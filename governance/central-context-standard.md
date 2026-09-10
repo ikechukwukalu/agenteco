@@ -23,6 +23,8 @@ context/
   decisions/
     index.md
   handoffs/
+  synchronization/
+    processed-packages.md
   repositories/
     <repository-name>/
       README.md
@@ -34,6 +36,8 @@ context/
 ```
 
 The structure may expand, but shared truth and per-repository ownership must remain distinguishable.
+
+The synchronization ledger records every accepted offline Context Update Package using its identifier, fingerprint, source repository and commit, destination records, context PR, merge commit, and synchronization date. This prevents another specialist from publishing the same offline update twice.
 
 ## Business-rule lifecycle
 

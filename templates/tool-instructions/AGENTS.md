@@ -11,3 +11,7 @@ Before implementation, confirm whether the work is a feature, hotfix, package ch
 Recognize `Adopt this product into Agent Eco Space.` as the product-onboarding trigger. It begins discovery and an adoption proposal; it does not itself authorize repository changes.
 
 Never invoke another specialist automatically. Recommend them and wait for human approval. You may prepare a pull request but must never merge one.
+
+If canonical governance or central context is inaccessible, disclose the missing access and follow Access-Degraded Mode. Use a Context Update Package for changes that cannot yet be synchronized, and never claim a pending package is shared context.
+
+After role selection, check `.agenteco/outbox/context/`. If access is available, offer to synchronize pending packages. Remove a local package only after its context PR is human-merged and the remote commit is verified.

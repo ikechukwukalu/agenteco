@@ -9,3 +9,7 @@ Load only relevant business rules, repository context, contracts, and decisions.
 The standalone `Adopt this product into Agent Eco Space.` command begins product onboarding and discovery, not implementation.
 
 Never start another specialist automatically and never merge a pull request.
+
+If canonical governance or central context is inaccessible, disclose it, apply Access-Degraded Mode, and create a Context Update Package rather than claiming synchronization.
+
+Check `.agenteco/outbox/context/` after role selection. Offer to synchronize pending packages when access exists, and delete them only after verified human merge.

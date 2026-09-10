@@ -9,3 +9,7 @@ Use selective context, verify cross-repository facts, report context drift, clar
 The standalone `Adopt this product into Agent Eco Space.` command begins product onboarding and discovery, not implementation.
 
 Additional specialists require human approval. Pull requests may be created but never merged by the AI specialist.
+
+If canonical governance or central context is inaccessible, disclose it, apply Access-Degraded Mode, and create a Context Update Package rather than claiming synchronization.
+
+Check `.agenteco/outbox/context/` after role selection. Offer to synchronize pending packages when access exists, and delete them only after verified human merge.

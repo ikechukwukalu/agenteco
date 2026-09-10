@@ -27,6 +27,7 @@ Git repositories remain the authority for implemented code. When context and cod
 - [Delivery and Pull Request Governance](governance/delivery-and-pr-governance.md)
 - [AgentHQ Inheritance Matrix](governance/agenthq-inheritance-matrix.md)
 - [AgentHQ Transfer Ledger](governance/transfer-ledger.md)
+- [Access-Degraded and Offline Mode](governance/access-degraded-mode.md)
 - [Specialist Catalogue](agents/README.md)
 - [Product Context Template](templates/product-context/README.md)
 - [Tool Instruction Adapters](templates/tool-instructions/README.md)
