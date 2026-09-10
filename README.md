@@ -83,4 +83,12 @@ Add this repository to Agent Eco Space.
 
 Registers a repository with an existing governed product. In a new or ambiguous session, use the complete [Add Repository Prompt](templates/add-repository-to-agent-eco-space.md) so the AI knows the product, central context, and repository being added.
 
+### Synchronize work from an existing session
+
+```text
+Synchronize this work with Agent Eco Space.
+```
+
+Backfills verified implementation and decision history from an existing code session into central context. Use the complete [Synchronization Prompt](templates/synchronize-existing-work.md) when the repositories and scope are not already established.
+
 See the [Command Catalogue](commands/README.md) for exact meanings and preconditions.

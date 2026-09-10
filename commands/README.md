@@ -60,6 +60,20 @@ Add this repository to Agent Eco Space.
 
 **Does not authorize:** Modifying either repository, automatically selecting the Engineering Manager, activating other specialists, creating or merging PRs, deployment, or publication.
 
+## Synchronize existing work
+
+```text
+Synchronize this work with Agent Eco Space.
+```
+
+**Purpose:** Backfill verified work from an existing AI session and code repository into the product's central context.
+
+**Required input:** Current repository, central-context repository, product name, and optionally a commit, PR, version, or date range. Use the complete [Synchronization Prompt](../templates/synchronize-existing-work.md) when Agent Eco Space locations are not already established.
+
+**Effect:** Verify implementation against repository evidence, compare it with existing context, avoid duplicates, reconstruct relevant history with confidence labels, and present exact context changes and a PR plan.
+
+**Does not authorize:** Changing application code, inventing undocumented history, modifying context before `Proceed with implementation.`, merging a PR, deployment, or publication.
+
 ## Future commands
 
 New commands must be added here before they are treated as workflow triggers. Each entry must define exact text, purpose, preconditions, effects, exclusions, and whether it changes authorization state.
