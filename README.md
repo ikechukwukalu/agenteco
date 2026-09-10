@@ -75,4 +75,12 @@ Proceed with implementation.
 
 Authorizes implementation of the most recently presented, unchanged, approved scope. It does not authorize merge, deployment, publication, or production release.
 
+### Add another repository
+
+```text
+Add this repository to Agent Eco Space.
+```
+
+Registers a repository with an existing governed product. In a new or ambiguous session, use the complete [Add Repository Prompt](templates/add-repository-to-agent-eco-space.md) so the AI knows the product, central context, and repository being added.
+
 See the [Command Catalogue](commands/README.md) for exact meanings and preconditions.

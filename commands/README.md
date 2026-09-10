@@ -46,6 +46,20 @@ Proceed with implementation.
 
 Material scope changes invalidate the authorization and require a refreshed proposal followed by a new standalone command.
 
+## Add a repository
+
+```text
+Add this repository to Agent Eco Space.
+```
+
+**Purpose:** Register another repository with an existing Agent Eco Space product and its central context.
+
+**Required input:** Existing product name, central-context location, and the repository URL or workspace path being added. Use the complete [Add Repository Prompt](../templates/add-repository-to-agent-eco-space.md) in a new or ambiguous session.
+
+**Effect:** Inspect and classify the repository, verify it is not already registered, map relationships and contracts, identify drift and risks, and present the central-context and instruction-adapter changes required.
+
+**Does not authorize:** Modifying either repository, automatically selecting the Engineering Manager, activating other specialists, creating or merging PRs, deployment, or publication.
+
 ## Future commands
 
 New commands must be added here before they are treated as workflow triggers. Each entry must define exact text, purpose, preconditions, effects, exclusions, and whether it changes authorization state.
