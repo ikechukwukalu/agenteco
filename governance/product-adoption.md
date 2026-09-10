@@ -1,6 +1,6 @@
 # Product Adoption
 
-The standalone command `Adopt this product into Agent Eco Space.` begins this workflow.
+The standalone command `Adopt this product into Agent Eco Space.` begins this workflow after Agent Eco Space has been loaded through a repository adapter or the first-time bootstrap prompt. The command alone cannot identify an unknown governance repository in an unconfigured chat.
 
 1. Report whether Agent Eco Space instructions and central-context registration are present.
 2. Ask whether the repository belongs to a new product, existing product, or standalone package when evidence does not establish it.
@@ -13,4 +13,4 @@ The standalone command `Adopt this product into Agent Eco Space.` begins this wo
 9. Prepare changes through the applicable temporary branches and PRs.
 10. Never merge those PRs.
 
-After adapters are installed and merged by a human, future supported AI sessions can discover Agent Eco Space from repository instructions. Before that point, the adoption command is the reliable entry mechanism.
+After adapters are installed and merged by a human, future supported AI sessions can discover Agent Eco Space from repository instructions. Before that point, the first-time bootstrap prompt is the reliable entry mechanism.

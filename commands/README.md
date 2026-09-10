@@ -2,6 +2,10 @@
 
 This catalogue documents commands that trigger a defined Agent Eco Space workflow or state transition. Commands are deliberately short, visible, and unambiguous.
 
+## Bootstrap versus command
+
+The [First-Time Bootstrap Prompt](../templates/bootstrap-agent-eco-space.md) is required when a session has no repository instruction pointing to Agent Eco Space. It supplies the governance location and product scope. The commands below are shortcuts used after that bootstrap or after instruction adapters are installed.
+
 ## Command rules
 
 - Send a command as a standalone message, without commentary or additional scope.
@@ -17,6 +21,8 @@ Adopt this product into Agent Eco Space.
 ```
 
 **Purpose:** Begin onboarding an existing or new product.
+
+**Discovery precondition:** The session has loaded Agent Eco Space through the first-time bootstrap prompt or a repository instruction adapter. Otherwise, the AI must request the governance location rather than pretending to recognize the command.
 
 **Selected role:** Engineering Manager is recommended and may be selected for the onboarding session.
 

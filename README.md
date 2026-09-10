@@ -46,13 +46,19 @@ Agent Eco Space is a sibling of AgentHQ, not a replacement. AgentHQ remains suit
 
 Commands that change Agent Eco Space state or enter a governed workflow must be sent as standalone messages.
 
+### First-time bootstrap
+
+A completely new AI session cannot understand the short commands until Agent Eco Space is discoverable. Start an unconfigured session with the [First-Time Bootstrap Prompt](templates/bootstrap-agent-eco-space.md). It identifies the Agent Eco Space repository, the product or current repository, and the central context repository when one exists.
+
+After repository instruction adapters have been installed, the shorter commands below become reliable entry points.
+
 ### Adopt a product
 
 ```text
 Adopt this product into Agent Eco Space.
 ```
 
-Starts the Engineering Manager onboarding workflow for a new or existing product. It authorizes discovery and an adoption proposal, not repository changes.
+Starts the Engineering Manager onboarding workflow for a new or existing product only after Agent Eco Space is discoverable in the current session. It authorizes discovery and an adoption proposal, not repository changes.
 
 ### Authorize implementation
 
