@@ -24,11 +24,11 @@ Work to reconcile:
 
 Use the current specialist identity if it has already been explicitly established in this session; otherwise ask who you are operating as today.
 
-Read the canonical Agent Eco Space governance and relevant central product context. Confirm which sources you can access. Do not rely on conversation memory alone: inspect the current repository, working tree, commits, pull requests, tests, documentation, configuration, and other available evidence to verify what was actually implemented.
+Read the canonical Agent Eco Space governance and run the Repository Readiness Preflight. Do not assume registration, manifest, adapters, outbox, or central-context structure already exist. Confirm which sources you can access. Do not rely on conversation memory alone: inspect the current repository, working tree, commits, pull requests, tests, documentation, configuration, and other available evidence to verify what was actually implemented.
 
 Compare the verified implementation with the central context. Search for existing records by repository, commit, pull request, feature, contract, decision, and context-update identifier so the same work is not duplicated.
 
-Prepare a context-backfill proposal that identifies:
+If setup is incomplete, prepare one combined repository-adoption, adapter-bootstrap, and context-backfill proposal. It identifies:
 1. the repository state and evidence reviewed;
 2. features, fixes, behaviour, and operational changes completed;
 3. business rules implemented, changed, corrected, deprecated, or still uncertain;
@@ -38,7 +38,8 @@ Prepare a context-backfill proposal that identifies:
 7. affected repositories, consumers, owners, and required handoffs;
 8. exact central-context files to create or update;
 9. context drift, missing evidence, conflicts, and unresolved questions;
-10. the proposed context branch and pull request.
+10. the proposed code and context branches and pull requests;
+11. missing or stale manifest, adapters, tracked outbox, registration, and per-repository context.
 
 Separate verified facts from reconstructed history, inference, and proposal. Preserve corrections and superseded decisions instead of rewriting history. Do not expose secrets, credentials, or production customer data.
 

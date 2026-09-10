@@ -13,6 +13,7 @@ The [First-Time Bootstrap Prompt](../templates/bootstrap-agent-eco-space.md) is 
 - Quoting a command in documentation or conversation does not execute it.
 - Similar wording does not trigger a protected state transition.
 - No command authorizes a specialist to merge a pull request.
+- Every entry command runs the canonical Repository Readiness Preflight before assuming setup exists.
 
 ## Adopt a product
 

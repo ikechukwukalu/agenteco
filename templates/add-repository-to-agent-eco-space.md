@@ -22,9 +22,9 @@ Repository to add:
 Known purpose, if any:
 <OPTIONAL_HUMAN_DESCRIPTION>
 
-Read the canonical Agent Eco Space governance and the existing product context. Confirm which sources you can access. Ask who you are operating as today and recommend the Engineering Manager for repository registration, but let me choose the specialist.
+Read the canonical Agent Eco Space governance and run the Repository Readiness Preflight. Do not assume the repository is unregistered or configured correctly. Confirm which sources you can access. Ask who you are operating as today and recommend the Engineering Manager for repository registration, but let me choose the specialist.
 
-Do not modify any repository yet. Inspect the repository being added and verify whether it is already registered. Determine its type, purpose, audience, technology, runtime, visibility, current revision, owners, default specialist, operating profile, delivery mode, protected branches, deployment or publication lifecycle, and documentation state.
+Do not modify any repository yet. Inspect the repository and classify its readiness as Ready, Partially Configured, Unconfigured, Access Degraded, or Blocked. Verify whether it is already registered and whether its manifest and adapters are current. Determine its type, purpose, audience, technology, runtime, visibility, current revision, owners, default specialist, operating profile, delivery mode, protected branches, deployment or publication lifecycle, and documentation state.
 
 Identify the APIs, events, data, packages, authentication, queues, files, or other contracts it produces and consumes. Map every known relationship with existing product repositories. Compare its implementation with the existing central context and report duplication, conflicts, missing contracts, security or access concerns, and context drift.
 

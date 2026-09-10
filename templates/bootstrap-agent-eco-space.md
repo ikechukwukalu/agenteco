@@ -16,7 +16,7 @@ Central product context repository:
 
 Read the Agent Eco Space README, command catalogue, operating constitution, specialist catalogue, and applicable rules. Then begin the "Adopt this product into Agent Eco Space." workflow.
 
-Do not modify any repository yet. First confirm what sources you can access, recommend the Engineering Manager for onboarding, ask who you are operating as today, inspect the current product evidence, and present an adoption plan. Wait for the standalone "Proceed with implementation." command before creating approved changes. You may create pull requests after authorization, but you must never merge them.
+Do not assume the repository is already configured. Run the canonical Repository Readiness Preflight first. Confirm what sources you can access, recommend the Engineering Manager for onboarding, ask who you are operating as today, inspect current product evidence, and present one combined adoption and remediation plan. Wait for the standalone "Proceed with implementation." command before creating approved changes. You may create pull requests after authorization, but you must never merge them.
 ```
 
 ## Access requirement
