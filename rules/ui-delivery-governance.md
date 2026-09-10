@@ -9,7 +9,7 @@ UI work follows this sequence:
 1. approved requirements and applicable Design and Experience Reference Registry entries;
 2. Samuel's UX/UI design and testable visual acceptance criteria;
 3. Project Owner design approval when the proposed design introduces or materially changes visual direction;
-4. clear implementation authorization for the understood scope;
+4. the standalone `Proceed with implementation.` command for the understood scope;
 5. Dotun's implementation of the approved design;
 6. Armstrong's functional and regression QA;
 7. Samuel's visual-fidelity and experience review;

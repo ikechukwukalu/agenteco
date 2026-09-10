@@ -65,7 +65,7 @@ Before implementation, the selected specialist must obtain and record:
 6. telephony provider and regional/privacy/compliance requirements where phone support is selected;
 7. observability, evaluation, incident, and rollback requirements.
 
-The selected specialist must propose a project-specific plan and wait for clear implementation authorization before changing source code.
+The selected specialist must propose a project-specific plan and wait for the standalone `Proceed with implementation.` command before changing source code.
 
 ## Relationship to Ada's CX Role
 
@@ -206,7 +206,7 @@ Agent Eco Space provides guided source-registration prompts so the Project Owner
 
 The first supported command is **Add Ada Website Source**. It collects the source title, approved URL or domain, owner, purpose, intended customer questions, permitted audiences, refresh approach, and expiry/review date. The selected specialist validates the request, then creates or updates the project's Ada source record and source manifest in Project Context.
 
-Creating the context record does not authorize application code changes, content ingestion, or exposure to customers. The selected specialist must next propose the scoped integration plan and wait for clear implementation authorization
+Creating the context record does not authorize application code changes, content ingestion, or exposure to customers. The selected specialist must next propose the scoped integration plan and wait for the standalone `Proceed with implementation.` command.
 
 A separate API-registration command follows the same pattern but additionally captures the server-side contract: input schema, example request, expected response schema, customer-safe output mapping, authorization, error handling, and test cases.
 
@@ -359,4 +359,3 @@ Each application's Ada Administration → Knowledge Governance area may maintain
 - a scoped single-approver override, where that person's approval alone satisfies the normal approval quorum.
 
 Exceptions must identify the authorized account, scope of knowledge classes, effective period, rationale, and owner. They must be reviewed and removable. An exception does not grant unrestricted administrative access or bypass audit logging, source validation, or other required safety controls.
-

@@ -10,7 +10,7 @@ Before producing implementation code, migration files, infrastructure configurat
 2. Identify missing, vague, risky, or conflicting details.
 3. Ask only necessary clarification questions.
 4. Suggest safe defaults only as options, not assumptions.
-5. Obtain the user's clear implementation authorization for the understood scope.
+5. Require the standalone `Proceed with implementation.` command for the understood scope.
 
 ## Forbidden Behavior
 
@@ -36,4 +36,4 @@ Agents may provide:
 - Clarifying question lists.
 - Risk assessments.
 
-But they must not implement until the user clearly authorizes implementation.
+But they must not implement until the user sends the standalone `Proceed with implementation.` command.

@@ -6,6 +6,8 @@ At the start of a fresh session, read the canonical Agent Eco Space rules and th
 
 Load only the shared business rules, this repository's context, affected contracts, and relevant decisions. Inspect connected repositories when needed to verify facts. Report context drift rather than guessing.
 
-Before implementation, confirm whether the work is a feature, hotfix, package change, or another task. Follow the applicable branch and PR rules. Own code, engineer-written tests, documentation, changelog, and affected context updates.
+Before implementation, confirm whether the work is a feature, hotfix, package change, or another task. Present the understood scope, then require the standalone `Proceed with implementation.` command. Follow the applicable branch and PR rules. Own code, engineer-written tests, documentation, changelog, and affected context updates.
+
+Recognize `Adopt this product into Agent Eco Space.` as the product-onboarding trigger. It begins discovery and an adoption proposal; it does not itself authorize repository changes.
 
 Never invoke another specialist automatically. Recommend them and wait for human approval. You may prepare a pull request but must never merge one.

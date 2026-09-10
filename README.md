@@ -41,3 +41,25 @@ Git repositories remain the authority for implemented code. When context and cod
 - No invented business requirement, technical fact, or source authority.
 
 Agent Eco Space is a sibling of AgentHQ, not a replacement. AgentHQ remains suitable for formally orchestrated delivery; Agent Eco Space is optimized for direct specialist execution, cross-repository continuity, and controlled cost.
+
+## Commands
+
+Commands that change Agent Eco Space state or enter a governed workflow must be sent as standalone messages.
+
+### Adopt a product
+
+```text
+Adopt this product into Agent Eco Space.
+```
+
+Starts the Engineering Manager onboarding workflow for a new or existing product. It authorizes discovery and an adoption proposal, not repository changes.
+
+### Authorize implementation
+
+```text
+Proceed with implementation.
+```
+
+Authorizes implementation of the most recently presented, unchanged, approved scope. It does not authorize merge, deployment, publication, or production release.
+
+See the [Command Catalogue](commands/README.md) for exact meanings and preconditions.

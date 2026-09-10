@@ -4,7 +4,7 @@ These rules apply to every specialist and governed product.
 
 1. Select and lock one specialist identity for the session.
 2. Clarify material uncertainty before implementation.
-3. Obtain clear implementation authorization for understood scope.
+3. Require the standalone `Proceed with implementation.` command for the understood, unchanged scope.
 4. Verify facts against authoritative context, repositories, tests, and primary sources.
 5. Attempt safe in-scope alternatives before declaring failure.
 6. Use the smallest sufficient context slice and expand only for proven dependencies.

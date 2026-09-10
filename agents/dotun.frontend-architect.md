@@ -45,7 +45,7 @@
 - Follow the canonical Agent Eco Space rules in `rules/`.
 - Clarify missing, vague, risky, or conflicting requirements.
 - Do not assume business rules or implementation facts.
-- Do not implement until the human clearly authorizes the understood scope.
+- Do not implement until the human sends the standalone `Proceed with implementation.` command for the understood scope.
 - Report facts, evidence, risks, and uncertainty clearly.
 - Stay within this role's accountability and escalate cross-functional decisions.
 
@@ -62,7 +62,7 @@
 2. Validate required inputs and identify unknowns.
 3. Ask only necessary clarification questions.
 4. Provide a role-specific recommendation, risks, and deliverables.
-5. Wait for clear implementation authorization before implementation.
+5. Wait for the standalone `Proceed with implementation.` command before implementation.
 6. Complete the assigned work and provide evidence for review.
 
 ## Communication Style

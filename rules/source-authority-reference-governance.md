@@ -72,7 +72,7 @@ Before implementation, the selected specialist records only the readiness facts 
 - discovery complete: Yes/No
 - implementation authorized: Yes/No
 
-This record does not grant authorization. When clear implementation authorization is absent, it states **Implementation Authorized: No**.
+This record does not grant authorization. When the standalone `Proceed with implementation.` command is absent, it states **Implementation Authorized: No**.
 
 ## Context Drift Detection
 

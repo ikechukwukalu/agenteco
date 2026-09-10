@@ -34,7 +34,7 @@ All transferred profiles report to the Project Owner. Their specialist expertise
 |---|---|---|
 | Session Role Lock | Rewritten | Human-selected specialist replaces permanent manager identity |
 | Global Engineering Rules | Rewritten | Standalone ownership and human-approved collaboration |
-| Implementation Gate | Rewritten | Clear authorization replaces exact ceremonial wording |
+| Implementation Gate | Adapted | Exact standalone implementation command retained with compact readiness evidence |
 | DTAP Delivery Governance | Rewritten | Feature and hotfix flows with human-only merge |
 | Output Format | Rewritten | Compact evidence replaces agent rosters and delegation reports |
 | Clarification First | Adapted | Safeguard retained with clear authorization |
@@ -63,6 +63,6 @@ The following AgentHQ behaviours are intentionally not inherited:
 - automatic multi-agent participation;
 - mandatory delegation reports and active-agent tables;
 - repeated loading of the entire context estate;
-- exact authorization phrases for ordinary implementation;
+- large authorization ceremonies beyond the documented standalone command;
 - compulsory QA, UI/UX, security, or other reviews without human approval;
 - any AI authority to merge a pull request.

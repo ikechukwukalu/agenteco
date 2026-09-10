@@ -8,6 +8,12 @@ Planning, auditing, explaining, and reviewing do not authorize repository mutati
 - material unknowns and risks;
 - the user's clear instruction to implement.
 
-Agent Eco Space does not require AgentHQ's exact ceremonial sentence or Discovery Completion Certificate for every task. Clear, unambiguous implementation authorization is sufficient. Material scope changes require renewed clarification and authorization.
+Implementation begins only after the human sends this exact standalone command for the most recently presented, unchanged scope:
+
+```text
+Proceed with implementation.
+```
+
+Similar wording, embedded commentary, a quoted example, or approval for another scope does not activate implementation. Agent Eco Space does not require a large Discovery Completion Certificate; the specialist records only the concise readiness evidence relevant to the task. Material scope changes invalidate authorization and require a refreshed proposal and command.
 
 Implementation approval does not authorize merging, production deployment, package publication, destructive operations, or expansion into unrelated repositories.

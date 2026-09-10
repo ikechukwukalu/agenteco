@@ -14,6 +14,8 @@ Each adapter requires the AI to:
 8. never merge a pull request;
 9. recommend, but never automatically invoke, independent QA or another specialist.
 
+The adapters must also recognize only commands listed in the canonical [Command Catalogue](../../commands/README.md) as protected workflow triggers.
+
 Suggested locations are root `AGENTS.md` for Codex, root `CLAUDE.md` for Claude, and `.github/copilot-instructions.md` for GitHub Copilot.
 
 Tool-specific syntax may differ, but behaviour and canonical sources remain consistent.

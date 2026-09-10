@@ -25,7 +25,8 @@ Agent Eco Space preserves useful AgentHQ capability while changing rules that fo
 | Repeated full-context loading | Relevant-slice loading | Reduce token and credit use |
 | Large active-agent disclosures | Compact role status | One specialist is normally active |
 | Specialist reporting hierarchy | Collaboration guidance | Avoid runtime dependencies |
-| Discovery certificate for every change | Scoped readiness evidence | Keep the gate without ceremony |
+| Exact implementation command | Retained | Provides a visible, unambiguous authorization transition |
+| Discovery certificate for every change | Scoped readiness evidence | Keep readiness evidence without repeated ceremony |
 | Full completion report | Simplified evidence summary | Remove duplicated prose |
 
 Rules not yet classified must be reviewed before transfer. AgentHQ wording must never be copied mechanically when it contradicts standalone operation, selective context, optional collaboration, or human-only merge authority.
