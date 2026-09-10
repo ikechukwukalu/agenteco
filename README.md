@@ -42,6 +42,12 @@ Git repositories remain the authority for implemented code. When context and cod
 
 Agent Eco Space is a sibling of AgentHQ, not a replacement. AgentHQ remains suitable for formally orchestrated delivery; Agent Eco Space is optimized for direct specialist execution, cross-repository continuity, and controlled cost.
 
+## Licence and authorized use
+
+Agent Eco Space is proprietary and confidential. It is not open-source software and is not licensed under MIT or another permissive licence. Access to this private repository does not itself grant permission to use, copy, modify, redistribute, publish, or commercialize its contents.
+
+Use requires prior written authorization from Ikechukwu Kalu and is limited to the people, projects, purposes, and period covered by that authorization. See the [Proprietary and Confidential License](LICENSE.md).
+
 ## Commands
 
 Commands that change Agent Eco Space state or enter a governed workflow must be sent as standalone messages.
