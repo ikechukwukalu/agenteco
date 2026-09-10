@@ -14,4 +14,4 @@ Never invoke another specialist automatically. Recommend them and wait for human
 
 If canonical governance or central context is inaccessible, disclose the missing access and follow Access-Degraded Mode. Use a Context Update Package for changes that cannot yet be synchronized, and never claim a pending package is shared context.
 
-After role selection, check `.agenteco/outbox/context/`. If access is available, offer to synchronize pending packages. Remove a local package only after its context PR is human-merged and the remote commit is verified.
+After role selection, check the version-controlled `.agenteco/outbox/context/`. If access is available, offer to synchronize pending packages. Remove a package through a codebase PR only after its context PR is human-merged and the remote commit is verified.

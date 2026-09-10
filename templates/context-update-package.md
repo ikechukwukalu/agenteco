@@ -9,7 +9,8 @@
 - Status: `Pending Context Sync`
 - Package identifier:
 - Content fingerprint:
-- Local outbox path: `.agenteco/outbox/context/<package-identifier>.md`
+- Version-controlled outbox path: `.agenteco/outbox/context/<package-identifier>.md`
+- Source repository visibility and authorized audience:
 
 ## Available authority
 
@@ -62,4 +63,5 @@ Confirm that this package contains no secret, credential, production customer da
 - Final status: Pending Context Sync / Submitted / Synchronized / Rejected
 - Remote merge verified by:
 - Remote merge commit:
-- Local package deletion: Pending / Completed
+- Codebase outbox removal PR:
+- Live outbox removal: Pending / Completed

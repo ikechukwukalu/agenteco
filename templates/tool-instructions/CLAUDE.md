@@ -12,4 +12,4 @@ Additional specialists require human approval. Pull requests may be created but 
 
 If canonical governance or central context is inaccessible, disclose it, apply Access-Degraded Mode, and create a Context Update Package rather than claiming synchronization.
 
-Check `.agenteco/outbox/context/` after role selection. Offer to synchronize pending packages when access exists, and delete them only after verified human merge.
+Check the version-controlled `.agenteco/outbox/context/` after role selection. Offer to synchronize pending packages when access exists, and remove them through codebase PRs only after verified human merge.

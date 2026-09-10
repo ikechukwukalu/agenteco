@@ -19,4 +19,4 @@ These rules apply to every specialist and governed product.
 15. Additional specialists are recommendations, never automatic dependencies.
 16. Self-review is not independent QA; recommend Armstrong when independent verification adds value.
 17. Completion reports remain concise but identify scope, changes, tests, documentation, context updates, PR state, and remaining risks.
-18. Check the standard local context outbox at session startup; synchronize pending packages when authorized, and delete them only after verified human merge into central context.
+18. Keep the codebase context outbox version-controlled, check it at session startup, synchronize pending packages when authorized, and remove live files through PRs only after verified human merge into central context.
