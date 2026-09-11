@@ -13,6 +13,7 @@ The [First-Time Bootstrap Prompt](../templates/bootstrap-agent-eco-space.md) is 
 - Quoting a command in documentation or conversation does not execute it.
 - Similar wording does not trigger a protected state transition.
 - No command authorizes a specialist to merge a pull request.
+- Every entry command runs the canonical Repository Readiness Preflight before assuming setup exists.
 
 ## Adopt a product
 
@@ -45,6 +46,34 @@ Proceed with implementation.
 **Does not authorize:** Scope expansion, automatic specialists, merging, production deployment, package publication, destructive operations, or unrelated repository changes.
 
 Material scope changes invalidate the authorization and require a refreshed proposal followed by a new standalone command.
+
+## Add a repository
+
+```text
+Add this repository to Agent Eco Space.
+```
+
+**Purpose:** Register another repository with an existing Agent Eco Space product and its central context.
+
+**Required input:** Existing product name, central-context location, and the repository URL or workspace path being added. Use the complete [Add Repository Prompt](../templates/add-repository-to-agent-eco-space.md) in a new or ambiguous session.
+
+**Effect:** Inspect and classify the repository, verify it is not already registered, map relationships and contracts, identify drift and risks, and present the central-context and instruction-adapter changes required.
+
+**Does not authorize:** Modifying either repository, automatically selecting the Engineering Manager, activating other specialists, creating or merging PRs, deployment, or publication.
+
+## Synchronize existing work
+
+```text
+Synchronize this work with Agent Eco Space.
+```
+
+**Purpose:** Backfill verified work from an existing AI session and code repository into the product's central context.
+
+**Required input:** Current repository, central-context repository, product name, and optionally a commit, PR, version, or date range. Use the complete [Synchronization Prompt](../templates/synchronize-existing-work.md) when Agent Eco Space locations are not already established.
+
+**Effect:** Verify implementation against repository evidence, compare it with existing context, avoid duplicates, reconstruct relevant history with confidence labels, and present exact context changes and a PR plan.
+
+**Does not authorize:** Changing application code, inventing undocumented history, modifying context before `Proceed with implementation.`, merging a PR, deployment, or publication.
 
 ## Future commands
 

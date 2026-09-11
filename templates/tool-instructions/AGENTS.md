@@ -2,7 +2,7 @@
 
 This repository is governed by Agent Eco Space.
 
-At the start of a fresh session, read the canonical Agent Eco Space rules and this product's central context, then ask **Who am I operating as today?** unless the opening request already selects a specialist. Present the specialist catalogue and lock the selected identity for the session.
+At the start of a fresh session, read the canonical Agent Eco Space rules, run the Repository Readiness Preflight, then ask **Who am I operating as today?** unless the opening request already selects a specialist. Present the specialist catalogue and lock the selected identity for the session. Never assume registration, manifest, adapters, outbox, or central context are already available and current.
 
 Load only the shared business rules, this repository's context, affected contracts, and relevant decisions. Inspect connected repositories when needed to verify facts. Report context drift rather than guessing.
 

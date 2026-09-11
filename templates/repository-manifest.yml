@@ -1,0 +1,38 @@
+# Agent Eco Space repository manifest
+schema_version: 1
+
+governance:
+  repository: https://github.com/ikechukwukalu/agenteco
+  version_or_commit: "<VERSION_OR_COMMIT>"
+
+product:
+  name: "<PRODUCT_NAME>"
+  context_repository: "<CONTEXT_REPOSITORY_URL_OR_PATH>"
+
+repository:
+  name: "<REPOSITORY_NAME>"
+  url_or_path: "<REPOSITORY_URL_OR_PATH>"
+  type: "<frontend|backend|mobile|microservice|package|sdk|infrastructure|other>"
+  visibility: "<private|internal|public>"
+  default_specialist: "<SPECIALIST_NAME>"
+  verified_revision: "<COMMIT_OR_VERSION>"
+
+delivery:
+  work_mode: "<Application|Package>"
+  operating_profile: "<Lite|Standard|Enterprise>"
+  topology: "<TOPOLOGY_OR_NOT_APPLICABLE>"
+  permanent_branches:
+    test: "<BRANCH_OR_NOT_APPLICABLE>"
+    staging: "<BRANCH_OR_NOT_APPLICABLE>"
+    production: "<BRANCH_OR_NOT_APPLICABLE>"
+
+adapters:
+  agents_md: "<present|missing|stale>"
+  claude_md: "<present|missing|stale>"
+  copilot_instructions: "<present|missing|stale>"
+  adapter_version: "<VERSION_OR_COMMIT>"
+
+context:
+  repository_directory: "<CENTRAL_CONTEXT_DIRECTORY>"
+  last_synchronized_revision: "<COMMIT_OR_NONE>"
+  pending_outbox_items: 0
