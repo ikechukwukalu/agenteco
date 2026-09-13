@@ -8,8 +8,17 @@ Use Agent Eco Space as the governance system for this work.
 Agent Eco Space governance repository:
 https://github.com/ikechukwukalu/agenteco
 
-Product or current repository:
-<PRODUCT_OR_REPOSITORY_URL_OR_WORKSPACE_PATH>
+Product name:
+<PRODUCT_NAME>
+
+Application or component name:
+<APPLICATION_OR_COMPONENT_NAME>
+
+Repository name:
+<REPOSITORY_NAME>
+
+Repository URL or workspace path:
+<REPOSITORY_URL_OR_WORKSPACE_PATH>
 
 Central product context repository:
 <CONTEXT_REPOSITORY_URL_OR_NONE_YET>

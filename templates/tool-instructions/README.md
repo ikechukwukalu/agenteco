@@ -20,3 +20,7 @@ The adapters must also recognize only commands listed in the canonical [Command 
 Suggested locations are root `AGENTS.md` for Codex, root `CLAUDE.md` for Claude, and `.github/copilot-instructions.md` for GitHub Copilot.
 
 Tool-specific syntax may differ, but behaviour and canonical sources remain consistent.
+
+## Integrity and human edits
+
+Each adapter separates its canonical and repository-specific content using the managed markers defined in [Instruction Adapter Integrity](../../governance/instruction-adapter-integrity.md). The readiness preflight compares recorded template versions and fingerprints, preserves valid local instructions, and reports accidental or conflicting edits instead of silently overwriting them.

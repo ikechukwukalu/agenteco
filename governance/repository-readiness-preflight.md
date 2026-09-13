@@ -1,6 +1,6 @@
 # Repository Readiness Preflight
 
-Every Agent Eco Space entry workflow runs this compact preflight before assuming a repository is configured. This includes first-time bootstrap, normal calls, product adoption, adding a repository, and synchronizing existing work.
+Every Agent Eco Space entry workflow runs this compact preflight before assuming a repository is configured. This includes first-time bootstrap, normal calls, product adoption, adding a repository, synchronizing existing work, and refreshing Agent Eco Space understanding.
 
 ## Fast path
 
@@ -9,11 +9,11 @@ Read `.agenteco/manifest.yml` first. When it exists, validate its recorded gover
 ## Checks
 
 1. Agent Eco Space governance location, access, and recorded version.
-2. Product name and central-context location and access.
+2. Product name, application or component name, and central-context location and access.
 3. Repository registration and per-repository context directory.
 4. Repository identity, visibility, classification, current revision, and default specialist.
 5. Application or Package work mode, operating profile, topology, permanent branches, and release model.
-6. Current `AGENTS.md`, `CLAUDE.md`, and Copilot instruction adapters.
+6. Current `AGENTS.md`, `CLAUDE.md`, and Copilot instruction adapters, including template versions, canonical and local fingerprints, and drift state.
 7. Version-controlled `.agenteco/outbox/context/` and pending packages.
 8. Relevant business rules, contracts, decisions, consumers, and connected repositories.
 9. Context drift, dirty working-tree state, open PRs, and access or information-classification risks.

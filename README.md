@@ -29,6 +29,7 @@ Git repositories remain the authority for implemented code. When context and cod
 - [AgentHQ Transfer Ledger](governance/transfer-ledger.md)
 - [Access-Degraded and Offline Mode](governance/access-degraded-mode.md)
 - [Repository Readiness Preflight](governance/repository-readiness-preflight.md)
+- [Instruction Adapter Integrity](governance/instruction-adapter-integrity.md)
 - [Specialist Catalogue](agents/README.md)
 - [Product Context Template](templates/product-context/README.md)
 - [Tool Instruction Adapters](templates/tool-instructions/README.md)
@@ -92,6 +93,14 @@ Synchronize this work with Agent Eco Space.
 
 Backfills verified implementation and decision history from an existing code session into central context. Use the complete [Synchronization Prompt](templates/synchronize-existing-work.md) when the repositories and scope are not already established.
 
+### Refresh Agent Eco Space understanding
+
+```text
+Refresh this repository's Agent Eco Space understanding.
+```
+
+Refreshes the agent's verified knowledge of current Agent Eco governance, installed adapters and manifest, central product context, and repository implementation. It reports drift and proposes reconciliation without changing anything until `Proceed with implementation.` is sent.
+
 See the [Command Catalogue](commands/README.md) for exact meanings and preconditions.
 
 ## Copyable prompt library
@@ -108,8 +117,17 @@ Use Agent Eco Space as the governance system for this work.
 Agent Eco Space governance repository:
 https://github.com/ikechukwukalu/agenteco
 
-Product or current repository:
-<PRODUCT_OR_REPOSITORY_URL_OR_WORKSPACE_PATH>
+Product name:
+<PRODUCT_NAME>
+
+Application or component name:
+<APPLICATION_OR_COMPONENT_NAME>
+
+Repository name:
+<REPOSITORY_NAME>
+
+Repository URL or workspace path:
+<REPOSITORY_URL_OR_WORKSPACE_PATH>
 
 Central product context repository:
 <CONTEXT_REPOSITORY_URL_OR_NONE_YET>
@@ -125,6 +143,24 @@ Use this in a repository that is already governed by Agent Eco Space, or when yo
 
 ```text
 Use Agent Eco Space to govern this product and repository.
+
+Agent Eco Space governance repository:
+https://github.com/ikechukwukalu/agenteco
+
+Product name:
+<PRODUCT_NAME>
+
+Application or component name:
+<APPLICATION_OR_COMPONENT_NAME>
+
+Repository name:
+<REPOSITORY_NAME>
+
+Repository URL or workspace path:
+<REPOSITORY_URL_OR_WORKSPACE_PATH>
+
+Central product context repository:
+<CENTRAL_CONTEXT_REPOSITORY_URL_OR_WORKSPACE_PATH>
 
 Read the canonical Agent Eco Space governance and run the Repository Readiness Preflight. Do not assume the repository, central context, manifest, or instruction adapters are present or current. Begin by asking who you are operating as today and present available roles unless I have already selected one.
 
@@ -146,10 +182,16 @@ https://github.com/ikechukwukalu/agenteco
 Existing product name:
 <PRODUCT_NAME>
 
+Application or component name:
+<APPLICATION_OR_COMPONENT_NAME>
+
 Central product context repository:
 <CENTRAL_CONTEXT_REPOSITORY_URL_OR_WORKSPACE_PATH>
 
-Repository to add:
+Repository name:
+<NEW_REPOSITORY_NAME>
+
+Repository URL or workspace path:
 <NEW_REPOSITORY_URL_OR_WORKSPACE_PATH>
 
 Known purpose, if any:
@@ -183,14 +225,20 @@ Synchronize this work with Agent Eco Space.
 Agent Eco Space governance repository:
 https://github.com/ikechukwukalu/agenteco
 
-Current repository:
+Product name:
+<PRODUCT_NAME>
+
+Application or component name:
+<APPLICATION_OR_COMPONENT_NAME>
+
+Repository name:
+<CURRENT_REPOSITORY_NAME>
+
+Repository URL or workspace path:
 <CURRENT_REPOSITORY_URL_OR_WORKSPACE_PATH>
 
 Central product context repository:
 <CENTRAL_CONTEXT_REPOSITORY_URL_OR_WORKSPACE_PATH>
-
-Product name:
-<PRODUCT_NAME>
 
 Work to reconcile:
 <CURRENT_SESSION_OR_OPTIONAL_COMMIT_PR_VERSION_RANGE>
@@ -221,7 +269,58 @@ Do not change the code implementation as part of this context-only operation unl
 After authorization, update the context through a temporary branch and pull request. Never merge the pull request. If central-context access is unavailable, create a version-controlled Context Update Package in `.agenteco/outbox/context/` and clearly mark it `Pending Context Sync`.
 ```
 
-### 5. Context update package
+### 5. Refresh Agent Eco Space understanding prompt
+
+Use this when the agent's governance or product-context understanding may be outdated, or after Agent Eco Space, repository adapters, implementation, or central context has changed. Canonical template: [Refresh Understanding](templates/refresh-agent-eco-space-understanding.md).
+
+```text
+Refresh this repository's Agent Eco Space understanding.
+
+Agent Eco Space governance repository:
+https://github.com/ikechukwukalu/agenteco
+
+Product name:
+<PRODUCT_NAME>
+
+Application or component name:
+<APPLICATION_OR_COMPONENT_NAME>
+
+Repository name:
+<REPOSITORY_NAME>
+
+Repository URL or workspace path:
+<REPOSITORY_URL_OR_WORKSPACE_PATH>
+
+Central product context repository:
+<CENTRAL_CONTEXT_REPOSITORY_URL_OR_WORKSPACE_PATH>
+
+Optional governance version or revision expected:
+<VERSION_COMMIT_OR_LATEST>
+
+Optional work or context range to review:
+<CURRENT_STATE_OR_COMMIT_PR_VERSION_RANGE>
+
+Use the current specialist identity if it has already been explicitly established in this session; otherwise ask who you are operating as today.
+
+Run the Repository Readiness Preflight. Read the latest accessible Agent Eco Space governance and compare it with the governance version, manifest, AGENTS.md, CLAUDE.md, Copilot instructions, and other Agent Eco files currently installed in this repository. Separately read the central product context relevant to this product, application or component, repository, its producers, and its consumers.
+
+Verify both sources of understanding against the current repository and any accessible connected repositories. Do not assume that governance, adapters, central context, conversation memory, or implementation is current. Detect and report:
+1. governance-version and inherited-rule changes;
+2. missing, stale, accidentally edited, or conflicting instruction adapters;
+3. manifest identity or configuration errors;
+4. central-context records that are missing, stale, duplicated, or inconsistent;
+5. implementation and contract drift between repositories and central context;
+6. superseded decisions, business rules, and corrections that must remain in history;
+7. access limitations and pending outbox packages.
+
+Classify each finding as a verified fact, drift, authorized repository-specific customization, unresolved conflict, or proposal. Preserve valid local instructions and history. Never allow a local adapter to weaken Agent Eco Space's non-negotiable safeguards.
+
+Present one reconciliation proposal identifying the exact governance adapters, manifest fields, central-context files, repository documentation, branches, tests, and pull requests that should change. Do not modify anything until I send the standalone "Proceed with implementation." command.
+
+After authorization, implement only the approved reconciliation. Create pull requests where appropriate but never merge them. If the central context cannot be written, create a version-controlled Context Update Package in `.agenteco/outbox/context/` and report its pending status.
+```
+
+### 6. Context update package
 
 This is the offline fallback used when a specialist must update central context but cannot write to that repository. It is stored in the codebase at `.agenteco/outbox/context/<package-identifier>.md`, committed for safekeeping, and removed only after the corresponding context pull request has been human-merged and verified. Canonical template: [Context Update Package](templates/context-update-package.md).
 
@@ -231,6 +330,8 @@ This is the offline fallback used when a specialist must update central context 
 ## Identity
 
 - Product:
+- Application or component:
+- Source repository name:
 - Source repository:
 - Selected specialist:
 - Created at:

@@ -13,10 +13,16 @@ https://github.com/ikechukwukalu/agenteco
 Existing product name:
 <PRODUCT_NAME>
 
+Application or component name:
+<APPLICATION_OR_COMPONENT_NAME>
+
 Central product context repository:
 <CENTRAL_CONTEXT_REPOSITORY_URL_OR_WORKSPACE_PATH>
 
-Repository to add:
+Repository name:
+<NEW_REPOSITORY_NAME>
+
+Repository URL or workspace path:
 <NEW_REPOSITORY_URL_OR_WORKSPACE_PATH>
 
 Known purpose, if any:

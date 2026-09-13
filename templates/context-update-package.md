@@ -3,6 +3,8 @@
 ## Identity
 
 - Product:
+- Application or component:
+- Source repository name:
 - Source repository:
 - Selected specialist:
 - Created at:

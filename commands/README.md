@@ -14,6 +14,7 @@ The [First-Time Bootstrap Prompt](../templates/bootstrap-agent-eco-space.md) is 
 - Similar wording does not trigger a protected state transition.
 - No command authorizes a specialist to merge a pull request.
 - Every entry command runs the canonical Repository Readiness Preflight before assuming setup exists.
+- Complete prompts identify the product, application or component, repository name and location, and central-context location; a repository URL alone is not a complete product identity.
 
 ## Adopt a product
 
@@ -74,6 +75,20 @@ Synchronize this work with Agent Eco Space.
 **Effect:** Verify implementation against repository evidence, compare it with existing context, avoid duplicates, reconstruct relevant history with confidence labels, and present exact context changes and a PR plan.
 
 **Does not authorize:** Changing application code, inventing undocumented history, modifying context before `Proceed with implementation.`, merging a PR, deployment, or publication.
+
+## Refresh Agent Eco Space understanding
+
+```text
+Refresh this repository's Agent Eco Space understanding.
+```
+
+**Purpose:** Refresh the selected agent's verified understanding of current Agent Eco Space governance, repository adapters and manifest, and relevant central product context.
+
+**Required input:** Product name, application or component name, repository name and location, central-context location, and the governance repository. Use the complete [Refresh Understanding Prompt](../templates/refresh-agent-eco-space-understanding.md).
+
+**Effect:** Run the readiness preflight, compare installed governance and context with their canonical sources and repository evidence, classify drift and valid local customizations, and present one reconciliation proposal.
+
+**Does not authorize:** Modifying governance adapters, manifest, context, product code, or documentation; invoking another specialist; merging a pull request; deployment; or publication.
 
 ## Future commands
 

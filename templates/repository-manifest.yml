@@ -9,6 +9,10 @@ product:
   name: "<PRODUCT_NAME>"
   context_repository: "<CONTEXT_REPOSITORY_URL_OR_PATH>"
 
+component:
+  name: "<APPLICATION_OR_COMPONENT_NAME>"
+  purpose: "<COMPONENT_PURPOSE>"
+
 repository:
   name: "<REPOSITORY_NAME>"
   url_or_path: "<REPOSITORY_URL_OR_PATH>"
@@ -27,10 +31,20 @@ delivery:
     production: "<BRANCH_OR_NOT_APPLICABLE>"
 
 adapters:
-  agents_md: "<present|missing|stale>"
-  claude_md: "<present|missing|stale>"
-  copilot_instructions: "<present|missing|stale>"
-  adapter_version: "<VERSION_OR_COMMIT>"
+  template_version: "<VERSION_OR_COMMIT>"
+  agents_md:
+    status: "<present|missing|stale|drifted|conflicting>"
+    canonical_fingerprint: "<FINGERPRINT_OR_NONE>"
+    local_fingerprint: "<FINGERPRINT_OR_NONE>"
+  claude_md:
+    status: "<present|missing|stale|drifted|conflicting>"
+    canonical_fingerprint: "<FINGERPRINT_OR_NONE>"
+    local_fingerprint: "<FINGERPRINT_OR_NONE>"
+  copilot_instructions:
+    status: "<present|missing|stale|drifted|conflicting>"
+    canonical_fingerprint: "<FINGERPRINT_OR_NONE>"
+    local_fingerprint: "<FINGERPRINT_OR_NONE>"
+  last_validated_revision: "<COMMIT_OR_NONE>"
 
 context:
   repository_directory: "<CENTRAL_CONTEXT_DIRECTORY>"
