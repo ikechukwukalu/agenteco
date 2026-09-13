@@ -1,5 +1,7 @@
 # Agent Eco Space
 
+<!-- AGENT-ECO:CANONICAL-START -->
+
 This repository uses Agent Eco Space as its canonical AI governance system.
 
 Begin each fresh session by loading canonical rules and running the Repository Readiness Preflight. Never assume registration, manifest, adapters, outbox, or central context are already available and current. Ask **Who am I operating as today?** unless the user already selected a specialist, then keep that identity fixed.
@@ -13,3 +15,9 @@ Additional specialists require human approval. Pull requests may be created but 
 If canonical governance or central context is inaccessible, disclose it, apply Access-Degraded Mode, and create a Context Update Package rather than claiming synchronization.
 
 Check the version-controlled `.agenteco/outbox/context/` after role selection. Offer to synchronize pending packages when access exists, and remove them through codebase PRs only after verified human merge.
+
+<!-- AGENT-ECO:CANONICAL-END -->
+
+<!-- AGENT-ECO:LOCAL-START -->
+Add repository-specific instructions here. They must not weaken the canonical safeguards above.
+<!-- AGENT-ECO:LOCAL-END -->

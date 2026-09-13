@@ -10,14 +10,20 @@ Synchronize this work with Agent Eco Space.
 Agent Eco Space governance repository:
 https://github.com/ikechukwukalu/agenteco
 
-Current repository:
+Product name:
+<PRODUCT_NAME>
+
+Application or component name:
+<APPLICATION_OR_COMPONENT_NAME>
+
+Repository name:
+<CURRENT_REPOSITORY_NAME>
+
+Repository URL or workspace path:
 <CURRENT_REPOSITORY_URL_OR_WORKSPACE_PATH>
 
 Central product context repository:
 <CENTRAL_CONTEXT_REPOSITORY_URL_OR_WORKSPACE_PATH>
-
-Product name:
-<PRODUCT_NAME>
 
 Work to reconcile:
 <CURRENT_SESSION_OR_OPTIONAL_COMMIT_PR_VERSION_RANGE>

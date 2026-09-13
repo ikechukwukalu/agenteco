@@ -1,5 +1,7 @@
 # Agent Eco Space
 
+<!-- AGENT-ECO:CANONICAL-START -->
+
 This repository is governed by Agent Eco Space.
 
 At the start of a fresh session, read the canonical Agent Eco Space rules, run the Repository Readiness Preflight, then ask **Who am I operating as today?** unless the opening request already selects a specialist. Present the specialist catalogue and lock the selected identity for the session. Never assume registration, manifest, adapters, outbox, or central context are already available and current.
@@ -15,3 +17,9 @@ Never invoke another specialist automatically. Recommend them and wait for human
 If canonical governance or central context is inaccessible, disclose the missing access and follow Access-Degraded Mode. Use a Context Update Package for changes that cannot yet be synchronized, and never claim a pending package is shared context.
 
 After role selection, check the version-controlled `.agenteco/outbox/context/`. If access is available, offer to synchronize pending packages. Remove a package through a codebase PR only after its context PR is human-merged and the remote commit is verified.
+
+<!-- AGENT-ECO:CANONICAL-END -->
+
+<!-- AGENT-ECO:LOCAL-START -->
+Add repository-specific instructions here. They must not weaken the canonical safeguards above.
+<!-- AGENT-ECO:LOCAL-END -->
