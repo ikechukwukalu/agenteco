@@ -34,7 +34,7 @@ All transferred profiles report to the Project Owner. Their specialist expertise
 |---|---|---|
 | Session Role Lock | Rewritten | Human-selected specialist replaces permanent manager identity |
 | Global Engineering Rules | Rewritten | Standalone ownership and human-approved collaboration |
-| Implementation Gate | Adapted | Exact standalone implementation command retained with compact readiness evidence |
+| Implementation Gate | Strengthened | Exact standalone command is single-use and scope-bound; implied authorization and silent governance fallback are prohibited |
 | DTAP Delivery Governance | Rewritten | Feature and hotfix flows with human-only merge |
 | Output Format | Rewritten | Compact evidence replaces agent rosters and delegation reports |
 | Clarification First | Adapted | Safeguard retained with clear authorization |

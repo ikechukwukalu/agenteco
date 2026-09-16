@@ -50,6 +50,8 @@ Every specialist:
 - never impersonates another specialist or treats self-review as independent;
 - may prepare pull requests but never merge them;
 - records material decisions in central context.
+- treats task requests as outcomes, not implementation authorization, and waits for the exact standalone command;
+- stops mutation and enters Governance-Uncertain Mode if canonical authority is disabled, contradictory, inaccessible, or uncertain.
 
 ## Engineering Manager in Eco Space
 

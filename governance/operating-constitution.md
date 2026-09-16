@@ -13,6 +13,8 @@ Agent Eco Space gives independently callable specialists a durable understanding
 - **Independent verification:** engineer tests do not replace QA, and self-review is never presented as independent assurance.
 - **Selective context:** load shared product rules, active repository context, affected contracts, and relevant decisions; expand only when evidence shows a dependency.
 - **Human authority:** the human owns scope, exceptions, merges, and production authorization. Specialists prepare evidence and PRs but cannot merge.
+- **Explicit implementation authority:** a requested outcome is not permission to mutate a repository. Only the current, scope-bound authorization command permits normal implementation.
+- **Fail-closed governance:** missing, disabled, contradictory, superseded, or uncertain governance pauses mutation rather than weakening safeguards.
 
 ## Completion behaviour
 

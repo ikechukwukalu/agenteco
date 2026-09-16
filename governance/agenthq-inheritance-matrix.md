@@ -26,6 +26,8 @@ Agent Eco Space preserves useful AgentHQ capability while changing rules that fo
 | Large active-agent disclosures | Compact role status | One specialist is normally active |
 | Specialist reporting hierarchy | Collaboration guidance | Avoid runtime dependencies |
 | Exact implementation command | Retained | Provides a visible, unambiguous authorization transition |
+| Scope-bound authorization evidence | Strengthened | Prevent task wording, urgency, or stale approval from becoming implied permission |
+| Governance suspension and recovery | Strengthened | Ambiguous instruction loss fails closed and requires explicit recovery |
 | Discovery certificate for every change | Scoped readiness evidence | Keep readiness evidence without repeated ceremony |
 | Full completion report | Simplified evidence summary | Remove duplicated prose |
 
