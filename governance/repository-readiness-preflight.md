@@ -17,6 +17,7 @@ Read `.agenteco/manifest.yml` first. When it exists, validate its recorded gover
 7. Version-controlled `.agenteco/outbox/context/` and pending packages.
 8. Relevant business rules, contracts, decisions, consumers, and connected repositories.
 9. Context drift, dirty working-tree state, open PRs, and access or information-classification risks.
+10. Current implementation-authorization state and any unresolved governance suspension, uncertainty, or unauthorized-change incident.
 
 ## Outcomes
 
@@ -25,6 +26,7 @@ Read `.agenteco/manifest.yml` first. When it exists, validate its recorded gover
 - **Unconfigured:** Produce a combined adoption or repository-registration proposal before the requested work.
 - **Access Degraded:** Apply Access-Degraded Mode, continue only where safe, and preserve pending context in the tracked outbox.
 - **Blocked:** Stop only the affected work and state the exact missing authority or evidence.
+- **Governance Uncertain:** Stop mutation, preserve existing work, reconcile authority, restate scope, and require fresh authorization.
 
 ## Mutation boundary
 

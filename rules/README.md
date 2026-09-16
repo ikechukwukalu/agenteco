@@ -7,6 +7,8 @@ Agent Eco Space rules preserve AgentHQ's proven safeguards while making one sele
 - [Global Engineering Rules](global-engineering-rules.md)
 - [Session Role Selection and Lock](session-role-lock.md)
 - [Implementation Gate](implementation-gate.md)
+- [Implementation Authorization Integrity](../governance/implementation-authorization-integrity.md)
+- [Governance Suspension and Recovery](../governance/governance-suspension-and-recovery.md)
 - [DTAP Delivery Governance](dtap-delivery-governance.md)
 - [Output Format](output-format.md)
 

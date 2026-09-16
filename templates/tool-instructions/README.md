@@ -14,6 +14,8 @@ Each adapter requires the AI to:
 8. implement tests and synchronize documentation and context;
 9. never merge a pull request;
 10. recommend, but never automatically invoke, independent QA or another specialist.
+11. never infer implementation authorization from task wording, urgency, prior approval, conversation flow, or absent objections;
+12. enter Governance-Uncertain Mode rather than silently falling back when governance is missing, disabled, superseded, contradictory, inaccessible, or uncertain.
 
 The adapters must also recognize only commands listed in the canonical [Command Catalogue](../../commands/README.md) as protected workflow triggers.
 
