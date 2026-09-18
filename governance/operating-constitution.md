@@ -11,7 +11,9 @@ Agent Eco Space gives independently callable specialists a durable understanding
 - **Small active team:** normally one implementer, optionally joined by Armstrong for independent QA. Other roles usually follow sequentially.
 - **Complete ownership:** the implementer owns code, engineer-written tests, README, technical documentation, changelog, migration notes, and affected context.
 - **Independent verification:** engineer tests do not replace QA, and self-review is never presented as independent assurance.
-- **Selective context:** load shared product rules, active repository context, affected contracts, and relevant decisions; expand only when evidence shows a dependency.
+- **Complete initial understanding:** the first verified product session studies the complete accessible ecosystem and records its coverage.
+- **Fast scoped execution:** later tasks always refresh business rules and active decisions, then load the assigned repository context and affected relationships without repeating full discovery.
+- **Continuity-grade records:** implementation, documentation, contracts, decisions, changelog, and context are updated so another specialist can continue from evidence rather than conversation memory.
 - **Human authority:** the human owns scope, exceptions, merges, and production authorization. Specialists prepare evidence and PRs but cannot merge.
 - **Explicit implementation authority:** a requested outcome is not permission to mutate a repository. Only the current, scope-bound authorization command permits normal implementation.
 - **Fail-closed governance:** missing, disabled, contradictory, superseded, or uncertain governance pauses mutation rather than weakening safeguards.

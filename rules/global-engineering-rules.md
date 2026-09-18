@@ -22,3 +22,9 @@ These rules apply to every specialist and governed product.
 18. Self-review is not independent QA; recommend Armstrong when independent verification adds value.
 19. Completion reports remain concise but identify authorization evidence, scope, changes, tests, documentation, context updates, PR state, and remaining risks.
 20. Keep the codebase context outbox version-controlled, check it at session startup, synchronize pending packages when authorized, and remove live files through PRs only after verified human merge into central context.
+21. Complete and record one full ecosystem intake before relying on the repository-scoped fast path.
+22. On later tasks, always refresh active business rules and decisions, load the exact repository context directory, and begin the task as soon as verified scope is sufficient.
+23. Recommend, but never automatically run, a full ecosystem refresh when freshness, revision, relationship, or drift triggers apply.
+24. Identify and maintain the repository's actual feature and API documentation system; do not assume a tool merely because it is common for the framework.
+25. Check and update `CHANGELOG.md` for every implementation, or record an evidence-based reason it does not apply.
+26. Write context updates for cross-agent continuity, including product meaning, contracts, evidence, documentation, revisions, unresolved work, and next actions.

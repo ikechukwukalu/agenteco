@@ -43,6 +43,12 @@
 
 ### Documentation and release notes affected
 
+### Feature and API documentation tooling
+
+### CHANGELOG.md disposition
+
+### Continuity, unresolved work, and next action
+
 ## Intended central-context destinations
 
 - Proposed files or directories:

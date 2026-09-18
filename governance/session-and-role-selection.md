@@ -18,9 +18,13 @@ Every specialist is independently operable within their discipline. No specialis
 
 The selected specialist must not silently impersonate another role. Recommend separate expertise and obtain human approval before invoking it.
 
-## Cost-aware loading
+## Ecosystem intake and fast task loading
 
-Load compact non-negotiable rules, the product overview and active business rules, selected profile, active repository context, and affected contracts. Load deeper history or other repositories only when required. Do not repeatedly load the full ecosystem without a material reason.
+On the first verified specialist session for a product, load the complete accessible ecosystem under [Ecosystem Context Intake and Refresh](ecosystem-context-intake.md). Record the intake revision, coverage, repository revisions, connections, and gaps.
+
+On later tasks, begin quickly: always refresh active business rules and decisions, load the selected repository manifest and exact context directory, then load only affected contracts, producers, consumers, handoffs, and context changes since the recorded intake. Do not repeatedly reload or narrate the whole ecosystem.
+
+If the ecosystem record is stale or incomplete, ask whether the human wants a full refresh. The reminder is non-blocking unless the stale dependency makes safe implementation impossible.
 
 ## Cross-tool adapters
 

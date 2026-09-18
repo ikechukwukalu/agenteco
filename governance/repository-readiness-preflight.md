@@ -18,6 +18,8 @@ Read `.agenteco/manifest.yml` first. When it exists, validate its recorded gover
 8. Relevant business rules, contracts, decisions, consumers, and connected repositories.
 9. Context drift, dirty working-tree state, open PRs, and access or information-classification risks.
 10. Current implementation-authorization state and any unresolved governance suspension, uncertainty, or unauthorized-change incident.
+11. Initial ecosystem-intake status, its context revision and date, assigned repository context directory, connected-repository coverage, and refresh-due state.
+12. Documentation inventory, API/feature documentation tooling, generation or validation commands, and `CHANGELOG.md` status.
 
 ## Outcomes
 

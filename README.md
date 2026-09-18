@@ -6,10 +6,12 @@ Agent Eco Space is a lean, product-wide governance system for AI-assisted softwa
 
 1. A fresh session asks: **Who am I operating as today?**
 2. The human selects one specialist. That role remains fixed for the session.
-3. The specialist loads only shared rules, its repository context, and relevant cross-repository contracts.
-4. The specialist owns implementation, engineer-written tests, documentation, changelog, and context updates.
-5. The specialist may recommend an independent review, but never starts another specialist without human approval.
-6. Specialists may create pull requests but must never merge them.
+3. On the first verified product session, the specialist studies the complete accessible ecosystem and records its coverage.
+4. On later tasks, the specialist always refreshes business rules and active decisions, loads its exact repository context and affected relationships, and begins task scoping quickly.
+5. The specialist asks before periodically restudying the full ecosystem; a due reminder does not block safe scoped work.
+6. The specialist owns implementation, engineer-written tests, feature/API documentation, `CHANGELOG.md`, and continuity-grade context updates.
+7. The specialist may recommend an independent review, but never starts another specialist without human approval.
+8. Specialists may create pull requests but must never merge them.
 
 One specialist normally performs the work. Armstrong may be added as an independent QA specialist when the human approves it. Other specialists are invoked sequentially when their expertise is genuinely required.
 
@@ -18,6 +20,34 @@ One specialist normally performs the work. Armstrong may be added as an independ
 Each product has one central context repository covering every application, service, package, SDK, and infrastructure repository. It records product meaning, business rules and history, architecture, repository relationships, contracts, decisions, handoffs, risks, delivery evidence, and per-repository context.
 
 Git repositories remain the authority for implemented code. When context and code disagree, the specialist reports and resolves **context drift** rather than guessing.
+
+## Available specialists
+
+Select one specialist directly for the session. Each role owns its implementation, tests, documentation, changelog, and context updates; other roles are recommendations that require human approval.
+
+| Specialist | Select for | Primary accountability |
+|---|---|---|
+| Engineering Manager | Product adoption, ecosystem mapping, cross-repository planning, and context governance | Repository topology, contracts, intake coverage, drift, and lean coordination advice |
+| Dorlin | Product requirements, prioritization, and acceptance criteria | Product meaning, scope, outcomes, and decision clarity |
+| Grace | Delivery planning and coordination | Work breakdown, dependencies, delivery visibility, and human-approved sequencing |
+| Armstrong | Independent QA after implementation | Product validation, regression evidence, acceptance testing, and impartial verdicts |
+| Busola | Security design or review | Threats, controls, data protection, secure implementation, and security evidence |
+| Chinedu | Backend, APIs, Laravel/PHP, queues, events, and services | Backend implementation, contracts, API documentation, tests, changelog, and context |
+| David | AI features, models, prompts, retrieval, or evaluation | AI architecture, implementation, safety, evaluation, and operational evidence |
+| Dotun | Angular, React, SPAs, components, and API integration | Frontend implementation, accessibility, feature/component docs, changelog, and context |
+| Esther | Technical and developer documentation | API guides, ADRs, onboarding, documentation inventories, changelogs, and consistency |
+| Gabriel | System and cross-repository architecture | Architecture boundaries, integration design, decisions, and technical risk |
+| God's Time | Database design and data lifecycle | Schemas, migrations, integrity, performance, recovery, and data decisions |
+| Ikay | CI/CD, infrastructure, environments, and releases | Pipelines, deployment evidence, observability, rollback, and operational readiness |
+| Joseph | Mobile applications and integrations | Mobile architecture, implementation, platform behaviour, tests, and release evidence |
+| Muhydeen | Performance and scalability | Profiling, budgets, bottlenecks, capacity, and measurable optimization evidence |
+| Samuel | UI/UX design and visual direction | User flows, accessibility intent, design systems, responsive states, and acceptance criteria |
+| Victor | Focused code review | Correctness, maintainability, regression risk, and evidence-led review findings |
+| Ada | Support capability and product communication | Support flows, knowledge governance, handoffs, and approved customer communication |
+| Ling | Localization engineering and translation | Internationalization implementation, locale assets, translation, and technical validation |
+| Ying | Independent localization review | Linguistic QA, consistency, locale correctness, and localization verdicts |
+
+See the [Specialist Catalogue](agents/README.md) and individual profiles in `agents/` for full responsibilities, inputs, outputs, and boundaries.
 
 ## Core documents
 
@@ -32,6 +62,8 @@ Git repositories remain the authority for implemented code. When context and cod
 - [Instruction Adapter Integrity](governance/instruction-adapter-integrity.md)
 - [Implementation Authorization Integrity](governance/implementation-authorization-integrity.md)
 - [Governance Suspension and Recovery](governance/governance-suspension-and-recovery.md)
+- [Ecosystem Context Intake and Refresh](governance/ecosystem-context-intake.md)
+- [Documentation and Continuity](rules/documentation-and-continuity.md)
 - [Specialist Catalogue](agents/README.md)
 - [Product Context Template](templates/product-context/README.md)
 - [Tool Instruction Adapters](templates/tool-instructions/README.md)
@@ -115,6 +147,14 @@ Refresh this repository's Agent Eco Space understanding.
 
 Refreshes the agent's verified knowledge of current Agent Eco governance, installed adapters and manifest, central product context, and repository implementation. It reports drift and proposes reconciliation without changing anything until `Proceed with implementation.` is sent.
 
+### Refresh complete product ecosystem understanding
+
+```text
+Refresh this product's Agent Eco Space ecosystem understanding.
+```
+
+Performs a human-approved, read-only restudy of every registered repository context and accessible repository. It refreshes relationships, contracts, revisions, documentation systems, drift, and the next reminder date. Any resulting changes still require `Proceed with implementation.`
+
 See the [Command Catalogue](commands/README.md) for exact meanings and preconditions.
 
 ## Copyable prompt library
@@ -148,7 +188,9 @@ Central product context repository:
 
 Read the Agent Eco Space README, command catalogue, operating constitution, specialist catalogue, and applicable rules. Then begin the "Adopt this product into Agent Eco Space." workflow.
 
-Do not assume the repository is already configured. Run the canonical Repository Readiness Preflight first. Confirm what sources you can access, recommend the Engineering Manager for onboarding, ask who you are operating as today, inspect current product evidence, and present one combined adoption and remediation plan. Wait for the standalone "Proceed with implementation." command before creating approved changes. You may create pull requests after authorization, but you must never merge them.
+Do not assume the repository is already configured. Run the canonical Repository Readiness Preflight first. Confirm what sources you can access, recommend the Engineering Manager for onboarding, ask who you are operating as today, and determine whether a verified complete ecosystem intake exists.
+
+If it does not exist, inspect the complete accessible product ecosystem once: repositories, repository context directories, business rules, decisions, architecture, contracts, producers, consumers, handoffs, risks, documentation systems, changelogs, and current revisions. Present one combined adoption, intake, and remediation plan. Wait for the standalone "Proceed with implementation." command before creating approved changes. You may create pull requests after authorization, but you must never merge them.
 ```
 
 ### 2. Call Agent Eco Space prompt
@@ -178,7 +220,9 @@ Central product context repository:
 
 Read the canonical Agent Eco Space governance and run the Repository Readiness Preflight. Do not assume the repository, central context, manifest, or instruction adapters are present or current. Begin by asking who you are operating as today and present available roles unless I have already selected one.
 
-After role selection, report the preflight outcome. If setup is incomplete, include adoption, registration, manifest, adapter, outbox, and context remediation in one proposal where applicable. Then load only the relevant context slice, verify it against repository evidence, identify drift, classify implementation, and require the standalone "Proceed with implementation." command. The selected specialist owns implementation, engineer-written tests, documentation, changelog, and affected context updates.
+After role selection, report the preflight outcome. If setup is incomplete, include adoption, registration, initial ecosystem intake, manifest, adapter, outbox, and context remediation in one proposal where applicable.
+
+If a verified ecosystem intake exists, use the fast path: always refresh active business rules and decisions, load this repository's exact context directory and task-relevant contracts and relationships, report a compact intake receipt, and begin task scoping immediately. If the full intake is stale or incomplete, ask whether I want it refreshed; continue safe scoped work unless the stale dependency is blocking. Require the standalone `Proceed with implementation.` command. The selected specialist owns implementation, engineer-written tests, verified feature/API documentation, `CHANGELOG.md`, and continuity-grade context updates.
 
 Do not invoke another specialist automatically. Recommend additional expertise only when it materially helps and wait for my approval. You may create pull requests on my behalf, but you must never merge them.
 ```
@@ -213,9 +257,11 @@ Known purpose, if any:
 
 Read the canonical Agent Eco Space governance and run the Repository Readiness Preflight. Do not assume the repository is unregistered or configured correctly. Confirm which sources you can access. Ask who you are operating as today and recommend the Engineering Manager for repository registration, but let me choose the specialist.
 
-Do not modify any repository yet. Inspect the repository and classify its readiness as Ready, Partially Configured, Unconfigured, Access Degraded, or Blocked. Verify whether it is already registered and whether its manifest and adapters are current. Determine its type, purpose, audience, technology, runtime, visibility, current revision, owners, default specialist, operating profile, delivery mode, protected branches, deployment or publication lifecycle, and documentation state.
+Do not modify any repository yet. Inspect the repository and classify its readiness as Ready, Partially Configured, Unconfigured, Access Degraded, or Blocked. Verify whether it is already registered and whether its manifest and adapters are current. Determine its type, purpose, audience, technology, runtime, visibility, current revision, owners, default specialist, operating profile, delivery mode, protected branches, deployment or publication lifecycle, feature/API documentation tooling, and `CHANGELOG.md` state.
 
 Identify the APIs, events, data, packages, authentication, queues, files, or other contracts it produces and consumes. Map every known relationship with existing product repositories. Compare its implementation with the existing central context and report duplication, conflicts, missing contracts, security or access concerns, and context drift.
+
+Treat registration as a material ecosystem change. Mark the complete ecosystem intake for refresh and include the new repository, its verified revision, relationships, documentation system, and any coverage gaps in that proposal.
 
 Present a repository-registration proposal containing:
 1. the proposed central-context repository record and destination directory;
@@ -275,6 +321,8 @@ If setup is incomplete, prepare one combined repository-adoption, adapter-bootst
 9. context drift, missing evidence, conflicts, and unresolved questions;
 10. the proposed code and context branches and pull requests;
 11. missing or stale manifest, adapters, tracked outbox, registration, and per-repository context.
+12. feature/API documentation and `CHANGELOG.md` changes or omissions;
+13. sibling-repository implications and continuity details needed by the next specialist.
 
 Separate verified facts from reconstructed history, inference, and proposal. Preserve corrections and superseded decisions instead of rewriting history. Do not expose secrets, credentials, or production customer data.
 
@@ -327,6 +375,8 @@ Verify both sources of understanding against the current repository and any acce
 6. superseded decisions, business rules, and corrections that must remain in history;
 7. access limitations and pending outbox packages;
 8. authorization ambiguity, governance suspension or uncertainty, and implementation that may have proceeded without valid scope-bound approval.
+9. missing, partial, stale, or materially outdated ecosystem-intake coverage and sibling-repository relationships;
+10. missing or stale feature/API documentation-tool records and `CHANGELOG.md` status.
 
 Classify each finding as a verified fact, drift, authorized repository-specific customization, unresolved conflict, or proposal. Preserve valid local instructions and history. Never allow a local adapter to weaken Agent Eco Space's non-negotiable safeguards.
 
@@ -337,7 +387,40 @@ Present one reconciliation proposal identifying the exact governance adapters, m
 After authorization, implement only the approved reconciliation. Create pull requests where appropriate but never merge them. If the central context cannot be written, create a version-controlled Context Update Package in `.agenteco/outbox/context/` and report its pending status.
 ```
 
-### 6. Context update package
+### 6. Product ecosystem refresh prompt
+
+Use this after Agent Eco reports that the complete ecosystem intake is stale, incomplete, or materially changed. Canonical template: [Product Ecosystem Refresh Prompt](templates/refresh-product-ecosystem-understanding.md).
+
+```text
+Refresh this product's Agent Eco Space ecosystem understanding.
+
+Agent Eco Space governance repository:
+https://github.com/ikechukwukalu/agenteco
+
+Product name:
+<PRODUCT_NAME>
+
+Central product context repository:
+<CENTRAL_CONTEXT_REPOSITORY_URL_OR_WORKSPACE_PATH>
+
+Current repository name and location:
+<REPOSITORY_NAME_AND_URL_OR_WORKSPACE_PATH>
+
+Recorded ecosystem-intake revision and date:
+<CONTEXT_REVISION_AND_DATE_OR_UNKNOWN>
+
+Read the current active business rules and decisions, product overview, architecture, repository map, contracts, handoffs, risks, releases, synchronization records, and every registered repository context directory. Identify every registered application, backend, frontend, mobile app, microservice, package, SDK, and infrastructure repository.
+
+Where access exists, verify each repository's purpose, current revision, produced and consumed contracts, documentation systems, changelog, consumers, producers, and material changes against repository evidence. Record inaccessible repositories and uncertainty rather than guessing.
+
+Compare the current ecosystem with the previous intake. Report new, removed, renamed, split, archived, stale, or conflicting repositories, relationships, APIs, events, packages, data contracts, business rules, decisions, handoffs, risks, documentation systems, and releases. Identify the current repository's updated connections and task-relevant implications.
+
+Return a compact ecosystem receipt containing the context revision, repositories reviewed, revisions verified, relationships added or changed, access gaps, material drift, and recommended next reminder date. Do not dump the full context back to me.
+
+Present the exact central-context, manifest, contract, documentation-inventory, handoff, risk, and repository-context updates required. Do not modify any repository until I send the standalone "Proceed with implementation." command. You may prepare pull requests after authorization, but you must never merge them.
+```
+
+### 7. Context update package
 
 This is the offline fallback used when a specialist must update central context but cannot write to that repository. It is stored in the codebase at `.agenteco/outbox/context/<package-identifier>.md`, committed for safekeeping, and removed only after the corresponding context pull request has been human-merged and verified. Canonical template: [Context Update Package](templates/context-update-package.md).
 
@@ -386,6 +469,12 @@ This is the offline fallback used when a specialist must update central context 
 ### Repositories and consumers affected
 
 ### Documentation and release notes affected
+
+### Feature and API documentation tooling
+
+### CHANGELOG.md disposition
+
+### Continuity, unresolved work, and next action
 
 ## Intended central-context destinations
 

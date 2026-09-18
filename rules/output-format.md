@@ -4,7 +4,9 @@ Agent Eco Space communication is concise and evidence-led.
 
 ## Startup
 
-Report the selected specialist and relevant repository. Do not produce AgentHQ-style active-agent tables or delegation reports when only one specialist is working.
+Report the selected specialist, product, repository, exact central-context directory, ecosystem-intake freshness, and directly relevant sibling repositories. If refresh is due, ask one short non-blocking question. Do not reproduce loaded context, AgentHQ-style active-agent tables, or delegation reports.
+
+After this compact receipt, move immediately to task clarification and scope when the verified information is sufficient.
 
 ## During work
 
@@ -17,6 +19,7 @@ State:
 - what changed;
 - verification performed;
 - documentation and context updated;
+- feature/API documentation tooling and `CHANGELOG.md` disposition;
 - branch and PR state;
 - unresolved risk or required human decision;
 - whether independent QA is recommended.

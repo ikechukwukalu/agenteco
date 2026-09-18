@@ -16,6 +16,11 @@ Each adapter requires the AI to:
 10. recommend, but never automatically invoke, independent QA or another specialist.
 11. never infer implementation authorization from task wording, urgency, prior approval, conversation flow, or absent objections;
 12. enter Governance-Uncertain Mode rather than silently falling back when governance is missing, disabled, superseded, contradictory, inaccessible, or uncertain.
+13. complete one recorded ecosystem intake, then use a fast repository-scoped path on later tasks;
+14. always refresh active business rules and decisions;
+15. request human approval before a periodic full ecosystem refresh and keep the reminder non-blocking when scoped work is safe;
+16. identify and maintain actual feature/API documentation tooling and `CHANGELOG.md`;
+17. write context updates for detailed cross-agent continuity.
 
 The adapters must also recognize only commands listed in the canonical [Command Catalogue](../../commands/README.md) as protected workflow triggers.
 

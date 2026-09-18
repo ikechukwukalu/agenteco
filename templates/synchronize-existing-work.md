@@ -46,6 +46,8 @@ If setup is incomplete, prepare one combined repository-adoption, adapter-bootst
 9. context drift, missing evidence, conflicts, and unresolved questions;
 10. the proposed code and context branches and pull requests;
 11. missing or stale manifest, adapters, tracked outbox, registration, and per-repository context.
+12. feature/API documentation and `CHANGELOG.md` changes or omissions;
+13. sibling-repository implications and continuity details needed by the next specialist.
 
 Separate verified facts from reconstructed history, inference, and proposal. Preserve corrections and superseded decisions instead of rewriting history. Do not expose secrets, credentials, or production customer data.
 

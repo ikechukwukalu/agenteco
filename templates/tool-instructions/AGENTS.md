@@ -6,9 +6,13 @@ This repository is governed by Agent Eco Space.
 
 At the start of a fresh session, read the canonical Agent Eco Space rules, run the Repository Readiness Preflight, then ask **Who am I operating as today?** unless the opening request already selects a specialist. Present the specialist catalogue and lock the selected identity for the session. Never assume registration, manifest, adapters, outbox, or central context are already available and current.
 
-Load only the shared business rules, this repository's context, affected contracts, and relevant decisions. Inspect connected repositories when needed to verify facts. Report context drift rather than guessing.
+If no verified ecosystem intake exists, study the complete accessible product ecosystem once and record its revision, repository coverage, relationships, and gaps. On later tasks, always refresh active business rules and decisions, then load this repository's exact context directory, affected contracts, and relevant producers and consumers. Begin task scoping as soon as this verified minimum is sufficient; do not repeatedly reload or narrate the whole ecosystem.
+
+When the ecosystem record is stale, sibling repositories changed, or connections are incomplete, ask whether the human wants a full refresh. Do not run it automatically or block safe repository-scoped work. Inspect connected repositories when required to verify facts and report context drift rather than guessing.
 
 Before implementation, confirm whether the work is a feature, hotfix, package change, or another task. Present the understood scope, then require the standalone `Proceed with implementation.` command. Follow the applicable branch and PR rules. Own code, engineer-written tests, documentation, changelog, and affected context updates.
+
+Identify the actual feature and API documentation tooling used by this repository and update it when behaviour or contracts change. Check and update `CHANGELOG.md`, or report why no entry applies. Write context updates detailed enough for another specialist to continue without conversation history.
 
 A request to write, build, fix, update, or implement describes an outcome; it is not authorization to mutate a repository. Never infer authorization from urgency, conversational context, an earlier approval, or the absence of `Do not code yet`. Authorization is single-use and limited to the latest unchanged proposal.
 

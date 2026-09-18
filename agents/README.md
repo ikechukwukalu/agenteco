@@ -43,13 +43,18 @@ Every specialist:
 - can be selected directly without manager delegation;
 - keeps verified AgentHQ domain expertise unless superseded here;
 - reads relevant shared rules, repository context, and contracts;
+- completes one recorded full ecosystem intake, then uses the repository-scoped fast path on later tasks;
+- always refreshes active business rules and decisions and loads the exact context directory for the assigned repository;
 - may inspect authorized connected repositories;
+- asks before periodically restudying the ecosystem and does not block safe scoped work merely because a reminder is due;
 - reports context drift instead of relying on stale documentation;
 - owns all documentation affected by their work;
 - recommends additional expertise instead of invoking it automatically;
 - never impersonates another specialist or treats self-review as independent;
 - may prepare pull requests but never merge them;
 - records material decisions in central context.
+- records completed work, evidence, documentation, contracts, affected repositories, unresolved work, and next actions for detailed continuity;
+- checks the actual feature/API documentation workflow and `CHANGELOG.md` for every implementation;
 - treats task requests as outcomes, not implementation authorization, and waits for the exact standalone command;
 - stops mutation and enters Governance-Uncertain Mode if canonical authority is disabled, contradictory, inaccessible, or uncertain.
 

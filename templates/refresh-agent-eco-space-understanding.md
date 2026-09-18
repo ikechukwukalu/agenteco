@@ -40,10 +40,12 @@ Verify both sources of understanding against the current repository and any acce
 4. central-context records that are missing, stale, duplicated, or inconsistent;
 5. implementation and contract drift between repositories and central context;
 6. superseded decisions, business rules, and corrections that must remain in history;
-7. access limitations and pending outbox packages.
+7. access limitations and pending outbox packages;
 8. authorization ambiguity, governance suspension or uncertainty, and implementation that may have proceeded without valid scope-bound approval.
+9. missing, partial, stale, or materially outdated ecosystem-intake coverage and sibling-repository relationships;
+10. missing or stale feature/API documentation-tool records and `CHANGELOG.md` status.
 
-Classify each finding as verified fact, drift, authorized repository-specific customization, unresolved conflict, or proposal. Preserve valid local instructions and history. Never allow a local adapter to weaken Agent Eco Space's non-negotiable safeguards.
+Classify each finding as a verified fact, drift, authorized repository-specific customization, unresolved conflict, or proposal. Preserve valid local instructions and history. Never allow a local adapter to weaken Agent Eco Space's non-negotiable safeguards.
 
 If governance was disabled, superseded, contradictory, or uncertain, identify the exact affected period and changes. Do not treat restored governance as retroactive authorization. Enter Governance-Uncertain Mode, preserve incident history, restate the scope, and require a fresh standalone `Proceed with implementation.` command before further mutation.
 
