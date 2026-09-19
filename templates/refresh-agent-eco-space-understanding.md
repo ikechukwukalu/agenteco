@@ -31,7 +31,7 @@ Optional work or context range to review:
 
 Use the current specialist identity if it has already been explicitly established in this session; otherwise ask who you are operating as today.
 
-Run the Repository Readiness Preflight. Read the latest accessible Agent Eco Space governance and compare it with the governance version, manifest, AGENTS.md, CLAUDE.md, Copilot instructions, and other Agent Eco files currently installed in this repository. Separately read the central product context relevant to this product, application or component, repository, its producers, and its consumers.
+Run the Repository Readiness Preflight. Read the latest accessible Agent Eco Space governance and compare it with the governance version, manifest, AGENTS.md, CLAUDE.md, Copilot instructions, GEMINI.md, any recorded DeepSeek host-client instructions, and other Agent Eco files currently installed in this repository. Separately read the central product context relevant to this product, application or component, repository, its producers, and its consumers.
 
 Verify both sources of understanding against the current repository and any accessible connected repositories. Do not assume that governance, adapters, central context, conversation memory, or implementation is current. Detect and report:
 1. governance-version and inherited-rule changes;

@@ -1,6 +1,6 @@
 # Instruction Adapter Integrity
 
-`AGENTS.md`, `CLAUDE.md`, and `.github/copilot-instructions.md` are governed Agent Eco Space adapters. Human edits are permitted, but no edit silently replaces canonical governance.
+`AGENTS.md`, `CLAUDE.md`, `.github/copilot-instructions.md`, and `GEMINI.md` are governed Agent Eco Space adapters. A DeepSeek host client may reuse one of these adapters or use a recorded client-managed path. Human edits are permitted, but no edit silently replaces canonical governance.
 
 ## Managed and local sections
 
@@ -18,6 +18,8 @@ The canonical section contains the applicable Agent Eco Space adapter. The local
 ## Preflight validation
 
 The repository manifest records each adapter's expected template version, canonical-section fingerprint, local-section fingerprint, last verified revision, validation state, and any drift or conflict.
+
+For DeepSeek, the manifest additionally records the host client and classifies discovery as `native-auto-loaded`, `client-managed`, or `manual-bootstrap`. A model name or configured API endpoint is not proof that repository governance was loaded.
 
 The preflight classifies a difference as an authorized local customization, outdated adapter, accidental drift, or conflicting instruction. It preserves valid local additions and rejects local instructions that weaken implementation authorization, source authority, engineer-owned testing, context synchronization, pull-request merge restrictions, security, or release controls.
 

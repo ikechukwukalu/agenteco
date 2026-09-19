@@ -1,6 +1,6 @@
 # Tool Instruction Adapters
 
-Every governed repository should contain thin instruction adapters for Codex, Claude, and GitHub Copilot. They point to the same canonical rules and product context rather than duplicating them.
+Every governed repository should contain thin instruction adapters for the AI tools approved for that repository. Codex, Claude, GitHub Copilot, and Gemini have defined repository adapters. DeepSeek support is resolved through its host coding client because DeepSeek is a model provider, not one universal workspace application. All adapters point to the same canonical rules and product context rather than duplicating them.
 
 Each adapter requires the AI to:
 
@@ -24,7 +24,17 @@ Each adapter requires the AI to:
 
 The adapters must also recognize only commands listed in the canonical [Command Catalogue](../../commands/README.md) as protected workflow triggers.
 
-Suggested locations are root `AGENTS.md` for Codex, root `CLAUDE.md` for Claude, and `.github/copilot-instructions.md` for GitHub Copilot.
+Defined locations are root `AGENTS.md` for Codex, root `CLAUDE.md` for Claude, `.github/copilot-instructions.md` for GitHub Copilot, and root `GEMINI.md` for Gemini CLI.
+
+For DeepSeek, first identify the host client. If that client natively loads one of the governed adapters, reuse it and record the client and path in `.agenteco/manifest.yml`. Otherwise use the [DeepSeek Bootstrap](deepseek-bootstrap.md) at session start and record the adapter as `manual-bootstrap`. Never create or trust a fictional universal `DEEPSEEK.md` auto-discovery contract.
+
+| AI model or tool | Agent Eco mechanism | Discovery classification |
+|---|---|---|
+| Codex | Root `AGENTS.md` | Native when supported by the active Codex surface |
+| Claude | Root `CLAUDE.md` | Native when supported by the active Claude surface |
+| GitHub Copilot | `.github/copilot-instructions.md` | Native GitHub Copilot repository instructions |
+| Gemini CLI | Root `GEMINI.md` | Native hierarchical Gemini context |
+| DeepSeek | Host-client adapter or portable bootstrap prompt | Client-managed or manual until verified |
 
 Tool-specific syntax may differ, but behaviour and canonical sources remain consistent.
 

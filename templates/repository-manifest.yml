@@ -1,5 +1,5 @@
 # Agent Eco Space repository manifest
-schema_version: 2
+schema_version: 3
 
 governance:
   repository: https://github.com/ikechukwukalu/agenteco
@@ -44,6 +44,18 @@ adapters:
     status: "<present|missing|stale|drifted|conflicting>"
     canonical_fingerprint: "<FINGERPRINT_OR_NONE>"
     local_fingerprint: "<FINGERPRINT_OR_NONE>"
+  gemini_md:
+    status: "<present|missing|stale|drifted|conflicting>"
+    canonical_fingerprint: "<FINGERPRINT_OR_NONE>"
+    local_fingerprint: "<FINGERPRINT_OR_NONE>"
+  deepseek:
+    mode: "<native-auto-loaded|client-managed|manual-bootstrap|not-used>"
+    host_client: "<CLIENT_NAME_OR_NONE>"
+    instruction_path: "<PATH_OR_NONE>"
+    status: "<verified|missing|stale|drifted|conflicting|not-used>"
+    canonical_fingerprint: "<FINGERPRINT_OR_NONE>"
+    local_fingerprint: "<FINGERPRINT_OR_NONE>"
+    last_verified_at: "<ISO_8601_OR_NONE>"
   last_validated_revision: "<COMMIT_OR_NONE>"
 
 context:

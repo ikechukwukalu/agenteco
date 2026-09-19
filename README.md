@@ -21,6 +21,20 @@ Each product has one central context repository covering every application, serv
 
 Git repositories remain the authority for implemented code. When context and code disagree, the specialist reports and resolves **context drift** rather than guessing.
 
+## Supported AI tools and models
+
+Agent Eco Space is AI-agnostic, but each tool must have a verifiable way to receive governance. Its canonical rules remain the same across tools.
+
+| Tool or model | Repository integration | Important behaviour |
+|---|---|---|
+| Codex | Root `AGENTS.md` | Native adapter where the active Codex surface supports repository instructions |
+| Claude | Root `CLAUDE.md` | Native Claude repository adapter |
+| GitHub Copilot | `.github/copilot-instructions.md` | Native Copilot repository instructions |
+| Gemini CLI | Root `GEMINI.md` | Automatically loaded hierarchical context; use `/memory show` to inspect active files |
+| DeepSeek | Verified host-client rules or the portable [DeepSeek Bootstrap](templates/tool-instructions/deepseek-bootstrap.md) | Client-managed: never assume the model endpoint loaded repository governance |
+
+Gemini is therefore a first-class native adapter. DeepSeek is fully usable, but its coding client must be recorded in `.agenteco/manifest.yml` because DeepSeek can run inside several different applications with different instruction-discovery behaviour. See [Tool Instruction Adapters](templates/tool-instructions/README.md).
+
 ## Available specialists
 
 Select one specialist directly for the session. Each role owns its implementation, tests, documentation, changelog, and context updates; other roles are recommendations that require human approval.
@@ -267,7 +281,7 @@ Present a repository-registration proposal containing:
 1. the proposed central-context repository record and destination directory;
 2. repository-map and architecture changes;
 3. contract, consumer, business-rule, decision, risk, roadmap, and handoff updates;
-4. the proposed Codex, Claude, and Copilot instruction adapters for the new repository;
+4. the proposed Codex, Claude, Copilot, and Gemini instruction adapters for the new repository, plus the verified DeepSeek host-client or manual-bootstrap configuration when DeepSeek is used;
 5. the temporary branches and pull requests required;
 6. tests or verification required for any executable adapter or automation changes;
 7. unresolved questions and access blockers.
@@ -364,7 +378,7 @@ Optional work or context range to review:
 
 Use the current specialist identity if it has already been explicitly established in this session; otherwise ask who you are operating as today.
 
-Run the Repository Readiness Preflight. Read the latest accessible Agent Eco Space governance and compare it with the governance version, manifest, AGENTS.md, CLAUDE.md, Copilot instructions, and other Agent Eco files currently installed in this repository. Separately read the central product context relevant to this product, application or component, repository, its producers, and its consumers.
+Run the Repository Readiness Preflight. Read the latest accessible Agent Eco Space governance and compare it with the governance version, manifest, AGENTS.md, CLAUDE.md, Copilot instructions, GEMINI.md, any recorded DeepSeek host-client instructions, and other Agent Eco files currently installed in this repository. Separately read the central product context relevant to this product, application or component, repository, its producers, and its consumers.
 
 Verify both sources of understanding against the current repository and any accessible connected repositories. Do not assume that governance, adapters, central context, conversation memory, or implementation is current. Detect and report:
 1. governance-version and inherited-rule changes;
@@ -501,3 +515,30 @@ Confirm that this package contains no secret, credential, production customer da
 - Codebase outbox removal PR:
 - Live outbox removal: Pending / Completed
 ```
+
+### 8. DeepSeek bootstrap prompt
+
+Use this when DeepSeek is the active model but its host coding client cannot prove that it automatically loaded a governed repository adapter. Canonical template: [DeepSeek Bootstrap](templates/tool-instructions/deepseek-bootstrap.md).
+
+```text
+Use Agent Eco Space as the canonical governance system for this repository.
+
+Agent Eco Space governance repository:
+<AGENT_ECO_SPACE_REPOSITORY>
+
+Central product context repository:
+<CENTRAL_CONTEXT_REPOSITORY>
+
+Repository manifest:
+.agenteco/manifest.yml
+
+Read the repository manifest and the canonical Agent Eco Space governance. Run the Repository Readiness Preflight. Confirm the DeepSeek host client named in the manifest and state which repository instruction files that client actually loaded. Do not claim automatic instruction discovery unless the host client proves it.
+
+Use the current specialist identity if one was explicitly established; otherwise ask: Who am I operating as today? Lock that identity for the session. Load the verified business rules, decisions, assigned repository context, affected contracts, producers, and consumers required for the task.
+
+Before any repository mutation, present the understood scope and wait for the standalone command: Proceed with implementation.
+
+Never invoke another specialist automatically. Never merge a pull request. Own implementation, engineer-written tests, feature/API documentation, CHANGELOG.md, and continuity-grade context updates. If canonical governance or central context is inaccessible, disclose it and use Access-Degraded Mode and a Context Update Package where applicable.
+```
+
+If the host client already supports `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, or another documented repository-rules mechanism, use that native mechanism and record its path and verification state in the manifest instead of repeatedly pasting this prompt.
