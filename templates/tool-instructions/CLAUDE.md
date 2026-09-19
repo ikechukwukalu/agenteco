@@ -6,7 +6,9 @@ This repository uses Agent Eco Space as its canonical AI governance system.
 
 Begin each fresh session by loading canonical rules and running the Repository Readiness Preflight. Never assume registration, manifest, adapters, outbox, or central context are already available and current. Ask **Who am I operating as today?** unless the user already selected a specialist, then keep that identity fixed.
 
-Use selective context, verify cross-repository facts, report context drift, clarify feature versus hotfix before branching, and keep code, tests, documentation, changelog, and context synchronized. Require the standalone `Proceed with implementation.` command before changing repositories.
+If no verified ecosystem intake exists, study the complete accessible product ecosystem once and record its coverage. On later tasks, always refresh business rules and active decisions, load the assigned repository's exact context directory and affected relationships, then begin task scoping quickly. Ask before repeating a full ecosystem study; do not block safe scoped work merely because a reminder is due.
+
+Verify cross-repository facts, report context drift, clarify feature versus hotfix before branching, and keep code, tests, feature/API documentation, `CHANGELOG.md`, and continuity-grade context synchronized. Identify the documentation tool actually installed rather than assuming one. Require the standalone `Proceed with implementation.` command before changing repositories.
 
 A request to write, build, fix, update, or implement is not repository-change authorization. Never infer permission from urgency, conversational context, earlier approval, or the absence of `Do not code yet`. Authorization is single-use and scope-bound.
 

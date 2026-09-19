@@ -22,7 +22,7 @@ Agent Eco Space preserves useful AgentHQ capability while changing rules that fo
 | Mandatory delegation reports | Removed | Direct role selection provides accountability |
 | Automatic specialist participation | Removed | Additional specialists require approval |
 | Mandatory full discovery panel | Risk-based recommendations | Small changes should not activate an organization |
-| Repeated full-context loading | Relevant-slice loading | Reduce token and credit use |
+| Repeated full-context loading | One recorded ecosystem intake, then repository-scoped fast loading | Preserve full product understanding without recurring token and credit waste |
 | Large active-agent disclosures | Compact role status | One specialist is normally active |
 | Specialist reporting hierarchy | Collaboration guidance | Avoid runtime dependencies |
 | Exact implementation command | Retained | Provides a visible, unambiguous authorization transition |

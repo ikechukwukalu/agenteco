@@ -6,7 +6,9 @@ Follow the canonical Agent Eco Space governance and this product's central conte
 
 At the first project interaction, run the Repository Readiness Preflight and never assume registration, manifest, adapters, outbox, or central context are current. Ask **Who am I operating as today?** unless the role is explicit. Keep the selected specialist identity for the session.
 
-Load only relevant business rules, repository context, contracts, and decisions. Verify implementation facts in connected repositories and report drift. Confirm feature versus hotfix before branching. Require the standalone `Proceed with implementation.` command before repository changes. The implementer owns tests, documentation, changelog, and context updates.
+If no verified ecosystem intake exists, study the complete accessible product ecosystem once and record its coverage. On later tasks, always refresh business rules and active decisions, load the assigned repository's exact context directory and affected relationships, then begin task scoping quickly. Ask before repeating a full ecosystem study and do not block safe scoped work merely because a reminder is due.
+
+Verify implementation facts in connected repositories and report drift. Confirm feature versus hotfix before branching. Require the standalone `Proceed with implementation.` command before repository changes. The implementer owns tests, the repository's verified feature/API documentation workflow, `CHANGELOG.md`, and continuity-grade context updates.
 
 A task request is not implementation authorization. Never infer permission from task verbs, urgency, prior approval, conversation flow, or the absence of `Do not code yet`. Authorization is single-use and scope-bound.
 

@@ -1,5 +1,5 @@
 # Agent Eco Space repository manifest
-schema_version: 1
+schema_version: 3
 
 governance:
   repository: https://github.com/ikechukwukalu/agenteco
@@ -44,9 +44,53 @@ adapters:
     status: "<present|missing|stale|drifted|conflicting>"
     canonical_fingerprint: "<FINGERPRINT_OR_NONE>"
     local_fingerprint: "<FINGERPRINT_OR_NONE>"
+  gemini_md:
+    status: "<present|missing|stale|drifted|conflicting>"
+    canonical_fingerprint: "<FINGERPRINT_OR_NONE>"
+    local_fingerprint: "<FINGERPRINT_OR_NONE>"
+  deepseek:
+    mode: "<native-auto-loaded|client-managed|manual-bootstrap|not-used>"
+    host_client: "<CLIENT_NAME_OR_NONE>"
+    instruction_path: "<PATH_OR_NONE>"
+    status: "<verified|missing|stale|drifted|conflicting|not-used>"
+    canonical_fingerprint: "<FINGERPRINT_OR_NONE>"
+    local_fingerprint: "<FINGERPRINT_OR_NONE>"
+    last_verified_at: "<ISO_8601_OR_NONE>"
   last_validated_revision: "<COMMIT_OR_NONE>"
 
 context:
   repository_directory: "<CENTRAL_CONTEXT_DIRECTORY>"
   last_synchronized_revision: "<COMMIT_OR_NONE>"
   pending_outbox_items: 0
+  ecosystem_intake:
+    status: "<complete|partial|missing|stale>"
+    completed_at: "<ISO_8601_OR_NONE>"
+    context_revision: "<COMMIT_OR_NONE>"
+    repository_revisions_reviewed: {}
+    coverage_gaps: []
+    refresh_interval_days: 14
+    next_reminder_at: "<ISO_8601_OR_NONE>"
+  connected_repositories:
+    producers: []
+    consumers: []
+    other_dependencies: []
+    last_verified_at: "<ISO_8601_OR_NONE>"
+
+documentation:
+  feature_documentation:
+    tool: "<TOOL_OR_NONE>"
+    version: "<VERSION_OR_NONE>"
+    source_paths: []
+    validation_command: "<COMMAND_OR_NONE>"
+    output_or_publication: "<PATH_URL_OR_NONE>"
+  api_documentation:
+    tool: "<SCRIBE_OPENAPI_SWAGGER_OTHER_OR_NONE>"
+    version: "<VERSION_OR_NONE>"
+    config_paths: []
+    source_paths: []
+    generation_or_validation_command: "<COMMAND_OR_NONE>"
+    output_or_publication: "<PATH_URL_OR_NONE>"
+  changelog:
+    path: "<CHANGELOG_PATH_OR_MISSING>"
+    format: "<FORMAT_OR_UNKNOWN>"
+    last_verified_revision: "<COMMIT_OR_NONE>"

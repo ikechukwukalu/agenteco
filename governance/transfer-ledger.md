@@ -41,6 +41,8 @@ All transferred profiles report to the Project Owner. Their specialist expertise
 | Engineer-Owned TDD | Adapted | Engineer tests retained; exceptions owned by selected specialist |
 | Engineering Principles | Adapted | Technical quality retained |
 | Source Authority and Reference Governance | Adapted | Selective sources and scoped readiness evidence |
+| Ecosystem Context Intake | Strengthened | Complete product understanding is recorded once, followed by fast scoped loading and human-approved refreshes |
+| Documentation and Changelog Continuity | Strengthened | Implementers identify real documentation tooling and leave detailed evidence for the next specialist |
 | Operating Profiles | Adapted | Selected specialist establishes profile without orchestration |
 | Package Delivery Mode | Adapted | Package lifecycle retained without application-only ceremony |
 | Application Delivery Topology | Adapted | Topology discovery owned by selected specialist |

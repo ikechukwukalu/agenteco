@@ -14,6 +14,7 @@ context/
     glossary.md
     architecture.md
     repository-map.md
+    ecosystem-intake.md
   business-rules/
     index.md
   contracts/
@@ -31,6 +32,8 @@ context/
       current-state.md
       roadmap.md
       decisions.md
+      documentation.md
+      task-history.md
   releases/
   risks/
 ```
@@ -51,4 +54,6 @@ If these disagree, record context drift, determine what must change, and never s
 
 ## Specialist responsibility
 
-The active specialist updates the active repository context, changed shared contracts, affected business rules and decisions, cross-repository handoffs, and verification references. Every specialist may read across central context but initially loads only the relevant slice.
+The active specialist updates the active repository context, changed shared contracts, affected business rules and decisions, cross-repository handoffs, documentation inventory, task history, and verification references. The record must be detailed enough for another specialist to continue without reconstructing the work from conversation history.
+
+The first verified product session loads the complete accessible ecosystem and records its coverage in `context/product/ecosystem-intake.md`. Later tasks use the repository-scoped fast path while always refreshing active business rules and decisions. Full ecosystem refreshes require human approval and are recommended when freshness or drift triggers apply.

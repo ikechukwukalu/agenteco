@@ -30,15 +30,17 @@ Known purpose, if any:
 
 Read the canonical Agent Eco Space governance and run the Repository Readiness Preflight. Do not assume the repository is unregistered or configured correctly. Confirm which sources you can access. Ask who you are operating as today and recommend the Engineering Manager for repository registration, but let me choose the specialist.
 
-Do not modify any repository yet. Inspect the repository and classify its readiness as Ready, Partially Configured, Unconfigured, Access Degraded, or Blocked. Verify whether it is already registered and whether its manifest and adapters are current. Determine its type, purpose, audience, technology, runtime, visibility, current revision, owners, default specialist, operating profile, delivery mode, protected branches, deployment or publication lifecycle, and documentation state.
+Do not modify any repository yet. Inspect the repository and classify its readiness as Ready, Partially Configured, Unconfigured, Access Degraded, or Blocked. Verify whether it is already registered and whether its manifest and adapters are current. Determine its type, purpose, audience, technology, runtime, visibility, current revision, owners, default specialist, operating profile, delivery mode, protected branches, deployment or publication lifecycle, feature/API documentation tooling, and `CHANGELOG.md` state.
 
 Identify the APIs, events, data, packages, authentication, queues, files, or other contracts it produces and consumes. Map every known relationship with existing product repositories. Compare its implementation with the existing central context and report duplication, conflicts, missing contracts, security or access concerns, and context drift.
+
+Treat registration as a material ecosystem change. Mark the complete ecosystem intake for refresh and include the new repository, its verified revision, relationships, documentation system, and any coverage gaps in that proposal.
 
 Present a repository-registration proposal containing:
 1. the proposed central-context repository record and destination directory;
 2. repository-map and architecture changes;
 3. contract, consumer, business-rule, decision, risk, roadmap, and handoff updates;
-4. the proposed Codex, Claude, and Copilot instruction adapters for the new repository;
+4. the proposed Codex, Claude, Copilot, and Gemini instruction adapters for the new repository, plus the verified DeepSeek host-client or manual-bootstrap configuration when DeepSeek is used;
 5. the temporary branches and pull requests required;
 6. tests or verification required for any executable adapter or automation changes;
 7. unresolved questions and access blockers.

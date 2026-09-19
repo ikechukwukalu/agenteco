@@ -108,6 +108,20 @@ Refresh this repository's Agent Eco Space understanding.
 
 **Does not authorize:** Modifying governance adapters, manifest, context, product code, or documentation; invoking another specialist; merging a pull request; deployment; or publication.
 
+## Refresh complete product ecosystem understanding
+
+```text
+Refresh this product's Agent Eco Space ecosystem understanding.
+```
+
+**Purpose:** Perform a human-approved, read-only restudy of the complete registered product ecosystem when the recorded intake is stale, incomplete, materially changed, or explicitly requested.
+
+**Required input:** Product name, central-context location, current repository, and the previous intake revision and date when known. Use the complete [Product Ecosystem Refresh Prompt](../templates/refresh-product-ecosystem-understanding.md).
+
+**Effect:** Refresh active business rules and decisions, inspect every registered repository context directory, verify accessible repository revisions and relationships, detect new or changed contracts and drift, and return a compact ecosystem receipt plus a precise reconciliation proposal.
+
+**Does not authorize:** Changing central context, manifests, adapters, code, documentation, or changelogs; invoking another specialist; merging; deployment; or publication. Changes still require the standalone `Proceed with implementation.` command.
+
 ## Future commands
 
 New commands must be added here before they are treated as workflow triggers. Each entry must define exact text, purpose, preconditions, effects, exclusions, and whether it changes authorization state.

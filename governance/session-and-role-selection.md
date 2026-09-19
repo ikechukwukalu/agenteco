@@ -18,10 +18,16 @@ Every specialist is independently operable within their discipline. No specialis
 
 The selected specialist must not silently impersonate another role. Recommend separate expertise and obtain human approval before invoking it.
 
-## Cost-aware loading
+## Ecosystem intake and fast task loading
 
-Load compact non-negotiable rules, the product overview and active business rules, selected profile, active repository context, and affected contracts. Load deeper history or other repositories only when required. Do not repeatedly load the full ecosystem without a material reason.
+On the first verified specialist session for a product, load the complete accessible ecosystem under [Ecosystem Context Intake and Refresh](ecosystem-context-intake.md). Record the intake revision, coverage, repository revisions, connections, and gaps.
+
+On later tasks, begin quickly: always refresh active business rules and decisions, load the selected repository manifest and exact context directory, then load only affected contracts, producers, consumers, handoffs, and context changes since the recorded intake. Do not repeatedly reload or narrate the whole ecosystem.
+
+If the ecosystem record is stale or incomplete, ask whether the human wants a full refresh. The reminder is non-blocking unless the stale dependency makes safe implementation impossible.
 
 ## Cross-tool adapters
 
-Each governed repository should carry thin instructions in `AGENTS.md`, `CLAUDE.md`, and `.github/copilot-instructions.md`. They point to the same canonical governance and product context rather than maintaining divergent copies.
+Each governed repository should carry thin instructions for its approved tools: `AGENTS.md`, `CLAUDE.md`, `.github/copilot-instructions.md`, and `GEMINI.md` where applicable. They point to the same canonical governance and product context rather than maintaining divergent copies.
+
+DeepSeek sessions inherit instructions from the host coding client. The manifest records that client, the actual instruction path, and whether loading is native, client-managed, or manual. A configured DeepSeek model endpoint alone is never treated as proof that Agent Eco Space governance loaded.
