@@ -22,6 +22,12 @@ Authorization is:
 
 Material scope changes invalidate authorization. The specialist must stop, explain the change, present a revised proposal, and wait for a fresh standalone command.
 
+## Narrow governance-compliance exception
+
+Automatic repair of a governed product repository's local Agent Eco adapter, manifest metadata, and strictly required compatibility support files is pre-authorized under [Instruction Adapter Integrity](instruction-adapter-integrity.md). It must not be expanded into product implementation or canonical governance changes.
+
+Changes to the Agent Eco Space governance repository are not covered by this exception. They require verified owner authority and the normal proposal plus standalone authorization defined by [Owner-Controlled Governance](owner-controlled-governance.md).
+
 ## Authorization evidence
 
 The completion report records:

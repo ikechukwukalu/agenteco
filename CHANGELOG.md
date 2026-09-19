@@ -6,6 +6,9 @@ All notable changes to Agent Eco Space are recorded here.
 
 ### Added
 
+- Owner-gated Agent Eco Space modification requiring verified GitHub identity `ikechukwukalu`, a bounded proposal, and standalone implementation authorization.
+- Automatic canonical reconciliation for local governed adapters and manifest metadata.
+- A governance-only upgrade command and prompt for existing Agent Eco Space sessions and repositories.
 - Native Gemini CLI governance through a managed root `GEMINI.md` adapter.
 - Client-aware DeepSeek support through verified host-client instructions or a portable manual bootstrap prompt.
 - Manifest and readiness-preflight records for Gemini fingerprints and DeepSeek discovery evidence.

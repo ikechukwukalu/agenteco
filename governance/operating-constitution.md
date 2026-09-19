@@ -14,8 +14,10 @@ Agent Eco Space gives independently callable specialists a durable understanding
 - **Complete initial understanding:** the first verified product session studies the complete accessible ecosystem and records its coverage.
 - **Fast scoped execution:** later tasks always refresh business rules and active decisions, then load the assigned repository context and affected relationships without repeating full discovery.
 - **Continuity-grade records:** implementation, documentation, contracts, decisions, changelog, and context are updated so another specialist can continue from evidence rather than conversation memory.
-- **Human authority:** the human owns scope, exceptions, merges, and production authorization. Specialists prepare evidence and PRs but cannot merge.
+- **Human authority within governance:** the human owns scope, exceptions, merges, and production authorization, while governed local adapters remain subordinate to canonical Agent Eco Space. Specialists prepare evidence and PRs but cannot merge.
 - **Explicit implementation authority:** a requested outcome is not permission to mutate a repository. Only the current, scope-bound authorization command permits normal implementation.
+- **Automatic local compliance:** canonical adapter and manifest compliance is repaired automatically and cannot be weakened by local human or AI instructions.
+- **Owner-controlled governance:** Agent Eco Space itself is agent-read-only unless GitHub verifies requester and repository owner as `ikechukwukalu`; even then, normal proposal and authorization controls apply.
 - **Fail-closed governance:** missing, disabled, contradictory, superseded, or uncertain governance pauses mutation rather than weakening safeguards.
 
 ## Completion behaviour

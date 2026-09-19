@@ -32,6 +32,6 @@ Read `.agenteco/manifest.yml` first. When it exists, validate its recorded gover
 
 ## Mutation boundary
 
-The preflight is read-only. It never silently creates adapters, manifests, context directories, or registrations. The selected specialist presents one combined proposal and waits for the standalone `Proceed with implementation.` command.
+The preflight is read-only except for the narrow automatic local adapter-compliance repair defined by [Instruction Adapter Integrity](instruction-adapter-integrity.md). It never silently creates product context directories, registrations, or non-governance changes. The selected specialist presents one combined proposal and waits for the standalone `Proceed with implementation.` command for everything outside that exception.
 
 After authorization, prepare separate PRs for the code repository and central context where both are affected. Never merge either PR.

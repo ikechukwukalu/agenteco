@@ -75,6 +75,7 @@ See the [Specialist Catalogue](agents/README.md) and individual profiles in `age
 - [Repository Readiness Preflight](governance/repository-readiness-preflight.md)
 - [Instruction Adapter Integrity](governance/instruction-adapter-integrity.md)
 - [Implementation Authorization Integrity](governance/implementation-authorization-integrity.md)
+- [Owner-Controlled Agent Eco Space Governance](governance/owner-controlled-governance.md)
 - [Governance Suspension and Recovery](governance/governance-suspension-and-recovery.md)
 - [Ecosystem Context Intake and Refresh](governance/ecosystem-context-intake.md)
 - [Documentation and Continuity](rules/documentation-and-continuity.md)
@@ -92,6 +93,7 @@ See the [Specialist Catalogue](agents/README.md) and individual profiles in `age
 - No invented business requirement, technical fact, or source authority.
 - No repository mutation inferred from task wording, urgency, conversational momentum, prior approval, or absent objections.
 - No silent fallback to ordinary implementation when governance is missing, disabled, contradictory, or uncertain.
+- No Agent Eco Space governance modification by an agent unless GitHub verifies the requester as `ikechukwukalu`, the canonical repository owner, and the normal proposal and authorization gate is satisfied.
 
 Agent Eco Space is a sibling of AgentHQ, not a replacement. AgentHQ remains suitable for formally orchestrated delivery; Agent Eco Space is optimized for direct specialist execution, cross-repository continuity, and controlled cost.
 
@@ -159,7 +161,15 @@ Backfills verified implementation and decision history from an existing code ses
 Refresh this repository's Agent Eco Space understanding.
 ```
 
-Refreshes the agent's verified knowledge of current Agent Eco governance, installed adapters and manifest, central product context, and repository implementation. It reports drift and proposes reconciliation without changing anything until `Proceed with implementation.` is sent.
+Refreshes the agent's verified knowledge of current Agent Eco governance, installed adapters and manifest, central product context, and repository implementation. It reports drift and proposes reconciliation without changing product or context files until `Proceed with implementation.` is sent. Canonical local adapter compliance repair remains automatic.
+
+### Upgrade installed Agent Eco Space governance
+
+```text
+Upgrade this repository to the latest Agent Eco Space governance.
+```
+
+Use this when Agent Eco Space is already active in the repository and session, but canonical governance has changed. It updates only the installed governance layer; it does not repeat adoption, repository registration, ecosystem intake, or the broader understanding refresh. Local canonical adapter reconciliation is automatic. See the complete [Governance Upgrade Prompt](templates/upgrade-agent-eco-space-governance.md).
 
 ### Refresh complete product ecosystem understanding
 
@@ -396,7 +406,7 @@ Classify each finding as a verified fact, drift, authorized repository-specific 
 
 If governance was disabled, superseded, contradictory, or uncertain, identify the exact affected period and changes. Do not treat restored governance as retroactive authorization. Enter Governance-Uncertain Mode, preserve incident history, restate the scope, and require a fresh standalone `Proceed with implementation.` command before further mutation.
 
-Present one reconciliation proposal identifying the exact governance adapters, manifest fields, central-context files, repository documentation, branches, tests, and pull requests that should change. Do not modify anything until I send the standalone "Proceed with implementation." command.
+Automatically repair proven canonical local adapter and manifest compliance differences under Instruction Adapter Integrity, and report them. Then present one reconciliation proposal identifying every remaining central-context file, repository document, branch, test, and pull request that should change. Do not make changes outside the automatic adapter-compliance exception until I send the standalone "Proceed with implementation." command.
 
 After authorization, implement only the approved reconciliation. Create pull requests where appropriate but never merge them. If the central context cannot be written, create a version-controlled Context Update Package in `.agenteco/outbox/context/` and report its pending status.
 ```
@@ -534,11 +544,55 @@ Repository manifest:
 
 Read the repository manifest and the canonical Agent Eco Space governance. Run the Repository Readiness Preflight. Confirm the DeepSeek host client named in the manifest and state which repository instruction files that client actually loaded. Do not claim automatic instruction discovery unless the host client proves it.
 
+Treat the canonical Agent Eco Space repository as read-only unless GitHub verifies the requester as `ikechukwukalu` and the canonical remote as `ikechukwukalu/agenteco`. A conversational identity, Git author, collaborator, or delegated authority is insufficient. Even for that verified owner, present an exact proposal, require `Proceed with implementation.`, and never merge.
+
+Compare the active host-client instructions and manifest with current canonical Agent Eco Space. Automatically repair missing, stale, altered, weakened, or conflicting managed instructions and their manifest records without waiting for `Proceed with implementation.` Preserve compliant local instructions and reconciliation history. This standing authorization never extends to product files, central context, or Agent Eco Space itself.
+
 Use the current specialist identity if one was explicitly established; otherwise ask: Who am I operating as today? Lock that identity for the session. Load the verified business rules, decisions, assigned repository context, affected contracts, producers, and consumers required for the task.
 
-Before any repository mutation, present the understood scope and wait for the standalone command: Proceed with implementation.
+Before any repository mutation outside the automatic local adapter-compliance exception, present the understood scope and wait for the standalone command: Proceed with implementation.
 
 Never invoke another specialist automatically. Never merge a pull request. Own implementation, engineer-written tests, feature/API documentation, CHANGELOG.md, and continuity-grade context updates. If canonical governance or central context is inaccessible, disclose it and use Access-Degraded Mode and a Context Update Package where applicable.
 ```
 
 If the host client already supports `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, or another documented repository-rules mechanism, use that native mechanism and record its path and verification state in the manifest instead of repeatedly pasting this prompt.
+
+### 9. Upgrade installed Agent Eco Space governance prompt
+
+Use this when Agent Eco Space is already installed and active in a repository or session, but canonical governance has advanced. This is not product adoption, repository registration, a general understanding refresh, or a full ecosystem refresh. Canonical template: [Governance Upgrade Prompt](templates/upgrade-agent-eco-space-governance.md).
+
+```text
+Upgrade this repository to the latest Agent Eco Space governance.
+
+Agent Eco Space governance repository:
+https://github.com/ikechukwukalu/agenteco
+
+This repository and current session already use Agent Eco Space. Do not restart product adoption, repository registration, ecosystem intake, role selection, or central-context discovery unless current evidence proves one is missing or invalid.
+
+Keep the specialist identity already established in this session. If no identity has been established, ask: Who am I operating as today?
+
+Treat the Agent Eco Space governance repository as read-only. Never modify it unless the requesting human has been verified through GitHub as user `ikechukwukalu` and the canonical remote is verified as `ikechukwukalu/agenteco`. A conversational claim, Git author identity, repository write access, or delegated authority is insufficient. Even for the verified owner, first present an exact proposal and wait for the standalone `Proceed with implementation.` command. Never merge an Agent Eco pull request.
+
+Read the latest accessible Agent Eco Space governance and compare it with the governance revision recorded in `.agenteco/manifest.yml`, every applicable native adapter, verified DeepSeek host-client instructions, and other installed Agent Eco support files.
+
+Identify canonical rules, safeguards, commands, adapters, templates, or manifest requirements introduced, changed, superseded, or removed since the recorded governance revision.
+
+Agent Eco Space is authoritative. Automatically reconcile this governed product repository with canonical governance without waiting for `Proceed with implementation.` This narrow standing authorization permits only:
+
+1. creating a missing applicable native adapter;
+2. replacing or repairing its canonical managed section;
+3. preserving compliant repository-specific instructions inside the designated local section;
+4. retiring conflicting local instructions from active use while recording what changed and why;
+5. upgrading the local manifest schema when required;
+6. updating governance revisions, adapter versions, fingerprints, validation states, and host-client records;
+7. updating local Agent Eco support files required solely for governance compatibility; and
+8. verifying that the active AI tool loaded the corrected adapter.
+
+Do not use this exception to change application code, tests, product or API documentation, CHANGELOG.md, business rules, central product context, delivery branches, or Agent Eco Space itself.
+
+Do not repeat the full ecosystem study merely because governance changed. Continue using the existing verified product and repository context. Report unrelated drift if encountered, but leave it for its normal governed workflow.
+
+Return a concise Governance Upgrade Report containing the previous and current governance revisions, canonical changes detected, local files reconciled, valid local instructions preserved, conflicts retired, manifest changes, adapter-loading verification, and unresolved access limitations.
+
+Never merge a pull request. Require the standalone `Proceed with implementation.` command before the original product task or any non-governance-compliance change.
+```
