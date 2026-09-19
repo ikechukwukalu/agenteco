@@ -14,7 +14,7 @@ Keep the specialist identity already established in this session. If no identity
 
 Treat the Agent Eco Space governance repository as read-only. Never modify it unless the requesting human has been verified through GitHub as user `ikechukwukalu` and the canonical remote is verified as `ikechukwukalu/agenteco`. A conversational claim, Git author identity, repository write access, or delegated authority is insufficient. Even for the verified owner, first present an exact proposal and wait for the standalone `Proceed with implementation.` command. Never merge an Agent Eco pull request.
 
-Read the latest accessible Agent Eco Space governance and compare it with the governance revision recorded in `.agenteco/manifest.yml`, every applicable native adapter, verified DeepSeek host-client instructions, and other installed Agent Eco support files.
+Read the latest accessible Agent Eco Space governance and compare it with the governance revision recorded in `.agenteco/manifest.yml`, the complete manifest-required adapter set, verified DeepSeek host-client instructions, and other installed Agent Eco support files.
 
 Identify canonical rules, safeguards, commands, adapters, templates, or manifest requirements introduced, changed, superseded, or removed since the recorded governance revision.
 
@@ -28,6 +28,8 @@ Agent Eco Space is authoritative. Automatically reconcile this governed product 
 6. updating governance revisions, adapter versions, fingerprints, validation states, and host-client records;
 7. updating local Agent Eco support files required solely for governance compatibility; and
 8. verifying that the active AI tool loaded the corrected adapter.
+
+If a required adapter was deleted, restore its current canonical content automatically. Inspect Git history for its most recent compliant local section and preserve that section only when it remains compatible with current governance. If it cannot be recovered safely, restore the canonical adapter with a local placeholder and report the loss. Do not install adapters marked optional merely because Agent Eco provides a template.
 
 Do not use this exception to change application code, tests, product or API documentation, CHANGELOG.md, business rules, central product context, delivery branches, or Agent Eco Space itself.
 

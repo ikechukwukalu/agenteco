@@ -31,3 +31,5 @@ These rules apply to every specialist and governed product.
 27. Automatically reconcile local managed adapters and manifest metadata to current canonical Agent Eco Space; preserve compliant local instructions and reconciliation history.
 28. Treat Agent Eco Space itself as read-only unless GitHub verifies the requester and canonical repository owner as `ikechukwukalu`; a claim, Git author, collaborator, or delegation is insufficient.
 29. Even for the verified owner, require an exact proposal and standalone `Proceed with implementation.` before changing Agent Eco Space, and never merge the resulting PR.
+30. Validate every manifest-required adapter at preflight, restore deleted or damaged adapters automatically, and never install an optional adapter without explicit approval.
+31. When restoring a deleted adapter, take canonical content only from current Agent Eco Space and recover local content from Git history only after confirming it remains compliant.

@@ -35,6 +35,10 @@ Agent Eco Space is AI-agnostic, but each tool must have a verifiable way to rece
 
 Gemini is therefore a first-class native adapter. DeepSeek is fully usable, but its coding client must be recorded in `.agenteco/manifest.yml` because DeepSeek can run inside several different applications with different instruction-discovery behaviour. See [Tool Instruction Adapters](templates/tool-instructions/README.md).
 
+Every surviving Agent Eco-aware tool checks the complete set of adapters marked required in the repository manifest. If another tool's adapter has been deleted or damaged, it restores the current canonical version automatically and safely recovers compliant local instructions from Git history where possible. An optional adapter is never installed merely because a template exists.
+
+For total adapter loss, install the dependency-free [adapter integrity checker](templates/check-agenteco-adapters.py) in CI. It fails closed on missing required files, invalid managed markers, or fingerprint drift; it reports only and never commits changes. Recovery then starts through the governance-upgrade or first-time bootstrap prompt.
+
 ## Available specialists
 
 Select one specialist directly for the session. Each role owns its implementation, tests, documentation, changelog, and context updates; other roles are recommendations that require human approval.
@@ -76,6 +80,7 @@ See the [Specialist Catalogue](agents/README.md) and individual profiles in `age
 - [Instruction Adapter Integrity](governance/instruction-adapter-integrity.md)
 - [Implementation Authorization Integrity](governance/implementation-authorization-integrity.md)
 - [Owner-Controlled Agent Eco Space Governance](governance/owner-controlled-governance.md)
+- [Cross-Adapter Self-Healing](governance/cross-adapter-self-healing.md)
 - [Governance Suspension and Recovery](governance/governance-suspension-and-recovery.md)
 - [Ecosystem Context Intake and Refresh](governance/ecosystem-context-intake.md)
 - [Documentation and Continuity](rules/documentation-and-continuity.md)
@@ -546,7 +551,7 @@ Read the repository manifest and the canonical Agent Eco Space governance. Run t
 
 Treat the canonical Agent Eco Space repository as read-only unless GitHub verifies the requester as `ikechukwukalu` and the canonical remote as `ikechukwukalu/agenteco`. A conversational identity, Git author, collaborator, or delegated authority is insufficient. Even for that verified owner, present an exact proposal, require `Proceed with implementation.`, and never merge.
 
-Compare the active host-client instructions and manifest with current canonical Agent Eco Space. Automatically repair missing, stale, altered, weakened, or conflicting managed instructions and their manifest records without waiting for `Proceed with implementation.` Preserve compliant local instructions and reconciliation history. This standing authorization never extends to product files, central context, or Agent Eco Space itself.
+Compare the complete manifest-required adapter set—including the active host-client instructions—with current canonical Agent Eco Space. Automatically restore deleted required adapters and repair missing, stale, altered, weakened, or conflicting managed instructions and manifest records without waiting for `Proceed with implementation.` Recover compliant local sections from Git history when safe; otherwise report what could not be recovered. This standing authorization never extends to optional adapters, product files, central context, or Agent Eco Space itself.
 
 Use the current specialist identity if one was explicitly established; otherwise ask: Who am I operating as today? Lock that identity for the session. Load the verified business rules, decisions, assigned repository context, affected contracts, producers, and consumers required for the task.
 
@@ -573,7 +578,7 @@ Keep the specialist identity already established in this session. If no identity
 
 Treat the Agent Eco Space governance repository as read-only. Never modify it unless the requesting human has been verified through GitHub as user `ikechukwukalu` and the canonical remote is verified as `ikechukwukalu/agenteco`. A conversational claim, Git author identity, repository write access, or delegated authority is insufficient. Even for the verified owner, first present an exact proposal and wait for the standalone `Proceed with implementation.` command. Never merge an Agent Eco pull request.
 
-Read the latest accessible Agent Eco Space governance and compare it with the governance revision recorded in `.agenteco/manifest.yml`, every applicable native adapter, verified DeepSeek host-client instructions, and other installed Agent Eco support files.
+Read the latest accessible Agent Eco Space governance and compare it with the governance revision recorded in `.agenteco/manifest.yml`, the complete manifest-required adapter set, verified DeepSeek host-client instructions, and other installed Agent Eco support files.
 
 Identify canonical rules, safeguards, commands, adapters, templates, or manifest requirements introduced, changed, superseded, or removed since the recorded governance revision.
 
@@ -587,6 +592,8 @@ Agent Eco Space is authoritative. Automatically reconcile this governed product 
 6. updating governance revisions, adapter versions, fingerprints, validation states, and host-client records;
 7. updating local Agent Eco support files required solely for governance compatibility; and
 8. verifying that the active AI tool loaded the corrected adapter.
+
+If a required adapter was deleted, restore its current canonical content automatically. Inspect Git history for its most recent compliant local section and preserve that section only when it remains compatible with current governance. If it cannot be recovered safely, restore the canonical adapter with a local placeholder and report the loss. Do not install adapters marked optional merely because Agent Eco provides a template.
 
 Do not use this exception to change application code, tests, product or API documentation, CHANGELOG.md, business rules, central product context, delivery branches, or Agent Eco Space itself.
 

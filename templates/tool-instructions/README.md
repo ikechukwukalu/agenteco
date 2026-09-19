@@ -21,7 +21,7 @@ Each adapter requires the AI to:
 15. request human approval before a periodic full ecosystem refresh and keep the reminder non-blocking when scoped work is safe;
 16. identify and maintain actual feature/API documentation tooling and `CHANGELOG.md`;
 17. write context updates for detailed cross-agent continuity.
-18. automatically reconcile its managed canonical section and manifest metadata when they differ from current Agent Eco Space;
+18. verify and automatically reconcile the complete manifest-required adapter set, restoring another tool's deleted adapter even when it is not the active tool;
 19. treat Agent Eco Space itself as read-only except for a request verified through GitHub as coming from repository owner `ikechukwukalu`, followed by the normal proposal and authorization gate.
 
 The adapters must also recognize only commands listed in the canonical [Command Catalogue](../../commands/README.md) as protected workflow triggers.
@@ -43,3 +43,5 @@ Tool-specific syntax may differ, but behaviour and canonical sources remain cons
 ## Integrity and human edits
 
 Each adapter separates its canonical and repository-specific content using the managed markers defined in [Instruction Adapter Integrity](../../governance/instruction-adapter-integrity.md). The readiness preflight compares recorded template versions and fingerprints, preserves valid local instructions, and reports accidental or conflicting edits instead of silently overwriting them.
+
+Repositories may install the dependency-free [adapter integrity checker](../check-agenteco-adapters.py) in CI. It detects total adapter loss, malformed managed sections, and fingerprint drift but never repairs or commits; a surviving governed agent or a human-started bootstrap performs remediation.

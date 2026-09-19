@@ -33,22 +33,32 @@ delivery:
 adapters:
   template_version: "<VERSION_OR_COMMIT>"
   agents_md:
+    path: "AGENTS.md"
+    required: <true|false>
     status: "<present|missing|stale|drifted|conflicting>"
     canonical_fingerprint: "<FINGERPRINT_OR_NONE>"
     local_fingerprint: "<FINGERPRINT_OR_NONE>"
   claude_md:
+    path: "CLAUDE.md"
+    required: <true|false>
     status: "<present|missing|stale|drifted|conflicting>"
     canonical_fingerprint: "<FINGERPRINT_OR_NONE>"
     local_fingerprint: "<FINGERPRINT_OR_NONE>"
   copilot_instructions:
+    path: ".github/copilot-instructions.md"
+    required: <true|false>
     status: "<present|missing|stale|drifted|conflicting>"
     canonical_fingerprint: "<FINGERPRINT_OR_NONE>"
     local_fingerprint: "<FINGERPRINT_OR_NONE>"
   gemini_md:
+    path: "GEMINI.md"
+    required: <true|false>
     status: "<present|missing|stale|drifted|conflicting>"
     canonical_fingerprint: "<FINGERPRINT_OR_NONE>"
     local_fingerprint: "<FINGERPRINT_OR_NONE>"
   deepseek:
+    path: "<PATH_OR_NONE>"
+    required: <true|false>
     mode: "<native-auto-loaded|client-managed|manual-bootstrap|not-used>"
     host_client: "<CLIENT_NAME_OR_NONE>"
     instruction_path: "<PATH_OR_NONE>"
@@ -96,3 +106,9 @@ documentation:
     path: "<CHANGELOG_PATH_OR_MISSING>"
     format: "<FORMAT_OR_UNKNOWN>"
     last_verified_revision: "<COMMIT_OR_NONE>"
+
+governance_integrity:
+  checker_path: ".agenteco/check-agenteco-adapters.py"
+  command: "python3 .agenteco/check-agenteco-adapters.py"
+  ci_enforced: <true|false>
+  last_passed_at: "<ISO_8601_OR_NONE>"

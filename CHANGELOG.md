@@ -6,6 +6,9 @@ All notable changes to Agent Eco Space are recorded here.
 
 ### Added
 
+- Cross-adapter self-healing so any surviving governed agent restores deleted or damaged manifest-required adapters.
+- A dependency-free CI integrity checker for missing adapters, managed-marker damage, and canonical fingerprint drift.
+- Manifest-declared adapter paths and required/optional status, with safe Git-history recovery rules for local sections.
 - Owner-gated Agent Eco Space modification requiring verified GitHub identity `ikechukwukalu`, a bounded proposal, and standalone implementation authorization.
 - Automatic canonical reconciliation for local governed adapters and manifest metadata.
 - A governance-only upgrade command and prompt for existing Agent Eco Space sessions and repositories.

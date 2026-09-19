@@ -38,3 +38,5 @@ Canonical adapter compliance is a narrow standing authorization and does not wai
 This exception covers only local Agent Eco adapters, their manifest records, and support files strictly required for governance compatibility. It does not authorize product code, tests, ordinary documentation, changelog, central context, branch, deployment, publication, or canonical Agent Eco Space changes. Corrections are reported and may be placed in a pull request, but the specialist must never merge it.
 
 Canonical Agent Eco Space changes follow [Owner-Controlled Governance](owner-controlled-governance.md); automatic local reconciliation can never write back to the governance repository.
+
+Every surviving Agent Eco-aware specialist performs this reconciliation across the complete manifest-required adapter set, not only its own native file. Deleted adapters follow [Cross-Adapter Self-Healing](cross-adapter-self-healing.md), including safe recovery of compliant local content from Git history.
