@@ -106,7 +106,23 @@ Refresh this repository's Agent Eco Space understanding.
 
 **Effect:** Run the readiness preflight, compare installed governance and context with their canonical sources and repository evidence, classify drift and valid local customizations, and present one reconciliation proposal.
 
-**Does not authorize:** Modifying governance adapters, manifest, context, product code, or documentation; invoking another specialist; merging a pull request; deployment; or publication.
+**Does not authorize:** Changes beyond the narrow automatic adapter-compliance exception; modifying context, product code, or ordinary documentation; invoking another specialist; merging a pull request; deployment; or publication.
+
+## Upgrade installed Agent Eco Space governance
+
+```text
+Upgrade this repository to the latest Agent Eco Space governance.
+```
+
+**Purpose:** Bring an already-governed repository and active session into compliance with a newer canonical Agent Eco Space revision.
+
+**Required state:** Agent Eco Space is already installed. The session has an existing product, component, repository, manifest, context registration, and usually an established specialist. Use the complete [Governance Upgrade Prompt](../templates/upgrade-agent-eco-space-governance.md) when locations or versions are not already known.
+
+**Effect:** Compare the recorded and current governance revisions, automatically reconcile applicable local managed adapters and manifest metadata, preserve compliant local instructions, retire conflicting instructions with history, verify adapter loading, and return a Governance Upgrade Report.
+
+**Does not repeat:** Product adoption, repository registration, initial ecosystem intake, general context reconciliation, or full sibling-repository study unless evidence proves existing setup is invalid.
+
+**Standing authorization:** Canonical local adapter compliance repair is automatic and does not require `Proceed with implementation.` It is limited to governed adapters, manifest metadata, and compatibility support files. It never authorizes product changes or a write to Agent Eco Space itself.
 
 ## Refresh complete product ecosystem understanding
 

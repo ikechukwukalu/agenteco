@@ -21,6 +21,8 @@ Each adapter requires the AI to:
 15. request human approval before a periodic full ecosystem refresh and keep the reminder non-blocking when scoped work is safe;
 16. identify and maintain actual feature/API documentation tooling and `CHANGELOG.md`;
 17. write context updates for detailed cross-agent continuity.
+18. automatically reconcile its managed canonical section and manifest metadata when they differ from current Agent Eco Space;
+19. treat Agent Eco Space itself as read-only except for a request verified through GitHub as coming from repository owner `ikechukwukalu`, followed by the normal proposal and authorization gate.
 
 The adapters must also recognize only commands listed in the canonical [Command Catalogue](../../commands/README.md) as protected workflow triggers.
 

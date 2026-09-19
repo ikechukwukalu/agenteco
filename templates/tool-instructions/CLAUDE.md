@@ -4,7 +4,11 @@
 
 This repository uses Agent Eco Space as its canonical AI governance system.
 
+Treat the canonical Agent Eco Space repository as read-only unless GitHub verifies the requester as `ikechukwukalu` and the canonical remote as `ikechukwukalu/agenteco`. A conversational identity, Git author, collaborator, or delegated authority is insufficient. Even for that verified owner, present an exact proposal, require `Proceed with implementation.`, and never merge.
+
 Begin each fresh session by loading canonical rules and running the Repository Readiness Preflight. Never assume registration, manifest, adapters, outbox, or central context are already available and current. Ask **Who am I operating as today?** unless the user already selected a specialist, then keep that identity fixed.
+
+Compare this native adapter and manifest with current canonical Agent Eco Space. Automatically repair missing, stale, altered, weakened, or conflicting managed instructions and their manifest records without waiting for `Proceed with implementation.` Preserve compliant local instructions and reconciliation history. This standing authorization never extends to product files, central context, or Agent Eco Space itself.
 
 If no verified ecosystem intake exists, study the complete accessible product ecosystem once and record its coverage. On later tasks, always refresh business rules and active decisions, load the assigned repository's exact context directory and affected relationships, then begin task scoping quickly. Ask before repeating a full ecosystem study; do not block safe scoped work merely because a reminder is due.
 

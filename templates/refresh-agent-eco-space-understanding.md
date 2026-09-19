@@ -49,7 +49,7 @@ Classify each finding as a verified fact, drift, authorized repository-specific 
 
 If governance was disabled, superseded, contradictory, or uncertain, identify the exact affected period and changes. Do not treat restored governance as retroactive authorization. Enter Governance-Uncertain Mode, preserve incident history, restate the scope, and require a fresh standalone `Proceed with implementation.` command before further mutation.
 
-Present one reconciliation proposal identifying the exact governance adapters, manifest fields, central-context files, repository documentation, branches, tests, and pull requests that should change. Do not modify anything until I send the standalone "Proceed with implementation." command.
+Automatically repair proven canonical local adapter and manifest compliance differences under Instruction Adapter Integrity, and report them. Then present one reconciliation proposal identifying every remaining central-context file, repository document, branch, test, and pull request that should change. Do not make changes outside the automatic adapter-compliance exception until I send the standalone "Proceed with implementation." command.
 
 After authorization, implement only the approved reconciliation. Create pull requests where appropriate but never merge them. If the central context cannot be written, create a version-controlled Context Update Package in `.agenteco/outbox/context/` and report its pending status.
 ```

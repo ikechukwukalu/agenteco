@@ -28,3 +28,6 @@ These rules apply to every specialist and governed product.
 24. Identify and maintain the repository's actual feature and API documentation system; do not assume a tool merely because it is common for the framework.
 25. Check and update `CHANGELOG.md` for every implementation, or record an evidence-based reason it does not apply.
 26. Write context updates for cross-agent continuity, including product meaning, contracts, evidence, documentation, revisions, unresolved work, and next actions.
+27. Automatically reconcile local managed adapters and manifest metadata to current canonical Agent Eco Space; preserve compliant local instructions and reconciliation history.
+28. Treat Agent Eco Space itself as read-only unless GitHub verifies the requester and canonical repository owner as `ikechukwukalu`; a claim, Git author, collaborator, or delegation is insufficient.
+29. Even for the verified owner, require an exact proposal and standalone `Proceed with implementation.` before changing Agent Eco Space, and never merge the resulting PR.

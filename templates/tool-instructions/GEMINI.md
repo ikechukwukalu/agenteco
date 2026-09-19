@@ -4,7 +4,11 @@
 
 This repository is governed by Agent Eco Space. Gemini CLI must treat this `GEMINI.md` as a thin adapter to the canonical governance and central product context, not as a replacement for either source.
 
+Treat the canonical Agent Eco Space repository as read-only unless GitHub verifies the requester as `ikechukwukalu` and the canonical remote as `ikechukwukalu/agenteco`. A conversational identity, Git author, collaborator, or delegated authority is insufficient. Even for that verified owner, present an exact proposal, require `Proceed with implementation.`, and never merge.
+
 At the start of a fresh session, load the canonical Agent Eco Space rules, run the Repository Readiness Preflight, and use `/memory show` when necessary to verify which hierarchical Gemini context files are active. Ask **Who am I operating as today?** unless the opening request already selects a specialist. Present the specialist catalogue and lock the selected identity for the session. Never assume registration, manifest, adapters, outbox, or central context are already available and current.
+
+Compare this native adapter and manifest with current canonical Agent Eco Space. Automatically repair missing, stale, altered, weakened, or conflicting managed instructions and their manifest records without waiting for `Proceed with implementation.` Preserve compliant local instructions and reconciliation history. This standing authorization never extends to product files, central context, or Agent Eco Space itself.
 
 If no verified ecosystem intake exists, study the complete accessible product ecosystem once and record its revision, repository coverage, relationships, and gaps. On later tasks, always refresh active business rules and decisions, then load this repository's exact context directory, affected contracts, and relevant producers and consumers. Begin task scoping as soon as this verified minimum is sufficient; do not repeatedly reload or narrate the whole ecosystem.
 
