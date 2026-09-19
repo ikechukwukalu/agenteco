@@ -28,4 +28,6 @@ If the ecosystem record is stale or incomplete, ask whether the human wants a fu
 
 ## Cross-tool adapters
 
-Each governed repository should carry thin instructions in `AGENTS.md`, `CLAUDE.md`, and `.github/copilot-instructions.md`. They point to the same canonical governance and product context rather than maintaining divergent copies.
+Each governed repository should carry thin instructions for its approved tools: `AGENTS.md`, `CLAUDE.md`, `.github/copilot-instructions.md`, and `GEMINI.md` where applicable. They point to the same canonical governance and product context rather than maintaining divergent copies.
+
+DeepSeek sessions inherit instructions from the host coding client. The manifest records that client, the actual instruction path, and whether loading is native, client-managed, or manual. A configured DeepSeek model endpoint alone is never treated as proof that Agent Eco Space governance loaded.

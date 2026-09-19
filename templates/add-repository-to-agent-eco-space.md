@@ -40,7 +40,7 @@ Present a repository-registration proposal containing:
 1. the proposed central-context repository record and destination directory;
 2. repository-map and architecture changes;
 3. contract, consumer, business-rule, decision, risk, roadmap, and handoff updates;
-4. the proposed Codex, Claude, and Copilot instruction adapters for the new repository;
+4. the proposed Codex, Claude, Copilot, and Gemini instruction adapters for the new repository, plus the verified DeepSeek host-client or manual-bootstrap configuration when DeepSeek is used;
 5. the temporary branches and pull requests required;
 6. tests or verification required for any executable adapter or automation changes;
 7. unresolved questions and access blockers.

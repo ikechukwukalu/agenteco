@@ -13,7 +13,7 @@ Read `.agenteco/manifest.yml` first. When it exists, validate its recorded gover
 3. Repository registration and per-repository context directory.
 4. Repository identity, visibility, classification, current revision, and default specialist.
 5. Application or Package work mode, operating profile, topology, permanent branches, and release model.
-6. Current `AGENTS.md`, `CLAUDE.md`, and Copilot instruction adapters, including template versions, canonical and local fingerprints, and drift state.
+6. Current `AGENTS.md`, `CLAUDE.md`, Copilot instructions, and `GEMINI.md` adapters, including template versions, canonical and local fingerprints, and drift state. When DeepSeek is used, verify its host client, discovery mode, actual instruction path, and loading evidence; never assume a universal DeepSeek instruction file.
 7. Version-controlled `.agenteco/outbox/context/` and pending packages.
 8. Relevant business rules, contracts, decisions, consumers, and connected repositories.
 9. Context drift, dirty working-tree state, open PRs, and access or information-classification risks.
