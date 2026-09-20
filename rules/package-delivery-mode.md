@@ -18,11 +18,13 @@ Package work does not use application-only DTAP environment promotion. Instead, 
 1. load the package and its Project Context repositories;
 2. inspect the package, existing public package, supported versions, and current release state;
 3. agree objectives, scope, and a precise roadmap;
-4. plan and implement through a temporary branch and pull request after explicit approval;
+4. plan and implement through a temporary branch after explicit approval;
 5. verify tests, static analysis or linting where available, dependency/security posture, supported framework/runtime versions, and backward compatibility;
 6. update public package documentation, examples, changelog, upgrade notes, and support matrix as applicable;
-7. recommend a Semantic Versioning release number;
-8. obtain explicit Project Owner approval before tagging, creating a release, or publishing to a registry.
+7. obtain and record the human's Armstrong QA decision and, when approved, Armstrong's verdict before creating the implementation pull request;
+8. create but never merge the implementation pull request;
+9. recommend a Semantic Versioning release number;
+10. obtain explicit Project Owner approval before tagging, creating a release, or publishing to a registry.
 
 ## Required Package Context
 
@@ -47,4 +49,3 @@ Package mode never removes higher-precedence requirements for approval, security
 ## Rigor Escalation
 
 The selected specialist must recommend raising the operating profile when a package has material consumer impact, breaking changes, broad support-matrix changes, security-sensitive behavior, complex integrations, or coordinated releases across dependent products.
-

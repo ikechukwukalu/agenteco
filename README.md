@@ -10,8 +10,9 @@ Agent Eco Space is a lean, product-wide governance system for AI-assisted softwa
 4. On later tasks, the specialist always refreshes business rules and active decisions, loads its exact repository context and affected relationships, and begins task scoping quickly.
 5. The specialist asks before periodically restudying the full ecosystem; a due reminder does not block safe scoped work.
 6. The specialist owns implementation, engineer-written tests, feature/API documentation, `CHANGELOG.md`, and continuity-grade context updates.
-7. The specialist may recommend an independent review, but never starts another specialist without human approval.
-8. Specialists may create pull requests but must never merge them.
+7. After testable implementation and engineer-owned verification, the specialist must ask whether Armstrong should independently verify the work or whether the human declines that review.
+8. If approved, Armstrong reviews before implementation PR creation; Armstrong is never started automatically.
+9. Specialists may create pull requests only after that QA decision checkpoint and must never merge them.
 
 One specialist normally performs the work. Armstrong may be added as an independent QA specialist when the human approves it. Other specialists are invoked sequentially when their expertise is genuinely required.
 
@@ -46,6 +47,10 @@ The backend specialist initializes a complete, revision-backed route and known-c
 The central context stores five linked tables: route inventory, route-to-consumer map, consumer contract expectations, compatibility risks, and Consumer Impact Alerts. Any specialist can identify drift or risk. Relevant producer and consumer agents must see unresolved alerts during preflight and promptly alert the human when focused cross-repository work is required. No second agent starts automatically.
 
 Known breaking API changes are blocked from production while a mapped consumer remains incompatible unless the human explicitly records a time-bounded exception and mitigation. See [API–Consumer Compatibility Mapping](rules/api-consumer-compatibility.md) and the [table template](templates/product-context/api-consumer-compatibility.md).
+
+## Confidential environment values
+
+Values in `.env` and every `.env.*` file are confidential except for safe placeholders in the exact `.env.example` template. Agents must never retrieve or disclose those values—even when directly asked. They may explain where an authorized human can locate or rotate a secret, verify presence without revealing a value, and perform an explicitly authorized insertion only through a non-disclosing mechanism. Secret values never belong in Git, PRs, context, documentation, logs, changelogs, examples, or outbox packages. See [Environment Secrets Confidentiality](rules/environment-secrets-confidentiality.md).
 
 ## Available specialists
 
@@ -93,6 +98,7 @@ See the [Specialist Catalogue](agents/README.md) and individual profiles in `age
 - [Ecosystem Context Intake and Refresh](governance/ecosystem-context-intake.md)
 - [Documentation and Continuity](rules/documentation-and-continuity.md)
 - [API–Consumer Compatibility Mapping](rules/api-consumer-compatibility.md)
+- [Environment Secrets Confidentiality](rules/environment-secrets-confidentiality.md)
 - [Specialist Catalogue](agents/README.md)
 - [Product Context Template](templates/product-context/README.md)
 - [Tool Instruction Adapters](templates/tool-instructions/README.md)
@@ -100,6 +106,7 @@ See the [Specialist Catalogue](agents/README.md) and individual profiles in `age
 ## Non-negotiable boundaries
 
 - No hidden or automatic delegation.
+- No implementation PR before the human explicitly approves or declines Armstrong's independent QA checkpoint for testable work.
 - No specialist merges a pull request.
 - No completion claim without proportionate tests and evidence.
 - No silent divergence between implementation and shared context.
@@ -108,6 +115,7 @@ See the [Specialist Catalogue](agents/README.md) and individual profiles in `age
 - No repository mutation inferred from task wording, urgency, conversational momentum, prior approval, or absent objections.
 - No silent fallback to ordinary implementation when governance is missing, disabled, contradictory, or uncertain.
 - No Agent Eco Space governance modification by an agent unless GitHub verifies the requester as `ikechukwukalu`, the canonical repository owner, and the normal proposal and authorization gate is satisfied.
+- No retrieval or disclosure of values from `.env` or `.env.*` files other than safe placeholders in exact `.env.example`.
 
 Agent Eco Space is a sibling of AgentHQ, not a replacement. AgentHQ remains suitable for formally orchestrated delivery; Agent Eco Space is optimized for direct specialist execution, cross-repository continuity, and controlled cost.
 
@@ -262,7 +270,9 @@ After role selection, report the preflight outcome. If setup is incomplete, incl
 
 If a verified ecosystem intake exists, use the fast path: always refresh active business rules and decisions, load this repository's exact context directory and task-relevant contracts and relationships, surface unresolved Consumer Impact Alerts affecting this repository, report a compact intake receipt, and begin task scoping immediately. For API-related work, inspect the progressive route-to-consumer map and verify the recorded producer and consumer revisions before relying on it. If the full intake is stale or incomplete, ask whether I want it refreshed; continue safe scoped work unless the stale dependency is blocking. Require the standalone `Proceed with implementation.` command. The selected specialist owns implementation, engineer-written tests, verified feature/API documentation, `CHANGELOG.md`, and continuity-grade context updates.
 
-Do not invoke another specialist automatically. Recommend additional expertise only when it materially helps and wait for my approval. You may create pull requests on my behalf, but you must never merge them.
+Treat values in `.env` and every `.env.*` file except exact `.env.example` as confidential and non-disclosable. Never retrieve those values for me or store them in context, documentation, logs, commits, pull requests, or outbox packages. `.env.example` may contain safe placeholders only.
+
+Do not invoke another specialist automatically. After completing testable implementation and engineer-owned verification, but before creating implementation pull requests, ask whether I approve Armstrong's independent QA or decline it. Record my decision; if approved, obtain and address or record Armstrong's verdict before PR creation. You may create pull requests on my behalf only after this checkpoint, but you must never merge them.
 ```
 
 ### 3. Add a repository prompt
@@ -493,6 +503,8 @@ This is the offline fallback used when a specialist must update central context 
 - Commit or working-tree reference:
 - Pull request, if available:
 - Tests and verification:
+- Pre-PR Armstrong QA decision: Approved / Declined / Not applicable
+- Armstrong verdict and findings disposition, if performed:
 
 ## Proposed context updates
 
@@ -526,7 +538,7 @@ This is the offline fallback used when a specialist must update central context 
 
 ## Sensitive-data handling
 
-Confirm that this package contains no secret, credential, production customer data, or confidential content inappropriate for its storage or transfer location.
+Confirm that this package contains no secret, credential, protected `.env` or `.env.*` value, production customer data, or confidential content inappropriate for its storage or transfer location. Exact `.env.example` variable names and safe placeholders may be referenced; live values may not.
 
 ## Synchronization record
 
@@ -572,7 +584,9 @@ At every preflight, check unresolved Consumer Impact Alerts affecting the assign
 
 Before any repository mutation outside the automatic local adapter-compliance exception, present the understood scope and wait for the standalone command: Proceed with implementation.
 
-Never invoke another specialist automatically. Never merge a pull request. Own implementation, engineer-written tests, feature/API documentation, CHANGELOG.md, and continuity-grade context updates. If canonical governance or central context is inaccessible, disclose it and use Access-Degraded Mode and a Context Update Package where applicable.
+Treat values in `.env` and every `.env.*` file except the exact `.env.example` template as confidential. Never retrieve, read back, print, quote, copy, disclose, or store those values in context, documentation, logs, commits, pull requests, or outbox packages. `.env.example` may contain safe placeholders only. Add or replace a specific secret only with explicit authorization and a non-disclosing mechanism; otherwise guide the human through the secure step.
+
+Never invoke another specialist automatically. After completing testable code or behaviour and its engineer-owned evidence—but before creating implementation pull requests—ask whether the human approves Armstrong's independent QA or declines it. Record the decision. If approved, obtain and address or record Armstrong's verdict before PR creation. This applies explicitly to Chinedu and Dotun and to every implementing specialist. Never merge a pull request. Own implementation, engineer-written tests, feature/API documentation, CHANGELOG.md, and continuity-grade context updates. If canonical governance or central context is inaccessible, disclose it and use Access-Degraded Mode and a Context Update Package where applicable.
 ```
 
 If the host client already supports `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, or another documented repository-rules mechanism, use that native mechanism and record its path and verification state in the manifest instead of repeatedly pasting this prompt.

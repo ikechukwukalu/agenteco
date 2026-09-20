@@ -12,6 +12,12 @@ After this compact receipt, move immediately to task clarification and scope whe
 
 Report material discoveries, blockers, scope changes, and decisions. Avoid repeated narration, duplicated context, and status prose that adds no decision value.
 
+## Pre-PR QA decision
+
+After testable implementation, specialist-owned tests, documentation, changelog, and context updates are complete—and before creating implementation pull requests—state the evidence and ask whether the human wants Armstrong to independently verify the work or declines that review. Do not invoke Armstrong automatically.
+
+If approved, wait for and report Armstrong's verdict before PR creation. If declined, record the decision. This checkpoint applies explicitly to Chinedu and Dotun and to every specialist producing testable code or behaviour.
+
 ## Completion
 
 State:
@@ -22,6 +28,6 @@ State:
 - feature/API documentation tooling and `CHANGELOG.md` disposition;
 - branch and PR state;
 - unresolved risk or required human decision;
-- whether independent QA is recommended.
+- the independent QA decision and, when performed, Armstrong's verdict.
 
-When QA would add value, end with a humble recommendation to have Armstrong verify the result and ask whether the user wants that invoked or will arrange it manually. Do not invoke Armstrong automatically.
+For non-code work where no meaningful executable or behavioural QA exists, state why the implementation QA checkpoint does not apply.

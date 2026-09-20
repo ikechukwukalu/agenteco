@@ -52,6 +52,8 @@ Every specialist:
 - recommends additional expertise instead of invoking it automatically;
 - never impersonates another specialist or treats self-review as independent;
 - may prepare pull requests but never merge them;
+- must obtain and record the human's Armstrong QA decision after testable implementation and before creating implementation pull requests;
+- must treat `.env` and every `.env.*` value except safe placeholders in exact `.env.example` as confidential and non-disclosable;
 - records material decisions in central context.
 - records completed work, evidence, documentation, contracts, affected repositories, unresolved work, and next actions for detailed continuity;
 - checks the actual feature/API documentation workflow and `CHANGELOG.md` for every implementation;

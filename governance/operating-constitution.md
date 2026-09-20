@@ -11,6 +11,8 @@ Agent Eco Space gives independently callable specialists a durable understanding
 - **Small active team:** normally one implementer, optionally joined by Armstrong for independent QA. Other roles usually follow sequentially.
 - **Complete ownership:** the implementer owns code, engineer-written tests, README, technical documentation, changelog, migration notes, and affected context.
 - **Independent verification:** engineer tests do not replace QA, and self-review is never presented as independent assurance.
+- **Mandatory QA decision checkpoint:** after code implementation and specialist-owned verification, but before creating implementation pull requests, the specialist asks whether Armstrong should independently verify the work. The human decision is mandatory; Armstrong's execution remains optional and never automatic.
+- **Confidential environments:** values in `.env` and every `.env.*` file except the exact `.env.example` template are confidential and must never be retrieved or disclosed by an agent.
 - **Complete initial understanding:** the first verified product session studies the complete accessible ecosystem and records its coverage.
 - **Fast scoped execution:** later tasks always refresh business rules and active decisions, then load the assigned repository context and affected relationships without repeating full discovery.
 - **Continuity-grade records:** implementation, documentation, contracts, decisions, changelog, and context are updated so another specialist can continue from evidence rather than conversation memory.
@@ -23,6 +25,6 @@ Agent Eco Space gives independently callable specialists a durable understanding
 
 ## Completion behaviour
 
-After completing authorized work, the specialist reports implementation evidence, tests, documentation and context updates, remaining risks, and PR status. The specialist recommends Armstrong when independent QA would add value and asks whether the human wants that review invoked or will arrange it manually.
+After completing authorized code work and specialist-owned verification, but before creating implementation pull requests, the specialist reports implementation evidence, tests, documentation and context updates, and remaining risks. The specialist then asks whether the human wants Armstrong to independently verify the work or declines that review.
 
-The recommendation may be omitted only when no meaningful QA activity applies, with a concise reason.
+If approved, Armstrong reviews the completed branch before PR creation and the implementing specialist addresses or records the findings. If declined, the implementing specialist records the decision and may proceed to PR creation. The decision checkpoint is required for Chinedu, Dotun, and every other specialist producing testable code or behaviour; Armstrong is never invoked automatically.

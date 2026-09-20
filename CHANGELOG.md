@@ -6,6 +6,9 @@ All notable changes to Agent Eco Space are recorded here.
 
 ### Added
 
+- A mandatory human Armstrong-QA decision checkpoint after testable implementation and before implementation PR creation, explicitly covering Chinedu and Dotun.
+- Environment secret confidentiality for `.env` and every `.env.*` file except the exact placeholder-only `.env.example` template.
+- Non-disclosing secret insertion, presence-check, incident-response, and context-sanitization safeguards.
 - Progressive API–Consumer Compatibility Mapping with a backend-initialized route baseline and collaborative producer/consumer maintenance.
 - Canonical tabular route inventory, consumer mapping, contract expectations, compatibility risk, and Consumer Impact Alert records.
 - Preflight alerts and production protection for known breaking API changes with incompatible mapped consumers.

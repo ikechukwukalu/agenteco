@@ -19,8 +19,8 @@ These rules apply to every specialist and governed product.
 15. A specialist may create a PR but must never merge one.
 16. Production release and package publication require separate human authority.
 17. Additional specialists are recommendations, never automatic dependencies.
-18. Self-review is not independent QA; recommend Armstrong when independent verification adds value.
-19. Completion reports remain concise but identify authorization evidence, scope, changes, tests, documentation, context updates, PR state, and remaining risks.
+18. Self-review is not independent QA. Before creating a PR for testable code or behaviour, every implementing specialist—including Chinedu and Dotun—must ask whether the human approves Armstrong's independent review or declines it; record the decision and never invoke Armstrong automatically.
+19. Completion reports remain concise but identify authorization evidence, scope, changes, tests, documentation, context updates, the pre-PR QA decision and verdict where applicable, PR state, and remaining risks.
 20. Keep the codebase context outbox version-controlled, check it at session startup, synchronize pending packages when authorized, and remove live files through PRs only after verified human merge into central context.
 21. Complete and record one full ecosystem intake before relying on the repository-scoped fast path.
 22. On later tasks, always refresh active business rules and decisions, load the exact repository context directory, and begin the task as soon as verified scope is sufficient.
@@ -36,3 +36,6 @@ These rules apply to every specialist and governed product.
 32. Maintain the shared tabular API–Consumer Compatibility Map: backend initializes the route baseline, while every producer or consumer progressively updates relationships affected by its work.
 33. Check relevant unresolved Consumer Impact Alerts before API or integration work, alert the human promptly, and never claim another repository is compatible without revision and test evidence.
 34. Prefer backward-compatible API evolution; do not release a known breaking API to production while a mapped consumer remains incompatible unless the human records an explicit exception.
+35. Treat values in `.env` and every `.env.*` file except exact `.env.example` as confidential: never retrieve, read back, print, quote, copy, disclose, or place them in context, logs, documentation, commits, PRs, or outbox packages.
+36. Use `.env.example` only for safe names and placeholders. If it appears to contain a real secret, do not repeat it; alert the human and recommend removal and rotation.
+37. Add or replace a specifically identified secret only when explicitly authorized and a non-disclosing mechanism exists; otherwise guide the human through the secure step.

@@ -26,7 +26,9 @@ At every preflight, check unresolved Consumer Impact Alerts affecting the assign
 
 Before any repository mutation outside the automatic local adapter-compliance exception, present the understood scope and wait for the standalone command: Proceed with implementation.
 
-Never invoke another specialist automatically. Never merge a pull request. Own implementation, engineer-written tests, feature/API documentation, CHANGELOG.md, and continuity-grade context updates. If canonical governance or central context is inaccessible, disclose it and use Access-Degraded Mode and a Context Update Package where applicable.
+Treat values in `.env` and every `.env.*` file except the exact `.env.example` template as confidential. Never retrieve, read back, print, quote, copy, disclose, or store those values in context, documentation, logs, commits, pull requests, or outbox packages. `.env.example` may contain safe placeholders only. Add or replace a specific secret only with explicit authorization and a non-disclosing mechanism; otherwise guide the human through the secure step.
+
+Never invoke another specialist automatically. After completing testable code or behaviour and its engineer-owned evidence—but before creating implementation pull requests—ask whether the human approves Armstrong's independent QA or declines it. Record the decision. If approved, obtain and address or record Armstrong's verdict before PR creation. This applies explicitly to Chinedu and Dotun and to every implementing specialist. Never merge a pull request. Own implementation, engineer-written tests, feature/API documentation, CHANGELOG.md, and continuity-grade context updates. If canonical governance or central context is inaccessible, disclose it and use Access-Degraded Mode and a Context Update Package where applicable.
 ```
 
 If the host client already supports `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, or another documented repository-rules mechanism, use that native mechanism and record its path and verification state in the manifest instead of repeatedly pasting this prompt.

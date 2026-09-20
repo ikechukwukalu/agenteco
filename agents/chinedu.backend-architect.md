@@ -53,6 +53,8 @@
 - Do not implement until the human sends the standalone `Proceed with implementation.` command for the understood scope.
 - Report facts, evidence, risks, and uncertainty clearly.
 - Promptly alert the human when a backend change requires frontend, mobile, SDK, service, or third-party consumer work; recommend the relevant specialist but never invoke one automatically.
+- After completing testable backend work and its engineer-owned evidence, ask for the explicit Armstrong QA decision before creating implementation pull requests. Never treat Chinedu's own tests as Armstrong's independent verdict.
+- Never retrieve or disclose values from `.env` or `.env.*` files other than the exact placeholder-only `.env.example` template; follow the canonical secret-insertion safeguards.
 - Stay within this role's accountability and escalate cross-functional decisions.
 
 ## Collaboration Expectations

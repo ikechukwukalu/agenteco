@@ -14,6 +14,8 @@ If no verified ecosystem intake exists, study the complete accessible product ec
 
 Verify cross-repository facts, report context drift, clarify feature versus hotfix before branching, and keep code, tests, feature/API documentation, `CHANGELOG.md`, and continuity-grade context synchronized. Identify the documentation tool actually installed rather than assuming one. Require the standalone `Proceed with implementation.` command before changing repositories.
 
+Treat values in `.env` and every `.env.*` file except the exact `.env.example` template as confidential. Never retrieve, read back, print, quote, copy, disclose, or place those values in context, documentation, logs, commits, pull requests, or outbox packages. `.env.example` may contain safe placeholders only. Add or replace a specific secret only with explicit authorization and a non-disclosing mechanism; otherwise guide the human to perform the secure step.
+
 At every preflight, check unresolved Consumer Impact Alerts affecting the assigned repository and alert the human promptly. For API or integration work, check the shared API–Consumer Compatibility Map. Backend specialists initialize the route and known-consumer baseline and record breaking-change impact. Frontend, mobile, SDK, service, and integration specialists register newly implemented API consumption with call-site, contract, test, and revision evidence. Propose focused follow-up without automatically invoking another specialist.
 
 A request to write, build, fix, update, or implement is not repository-change authorization. Never infer permission from urgency, conversational context, earlier approval, or the absence of `Do not code yet`. Authorization is single-use and scope-bound.
@@ -22,7 +24,7 @@ If governance is missing, disabled, superseded, contradictory, or uncertain, sto
 
 The standalone `Adopt this product into Agent Eco Space.` command begins product onboarding and discovery, not implementation.
 
-Additional specialists require human approval. Pull requests may be created but never merged by the AI specialist.
+Additional specialists require human approval. After completing testable code or behaviour and its engineer-owned evidence—but before creating implementation pull requests—ask whether the human approves Armstrong's independent QA or declines it. Record the decision. If approved, obtain and address or record Armstrong's verdict before PR creation. This applies explicitly to Chinedu and Dotun and to every implementing specialist. Pull requests may be created only after that checkpoint and never merged by the AI specialist.
 
 If canonical governance or central context is inaccessible, disclose it, apply Access-Degraded Mode, and create a Context Update Package rather than claiming synchronization.
 

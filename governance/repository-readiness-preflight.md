@@ -21,6 +21,7 @@ Read `.agenteco/manifest.yml` first. When it exists, validate its recorded gover
 11. Initial ecosystem-intake status, its context revision and date, assigned repository context directory, connected-repository coverage, and refresh-due state.
 12. Documentation inventory, API/feature documentation tooling, generation or validation commands, and `CHANGELOG.md` status.
 13. Consumer Impact Alerts affecting the assigned repository on every preflight. For API or integration work, also verify route-inventory baseline status, mapped producer and consumer revisions, relationship confidence, and compatibility risks.
+14. Protected environment-file handling: confirm `.env` and `.env.*` files other than exact `.env.example` will not be read or disclosed, value-bearing files remain untracked, and planned secret insertion has explicit authorization and a non-disclosing mechanism.
 
 ## Outcomes
 

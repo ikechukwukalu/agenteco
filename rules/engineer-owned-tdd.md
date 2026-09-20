@@ -37,3 +37,5 @@ Frontend engineers own the appropriate unit, component, accessibility, state, AP
 ## Narrow exceptions
 
 A spike, one-off operational investigation, or purely cosmetic change may justify a documented reduced-test exception. The selected specialist must record the reason, risk, follow-up, and owner. An exception never waives required CI checks or an independent QA/security review that the human has explicitly made a gate for the scope.
+
+For testable implementation, engineer-owned tests are completed first. Before the implementation PR is created, the implementer must ask whether the human approves Armstrong's independent QA or declines it. The decision is recorded; Armstrong never starts automatically.

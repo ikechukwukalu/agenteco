@@ -7,7 +7,7 @@ Agent Eco Space preserves useful AgentHQ capability while changing rules that fo
 | Clarification before implementation | Retained, streamlined | Prevent costly rework without ceremony |
 | Facts, sources, and uncertainty labels | Retained | Protect correctness |
 | Engineer-owned TDD | Retained | Implementers prove their own code |
-| Independent QA | Human-approved recommendation | Prevent self-marking without automatic cost |
+| Independent QA | Mandatory pre-PR human decision; review remains optional and never automatic | Prevent self-marking without automatic cost |
 | Documentation synchronization | Retained; owned by implementer | Avoid another automatic specialist |
 | Backward compatibility and small blast radius | Retained | Protect existing users |
 | Pull-request delivery | Retained | Preserve reviewability |

@@ -13,7 +13,7 @@ Each adapter requires the AI to:
 7. follow the branch and pull-request rules;
 8. implement tests and synchronize documentation and context;
 9. never merge a pull request;
-10. recommend, but never automatically invoke, independent QA or another specialist.
+10. require a recorded human decision on Armstrong's independent QA after testable implementation and before creating implementation PRs, while never invoking Armstrong automatically;
 11. never infer implementation authorization from task wording, urgency, prior approval, conversation flow, or absent objections;
 12. enter Governance-Uncertain Mode rather than silently falling back when governance is missing, disabled, superseded, contradictory, inaccessible, or uncertain.
 13. complete one recorded ecosystem intake, then use a fast repository-scoped path on later tasks;
@@ -24,6 +24,7 @@ Each adapter requires the AI to:
 18. verify and automatically reconcile the complete manifest-required adapter set, restoring another tool's deleted adapter even when it is not the active tool;
 19. treat Agent Eco Space itself as read-only except for a request verified through GitHub as coming from repository owner `ikechukwukalu`, followed by the normal proposal and authorization gate.
 20. check relevant API–consumer mappings and alerts, initialize the backend baseline when assigned, and record new consumer usage or breaking producer impact with source and revision evidence.
+21. treat `.env` and every `.env.*` file except exact `.env.example` as value-confidential, never disclose those values, and allow only explicitly authorized non-disclosing secret insertion.
 
 The adapters must also recognize only commands listed in the canonical [Command Catalogue](../../commands/README.md) as protected workflow triggers.
 

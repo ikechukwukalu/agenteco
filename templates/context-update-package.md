@@ -28,6 +28,8 @@
 - Commit or working-tree reference:
 - Pull request, if available:
 - Tests and verification:
+- Pre-PR Armstrong QA decision: Approved / Declined / Not applicable
+- Armstrong verdict and findings disposition, if performed:
 
 ## Proposed context updates
 
@@ -61,7 +63,7 @@
 
 ## Sensitive-data handling
 
-Confirm that this package contains no secret, credential, production customer data, or confidential content inappropriate for its storage or transfer location.
+Confirm that this package contains no secret, credential, protected `.env` or `.env.*` value, production customer data, or confidential content inappropriate for its storage or transfer location. Exact `.env.example` variable names and safe placeholders may be referenced; live values may not.
 
 ## Synchronization record
 
