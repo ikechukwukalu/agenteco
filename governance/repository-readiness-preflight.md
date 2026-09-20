@@ -20,6 +20,7 @@ Read `.agenteco/manifest.yml` first. When it exists, validate its recorded gover
 10. Current implementation-authorization state and any unresolved governance suspension, uncertainty, or unauthorized-change incident.
 11. Initial ecosystem-intake status, its context revision and date, assigned repository context directory, connected-repository coverage, and refresh-due state.
 12. Documentation inventory, API/feature documentation tooling, generation or validation commands, and `CHANGELOG.md` status.
+13. Consumer Impact Alerts affecting the assigned repository on every preflight. For API or integration work, also verify route-inventory baseline status, mapped producer and consumer revisions, relationship confidence, and compatibility risks.
 
 ## Outcomes
 

@@ -6,6 +6,10 @@ All notable changes to Agent Eco Space are recorded here.
 
 ### Added
 
+- Progressive API–Consumer Compatibility Mapping with a backend-initialized route baseline and collaborative producer/consumer maintenance.
+- Canonical tabular route inventory, consumer mapping, contract expectations, compatibility risk, and Consumer Impact Alert records.
+- Preflight alerts and production protection for known breaking API changes with incompatible mapped consumers.
+- Repository manifest schema 4 fields for compatibility-map paths, baseline evidence, consumer revisions, and unresolved alerts.
 - Cross-adapter self-healing so any surviving governed agent restores deleted or damaged manifest-required adapters.
 - A dependency-free CI integrity checker for missing adapters, managed-marker damage, and canonical fingerprint drift.
 - Manifest-declared adapter paths and required/optional status, with safe Git-history recovery rules for local sections.

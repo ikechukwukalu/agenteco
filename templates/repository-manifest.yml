@@ -1,5 +1,5 @@
 # Agent Eco Space repository manifest
-schema_version: 3
+schema_version: 4
 
 governance:
   repository: https://github.com/ikechukwukalu/agenteco
@@ -86,6 +86,19 @@ context:
     producers: []
     consumers: []
     other_dependencies: []
+    last_verified_at: "<ISO_8601_OR_NONE>"
+  api_consumer_compatibility:
+    applicable: <true|false>
+    baseline_status: "<complete|partial|missing|stale|not-applicable>"
+    baseline_owner: "<SPECIALIST_OR_NONE>"
+    route_inventory_path: "<CENTRAL_CONTEXT_PATH_OR_NONE>"
+    consumer_map_path: "<CENTRAL_CONTEXT_PATH_OR_NONE>"
+    consumer_expectations_path: "<CENTRAL_CONTEXT_PATH_OR_NONE>"
+    risk_register_path: "<CENTRAL_CONTEXT_PATH_OR_NONE>"
+    impact_alerts_path: "<CENTRAL_CONTEXT_PATH_OR_NONE>"
+    backend_revision: "<COMMIT_OR_NONE>"
+    consumer_revisions: {}
+    unresolved_alerts: []
     last_verified_at: "<ISO_8601_OR_NONE>"
 
 documentation:

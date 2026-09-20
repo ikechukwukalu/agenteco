@@ -37,6 +37,10 @@
 
 ### API, event, or data contracts affected
 
+### API–consumer relationships added or changed
+
+### Consumer Impact Alerts and compatibility risks
+
 ### Decisions created or superseded
 
 ### Repositories and consumers affected

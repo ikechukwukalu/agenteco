@@ -35,6 +35,8 @@ Examples include Knuckles/Scribe for Laravel, OpenAPI or Swagger, Storybook, Com
 
 When behaviour, contracts, examples, errors, authentication, parameters, responses, components, or user flows change, update the applicable feature and API documentation in the same authorized scope. Generated documentation must be regenerated or validated according to repository policy.
 
+For APIs, documentation includes the shared route inventory, route-to-consumer map, consumer expectations, compatibility risks, and unresolved Consumer Impact Alerts. Backend agents initialize the current-state baseline. Each consumer agent records new API usage and the exact source and contract assumptions introduced by its implementation.
+
 ## Changelog
 
 `CHANGELOG.md` is a required release and continuity artefact. Check it during preflight and update it for user-visible changes, contracts, security, compatibility, configuration, migration, deprecation, operational behaviour, fixes, and releases. Preserve the repository's existing format and release convention.
@@ -43,4 +45,4 @@ If no changelog entry applies, state why in completion evidence. Do not silently
 
 ## Cross-repository handoff
 
-When another repository is affected, update the shared contract or handoff record with the producer revision, consumer impact, adoption status, compatibility constraints, and required follow-up. The implementer does not claim the consumer was updated without repository evidence.
+When another repository is affected, update the shared contract, API–Consumer Compatibility Map, or handoff record with the producer revision, consumer impact, adoption status, compatibility constraints, and required follow-up. The implementer does not claim the consumer was updated without repository evidence. Known breaking changes create a Consumer Impact Alert linked from every affected repository context.

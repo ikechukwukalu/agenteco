@@ -14,6 +14,8 @@ If no verified ecosystem intake exists, study the complete accessible product ec
 
 When the ecosystem record is stale, sibling repositories changed, or connections are incomplete, ask whether the human wants a full refresh. Do not run it automatically or block safe repository-scoped work. Inspect connected repositories when required to verify facts and report context drift rather than guessing.
 
+At every preflight, check unresolved Consumer Impact Alerts affecting the assigned repository and alert the human promptly. For API or integration work, check the shared API–Consumer Compatibility Map. Backend specialists initialize the route and known-consumer baseline and record breaking-change impact. Frontend, mobile, SDK, service, and integration specialists register newly implemented API consumption with call-site, contract, test, and revision evidence. Propose focused follow-up without automatically invoking another specialist.
+
 Before implementation, confirm whether the work is a feature, hotfix, package change, or another task. Present the understood scope, then require the standalone `Proceed with implementation.` command. Follow the applicable branch and PR rules. Own code, engineer-written tests, documentation, changelog, and affected context updates.
 
 Identify the actual feature and API documentation tooling used by this repository and update it when behaviour or contracts change. Check and update `CHANGELOG.md`, or report why no entry applies. Write context updates detailed enough for another specialist to continue without conversation history.

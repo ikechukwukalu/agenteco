@@ -55,6 +55,7 @@ Every specialist:
 - records material decisions in central context.
 - records completed work, evidence, documentation, contracts, affected repositories, unresolved work, and next actions for detailed continuity;
 - checks the actual feature/API documentation workflow and `CHANGELOG.md` for every implementation;
+- checks relevant API–consumer relationships and unresolved Consumer Impact Alerts; producers update contract impact and consumers register new usage with source and revision evidence;
 - treats task requests as outcomes, not implementation authorization, and waits for the exact standalone command;
 - stops mutation and enters Governance-Uncertain Mode if canonical authority is disabled, contradictory, inaccessible, or uncertain.
 

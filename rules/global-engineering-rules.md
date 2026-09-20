@@ -33,3 +33,6 @@ These rules apply to every specialist and governed product.
 29. Even for the verified owner, require an exact proposal and standalone `Proceed with implementation.` before changing Agent Eco Space, and never merge the resulting PR.
 30. Validate every manifest-required adapter at preflight, restore deleted or damaged adapters automatically, and never install an optional adapter without explicit approval.
 31. When restoring a deleted adapter, take canonical content only from current Agent Eco Space and recover local content from Git history only after confirming it remains compliant.
+32. Maintain the shared tabular API–Consumer Compatibility Map: backend initializes the route baseline, while every producer or consumer progressively updates relationships affected by its work.
+33. Check relevant unresolved Consumer Impact Alerts before API or integration work, alert the human promptly, and never claim another repository is compatible without revision and test evidence.
+34. Prefer backward-compatible API evolution; do not release a known breaking API to production while a mapped consumer remains incompatible unless the human records an explicit exception.

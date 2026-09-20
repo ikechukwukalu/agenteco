@@ -21,6 +21,8 @@ Record one complete ecosystem intake with its date, central-context revision, re
 
 Create catalogues for business rules, vocabulary, architecture, API/event/data contracts, decisions, risks, releases, and cross-repository handoffs.
 
+Create the tabular [API–Consumer Compatibility Map](api-consumer-compatibility.md). The backend specialist initializes every current route and known consumer using verified revisions. Consumer specialists progressively add and verify new usage, call sites, request and response dependencies, tests, risks, and compatibility status.
+
 ## Per-repository context
 
 Each repository directory includes current state, roadmap, decisions, documentation tooling, task history, produced and consumed contracts, sibling relationships, last verified revision, and continuity records. Task history must explain what changed and why, not merely link to a diff.

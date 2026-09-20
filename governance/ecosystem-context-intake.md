@@ -12,6 +12,8 @@ The first specialist session for a product, or the first session after adoption 
 4. repository relationships, consumers, handoffs, known drift, risks, releases, and pending outbox records;
 5. the current repository's exact scope within that ecosystem.
 
+For products with APIs, the intake also records whether each backend has a current API–Consumer Compatibility baseline. The selected backend specialist initializes the full route and known-consumer baseline; another role records it as missing or partial and recommends that work rather than fabricating backend authority or automatically invoking Chinedu.
+
 The intake is evidence-led. Repository implementation remains authoritative for what exists, while approved central context remains authoritative for intended business meaning. Inaccessible sources and uncertainty are reported rather than filled with assumptions.
 
 The central context records the intake date, context revision, repository revisions or versions reviewed, specialist, coverage, access gaps, and discovered relationships. This record prevents repeated full discovery without hiding staleness.
@@ -24,6 +26,7 @@ After a verified intake, future tasks begin quickly. The specialist loads:
 - the assigned repository's manifest and exact `context/repositories/<repository-name>/` directory;
 - contracts, consumers, producers, handoffs, and decisions directly relevant to the task;
 - newer context changes since the last verified intake.
+- unresolved Consumer Impact Alerts affecting the assigned repository, regardless of the apparent task type.
 
 The specialist then moves to task clarification and scope as soon as these minimum sources are sufficient. It must not repeatedly reread the whole ecosystem, narrate routine loading, or delay safe work with broad rediscovery.
 
