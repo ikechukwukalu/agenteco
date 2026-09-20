@@ -9,7 +9,7 @@ This ledger proves which AgentHQ assets were transferred and how Agent Eco Space
 | Engineering Manager | Rewritten | Optional adviser and context steward; never permanently active |
 | Dorlin | Transferred | Directly selectable product specialist |
 | Grace | Transferred | Directly selectable delivery specialist |
-| Armstrong | Transferred | Independent QA invoked only with human approval |
+| Armstrong | Transferred | Every testable implementation reaches a pre-PR human QA decision; Armstrong is invoked only with approval |
 | Busola | Transferred | Directly selectable security specialist |
 | Chinedu | Transferred | Directly selectable backend specialist |
 | David | Transferred | Directly selectable AI specialist |

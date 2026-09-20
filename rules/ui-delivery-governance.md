@@ -51,7 +51,7 @@ The implementing specialist must compare the implementation with the approved de
 - unresolved material differences;
 - a verdict of `Accepted`, `Changes Required`, or `Blocked`.
 
-The specialist recommends Armstrong for independent functional QA and Samuel for an independent visual verdict when either would materially improve confidence. They are invoked only with human approval. When the human requires either review for the current scope, unresolved blocking findings prevent readiness. UI Replica Mode adds stricter parity evidence when activated.
+After testable UI implementation and Dotun's engineer-owned verification—but before implementation PR creation—Dotun must ask whether the human approves Armstrong's independent functional QA or declines it. Armstrong is invoked only with human approval. Samuel remains a recommended independent visual reviewer when that would materially improve confidence. When the human requires either review for the current scope, unresolved blocking findings prevent readiness. UI Replica Mode adds stricter parity evidence when activated.
 
 ## Project Owner UAT
 

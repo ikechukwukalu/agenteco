@@ -13,10 +13,13 @@ For every completed task, update the assigned repository context directory and a
 - contracts produced or consumed and affected sibling repositories;
 - database, configuration, infrastructure, security, compatibility, and migration effects;
 - tests, commands, evidence, and known coverage gaps;
+- the pre-PR Armstrong QA decision and, when performed, verdict and findings disposition;
 - feature, API, operational, README, migration, and release documentation changed;
 - `CHANGELOG.md` entry or an explicit, evidence-based reason it does not apply;
 - branch, commit, pull request, release, and source revisions;
 - unresolved risks, deferred work, and the clearest next action.
+
+Never record a value from `.env` or any `.env.*` file other than safe placeholders in exact `.env.example`. Configuration continuity records use variable names, purpose, environment, ownership, and sanitized status only.
 
 Do not write vague notes such as `feature completed` or duplicate code diffs without explaining their product and contract meaning. Separate verified facts from proposals and uncertainty.
 

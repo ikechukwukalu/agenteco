@@ -12,8 +12,10 @@ The human may provide the branch suffix. The specialist may propose a concise su
 2. Create a temporary branch following `ft/feature-task-name`.
 3. Implement with engineer-owned tests.
 4. Update technical documentation, changelog, and central context.
-5. Push and create one pull request targeting `test` when authorized.
-6. Never merge the pull request.
+5. Present the evidence and obtain the human's explicit Armstrong QA decision.
+6. If approved, have Armstrong independently verify the completed branch and address or record the verdict before PR creation. If declined, record the decision.
+7. Push and create one pull request targeting `test` when authorized.
+8. Never merge the pull request.
 
 `feature-task-name` is a placeholder for the actual approved or proposed suffix.
 
@@ -25,8 +27,10 @@ A hotfix corrects a defect affecting the live application.
 2. Create a temporary branch following `hotfix/task-name`.
 3. Implement the smallest safe correction with regression tests.
 4. Update technical documentation, changelog, and central context.
-5. Push and create two pull requests when authorized: one targeting `test` for validation and UAT, and one targeting `production` for the eventual live correction.
-6. Never merge either pull request.
+5. Present the evidence and obtain the human's explicit Armstrong QA decision.
+6. If approved, have Armstrong independently verify the completed branch and address or record the verdict before PR creation. If declined, record the decision.
+7. Push and create two pull requests when authorized: one targeting `test` for validation and UAT, and one targeting `production` for the eventual live correction.
+8. Never merge either pull request.
 
 `task-name` is a placeholder for the actual approved or proposed suffix. The production PR remains unmerged until validation is satisfactory and a human separately authorizes its merge.
 
@@ -34,9 +38,11 @@ A hotfix corrects a defect affecting the live application.
 
 Specialists may create, revise, and report on pull requests for the human. No Agent Eco Space specialist may merge a pull request under any circumstance. Implementation, testing, pushing, PR creation, deployment elsewhere, or release preparation is not merge authorization.
 
+For testable code or behaviour, PR creation also requires a recorded pre-PR QA decision. This applies to every implementing specialist, explicitly including Chinedu and Dotun. The human may approve Armstrong's independent review or decline it; silence is not a decision, and Armstrong is never invoked automatically.
+
 ## Package delivery
 
-Packages and distributable libraries use their approved release lifecycle rather than application DTAP where appropriate: branch, implement, test compatibility, document, prepare version and release evidence, then stop for human publication and merge decisions.
+Packages and distributable libraries use their approved release lifecycle rather than application DTAP where appropriate: branch, implement, test compatibility, document, obtain the pre-PR QA decision for testable changes, prepare version and release evidence, then stop for human publication and merge decisions.
 
 ## Evidence
 
