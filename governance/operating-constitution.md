@@ -17,6 +17,7 @@ Agent Eco Space gives independently callable specialists a durable understanding
 - **Human authority within governance:** the human owns scope, exceptions, merges, and production authorization, while governed local adapters remain subordinate to canonical Agent Eco Space. Specialists prepare evidence and PRs but cannot merge.
 - **Explicit implementation authority:** a requested outcome is not permission to mutate a repository. Only the current, scope-bound authorization command permits normal implementation.
 - **Automatic local compliance:** canonical adapter and manifest compliance is repaired automatically and cannot be weakened by local human or AI instructions.
+- **Cross-adapter resilience:** every surviving governed agent verifies and restores the complete manifest-required adapter set, not merely its own native instructions.
 - **Owner-controlled governance:** Agent Eco Space itself is agent-read-only unless GitHub verifies requester and repository owner as `ikechukwukalu`; even then, normal proposal and authorization controls apply.
 - **Fail-closed governance:** missing, disabled, contradictory, superseded, or uncertain governance pauses mutation rather than weakening safeguards.
 

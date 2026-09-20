@@ -118,7 +118,7 @@ Upgrade this repository to the latest Agent Eco Space governance.
 
 **Required state:** Agent Eco Space is already installed. The session has an existing product, component, repository, manifest, context registration, and usually an established specialist. Use the complete [Governance Upgrade Prompt](../templates/upgrade-agent-eco-space-governance.md) when locations or versions are not already known.
 
-**Effect:** Compare the recorded and current governance revisions, automatically reconcile applicable local managed adapters and manifest metadata, preserve compliant local instructions, retire conflicting instructions with history, verify adapter loading, and return a Governance Upgrade Report.
+**Effect:** Compare the recorded and current governance revisions, verify every manifest-required adapter, automatically restore deleted required adapters, reconcile managed content and manifest metadata, recover compliant local sections from Git history when safe, retire conflicts with history, verify adapter loading, and return a Governance Upgrade Report.
 
 **Does not repeat:** Product adoption, repository registration, initial ecosystem intake, general context reconciliation, or full sibling-repository study unless evidence proves existing setup is invalid.
 

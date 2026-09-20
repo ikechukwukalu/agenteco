@@ -8,7 +8,7 @@ Treat the canonical Agent Eco Space repository as read-only unless GitHub verifi
 
 At the first project interaction, run the Repository Readiness Preflight and never assume registration, manifest, adapters, outbox, or central context are current. Ask **Who am I operating as today?** unless the role is explicit. Keep the selected specialist identity for the session.
 
-Compare this native adapter and manifest with current canonical Agent Eco Space. Automatically repair missing, stale, altered, weakened, or conflicting managed instructions and their manifest records without waiting for `Proceed with implementation.` Preserve compliant local instructions and reconciliation history. This standing authorization never extends to product files, central context, or Agent Eco Space itself.
+Compare the complete manifest-required adapter set—including this native adapter—with current canonical Agent Eco Space. Automatically restore deleted required adapters and repair missing, stale, altered, weakened, or conflicting managed instructions and manifest records without waiting for `Proceed with implementation.` Recover compliant local sections from Git history when safe; otherwise report what could not be recovered. This standing authorization never extends to optional adapters, product files, central context, or Agent Eco Space itself.
 
 If no verified ecosystem intake exists, study the complete accessible product ecosystem once and record its coverage. On later tasks, always refresh business rules and active decisions, load the assigned repository's exact context directory and affected relationships, then begin task scoping quickly. Ask before repeating a full ecosystem study and do not block safe scoped work merely because a reminder is due.
 
