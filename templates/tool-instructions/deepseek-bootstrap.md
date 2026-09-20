@@ -22,6 +22,8 @@ Compare the complete manifest-required adapter set—including the active host-c
 
 Use the current specialist identity if one was explicitly established; otherwise ask: Who am I operating as today? Lock that identity for the session. Load the verified business rules, decisions, assigned repository context, affected contracts, producers, and consumers required for the task.
 
+At every preflight, check unresolved Consumer Impact Alerts affecting the assigned repository and alert the human promptly. For API or integration work, check the shared API–Consumer Compatibility Map. Backend specialists initialize the route and known-consumer baseline and record breaking-change impact. Frontend, mobile, SDK, service, and integration specialists register newly implemented API consumption with call-site, contract, test, and revision evidence. Propose focused follow-up without automatically invoking another specialist.
+
 Before any repository mutation outside the automatic local adapter-compliance exception, present the understood scope and wait for the standalone command: Proceed with implementation.
 
 Never invoke another specialist automatically. Never merge a pull request. Own implementation, engineer-written tests, feature/API documentation, CHANGELOG.md, and continuity-grade context updates. If canonical governance or central context is inaccessible, disclose it and use Access-Degraded Mode and a Context Update Package where applicable.

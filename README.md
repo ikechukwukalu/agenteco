@@ -39,6 +39,14 @@ Every surviving Agent Eco-aware tool checks the complete set of adapters marked 
 
 For total adapter loss, install the dependency-free [adapter integrity checker](templates/check-agenteco-adapters.py) in CI. It fails closed on missing required files, invalid managed markers, or fingerprint drift; it reports only and never commits changes. Recovery then starts through the governance-upgrade or first-time bootstrap prompt.
 
+## API–consumer compatibility
+
+The backend specialist initializes a complete, revision-backed route and known-consumer baseline for each backend, beginning with the core backend. The product then maintains it progressively: backend agents update producer contracts and impact; frontend, mobile, SDK, service, and integration agents register new consumption and the exact source-level assumptions they introduce.
+
+The central context stores five linked tables: route inventory, route-to-consumer map, consumer contract expectations, compatibility risks, and Consumer Impact Alerts. Any specialist can identify drift or risk. Relevant producer and consumer agents must see unresolved alerts during preflight and promptly alert the human when focused cross-repository work is required. No second agent starts automatically.
+
+Known breaking API changes are blocked from production while a mapped consumer remains incompatible unless the human explicitly records a time-bounded exception and mitigation. See [API–Consumer Compatibility Mapping](rules/api-consumer-compatibility.md) and the [table template](templates/product-context/api-consumer-compatibility.md).
+
 ## Available specialists
 
 Select one specialist directly for the session. Each role owns its implementation, tests, documentation, changelog, and context updates; other roles are recommendations that require human approval.
@@ -84,6 +92,7 @@ See the [Specialist Catalogue](agents/README.md) and individual profiles in `age
 - [Governance Suspension and Recovery](governance/governance-suspension-and-recovery.md)
 - [Ecosystem Context Intake and Refresh](governance/ecosystem-context-intake.md)
 - [Documentation and Continuity](rules/documentation-and-continuity.md)
+- [API–Consumer Compatibility Mapping](rules/api-consumer-compatibility.md)
 - [Specialist Catalogue](agents/README.md)
 - [Product Context Template](templates/product-context/README.md)
 - [Tool Instruction Adapters](templates/tool-instructions/README.md)
@@ -251,7 +260,7 @@ Read the canonical Agent Eco Space governance and run the Repository Readiness P
 
 After role selection, report the preflight outcome. If setup is incomplete, include adoption, registration, initial ecosystem intake, manifest, adapter, outbox, and context remediation in one proposal where applicable.
 
-If a verified ecosystem intake exists, use the fast path: always refresh active business rules and decisions, load this repository's exact context directory and task-relevant contracts and relationships, report a compact intake receipt, and begin task scoping immediately. If the full intake is stale or incomplete, ask whether I want it refreshed; continue safe scoped work unless the stale dependency is blocking. Require the standalone `Proceed with implementation.` command. The selected specialist owns implementation, engineer-written tests, verified feature/API documentation, `CHANGELOG.md`, and continuity-grade context updates.
+If a verified ecosystem intake exists, use the fast path: always refresh active business rules and decisions, load this repository's exact context directory and task-relevant contracts and relationships, surface unresolved Consumer Impact Alerts affecting this repository, report a compact intake receipt, and begin task scoping immediately. For API-related work, inspect the progressive route-to-consumer map and verify the recorded producer and consumer revisions before relying on it. If the full intake is stale or incomplete, ask whether I want it refreshed; continue safe scoped work unless the stale dependency is blocking. Require the standalone `Proceed with implementation.` command. The selected specialist owns implementation, engineer-written tests, verified feature/API documentation, `CHANGELOG.md`, and continuity-grade context updates.
 
 Do not invoke another specialist automatically. Recommend additional expertise only when it materially helps and wait for my approval. You may create pull requests on my behalf, but you must never merge them.
 ```
@@ -440,11 +449,11 @@ Recorded ecosystem-intake revision and date:
 
 Read the current active business rules and decisions, product overview, architecture, repository map, contracts, handoffs, risks, releases, synchronization records, and every registered repository context directory. Identify every registered application, backend, frontend, mobile app, microservice, package, SDK, and infrastructure repository.
 
-Where access exists, verify each repository's purpose, current revision, produced and consumed contracts, documentation systems, changelog, consumers, producers, and material changes against repository evidence. Record inaccessible repositories and uncertainty rather than guessing.
+Where access exists, verify each repository's purpose, current revision, produced and consumed contracts, documentation systems, changelog, consumers, producers, and material changes against repository evidence. For every applicable backend, refresh its route inventory, route-to-consumer relationships, recorded consumer revisions, confidence states, compatibility risks, and unresolved Consumer Impact Alerts. Ask consumer specialists to confirm only their own observed integrations; do not invent consumption from route existence alone. Record inaccessible repositories and uncertainty rather than guessing.
 
-Compare the current ecosystem with the previous intake. Report new, removed, renamed, split, archived, stale, or conflicting repositories, relationships, APIs, events, packages, data contracts, business rules, decisions, handoffs, risks, documentation systems, and releases. Identify the current repository's updated connections and task-relevant implications.
+Compare the current ecosystem with the previous intake. Report new, removed, renamed, split, archived, stale, or conflicting repositories, relationships, APIs, events, packages, data contracts, business rules, decisions, handoffs, risks, documentation systems, and releases. Identify the current repository's updated connections and task-relevant implications, including API changes that may break a mapped web, mobile, SDK, service, or third-party consumer.
 
-Return a compact ecosystem receipt containing the context revision, repositories reviewed, revisions verified, relationships added or changed, access gaps, material drift, and recommended next reminder date. Do not dump the full context back to me.
+Return a compact ecosystem receipt containing the context revision, repositories reviewed, revisions verified, relationships added or changed, unresolved Consumer Impact Alerts, access gaps, material drift, and recommended next reminder date. Do not dump the full context back to me.
 
 Present the exact central-context, manifest, contract, documentation-inventory, handoff, risk, and repository-context updates required. Do not modify any repository until I send the standalone "Proceed with implementation." command. You may prepare pull requests after authorization, but you must never merge them.
 ```
@@ -464,10 +473,10 @@ This is the offline fallback used when a specialist must update central context 
 - Source repository:
 - Selected specialist:
 - Created at:
-- Status: Pending Context Sync
+- Status: `Pending Context Sync`
 - Package identifier:
 - Content fingerprint:
-- Version-controlled outbox path: .agenteco/outbox/context/<package-identifier>.md
+- Version-controlled outbox path: `.agenteco/outbox/context/<package-identifier>.md`
 - Source repository visibility and authorized audience:
 
 ## Available authority
@@ -492,6 +501,10 @@ This is the offline fallback used when a specialist must update central context 
 ### Business rules affected
 
 ### API, event, or data contracts affected
+
+### API–consumer relationships added or changed
+
+### Consumer Impact Alerts and compatibility risks
 
 ### Decisions created or superseded
 
@@ -554,6 +567,8 @@ Treat the canonical Agent Eco Space repository as read-only unless GitHub verifi
 Compare the complete manifest-required adapter set—including the active host-client instructions—with current canonical Agent Eco Space. Automatically restore deleted required adapters and repair missing, stale, altered, weakened, or conflicting managed instructions and manifest records without waiting for `Proceed with implementation.` Recover compliant local sections from Git history when safe; otherwise report what could not be recovered. This standing authorization never extends to optional adapters, product files, central context, or Agent Eco Space itself.
 
 Use the current specialist identity if one was explicitly established; otherwise ask: Who am I operating as today? Lock that identity for the session. Load the verified business rules, decisions, assigned repository context, affected contracts, producers, and consumers required for the task.
+
+At every preflight, check unresolved Consumer Impact Alerts affecting the assigned repository and alert the human promptly. For API or integration work, check the shared API–Consumer Compatibility Map. Backend specialists initialize the route and known-consumer baseline and record breaking-change impact. Frontend, mobile, SDK, service, and integration specialists register newly implemented API consumption with call-site, contract, test, and revision evidence. Propose focused follow-up without automatically invoking another specialist.
 
 Before any repository mutation outside the automatic local adapter-compliance exception, present the understood scope and wait for the standalone command: Proceed with implementation.
 

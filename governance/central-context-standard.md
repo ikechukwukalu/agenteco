@@ -19,6 +19,10 @@ context/
     index.md
   contracts/
     apis/
+      route-inventory.md
+      consumer-map.md
+      consumer-expectations.md
+      impact-alerts.md
     events/
     data/
   decisions/
@@ -40,6 +44,8 @@ context/
 
 The structure may expand, but shared truth and per-repository ownership must remain distinguishable.
 
+API records use the canonical [API–Consumer Compatibility Map](../templates/product-context/api-consumer-compatibility.md). A backend specialist initializes the route and known-consumer baseline. Every producer and consumer specialist then progressively maintains the rows affected by its work. Shared alerts are linked from the producer and every affected consumer context directory.
+
 The synchronization ledger records every accepted offline Context Update Package using its identifier, fingerprint, source repository and commit, destination records, context PR, merge commit, and synchronization date. This prevents another specialist from publishing the same offline update twice.
 
 ## Business-rule lifecycle
@@ -54,6 +60,6 @@ If these disagree, record context drift, determine what must change, and never s
 
 ## Specialist responsibility
 
-The active specialist updates the active repository context, changed shared contracts, affected business rules and decisions, cross-repository handoffs, documentation inventory, task history, and verification references. The record must be detailed enough for another specialist to continue without reconstructing the work from conversation history.
+The active specialist updates the active repository context, changed shared contracts, API-consumer relationships, affected business rules and decisions, cross-repository handoffs, documentation inventory, task history, and verification references. A consumer specialist records newly implemented API use; a backend specialist records producer changes and consumer impact. The record must be detailed enough for another specialist to continue without reconstructing the work from conversation history.
 
 The first verified product session loads the complete accessible ecosystem and records its coverage in `context/product/ecosystem-intake.md`. Later tasks use the repository-scoped fast path while always refreshing active business rules and decisions. Full ecosystem refreshes require human approval and are recommended when freshness or drift triggers apply.

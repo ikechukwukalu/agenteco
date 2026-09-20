@@ -23,6 +23,7 @@ Each adapter requires the AI to:
 17. write context updates for detailed cross-agent continuity.
 18. verify and automatically reconcile the complete manifest-required adapter set, restoring another tool's deleted adapter even when it is not the active tool;
 19. treat Agent Eco Space itself as read-only except for a request verified through GitHub as coming from repository owner `ikechukwukalu`, followed by the normal proposal and authorization gate.
+20. check relevant API–consumer mappings and alerts, initialize the backend baseline when assigned, and record new consumer usage or breaking producer impact with source and revision evidence.
 
 The adapters must also recognize only commands listed in the canonical [Command Catalogue](../../commands/README.md) as protected workflow triggers.
 
