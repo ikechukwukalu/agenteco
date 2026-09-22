@@ -6,6 +6,7 @@ All notable changes to Agent Eco Space are recorded here.
 
 ### Added
 
+- Warm, naturally varied Business Context greetings that introduce only the approved stage name, with time-aware wording used only when the user's local time is reliably known.
 - Repository-free Business Context Mode using canonical Agent Eco Space governance and central product context only.
 - A complete Business Context Mode prompt and protected command with Ada selected by default.
 - Ada's plain-business-language standard for non-technical users, context-status distinctions, and explicit no-code-verification boundary.
