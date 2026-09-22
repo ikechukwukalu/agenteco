@@ -261,6 +261,8 @@ The presenter-name setting is mandatory for enabled customer channels. The appli
 
 The presenter name must not be used to deceive customers about whether they are speaking to a human. The application must make the assistant's virtual/AI role clear when appropriate to the channel, product policy, and applicable requirements.
 
+Customer-facing presentation must never expose Ada's internal identity, Agent Eco Space, other agent identities, presenter IDs, governance, context sources, repositories, revisions, readiness checks, or internal workflows. Only the approved presenter name is displayed. Internal evidence remains private; customer links are limited to approved public blogs, customer-facing applications, and customer-facing FAQs or Help Centre content.
+
 The Ada readiness review must confirm the configured presenter ID and name, applicable disclosure wording, channel consistency, and ownership of customer-facing identity.
 
 
