@@ -32,7 +32,7 @@ Every AgentHQ specialist remains available in Agent Eco Space. Each is independe
 
 | Specialist | Role |
 |---|---|
-| Ada | Senior Customer Support and Product Communications Specialist |
+| Ada | Senior Customer Support and Product Communications Specialist; default for repository-free Business Context Mode |
 | Ling | Senior Localization Engineer and Translator |
 | Ying | Senior Localization Reviewer |
 

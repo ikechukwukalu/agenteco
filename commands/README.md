@@ -14,7 +14,7 @@ The [First-Time Bootstrap Prompt](../templates/bootstrap-agent-eco-space.md) is 
 - Similar wording does not trigger a protected state transition.
 - No command authorizes a specialist to merge a pull request.
 - Every entry command runs the canonical Repository Readiness Preflight before assuming setup exists.
-- Complete prompts identify the product, application or component, repository name and location, and central-context location; a repository URL alone is not a complete product identity.
+- Repository-based complete prompts identify the product, application or component, repository name and location, and central-context location; a repository URL alone is not a complete product identity. The Business Context Mode prompt intentionally identifies only governance, product, central context, and the business objective because no code repository is assigned.
 
 ## Adopt a product
 
@@ -47,6 +47,24 @@ Proceed with implementation.
 **Does not authorize:** Scope expansion, automatic specialists, merging, production deployment, package publication, destructive operations, or unrelated repository changes.
 
 Material scope changes invalidate the authorization and require a refreshed proposal followed by a new standalone command.
+
+## Start a business context session
+
+```text
+Start an Agent Eco Space business context session.
+```
+
+**Purpose:** Start a business-facing, context-only Agent Eco Space session without assigning a code repository.
+
+**Discovery precondition:** The session already knows the canonical Agent Eco Space governance repository, product name, and central product-context repository. In a new or ambiguous session, use the complete [Business Context Mode Prompt](../templates/call-agent-eco-space-business-context.md).
+
+**Selected role:** Ada is selected and locked by default. The session confirms Ada instead of asking who it is operating as, unless the human explicitly requests another specialist.
+
+**Effect:** Run the Business Context Readiness Check and answer from central context in clear language suitable for non-technical business users. Distinguish released behaviour, unreleased implementation records, approved plans, proposals, superseded rules, uncertainty, and matters requiring code or specialist verification.
+
+**Read-only default:** Business explanations, summaries, comparisons, and communication drafts do not require implementation authorization.
+
+**Does not authorize:** Code inspection or implementation, repository registration, adapter installation, context mutation, publication, another specialist, merge, deployment, release, or access expansion. A proposed central-context change still requires the standalone `Proceed with implementation.` command; publication requires its separate applicable approval.
 
 Task verbs, urgency, conversation flow, previous approval, and the absence of `Do not code yet` never substitute for this command. Authorization is single-use, scope-bound, non-retroactive, and revocable.
 

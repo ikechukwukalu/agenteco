@@ -6,6 +6,9 @@ All notable changes to Agent Eco Space are recorded here.
 
 ### Added
 
+- Repository-free Business Context Mode using canonical Agent Eco Space governance and central product context only.
+- A complete Business Context Mode prompt and protected command with Ada selected by default.
+- Ada's plain-business-language standard for non-technical users, context-status distinctions, and explicit no-code-verification boundary.
 - A mandatory human Armstrong-QA decision checkpoint after testable implementation and before implementation PR creation, explicitly covering Chinedu and Dotun.
 - Environment secret confidentiality for `.env` and every `.env.*` file except the exact placeholder-only `.env.example` template.
 - Non-disclosing secret insertion, presence-check, incident-response, and context-sanitization safeguards.
