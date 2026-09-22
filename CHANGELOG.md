@@ -6,6 +6,7 @@ All notable changes to Agent Eco Space are recorded here.
 
 ### Added
 
+- Business Context live-lookup guidance for approved tracking and quote requests, including connection checks, safe response handling, and natural fallbacks when a lookup is unavailable.
 - Ada Internal Support Mode for role-aware, access-controlled assistance to authorized staff and developers.
 - Product Knowledge Training Mode for verified, history-preserving central-context updates, including governed indicative rate-card guidance.
 - Warm, naturally varied Business Context greetings that introduce only the approved stage name, with time-aware wording used only when the user's local time is reliably known.

@@ -163,6 +163,8 @@ The application must provide a source registry where authorized staff or adminis
 
 Ada must not fetch arbitrary URLs, call unregistered APIs, expose credentials, or treat raw unvalidated JSON as fact. API credentials stay server-side. Before a live tool is available to Ada, the application validates its schema, access policy, error behaviour, and customer-safe output.
 
+The same decision applies in a customer-facing Business Context chat: Ada checks active product-context approval and whether a permitted connection is actually available in that session. A catalogue entry or successful API test alone does not install a tool. If an approved tracking or quote connection exists, she uses it within its identity and output limits rather than refusing solely because the session is read-only. If it does not exist, she gives the customer an approved path or follow-up without discussing the integration.
+
 Example: a shipment quote tool may accept origin, destination, weight, and service preferences, then return approved quote options, currency, service names, conditions, and delivery ranges. Ada uses that verified response to explain options; she does not calculate or invent rates herself.
 
 ## Escalation Routing
