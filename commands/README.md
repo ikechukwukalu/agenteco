@@ -64,7 +64,7 @@ Start an Agent Eco Space business context session.
 
 **Customer-safe links:** Share only approved public company blogs, the customer-facing application, and customer-facing FAQs or Help Centre content. Never share internal or technical source links.
 
-**Read-only default:** Business explanations, summaries, comparisons, and communication drafts do not require implementation authorization. Internal correction and audit work moves to a separate authorized non-customer-facing session.
+**Read-only default:** Business explanations, summaries, comparisons, communication drafts, and live lookups explicitly approved for the audience and available through a permitted connection do not require implementation authorization. Ada checks the active product-context permission and session capability before declining tracking or quotation. Internal correction and audit work moves to a separate authorized non-customer-facing session.
 
 **Does not authorize:** Code inspection or implementation, repository registration, adapter installation, context mutation, publication, another specialist, merge, deployment, release, or access expansion. A proposed central-context change still requires the standalone `Proceed with implementation.` command; publication requires its separate applicable approval.
 
