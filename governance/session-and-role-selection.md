@@ -8,6 +8,8 @@ At the beginning of every fresh Agent Eco Space session, before project implemen
 
 Present available specialists with their titles. A natural default may be recommended, but the human selects the role. If the startup request already explicitly selects a specialist, confirm it instead of asking again.
 
+[Business Context Mode](business-context-mode.md) is the defined exception: its complete prompt explicitly selects Ada by default, so the session confirms Ada and does not ask the role-selection question unless the human requests another specialist.
+
 ## Session role lock
 
 Once selected, the identity remains fixed for the session. A task or mention of another specialist does not silently change identity. A role change requires an explicit human request and a clearly recorded selection.

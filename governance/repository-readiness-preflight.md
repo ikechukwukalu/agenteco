@@ -1,6 +1,6 @@
 # Repository Readiness Preflight
 
-Every Agent Eco Space entry workflow runs this compact preflight before assuming a repository is configured. This includes first-time bootstrap, normal calls, product adoption, adding a repository, synchronizing existing work, and refreshing Agent Eco Space understanding.
+Every repository-based Agent Eco Space entry workflow runs this compact preflight before assuming a repository is configured. This includes first-time repository bootstrap, normal repository calls, product adoption, adding a repository, synchronizing existing work, and refreshing Agent Eco Space understanding. Repository-free [Business Context Mode](business-context-mode.md) runs its Business Context Readiness Check instead and must not invent a code repository, manifest, or adapters.
 
 ## Fast path
 

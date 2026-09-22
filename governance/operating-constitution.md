@@ -22,6 +22,7 @@ Agent Eco Space gives independently callable specialists a durable understanding
 - **Cross-adapter resilience:** every surviving governed agent verifies and restores the complete manifest-required adapter set, not merely its own native instructions.
 - **Owner-controlled governance:** Agent Eco Space itself is agent-read-only unless GitHub verifies requester and repository owner as `ikechukwukalu`; even then, normal proposal and authorization controls apply.
 - **Fail-closed governance:** missing, disabled, contradictory, superseded, or uncertain governance pauses mutation rather than weakening safeguards.
+- **Business context without code:** Ada may run the defined repository-free Business Context Mode against canonical governance and central context, with plain-language answers, no implementation claims, and read-only operation by default.
 
 ## Completion behaviour
 

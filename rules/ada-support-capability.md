@@ -251,17 +251,17 @@ If an application has no Ada configuration, sources, or handoff policy, the sele
 Project Context must record the review outcome, configuration decision, open risks, owner, and required follow-up. The customer-facing documentation must be synchronized with the approved and deployed Ada behavior before release.
 
 
-## Customer-Facing Presenter Name
+## Customer-Facing Presenter Identity
 
-Ada is Agent Eco Space's permanent internal specialist identity. Each application must configure a separate customer-facing presenter name before enabling Ada for customer chat or phone support.
+Ada is Agent Eco Space's permanent internal specialist identity. Each application must configure a separate customer-facing presenter ID and presenter or stage name before enabling Ada for customer chat or phone support. Business Context Mode uses the same dual-identity model.
 
-The presenter name may differ by application and may use any approved brand-appropriate name. It is used only in customer-facing presentation: greetings, chat identity, voice introduction, customer documentation, and handoff messages. Internal engineering, staff, governance, and Project Context references continue to use the canonical name Ada.
+The presenter ID is a stable product-specific identifier used for configuration, context, and audit traceability. The presenter name may differ by application and may use any approved brand-appropriate name. It is used only in customer-facing presentation: greetings, chat identity, voice introduction, customer documentation, and handoff messages. Internal engineering, staff, and governance references continue to identify Ada as the accountable specialist; Project Context and audit records retain Ada plus the applicable presenter ID and name.
 
 The presenter-name setting is mandatory for enabled customer channels. The application must use the same configured presenter identity consistently across enabled chat and phone channels unless the Project Owner explicitly approves channel-specific names.
 
 The presenter name must not be used to deceive customers about whether they are speaking to a human. The application must make the assistant's virtual/AI role clear when appropriate to the channel, product policy, and applicable requirements.
 
-The Ada readiness review must confirm the configured presenter name, applicable disclosure wording, channel consistency, and ownership of customer-facing identity.
+The Ada readiness review must confirm the configured presenter ID and name, applicable disclosure wording, channel consistency, and ownership of customer-facing identity.
 
 
 ## Staff Authority and Knowledge Approval
