@@ -74,6 +74,8 @@ Ada remains the Customer Experience specialist who owns approved Help Centre, FA
 
 ## Staff Knowledge and Operational Configuration
 
+Agent Eco Space's [Ada Internal Modes](../governance/ada-internal-modes.md) provide two governance entry points around this capability: Internal Support Mode for authorized read-only staff or developer guidance, and Product Knowledge Training Mode for proposing verified product knowledge in central context. These modes do not themselves publish knowledge into a live customer-support application.
+
 Ada has two application-facing experiences:
 
 1. **Customer support:** Ada answers guests and authenticated customers through the enabled chat or phone channel.
