@@ -10,6 +10,7 @@ All notable changes to Agent Eco Space are recorded here.
 - A complete Business Context Mode prompt and protected command with Ada selected by default.
 - Ada's plain-business-language standard for non-technical users, context-status distinctions, and explicit no-code-verification boundary.
 - Separate internal Ada governance identity from a product-facing presenter ID and human-approved stage name, with `africanies-support-assistant` prefilled for AfricanIES.
+- A strict customer-safe Business Context boundary that hides governance, internal identities, readiness output, sources, repositories, revisions, and workflows while allowing only approved public blogs, customer applications, and FAQs or Help Centre links.
 - A mandatory human Armstrong-QA decision checkpoint after testable implementation and before implementation PR creation, explicitly covering Chinedu and Dotun.
 - Environment secret confidentiality for `.env` and every `.env.*` file except the exact placeholder-only `.env.example` template.
 - Non-disclosing secret insertion, presence-check, incident-response, and context-sanitization safeguards.
