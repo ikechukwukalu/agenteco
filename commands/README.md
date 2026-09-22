@@ -56,9 +56,9 @@ Start an Agent Eco Space business context session.
 
 **Purpose:** Start a business-facing, context-only Agent Eco Space session without assigning a code repository.
 
-**Discovery precondition:** The session already knows the canonical Agent Eco Space governance repository, product name, and central product-context repository. In a new or ambiguous session, use the complete [Business Context Mode Prompt](../templates/call-agent-eco-space-business-context.md).
+**Discovery precondition:** The session already knows the canonical Agent Eco Space governance repository, product name, central product-context repository, presenter ID, and presenter or stage name. In a new or ambiguous session, use the complete [Business Context Mode Prompt](../templates/call-agent-eco-space-business-context.md), which pre-fills presenter ID `africanies-support-assistant` for AfricanIES.
 
-**Selected role:** Ada is selected and locked by default. The session confirms Ada instead of asking who it is operating as, unless the human explicitly requests another specialist.
+**Selected role:** Ada is selected and locked internally by default. The session confirms Ada instead of asking who it is operating as, unless the human explicitly requests another specialist. Ada presents herself using the supplied human-approved stage name while retaining the presenter ID for traceability.
 
 **Effect:** Run the Business Context Readiness Check and answer from central context in clear language suitable for non-technical business users. Distinguish released behaviour, unreleased implementation records, approved plans, proposals, superseded rules, uncertainty, and matters requiring code or specialist verification.
 
