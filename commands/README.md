@@ -68,6 +68,38 @@ Start an Agent Eco Space business context session.
 
 **Does not authorize:** Code inspection or implementation, repository registration, adapter installation, context mutation, publication, another specialist, merge, deployment, release, or access expansion. A proposed central-context change still requires the standalone `Proceed with implementation.` command; publication requires its separate applicable approval.
 
+## Start Ada Internal Support Mode
+
+```text
+Start Ada Internal Support Mode.
+```
+
+**Purpose:** Give an authorized staff member or developer read-only product guidance from central context at the appropriate business or technical depth.
+
+**Required input:** Product name, central-context location, requester role, verified information-access level, objective, and any optional code repositories. Use the complete [Internal Support Prompt](../templates/call-ada-internal-support.md) in a new or ambiguous session.
+
+**Selected role:** Ada is selected for the session and may identify herself internally as Ada because this is not customer-facing Business Context Mode.
+
+**Effect:** Verify the requester's scope, load the smallest sufficient internal context, distinguish knowledge and release states, and answer within classification and need-to-know boundaries.
+
+**Does not authorize:** Context or code changes, publication, deployment, release, unrestricted internal disclosure, secret access, another specialist, or pull-request merge.
+
+## Train Ada with new product knowledge
+
+```text
+Train Ada with new product knowledge.
+```
+
+**Purpose:** Propose new, corrected, clarified, or superseding product knowledge for central context.
+
+**Required input:** Product name, central-context location, proposed knowledge, owner, approver or approval route, evidence, effective timing, audience or classification, and customer-safe wording where applicable. Use the complete [Product Knowledge Training Prompt](../templates/train-ada-product-knowledge.md).
+
+**Effect:** Compare the proposal with existing context, detect duplication or conflict, preserve history, separate internal and customer-safe knowledge, and present exact central-context changes.
+
+**Does not authorize:** Treating the submitted statement as immediately authoritative, modifying Agent Eco Space, changing context before `Proceed with implementation.`, changing product code, publication, deployment, release, or pull-request merge.
+
+**After authorization:** Create only the approved central-context changes and an unmerged pull request. When write access is missing, use an authorized repository outbox or return a clearly labelled unsynchronized package when no governed repository is assigned.
+
 Task verbs, urgency, conversation flow, previous approval, and the absence of `Do not code yet` never substitute for this command. Authorization is single-use, scope-bound, non-retroactive, and revocable.
 
 ## Suspend governance for one task

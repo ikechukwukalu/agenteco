@@ -6,6 +6,8 @@ All notable changes to Agent Eco Space are recorded here.
 
 ### Added
 
+- Ada Internal Support Mode for role-aware, access-controlled assistance to authorized staff and developers.
+- Product Knowledge Training Mode for verified, history-preserving central-context updates, including governed indicative rate-card guidance.
 - Warm, naturally varied Business Context greetings that introduce only the approved stage name, with time-aware wording used only when the user's local time is reliably known.
 - Repository-free Business Context Mode using canonical Agent Eco Space governance and central product context only.
 - A complete Business Context Mode prompt and protected command with Ada selected by default.
