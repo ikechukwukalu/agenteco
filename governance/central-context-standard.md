@@ -15,6 +15,11 @@ context/
     architecture.md
     repository-map.md
     ecosystem-intake.md
+  governance/
+    README.md
+    <role-specific-snapshots>.md
+  rules/
+    index.md
   business-rules/
     index.md
   contracts/
@@ -39,10 +44,13 @@ context/
       documentation.md
       task-history.md
   releases/
+    feature-availability.md
   risks/
 ```
 
 The structure may expand, but shared truth and per-repository ownership must remain distinguishable.
+
+`context/governance/` follows [Versioned Governance Snapshots](versioned-context-snapshots.md). `context/rules/index.md` follows [Scoped Product Rules](scoped-product-rules.md) and may point to existing `business-rules/` files. `context/releases/feature-availability.md` follows [Product Feature Availability](feature-availability.md). The three records serve different purposes: governing instructions, applicable product policy, and verified release state.
 
 API records use the canonical [API–Consumer Compatibility Map](../templates/product-context/api-consumer-compatibility.md). A backend specialist initializes the route and known-consumer baseline. Every producer and consumer specialist then progressively maintains the rows affected by its work. Shared alerts are linked from the producer and every affected consumer context directory.
 

@@ -23,6 +23,8 @@ The central context records the intake date, context revision, repository revisi
 After a verified intake, future tasks begin quickly. The specialist loads:
 
 - current product business rules and active decisions;
+- the scoped-rule index and only rules applicable to the role, task, repository, audience, and environment;
+- the matching role snapshot when available, plus feature-availability rows relevant to the task and its consumers;
 - the assigned repository's manifest and exact `context/repositories/<repository-name>/` directory;
 - contracts, consumers, producers, handoffs, and decisions directly relevant to the task;
 - newer context changes since the last verified intake.
@@ -59,6 +61,8 @@ The default reminder interval is 14 days unless the product manifest defines ano
 ## Reading authority
 
 Business rules and active decisions may always be reread because they define current product meaning. Superseded rules and decisions remain available for history but are loaded only when the task or a conflict requires them.
+
+Checking the small rule index and current feature-availability rows is part of the fast path. Do not reread every rule body or every feature record for an unrelated task.
 
 ## Time-conscious communication
 

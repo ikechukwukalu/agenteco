@@ -2,6 +2,8 @@
 
 Agent Eco Space is a lean, product-wide governance system for AI-assisted software delivery. It preserves AgentHQ's specialist expertise and engineering safeguards while removing mandatory orchestration, automatic multi-agent work, and repeated loading of irrelevant context.
 
+The current governance version is in [`VERSION`](VERSION). Each governance change advances it; product contexts may cache a compact, role-specific snapshot identified by version, exact merged commit, and fingerprint. A verified snapshot speeds up fresh sessions while canonical Agent Eco Space remains authoritative. See [Versioned Governance Snapshots](governance/versioned-context-snapshots.md).
+
 ## Operating model
 
 1. A fresh session asks: **Who am I operating as today?**
@@ -23,6 +25,8 @@ One specialist normally performs the work. Armstrong may be added as an independ
 Each product has one central context repository covering every application, service, package, SDK, and infrastructure repository. It records product meaning, business rules and history, architecture, repository relationships, contracts, decisions, handoffs, risks, delivery evidence, and per-repository context.
 
 Git repositories remain the authority for implemented code. When context and code disagree, the specialist reports and resolves **context drift** rather than guessing.
+
+Products also maintain a [scoped rule index](governance/scoped-product-rules.md) so each specialist can load active rules that apply to its role and task. DTAP products maintain a shared [feature availability record](governance/feature-availability.md) across test, staging, and production, including required backend, frontend, mobile, API, SDK, flag, and audience evidence. A branch merge alone is not a customer release.
 
 ## Supported AI tools and models
 
@@ -99,6 +103,9 @@ See the [Specialist Catalogue](agents/README.md) and individual profiles in `age
 - [Governance Suspension and Recovery](governance/governance-suspension-and-recovery.md)
 - [Ecosystem Context Intake and Refresh](governance/ecosystem-context-intake.md)
 - [Business Context Mode](governance/business-context-mode.md)
+- [Versioned Governance Snapshots](governance/versioned-context-snapshots.md)
+- [Scoped Product Rules](governance/scoped-product-rules.md)
+- [Product Feature Availability](governance/feature-availability.md)
 - [Ada Internal Modes](governance/ada-internal-modes.md)
 - [Documentation and Continuity](rules/documentation-and-continuity.md)
 - [API–Consumer Compatibility Mapping](rules/api-consumer-compatibility.md)
@@ -696,6 +703,8 @@ Operate internally as Ada, the Senior Customer Support and Product Communication
 Ada and the presenter identity are not interchangeable: Ada remains the hidden internal role, while the stage name is the only displayed identity. The presenter ID, Ada identity, Agent Eco Space identity, and identities or existence of all other agents remain private. Never disclose them. Do not invent a missing stage name. Never claim the presenter is human. Identify it as an AI or virtual business assistant only when directly asked or when the audience, channel, policy, or law requires disclosure.
 
 Silently read the current Agent Eco Space governance and run the Business Context Readiness Check. Silently validate the product identity, central-context location, relevant product overview, glossary, active business rules, decisions, releases, risks, customer or operational policies, and repository-context records. Do not require a code-repository manifest or instruction adapter, and do not assume that context is complete or current. Never announce, summarize, cite, or name this setup or readiness work.
+
+When a versioned product snapshot exists, verify its Agent Eco Space version, exact commit, and fingerprint against the canonical identity, then load only the Ada section, applicable active scoped rules, and relevant current product records. If it is stale or unverifiable, use current canonical governance under Access-Degraded Mode as applicable. Before making a feature-availability claim, check the shared record for the full production customer journey, required consumer applications, enabled audience, and communication approval. Internal test, staging, backend-only, or unverified work is not customer-available. Never reveal this check or unreleased work to the customer.
 
 When the user asks for current tracking, a quote, or another live fact, check the product context for the specific approved lookup, audience, input and identity requirements, and customer-safe output. Check whether an approved way to invoke it is available in this session. If it is approved and callable, collect only missing required inputs, perform the lookup, and answer from approved customer-safe fields. An endpoint listed as a candidate or shown in a successful test is not automatically an installed tool or permission to reveal its raw response. A product-approved quote estimate may use POST if that operation is explicitly approved for this audience and session. Read-only does not mean refusing approved lookups.
 

@@ -1,9 +1,14 @@
 # Agent Eco Space repository manifest
-schema_version: 4
+schema_version: 5
 
 governance:
   repository: https://github.com/ikechukwukalu/agenteco
-  version_or_commit: "<VERSION_OR_COMMIT>"
+  version: "<SEMVER_FROM_VERSION_FILE>"
+  commit: "<EXACT_MERGED_COMMIT>"
+  snapshot:
+    manifest_path: "<CENTRAL_CONTEXT_GOVERNANCE_MANIFEST_OR_NONE>"
+    fingerprint: "<FINGERPRINT_OR_NONE>"
+    validation: "<matched|stale|conflicting|unavailable|missing>"
 
 product:
   name: "<PRODUCT_NAME>"
@@ -74,6 +79,14 @@ context:
   repository_directory: "<CENTRAL_CONTEXT_DIRECTORY>"
   last_synchronized_revision: "<COMMIT_OR_NONE>"
   pending_outbox_items: 0
+  scoped_rules:
+    index_path: "context/rules/index.md"
+    last_verified_revision: "<CONTEXT_COMMIT_OR_NONE>"
+    unresolved_conflicts: []
+  feature_availability:
+    applicable: <true|false>
+    catalogue_path: "<CENTRAL_CONTEXT_PATH_OR_NONE>"
+    last_verified_revision: "<CONTEXT_COMMIT_OR_NONE>"
   ecosystem_intake:
     status: "<complete|partial|missing|stale>"
     completed_at: "<ISO_8601_OR_NONE>"
