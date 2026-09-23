@@ -4,7 +4,7 @@ Every repository-based Agent Eco Space entry workflow runs this compact prefligh
 
 ## Fast path
 
-Read `.agenteco/manifest.yml` first. When it exists, validate its recorded governance version, product context, repository identity, adapters, work mode, delivery model, and last verified repository revision. Inspect deeper only when the manifest is missing, stale, inconsistent, or insufficient for the requested work.
+Read `.agenteco/manifest.yml` first. When it exists, validate its recorded governance version and exact commit against the canonical pair, product snapshot fingerprint, product context, repository identity, adapters, work mode, delivery model, and last verified repository revision. Inspect deeper only when the manifest is missing, stale, inconsistent, or insufficient for the requested work.
 
 ## Checks
 
@@ -22,6 +22,8 @@ Read `.agenteco/manifest.yml` first. When it exists, validate its recorded gover
 12. Documentation inventory, API/feature documentation tooling, generation or validation commands, and `CHANGELOG.md` status.
 13. Consumer Impact Alerts affecting the assigned repository on every preflight. For API or integration work, also verify route-inventory baseline status, mapped producer and consumer revisions, relationship confidence, and compatibility risks.
 14. Protected environment-file handling: confirm `.env` and `.env.*` files other than exact `.env.example` will not be read or disclosed, value-bearing files remain untracked, and planned secret insertion has explicit authorization and a non-disclosing mechanism.
+15. Scoped product-rule index: verify its revision and load applicable active rules; flag unresolved scope, classification, or conflicts.
+16. For DTAP products, check relevant feature-availability rows and evidence for test, staging, and production. Do not equate merge state with deployment or customer availability.
 
 ## Outcomes
 

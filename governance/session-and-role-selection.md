@@ -24,7 +24,7 @@ The selected specialist must not silently impersonate another role. Recommend se
 
 On the first verified specialist session for a product, load the complete accessible ecosystem under [Ecosystem Context Intake and Refresh](ecosystem-context-intake.md). Record the intake revision, coverage, repository revisions, connections, and gaps.
 
-On later tasks, begin quickly: always refresh active business rules and decisions, load the selected repository manifest and exact context directory, then load only affected contracts, producers, consumers, handoffs, and context changes since the recorded intake. Do not repeatedly reload or narrate the whole ecosystem.
+On later tasks, begin quickly: verify the canonical governance version and commit against a product snapshot when one exists, check the small scoped-rule index, load applicable active rules and decisions, the selected repository manifest and exact context directory, relevant feature-availability rows, then only affected contracts, producers, consumers, handoffs, and context changes since the recorded intake. Do not repeatedly reload or narrate the whole ecosystem. A fresh session must load its applicable snapshot or canonical instructions; it cannot inherit memory from a previous chat.
 
 If the ecosystem record is stale or incomplete, ask whether the human wants a full refresh. The reminder is non-blocking unless the stale dependency makes safe implementation impossible.
 

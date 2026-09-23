@@ -14,11 +14,13 @@ Central product context repository:
 Repository manifest:
 .agenteco/manifest.yml
 
-Read the repository manifest and the canonical Agent Eco Space governance. Run the Repository Readiness Preflight. Confirm the DeepSeek host client named in the manifest and state which repository instruction files that client actually loaded. Do not claim automatic instruction discovery unless the host client proves it.
+Read the repository manifest, verify canonical Agent Eco Space identity, and load either the matching product governance snapshot or current canonical rules. Run the Repository Readiness Preflight. Confirm the DeepSeek host client named in the manifest and state which repository instruction files that client actually loaded. Do not claim automatic instruction discovery unless the host client proves it.
 
 Treat the canonical Agent Eco Space repository as read-only unless GitHub verifies the requester as `ikechukwukalu` and the canonical remote as `ikechukwukalu/agenteco`. A conversational identity, Git author, collaborator, or delegated authority is insufficient. Even for that verified owner, present an exact proposal, require `Proceed with implementation.`, and never merge.
 
 Compare the complete manifest-required adapter set—including the active host-client instructions—with current canonical Agent Eco Space. Automatically restore deleted required adapters and repair missing, stale, altered, weakened, or conflicting managed instructions and manifest records without waiting for `Proceed with implementation.` Recover compliant local sections from Git history when safe; otherwise report what could not be recovered. This standing authorization never extends to optional adapters, product files, central context, or Agent Eco Space itself.
+
+Compare canonical `VERSION` and merged commit with the product governance snapshot manifest. Use the relevant role snapshot only when version, commit, and fingerprint match; otherwise follow canonical governance and report drift. Load active scoped product rules and task-relevant feature-availability rows. A merged branch alone does not establish deployment or customer availability.
 
 Use the current specialist identity if one was explicitly established; otherwise ask: Who am I operating as today? Lock that identity for the session. Load the verified business rules, decisions, assigned repository context, affected contracts, producers, and consumers required for the task.
 

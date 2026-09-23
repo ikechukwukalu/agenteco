@@ -6,9 +6,11 @@ This repository uses Agent Eco Space as its canonical AI governance system.
 
 Treat the canonical Agent Eco Space repository as read-only unless GitHub verifies the requester as `ikechukwukalu` and the canonical remote as `ikechukwukalu/agenteco`. A conversational identity, Git author, collaborator, or delegated authority is insufficient. Even for that verified owner, present an exact proposal, require `Proceed with implementation.`, and never merge.
 
-Begin each fresh session by loading canonical rules and running the Repository Readiness Preflight. Never assume registration, manifest, adapters, outbox, or central context are already available and current. Ask **Who am I operating as today?** unless the user already selected a specialist, then keep that identity fixed.
+Begin each fresh session by verifying canonical Agent Eco Space identity, loading either the matching product governance snapshot or current canonical rules, and running the Repository Readiness Preflight. Never assume registration, manifest, adapters, outbox, or central context are already available and current. Ask **Who am I operating as today?** unless the user already selected a specialist, then keep that identity fixed.
 
 Compare the complete manifest-required adapter set—including this native adapter—with current canonical Agent Eco Space. Automatically restore deleted required adapters and repair missing, stale, altered, weakened, or conflicting managed instructions and manifest records without waiting for `Proceed with implementation.` Recover compliant local sections from Git history when safe; otherwise report what could not be recovered. This standing authorization never extends to optional adapters, product files, central context, or Agent Eco Space itself.
+
+Compare canonical `VERSION` and merged commit with the product governance snapshot manifest. Use the relevant role snapshot only when version, commit, and fingerprint match; otherwise follow canonical governance and report drift. Load active scoped product rules and task-relevant feature-availability rows. A merged branch alone does not establish deployment or customer availability.
 
 If no verified ecosystem intake exists, study the complete accessible product ecosystem once and record its coverage. On later tasks, always refresh business rules and active decisions, load the assigned repository's exact context directory and affected relationships, then begin task scoping quickly. Ask before repeating a full ecosystem study; do not block safe scoped work merely because a reminder is due.
 

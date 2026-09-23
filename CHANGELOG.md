@@ -6,6 +6,9 @@ All notable changes to Agent Eco Space are recorded here.
 
 ### Added
 
+- Initial versioned governance identity and compact product-snapshot fast path, with exact commit and fingerprint verification.
+- Scoped product-rule catalogue with role, audience, repository, effective-date, and conflict handling.
+- Shared DTAP feature-availability catalogue covering component dependencies, environment evidence, and customer communication readiness.
 - Business Context live-lookup guidance for approved tracking and quote requests, including connection checks, safe response handling, and natural fallbacks when a lookup is unavailable.
 - Ada Internal Support Mode for role-aware, access-controlled assistance to authorized staff and developers.
 - Product Knowledge Training Mode for verified, history-preserving central-context updates, including governed indicative rate-card guidance.
@@ -21,7 +24,7 @@ All notable changes to Agent Eco Space are recorded here.
 - Progressive API–Consumer Compatibility Mapping with a backend-initialized route baseline and collaborative producer/consumer maintenance.
 - Canonical tabular route inventory, consumer mapping, contract expectations, compatibility risk, and Consumer Impact Alert records.
 - Preflight alerts and production protection for known breaking API changes with incompatible mapped consumers.
-- Repository manifest schema 4 fields for compatibility-map paths, baseline evidence, consumer revisions, and unresolved alerts.
+- Repository manifest schema 5 fields for compatibility-map paths, governance snapshot identity, scoped rules, feature availability, baseline evidence, consumer revisions, and unresolved alerts.
 - Cross-adapter self-healing so any surviving governed agent restores deleted or damaged manifest-required adapters.
 - A dependency-free CI integrity checker for missing adapters, managed-marker damage, and canonical fingerprint drift.
 - Manifest-declared adapter paths and required/optional status, with safe Git-history recovery rules for local sections.

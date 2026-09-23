@@ -48,6 +48,8 @@ Packages and distributable libraries use their approved release lifecycle rather
 
 No work is described as ready when required tests or CI are red. An explicitly accepted exception records the failing check, impact, owner, and human approval.
 
+For DTAP work, the implementing specialist updates the central [feature availability catalogue](feature-availability.md) for their component with branch, commit, dependency, and verification evidence. A merged branch is not a deployment. The release owner records actual environment deployment; the customer-facing state depends on all required components, flags, audience access, customer-journey verification, and communication approval.
+
 ## API consumer compatibility gate
 
 Before a known breaking API change is released to production, every mapped affected consumer must be `Verified Compatible`, deprecated with evidence, or covered by an explicit human-approved exception. The exception records affected consumers, impact, duration, owner, mitigation, and rollback or recovery plan. Implementation approval alone is not a production compatibility exception.
