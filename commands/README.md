@@ -14,7 +14,7 @@ The [First-Time Bootstrap Prompt](../templates/bootstrap-agent-eco-space.md) is 
 - Similar wording does not trigger a protected state transition.
 - No command authorizes a specialist to merge a pull request.
 - Every entry command runs the canonical Repository Readiness Preflight before assuming setup exists.
-- Repository-based complete prompts identify the product, application or component, repository name and location, and central-context location; a repository URL alone is not a complete product identity. The Business Context Mode prompt intentionally identifies only governance, product, central context, and the business objective because no code repository is assigned.
+- Repository-based complete prompts identify the product, application or component, repository name and location, and central-context location; a repository URL alone is not a complete product identity. Repository-free Business Context Mode and Technical Product Context Mode prompts identify governance, product, and central context instead, because no code repository is assigned.
 
 ## Adopt a product
 
@@ -67,6 +67,20 @@ Start an Agent Eco Space business context session.
 **Read-only default:** Business explanations, summaries, comparisons, communication drafts, and live lookups explicitly approved for the audience and available through a permitted connection do not require implementation authorization. Ada checks the active product-context permission and session capability before declining tracking or quotation. Internal correction and audit work moves to a separate authorized non-customer-facing session.
 
 **Does not authorize:** Code inspection or implementation, repository registration, adapter installation, context mutation, publication, another specialist, merge, deployment, release, or access expansion. A proposed central-context change still requires the standalone `Proceed with implementation.` command; publication requires its separate applicable approval.
+
+## Start a product-wide technical session
+
+```text
+Start an Agent Eco Space technical product context session.
+```
+
+**Purpose:** Select the Engineering Manager for a repository-free technical view across the product ecosystem.
+
+**Discovery precondition:** In a new or ambiguous session, use the complete [Product-Wide Engineering Manager Prompt](../templates/call-product-wide-engineering-manager.md) to supply canonical governance, product identity, and central-context location. No code repository or local adapter is assumed.
+
+**Effect:** Read relevant product context and verify material claims against accessible source and deployment evidence where necessary. Explain API producers and consumers, dependencies, risks, and separately evidenced test, staging, production, and customer-availability states. Do not infer deployment from a merge or a complete customer journey from a backend-only release.
+
+**Read-only default:** Technical questions and advice do not authorize code, context, governance, branch, pull-request, deployment, publication, or access changes. The Engineering Manager does not automatically invoke another specialist or gate their ordinary work.
 
 ## Start Ada Internal Support Mode
 

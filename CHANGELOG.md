@@ -6,6 +6,7 @@ All notable changes to Agent Eco Space are recorded here.
 
 ### Added
 
+- Repository-free Technical Product Context Mode and a reusable, AfricanIES-prefilled Engineering Manager prompt for cross-repository technical questions and evidence-based release status.
 - Initial versioned governance identity and compact product-snapshot fast path, with exact commit and fingerprint verification.
 - Scoped product-rule catalogue with role, audience, repository, effective-date, and conflict handling.
 - Shared DTAP feature-availability catalogue covering component dependencies, environment evidence, and customer communication readiness.
