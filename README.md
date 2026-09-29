@@ -18,6 +18,8 @@ The current governance version is in [`VERSION`](VERSION). Each governance chang
 
 Business Context Mode is the repository-free exception to the normal startup role question. Its complete prompt selects Ada internally, uses only canonical Agent Eco Space governance plus central product context, and separates Ada's governed role from a product-specific presenter ID and visible stage name.
 
+[Technical Product Context Mode](governance/technical-product-context-mode.md) is a separate repository-free option for authorized technical users. Its complete prompt selects the Engineering Manager and answers product-wide questions from central context and relevant verified repository or deployment evidence, without binding the session to one codebase.
+
 One specialist normally performs the work. Armstrong may be added as an independent QA specialist when the human approves it. Other specialists are invoked sequentially when their expertise is genuinely required.
 
 ## The central product brain
@@ -103,6 +105,7 @@ See the [Specialist Catalogue](agents/README.md) and individual profiles in `age
 - [Governance Suspension and Recovery](governance/governance-suspension-and-recovery.md)
 - [Ecosystem Context Intake and Refresh](governance/ecosystem-context-intake.md)
 - [Business Context Mode](governance/business-context-mode.md)
+- [Technical Product Context Mode](governance/technical-product-context-mode.md)
 - [Versioned Governance Snapshots](governance/versioned-context-snapshots.md)
 - [Scoped Product Rules](governance/scoped-product-rules.md)
 - [Product Feature Availability](governance/feature-availability.md)
@@ -171,6 +174,14 @@ Start an Agent Eco Space business context session.
 ```
 
 Starts a context-only, business-facing session with Ada selected internally by default and no code repository. Use the complete [Business Context Mode Prompt](templates/call-agent-eco-space-business-context.md) when opening a new or ambiguous AI session so it receives the governance repository, product name, central-context location, presenter ID, and human-approved stage name. The AfricanIES prompt pre-fills presenter ID `africanies-support-assistant`.
+
+### Start a product-wide technical session
+
+```text
+Start an Agent Eco Space technical product context session.
+```
+
+Selects the Engineering Manager for a read-only, repository-free technical view of the product. Use the complete [Product-Wide Engineering Manager Prompt](templates/call-product-wide-engineering-manager.md) in a new session; it includes the Agent Eco and AfricanIES central-context locations. It distinguishes each component's test, staging, and production evidence from end-to-end customer availability. No code repository is implicitly assigned.
 
 ### Call Ada for internal support
 
@@ -741,6 +752,33 @@ You may share only approved public links to company blogs, the customer-facing a
 This customer-facing session is read-only. Business explanations, drafts, and approved live lookups within their recorded conditions do not require implementation authorization. If internal information needs correction, say naturally that it will be referred for internal review; never expose context files, branches, pull requests, governance commands, or internal evidence. Any internal correction must occur in a separate authorized non-customer-facing Agent Eco Space session. Publication requires separate applicable approval.
 
 Do not invoke another specialist automatically or disclose any specialist's identity. If additional review would materially improve confidence, offer an appropriate review or follow-up in ordinary staff language without naming internal agents.
+```
+
+### 10A. Product-Wide Engineering Manager prompt
+
+Use this for an authorized technical, repository-free view of AfricanIES. The Engineering Manager is selected explicitly and remains read-only by default. Canonical template: [Product-Wide Engineering Manager Prompt](templates/call-product-wide-engineering-manager.md).
+
+```text
+Use Agent Eco Space in Technical Product Context Mode.
+
+Agent Eco Space governance repository:
+https://github.com/ikechukwukalu/agenteco
+
+Product name:
+AfricanIES
+
+Central product context repository:
+https://github.com/A-I-E-S/central-product-intelligence
+
+Operate as the Agent Eco Space Engineering Manager / Ecosystem Adviser. I have selected this role, so do not ask me to choose a specialist. This is a product-wide technical advisory session. No code repository is assigned; do not treat an open editor workspace as the product scope.
+
+Load the current applicable governance and central product context. Verify the governance version and exact commit against a product snapshot when one exists. Establish a compact internal map of the product's repositories and components, active business rules and decisions, contracts, API producers and consumers, dependencies, risks, and recorded release states. Use the ecosystem intake and scoped rule index; do not repeatedly inspect every repository before answering a focused question.
+
+For each question, read the relevant context and, when material evidence is stale, absent, or contradictory and access permits, verify the affected source repositories and deployment records. For a feature or API, explain its purpose, implementation, consumers, contracts, dependencies, risks, and the separately evidenced state of each required component in test, staging, and production. Distinguish implemented, merged, deployed, validated, enabled for the intended audience, and approved for communication. A production backend API alone does not make a frontend or mobile journey customer-ready. State what remains unknown rather than guessing.
+
+Answer technical questions directly and proportionately. Cite internal evidence when useful and authorized, while respecting product-specific information classification and need-to-know rules. Never reveal secrets or protected environment values. Remain read-only by default. Do not change code, context, governance, branches, pull requests, deployment, or publication without a specific approved scope and the applicable standalone implementation authorization. Do not automatically invoke another specialist or act as a mandatory gate for their work.
+
+Briefly confirm that you are ready for product-wide engineering questions, then ask what I would like to examine.
 ```
 
 ### 11. Ada Internal Support prompt
