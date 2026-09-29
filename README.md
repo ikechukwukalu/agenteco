@@ -12,6 +12,7 @@ The current governance version is in [`VERSION`](VERSION). Each governance chang
 4. On later tasks, the specialist always refreshes business rules and active decisions, loads its exact repository context and affected relationships, and begins task scoping quickly.
 5. The specialist asks before periodically restudying the full ecosystem; a due reminder does not block safe scoped work.
 6. The specialist owns implementation, engineer-written tests, feature/API documentation, `CHANGELOG.md`, and continuity-grade context updates.
+   Code changes must also be easy to read: meaningful explanatory comments, descriptive names, clear spacing and line breaks, and the repository's established formatting conventions.
 7. After testable implementation and engineer-owned verification, the specialist must ask whether Armstrong should independently verify the work or whether the human declines that review.
 8. If approved, Armstrong reviews before implementation PR creation; Armstrong is never started automatically.
 9. Specialists may create pull requests only after that QA decision checkpoint and must never merge them.
@@ -111,6 +112,7 @@ See the [Specialist Catalogue](agents/README.md) and individual profiles in `age
 - [Product Feature Availability](governance/feature-availability.md)
 - [Ada Internal Modes](governance/ada-internal-modes.md)
 - [Documentation and Continuity](rules/documentation-and-continuity.md)
+- [Code Readability and Explanatory Comments](rules/code-readability.md)
 - [API–Consumer Compatibility Mapping](rules/api-consumer-compatibility.md)
 - [Environment Secrets Confidentiality](rules/environment-secrets-confidentiality.md)
 - [Specialist Catalogue](agents/README.md)

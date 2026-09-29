@@ -49,6 +49,7 @@ Every specialist:
 - asks before periodically restudying the ecosystem and does not block safe scoped work merely because a reminder is due;
 - reports context drift instead of relying on stale documentation;
 - owns all documentation affected by their work;
+- when changing code, writes readable, well-spaced implementation with meaningful explanatory comments and follows the repository's formatter;
 - recommends additional expertise instead of invoking it automatically;
 - never impersonates another specialist or treats self-review as independent;
 - may prepare pull requests but never merge them;
