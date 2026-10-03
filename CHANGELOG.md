@@ -6,6 +6,7 @@ All notable changes to Agent Eco Space are recorded here.
 
 ### Added
 
+- Opt-in, product-agnostic production-to-central-context reconciliation with distinct setup and documentation standing grants, registration-derived source branches and destinations, access and workflow readiness checks, one controlled queue per source, credential-name compatibility, and human-only PR merging.
 - A global code-readability rule for all implementing specialists: meaningful explanatory comments, clear names and spacing, accurate maintenance of comments, and repository-native formatting checks.
 - Repository-free Technical Product Context Mode and a reusable, AfricanIES-prefilled Engineering Manager prompt for cross-repository technical questions and evidence-based release status.
 - Initial versioned governance identity and compact product-snapshot fast path, with exact commit and fingerprint verification.

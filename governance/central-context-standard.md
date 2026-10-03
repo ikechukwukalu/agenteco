@@ -35,6 +35,9 @@ context/
   handoffs/
   synchronization/
     processed-packages.md
+  automation/
+    production-reconciliation-registration.json
+    production-reconciliation-state.json
   repositories/
     <repository-name>/
       README.md
@@ -49,6 +52,8 @@ context/
 ```
 
 The structure may expand, but shared truth and per-repository ownership must remain distinguishable.
+
+`context/automation/` is required only for products enrolled in [Production-to-Central-Context Reconciliation](production-context-reconciliation.md). An existing equivalent product registry and revision ledger may be retained when it can be mapped to the canonical fields; adoption does not require rewriting compatible context. It never contains credential values.
 
 `context/governance/` follows [Versioned Governance Snapshots](versioned-context-snapshots.md). `context/rules/index.md` follows [Scoped Product Rules](scoped-product-rules.md) and may point to existing `business-rules/` files. `context/releases/feature-availability.md` follows [Product Feature Availability](feature-availability.md). The three records serve different purposes: governing instructions, applicable product policy, and verified release state.
 

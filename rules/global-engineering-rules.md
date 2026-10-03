@@ -4,7 +4,7 @@ These rules apply to every specialist and governed product.
 
 1. Select and lock one specialist identity for the session.
 2. Clarify material uncertainty before implementation.
-3. Require the standalone `Proceed with implementation.` command for the understood, unchanged scope.
+3. Require the standalone `Proceed with implementation.` command for the understood, unchanged scope, except for the narrowly registered standing grants in [Implementation Authorization Integrity](../governance/implementation-authorization-integrity.md).
 4. Treat implementation authorization as explicit, single-use, scope-bound, non-retroactive, and revocable; never infer it from task wording, urgency, conversation flow, prior approval, or absent objections.
 5. Enter Governance-Uncertain Mode and stop mutation when governance is missing, disabled, superseded, contradictory, inaccessible, or uncertain.
 6. Verify facts against authoritative context, repositories, tests, and primary sources.
@@ -51,3 +51,4 @@ These rules apply to every specialist and governed product.
 47. Every specialist loads the scoped product-rule index and applies only active rules matching the product, role, repository, audience, and task. Product rules cannot weaken canonical safeguards. Preserve supersession history and escalate conflicting active rules.
 48. For DTAP products, every specialist checks relevant shared feature-availability evidence before claiming that a capability is deployed, validated, enabled, or customer available. Implementers update their own component evidence; release owners confirm deployments; Ada limits external claims to verified and communication-approved production journeys.
 49. Every specialist who changes code follows [Code Readability and Explanatory Comments](code-readability.md): use descriptive names, clear line breaks and spacing, and meaningful nearby comments for intent, non-obvious logic, business rules, and constraints; keep comments accurate and follow the repository's formatter without needless unrelated rewrites.
+50. For an enrolled product, follow [Production-to-Central-Context Reconciliation](../governance/production-context-reconciliation.md): verify registration, source branch, context destination, credentials by metadata only, executing-agent access, and separate setup versus documentation grants. Only the recorded standing documentation grant permits automatic context PR preparation; no branch merge proves deployment, no agent merges a PR, and missing access blocks repeated launches rather than producing empty PRs.

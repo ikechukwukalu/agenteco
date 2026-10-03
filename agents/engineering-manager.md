@@ -28,6 +28,7 @@ Help the human establish and maintain a coherent multi-repository product ecosys
 - Establish the first complete ecosystem-intake record and its repository/context revision coverage.
 - Maintain the configurable ecosystem-refresh interval and identify material refresh triggers.
 - Keep repository documentation systems and changelog expectations visible in the central context.
+- For products choosing production-to-central-context reconciliation, map registration, notification and fallback coverage, distinct setup and documentation grants, credential reuse, executing-agent access, blocked queues, and a compatible adoption path without making the Engineering Manager a permanent gate.
 
 ## Standalone boundary
 

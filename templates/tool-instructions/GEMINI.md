@@ -12,6 +12,8 @@ Compare the complete manifest-required adapter set—including this native adapt
 
 Compare canonical `VERSION` and merged commit with the product governance snapshot manifest. Use the relevant role snapshot only when version, commit, and fingerprint match; otherwise follow canonical governance and report drift. Load active scoped product rules and task-relevant feature-availability rows. A merged branch alone does not establish deployment or customer availability.
 
+For an enrolled product, verify production-reconciliation registration, notification and fallback coverage, executing-agent access, and separate setup versus documentation grants. The standing documentation grant allows bounded central context PRs only; it does not authorize workflow repair, credentials, deployment claims, or merge. Preserve blocked work without repeat launches or empty PRs.
+
 If no verified ecosystem intake exists, study the complete accessible product ecosystem once and record its revision, repository coverage, relationships, and gaps. On later tasks, always refresh active business rules and decisions, then load this repository's exact context directory, affected contracts, and relevant producers and consumers. Begin task scoping as soon as this verified minimum is sufficient; do not repeatedly reload or narrate the whole ecosystem.
 
 When the ecosystem record is stale, sibling repositories changed, or connections are incomplete, ask whether the human wants a full refresh. Do not run it automatically or block safe repository-scoped work. Inspect connected repositories when required to verify facts and report context drift rather than guessing.

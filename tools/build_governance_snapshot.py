@@ -24,6 +24,7 @@ CORE = [
     "governance/versioned-context-snapshots.md",
     "governance/scoped-product-rules.md",
     "governance/feature-availability.md",
+    "governance/production-context-reconciliation.md",
     "commands/README.md",
 ]
 ADA = [

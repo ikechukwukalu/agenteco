@@ -28,6 +28,8 @@ Automatic repair of a governed product repository's local Agent Eco adapter, man
 
 Changes to the Agent Eco Space governance repository are not covered by this exception. They require verified owner authority and the normal proposal plus standalone authorization defined by [Owner-Controlled Governance](owner-controlled-governance.md).
 
+An explicitly enrolled product may have two distinct bounded standing grants under [Production-to-Central-Context Reconciliation](production-context-reconciliation.md). A setup/repair grant permits only listed workflow and registration repair PRs. A documentation grant permits only the recorded executing agent to prepare central documentation PRs for verified registered production-source ranges without a new per-event command. Neither grant authorizes credential or access changes, merge, deployment, or governance mutation. Without the applicable grant, the ordinary standalone command is required.
+
 ## Authorization evidence
 
 The completion report records:
