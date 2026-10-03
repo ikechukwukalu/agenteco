@@ -31,6 +31,8 @@ Git repositories remain the authority for implemented code. When context and cod
 
 Products also maintain a [scoped rule index](governance/scoped-product-rules.md) so each specialist can load active rules that apply to its role and task. DTAP products maintain a shared [feature availability record](governance/feature-availability.md) across test, staging, and production, including required backend, frontend, mobile, API, SDK, flag, and audience evidence. A branch merge alone is not a customer release.
 
+Products may opt into [Production-to-Central-Context Reconciliation](governance/production-context-reconciliation.md). Approved registration identifies each source's production branch and its own central-context destination. Verified source changes can then queue bounded central documentation PRs without repeated per-event authorization; a human still merges each PR. Setup and workflow repair use a separate grant. Secret names are standardized while values and access scopes remain product-specific.
+
 ## Supported AI tools and models
 
 Agent Eco Space is AI-agnostic, but each tool must have a verifiable way to receive governance. Its canonical rules remain the same across tools.
@@ -110,6 +112,7 @@ See the [Specialist Catalogue](agents/README.md) and individual profiles in `age
 - [Versioned Governance Snapshots](governance/versioned-context-snapshots.md)
 - [Scoped Product Rules](governance/scoped-product-rules.md)
 - [Product Feature Availability](governance/feature-availability.md)
+- [Production-to-Central-Context Reconciliation](governance/production-context-reconciliation.md)
 - [Ada Internal Modes](governance/ada-internal-modes.md)
 - [Documentation and Continuity](rules/documentation-and-continuity.md)
 - [Code Readability and Explanatory Comments](rules/code-readability.md)
@@ -158,6 +161,14 @@ Adopt this product into Agent Eco Space.
 ```
 
 Starts the Engineering Manager onboarding workflow for a new or existing product only after Agent Eco Space is discoverable in the current session. It authorizes discovery and an adoption proposal, not repository changes.
+
+### Enroll production-context reconciliation
+
+```text
+Enroll this product in production-context reconciliation.
+```
+
+Starts read-only discovery of registration, notification coverage, central fallback, credential-name presence, executing-agent access, and pending work. It produces a new-product onboarding or existing-product upgrade proposal with **separate** setup/repair and automatic documentation-reconciliation grants. Use the complete [Enrollment Prompt](templates/enroll-production-context-reconciliation.md) in a new or ambiguous session. Enrollment and workflow repair are not authorized by the short command alone.
 
 ### Authorize implementation
 
@@ -877,4 +888,34 @@ For an indicative or basic rate card, record its owner and approver, effective a
 Present a concise reconciliation proposal containing the exact central-context destinations, additions, corrections, superseded records, downstream documentation or support effects, risks, and verification plan. Do not change any repository until I send the standalone "Proceed with implementation." command.
 
 After authorization, create a central-context branch and pull request but never merge it. If write access is unavailable, create a Context Update Package in the assigned governed repository's version-controlled `.agenteco/outbox/context/` when available. If no governed repository is assigned, return a clearly labelled copyable pending package and state that it has not been synchronized.
+```
+
+### 13. Production-context reconciliation enrollment prompt
+
+Use this for a new product or a compatible upgrade of an existing product. It proposes enrollment and distinct authorization grants without changing repositories. Canonical template: [Production Reconciliation Enrollment Prompt](templates/enroll-production-context-reconciliation.md).
+
+```text
+Use Agent Eco Space to propose production-to-central-context reconciliation for this product.
+
+Canonical Agent Eco Space repository:
+https://github.com/ikechukwukalu/agenteco
+
+Product name:
+<PRODUCT_NAME>
+
+Central product-context repository or workspace path:
+<CONTEXT_REPOSITORY>
+
+Known source repositories, if available:
+<SOURCE_REPOSITORIES_OR_DISCOVER_FROM_PRODUCT_REGISTRATION>
+
+Operate as the Engineering Manager for this product-wide intake unless I have already selected a different specialist. Read the current canonical Production-to-Central-Context Reconciliation policy and the product's existing registration, source manifests, production branches, notification workflows, central receiver and scheduled fallback, reconciliation state, open tasks and PRs, and approval records. Do not assume this is a new product or that a workflow or credential is absent.
+
+Verify required secret names by metadata only: CPI_DISPATCH_TOKEN, CPI_COPILOT_TOKEN, and CPI_SOURCE_READ_TOKEN. Never retrieve or expose their values. Distinguish scanner source access from the executing agent's separate source and governance access. Preserve compatible credentials and workflow references. Determine the smallest missing setup, including any failed runs or blocked agent tasks.
+
+Present a product-specific registration and a migration or onboarding plan. Separate the human's bounded authority to prepare workflow and registration repair PRs from the standing authority for automatic central documentation PRs. Identify approved source repositories, their production branches, central destination, allowed paths, executing agent, effective period, and revocation. Do not infer either grant from a production merge, existing token, or generated task.
+
+Explain how the process will retain one active reconciliation per source, keep newer revisions queued, stop repeated launches when access is blocked, and update the synchronized revision only after a substantive documentation PR is human-merged. Distinguish production-source merge from deployment and customer availability.
+
+Do not change a repository or activate the workflow now. Present exact proposed files, tests, access checks, PRs, and remaining human decisions. Wait for the standalone Proceed with implementation. authorization for changes not already covered by an approved, bounded setup grant. Never merge a PR.
 ```

@@ -1,0 +1,34 @@
+# Render the two angle-bracketed values from the approved product registration.
+# This canonical template intentionally contains no product-specific destination.
+# A human reviews the rendered source-repository PR before the workflow is active.
+name: Notify central context of production source changes
+on:
+  push:
+    branches: [<REGISTERED_PRODUCTION_BRANCH>]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  notify:
+    if: github.ref == 'refs/heads/<REGISTERED_PRODUCTION_BRANCH>'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Notify registered central context
+        env:
+          GH_TOKEN: ${{ secrets.CPI_DISPATCH_TOKEN }}
+          SOURCE_REPOSITORY: ${{ github.repository }}
+          SOURCE_SHA: ${{ github.sha }}
+          CONTEXT_REPOSITORY: <REGISTERED_CONTEXT_OWNER/REPOSITORY>
+          PRODUCTION_BRANCH: <REGISTERED_PRODUCTION_BRANCH>
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo '::error::CPI_DISPATCH_TOKEN is unavailable; scheduled central scanning remains the recovery path.'
+            exit 1
+          fi
+          jq -n --arg repository "$SOURCE_REPOSITORY" \
+            --arg branch "$PRODUCTION_BRANCH" --arg sha "$SOURCE_SHA" \
+            '{event_type: "production-source-changed", client_payload: {repository: $repository, branch: $branch, sha: $sha}}' \
+            > "$RUNNER_TEMP/production-context-event.json"
+          gh api --method POST "repos/$CONTEXT_REPOSITORY/dispatches" \
+            --input "$RUNNER_TEMP/production-context-event.json"

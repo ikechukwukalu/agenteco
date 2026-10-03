@@ -13,7 +13,7 @@ The [First-Time Bootstrap Prompt](../templates/bootstrap-agent-eco-space.md) is 
 - Quoting a command in documentation or conversation does not execute it.
 - Similar wording does not trigger a protected state transition.
 - No command authorizes a specialist to merge a pull request.
-- Every entry command runs the canonical Repository Readiness Preflight before assuming setup exists.
+- Repository-based entry commands run the canonical Repository Readiness Preflight; repository-free commands run their applicable product-context readiness checks. No entry command assumes setup exists.
 - Repository-based complete prompts identify the product, application or component, repository name and location, and central-context location; a repository URL alone is not a complete product identity. Repository-free Business Context Mode and Technical Product Context Mode prompts identify governance, product, and central context instead, because no code repository is assigned.
 
 ## Adopt a product
@@ -31,6 +31,18 @@ Adopt this product into Agent Eco Space.
 **Effect:** Inspect current repositories and instructions, determine whether the product is new or already registered, build a repository and contract inventory, identify context drift, and present an adoption plan.
 
 **Does not authorize:** Creating or changing product files, installing instruction adapters, merging PRs, or implementing application features.
+
+## Enroll production-context reconciliation
+
+```text
+Enroll this product in production-context reconciliation.
+```
+
+**Purpose:** Discover the product's production-source and central-context registration, current notification and fallback workflows, compatible credentials, executing-agent access, queue state, and existing authorization. Use the complete [Enrollment Prompt](../templates/enroll-production-context-reconciliation.md) in a new or ambiguous session.
+
+**Effect:** Present an existing-product upgrade or new-product onboarding proposal with separate setup/repair and standing documentation-reconciliation grants. The Engineering Manager is recommended but never automatically required. Existing compatible workflows and secret names are preserved.
+
+**Does not authorize:** Creating or repairing workflows, writing central documentation, provisioning credentials, activating automatic assignment, merging PRs, or modifying Agent Eco Space. Such work follows the [production reconciliation policy](../governance/production-context-reconciliation.md) and its explicit authority boundaries.
 
 ## Authorize implementation
 

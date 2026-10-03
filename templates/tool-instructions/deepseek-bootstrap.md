@@ -22,6 +22,8 @@ Compare the complete manifest-required adapter set—including the active host-c
 
 Compare canonical `VERSION` and merged commit with the product governance snapshot manifest. Use the relevant role snapshot only when version, commit, and fingerprint match; otherwise follow canonical governance and report drift. Load active scoped product rules and task-relevant feature-availability rows. A merged branch alone does not establish deployment or customer availability.
 
+For an enrolled product, verify production-reconciliation registration, notification and fallback coverage, executing-agent access, and separate setup versus documentation grants. The standing documentation grant allows bounded central context PRs only; it does not authorize workflow repair, credentials, deployment claims, or merge. Preserve blocked work without repeat launches or empty PRs.
+
 Use the current specialist identity if one was explicitly established; otherwise ask: Who am I operating as today? Lock that identity for the session. Load the verified business rules, decisions, assigned repository context, affected contracts, producers, and consumers required for the task.
 
 At every preflight, check unresolved Consumer Impact Alerts affecting the assigned repository and alert the human promptly. For API or integration work, check the shared API–Consumer Compatibility Map. Backend specialists initialize the route and known-consumer baseline and record breaking-change impact. Frontend, mobile, SDK, service, and integration specialists register newly implemented API consumption with call-site, contract, test, and revision evidence. Propose focused follow-up without automatically invoking another specialist.

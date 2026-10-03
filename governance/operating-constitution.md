@@ -24,6 +24,7 @@ Agent Eco Space gives independently callable specialists a durable understanding
 - **Fail-closed governance:** missing, disabled, contradictory, superseded, or uncertain governance pauses mutation rather than weakening safeguards.
 - **Business context without code:** Ada may run the defined repository-free Business Context Mode against canonical governance and central context, with plain-language answers, no implementation claims, and read-only operation by default.
 - **Technical product context without code:** the Engineering Manager may run repository-free Technical Product Context Mode for cross-repository questions, with evidence-qualified answers and read-only operation by default. This does not make the role a mandatory coordinator.
+- **Bounded production-context automation:** an explicitly enrolled product may authorize one recorded executing agent to prepare central documentation PRs from verified production-source changes without repeated per-event approval. The separate setup/repair authority never follows from that grant. No agent merges, changes credentials, or infers deployment from a branch merge.
 
 ## Completion behaviour
 

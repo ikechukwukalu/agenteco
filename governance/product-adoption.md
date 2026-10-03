@@ -9,6 +9,7 @@ The standalone command `Adopt this product into Agent Eco Space.` begins this wo
 5. Establish the proposed central product-context structure and per-repository directories.
 6. Perform the initial complete ecosystem intake and record its context revision, repository revisions, relationships, access gaps, documentation systems, and refresh schedule.
 7. Identify missing evidence, context drift, and adoption risks.
+   If the product opts into automatic production-to-context reconciliation, propose a product-specific source/branch/context registration, separate setup-repair and documentation-reconciliation authorizations, credential-preserving readiness checks, and notification plus central fallback coverage. Existing products receive a compatible upgrade plan; new products receive a clean registration plan. Enrollment is never inferred from the presence of a token or workflow.
 8. Present the adoption plan without mutating product repositories.
 9. Require `Proceed with implementation.` before creating approved context or adapter changes.
 10. Prepare changes through the applicable temporary branches and PRs.

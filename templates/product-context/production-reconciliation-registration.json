@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "product": "<PRODUCT_NAME>",
+  "central_context_repository": "<OWNER/REPOSITORY>",
+  "central_context_branch": "<CONTEXT_BRANCH>",
+  "executing_agent": "<APPROVED_AGENT_IDENTITY>",
+  "registration_status": "proposed",
+  "queue_state_path": "context/automation/production-reconciliation-state.json",
+  "credentials": {
+    "source_dispatch_secret_name": "CPI_DISPATCH_TOKEN",
+    "central_assignment_secret_name": "CPI_COPILOT_TOKEN",
+    "central_source_read_secret_name": "CPI_SOURCE_READ_TOKEN"
+  },
+  "source_repositories": [
+    {
+      "repository": "<OWNER/SOURCE_REPOSITORY>",
+      "production_branch": "<REGISTERED_BRANCH>",
+      "notification_workflow": ".github/workflows/notify-production-context.yml",
+      "notification_template_version": "<AGENT_ECO_VERSION>",
+      "status": "proposed"
+    }
+  ],
+  "authorization": {
+    "setup_and_repair": {
+      "status": "not-approved",
+      "grant_id": "<GRANT_ID_OR_NONE>",
+      "approved_by": "<HUMAN_OWNER_OR_NONE>",
+      "approval_reference": "<REVIEWABLE_DECISION_OR_NONE>",
+      "approved_source_repositories_and_branches": [],
+      "approved_context_destination": "<OWNER/REPOSITORY@BRANCH_OR_NONE>",
+      "approved_paths": [],
+      "responsible_specialist": "<SPECIALIST_OR_NONE>",
+      "effective_at": null,
+      "valid_until": null,
+      "revoked_at": null
+    },
+    "documentation_reconciliation": {
+      "status": "not-approved",
+      "grant_id": "<GRANT_ID_OR_NONE>",
+      "approved_by": "<HUMAN_OWNER_OR_NONE>",
+      "approval_reference": "<REVIEWABLE_DECISION_OR_NONE>",
+      "approved_source_repositories_and_branches": [],
+      "approved_context_destination": "<OWNER/REPOSITORY@BRANCH_OR_NONE>",
+      "executing_agent": "<APPROVED_AGENT_IDENTITY_OR_NONE>",
+      "allowed_context_paths": [],
+      "effective_at": null,
+      "valid_until": null,
+      "revoked_at": null
+    }
+  }
+}

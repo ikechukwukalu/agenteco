@@ -50,6 +50,8 @@ No work is described as ready when required tests or CI are red. An explicitly a
 
 For DTAP work, the implementing specialist updates the central [feature availability catalogue](feature-availability.md) for their component with branch, commit, dependency, and verification evidence. A merged branch is not a deployment. The release owner records actual environment deployment; the customer-facing state depends on all required components, flags, audience access, customer-journey verification, and communication approval.
 
+An enrolled product's production-source change may independently queue a central documentation PR under its recorded [production-reconciliation standing authorization](production-context-reconciliation.md). This does not promote the feature through DTAP, prove deployment, bypass human PR merge, or authorize workflow repair. Automated central documentation PRs identify their grant, source range, evidence, and unresolved release-state gaps.
+
 ## API consumer compatibility gate
 
 Before a known breaking API change is released to production, every mapped affected consumer must be `Verified Compatible`, deprecated with evidence, or covered by an explicit human-approved exception. The exception records affected consumers, impact, duration, owner, mitigation, and rollback or recovery plan. Implementation approval alone is not a production compatibility exception.

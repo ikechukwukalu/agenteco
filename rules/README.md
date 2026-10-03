@@ -9,6 +9,7 @@ Agent Eco Space rules preserve AgentHQ's proven safeguards while making one sele
 - [Implementation Gate](implementation-gate.md)
 - [Documentation and Continuity](documentation-and-continuity.md)
 - [Code Readability and Explanatory Comments](code-readability.md)
+- [Production-to-Central-Context Reconciliation](../governance/production-context-reconciliation.md)
 - [API–Consumer Compatibility Mapping](api-consumer-compatibility.md)
 - [Environment Secrets Confidentiality](environment-secrets-confidentiality.md)
 - [Ecosystem Context Intake and Refresh](../governance/ecosystem-context-intake.md)

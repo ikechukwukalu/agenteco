@@ -87,6 +87,18 @@ context:
     applicable: <true|false>
     catalogue_path: "<CENTRAL_CONTEXT_PATH_OR_NONE>"
     last_verified_revision: "<CONTEXT_COMMIT_OR_NONE>"
+  production_reconciliation:
+    enrollment: "<approved|proposed|not-enrolled|revoked>"
+    registration_path: "<CENTRAL_CONTEXT_REGISTRATION_PATH_OR_NONE>"
+    context_repository: "<REGISTERED_OWNER/REPOSITORY_OR_NONE>"
+    production_branch: "<REGISTERED_BRANCH_OR_NONE>"
+    notification_workflow: "<SOURCE_WORKFLOW_PATH_OR_NONE>"
+    notification_status: "<verified|missing|stale|conflicting|not-applicable>"
+    central_fallback_status: "<verified|missing|stale|not-applicable>"
+    setup_grant_id: "<GRANT_ID_OR_NONE>"
+    documentation_grant_id: "<GRANT_ID_OR_NONE>"
+    executing_agent_access: "<verified|blocked|unverified|not-applicable>"
+    last_checked_at: "<ISO_8601_OR_NONE>"
   ecosystem_intake:
     status: "<complete|partial|missing|stale>"
     completed_at: "<ISO_8601_OR_NONE>"

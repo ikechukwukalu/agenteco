@@ -25,6 +25,8 @@ Create the [scoped product rule index](scoped-rules.md), preserving existing aut
 
 Create the tabular [API–Consumer Compatibility Map](api-consumer-compatibility.md). The backend specialist initializes every current route and known consumer using verified revisions. Consumer specialists progressively add and verify new usage, call sites, request and response dependencies, tests, risks, and compatibility status.
 
+Products opting into automatic production-to-context reconciliation add a human-reviewed [registration and authorization record](production-reconciliation-registration.json) or map an existing equivalent registry to its fields. It records the central destination, source allowlist and production branches, separate setup and documentation grants, and secret **names**, never credential values. The source workflow is rendered from that registration using the [canonical notification template](../production-context-notification.yml).
+
 ## Per-repository context
 
 Each repository directory includes current state, roadmap, decisions, documentation tooling, task history, produced and consumed contracts, sibling relationships, last verified revision, and continuity records. Task history must explain what changed and why, not merely link to a diff.

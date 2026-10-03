@@ -24,6 +24,7 @@ Read `.agenteco/manifest.yml` first. When it exists, validate its recorded gover
 14. Protected environment-file handling: confirm `.env` and `.env.*` files other than exact `.env.example` will not be read or disclosed, value-bearing files remain untracked, and planned secret insertion has explicit authorization and a non-disclosing mechanism.
 15. Scoped product-rule index: verify its revision and load applicable active rules; flag unresolved scope, classification, or conflicts.
 16. For DTAP products, check relevant feature-availability rows and evidence for test, staging, and production. Do not equate merge state with deployment or customer availability.
+17. If the product is enrolled in [Production-to-Central-Context Reconciliation](production-context-reconciliation.md), verify the registered context destination and source production branch, notification workflow compatibility, central receiver and scheduled fallback, secret-name metadata, scanner and executing-agent access evidence, both separate authorization states, and pending or blocked queue state. Report missing or drifted setup without reading credential values or launching duplicate agent tasks. For an unenrolled product, offer enrollment as a proposal rather than silently enabling it.
 
 ## Outcomes
 
