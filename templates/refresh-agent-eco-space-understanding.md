@@ -31,7 +31,7 @@ Optional work or context range to review:
 
 Use the current specialist identity if it has already been explicitly established in this session; otherwise ask who you are operating as today.
 
-Run the Repository Readiness Preflight. Read the latest accessible Agent Eco Space governance and compare it with the governance version, manifest, AGENTS.md, CLAUDE.md, Copilot instructions, GEMINI.md, any recorded DeepSeek host-client instructions, and other Agent Eco files currently installed in this repository. Separately read the central product context relevant to this product, application or component, repository, its producers, and its consumers.
+Run the Repository Readiness Preflight. Verify the last approved full Agent Eco mirror in central context. When canonical Agent Eco is accessible, compare its VERSION and exact merged commit with the mirror; read a matching mirror rather than downloading unchanged governance. Without canonical access, state the mirror's recorded version and that freshness is unknown. Compare the applicable verified governance with the local manifest, AGENTS.md, CLAUDE.md, Copilot instructions, GEMINI.md, any recorded DeepSeek host-client instructions, and other installed Agent Eco files. Separately read the central product context relevant to this product, application or component, repository, its producers, and its consumers.
 
 Verify both sources of understanding against the current repository and any accessible connected repositories. Do not assume that governance, adapters, central context, conversation memory, or implementation is current. Detect and report:
 1. governance-version and inherited-rule changes;
@@ -51,7 +51,7 @@ If governance was disabled, superseded, contradictory, or uncertain, identify th
 
 Automatically repair proven canonical local adapter and manifest compliance differences under Instruction Adapter Integrity, and report them. Then present one reconciliation proposal identifying every remaining central-context file, repository document, branch, test, and pull request that should change. Do not make changes outside the automatic adapter-compliance exception until I send the standalone "Proceed with implementation." command.
 
-After authorization, implement only the approved reconciliation. Create pull requests where appropriate but never merge them. If the central context cannot be written, create a version-controlled Context Update Package in `.agenteco/outbox/context/` and report its pending status.
+After authorization, implement only the approved reconciliation. If canonical governance is newer, only an agent with approved canonical read and central-context write access may prepare the full-mirror refresh PR; never silently overwrite the approved copy. Create pull requests where appropriate but never merge them. After PR creation, remind the human of other relevant open context and code PRs. If the central context cannot be written, create a version-controlled Context Update Package in `.agenteco/outbox/context/` and report its pending status.
 ```
 
 This refresh updates an agent's verified understanding; it does not authorize product-feature work, merge, deployment, publication, or production release.

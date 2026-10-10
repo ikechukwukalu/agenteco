@@ -18,6 +18,10 @@ context/
   governance/
     README.md
     <role-specific-snapshots>.md
+    mirror/
+      manifest.json
+      repository/
+        <exact tracked Agent Eco files>
   rules/
     index.md
   business-rules/
@@ -55,7 +59,7 @@ The structure may expand, but shared truth and per-repository ownership must rem
 
 `context/automation/` is required only for products enrolled in [Production-to-Central-Context Reconciliation](production-context-reconciliation.md). An existing equivalent product registry and revision ledger may be retained when it can be mapped to the canonical fields; adoption does not require rewriting compatible context. It never contains credential values.
 
-`context/governance/` follows [Versioned Governance Snapshots](versioned-context-snapshots.md). `context/rules/index.md` follows [Scoped Product Rules](scoped-product-rules.md) and may point to existing `business-rules/` files. `context/releases/feature-availability.md` follows [Product Feature Availability](feature-availability.md). The three records serve different purposes: governing instructions, applicable product policy, and verified release state.
+`context/governance/` follows [Versioned Governance Snapshots and Full Mirrors](versioned-context-snapshots.md). The `mirror/` directory is installed only after audience and license review; it includes the complete tracked Agent Eco source at one merged commit, not `.git` or untracked files. `context/rules/index.md` follows [Scoped Product Rules](scoped-product-rules.md) and may point to existing `business-rules/` files. `context/releases/feature-availability.md` follows [Product Feature Availability](feature-availability.md). The three records serve different purposes: governing instructions, applicable product policy, and verified release state.
 
 API records use the canonical [API–Consumer Compatibility Map](../templates/product-context/api-consumer-compatibility.md). A backend specialist initializes the route and known-consumer baseline. Every producer and consumer specialist then progressively maintains the rows affected by its work. Shared alerts are linked from the producer and every affected consumer context directory.
 

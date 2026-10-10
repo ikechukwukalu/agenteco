@@ -29,7 +29,7 @@ A message or edit that generically says prior adapters or `AGENTS.md` instructio
 
 Canonical adapter compliance is a narrow standing authorization and does not wait for `Proceed with implementation.` When preflight or the governance-upgrade workflow proves that a managed section is missing, stale, altered, weakened, or conflicting, the selected specialist must automatically:
 
-1. install or restore the applicable canonical managed section from Agent Eco Space;
+1. install or restore the applicable canonical managed section from Agent Eco Space, or from a complete, integrity-verified, human-approved product mirror when canonical access is unavailable; in the latter case record that source and its unverified freshness;
 2. preserve compliant content in the designated local section;
 3. remove conflicting content from active instructions while recording the previous content, reason, and governing revision in reconciliation history;
 4. update manifest schema, governance revision, adapter versions, fingerprints, status, and verification evidence as required; and
@@ -38,5 +38,7 @@ Canonical adapter compliance is a narrow standing authorization and does not wai
 This exception covers only local Agent Eco adapters, their manifest records, and support files strictly required for governance compatibility. It does not authorize product code, tests, ordinary documentation, changelog, central context, branch, deployment, publication, or canonical Agent Eco Space changes. Corrections are reported and may be placed in a pull request, but the specialist must never merge it.
 
 Canonical Agent Eco Space changes follow [Owner-Controlled Governance](owner-controlled-governance.md); automatic local reconciliation can never write back to the governance repository.
+
+If an approved product mirror has advanced beyond the repository's recorded governance revision, specialists must evaluate the changed managed adapters and manifest fields and apply the narrow automatic local reconciliation above. Do not downgrade a newer local adapter because a stale mirror is the only accessible source. A product mirror cannot authorize its own refresh, expand the auto-repair exception, or establish that its version is the latest canonical release without canonical access.
 
 Every surviving Agent Eco-aware specialist performs this reconciliation across the complete manifest-required adapter set, not only its own native file. Deleted adapters follow [Cross-Adapter Self-Healing](cross-adapter-self-healing.md), including safe recovery of compliant local content from Git history.

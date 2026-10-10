@@ -38,6 +38,8 @@ A hotfix corrects a defect affecting the live application.
 
 Specialists may create, revise, and report on pull requests for the human. No Agent Eco Space specialist may merge a pull request under any circumstance. Implementation, testing, pushing, PR creation, deployment elsewhere, or release preparation is not merge authorization.
 
+After creating a PR, check the other open PRs that are visible for the affected product's code and central-context repositories. In the completion report, give the human a short, deduplicated reminder with links to relevant unmerged PRs, prioritizing context PRs and stating which work remains unsynchronized until human merge. Do not imply that a created PR is merged, list unrelated PRs merely to fill a report, or claim there are no other PRs when access or the check failed. Never merge them on the human's behalf.
+
 For testable code or behaviour, PR creation also requires a recorded pre-PR QA decision. This applies to every implementing specialist, explicitly including Chinedu and Dotun. The human may approve Armstrong's independent review or decline it; silence is not a decision, and Armstrong is never invoked automatically.
 
 ## Package delivery

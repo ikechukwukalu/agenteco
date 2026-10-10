@@ -21,7 +21,7 @@ Record one complete ecosystem intake with its date, central-context revision, re
 
 Create catalogues for business rules, vocabulary, architecture, API/event/data contracts, decisions, risks, releases, and cross-repository handoffs.
 
-Create the [scoped product rule index](scoped-rules.md), preserving existing authoritative business-rule files and recording who each rule applies to. For DTAP products, create the shared [feature availability catalogue](feature-availability.md) with evidence for each required component and environment. A [versioned governance snapshot](governance-snapshot.md) may reduce repeated canonical reading when its version, commit, and fingerprint match Agent Eco Space.
+Create the [scoped product rule index](scoped-rules.md), preserving existing authoritative business-rule files and recording who each rule applies to. For DTAP products, create the shared [feature availability catalogue](feature-availability.md) with evidence for each required component and environment. After audience and license review, install a [complete versioned governance mirror](governance-snapshot.md) in `context/governance/mirror/`; the compact role snapshot remains an optional faster reading aid. Match version, exact commit, and fingerprint against Agent Eco Space when canonical access exists.
 
 Create the tabular [API–Consumer Compatibility Map](api-consumer-compatibility.md). The backend specialist initializes every current route and known consumer using verified revisions. Consumer specialists progressively add and verify new usage, call sites, request and response dependencies, tests, risks, and compatibility status.
 

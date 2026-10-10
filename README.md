@@ -2,7 +2,7 @@
 
 Agent Eco Space is a lean, product-wide governance system for AI-assisted software delivery. It preserves AgentHQ's specialist expertise and engineering safeguards while removing mandatory orchestration, automatic multi-agent work, and repeated loading of irrelevant context.
 
-The current governance version is in [`VERSION`](VERSION). Each governance change advances it; product contexts may cache a compact, role-specific snapshot identified by version, exact merged commit, and fingerprint. A verified snapshot speeds up fresh sessions while canonical Agent Eco Space remains authoritative. See [Versioned Governance Snapshots](governance/versioned-context-snapshots.md).
+The current governance version is in [`VERSION`](VERSION). Every governance PR must increase it. Authorized product contexts can retain a [complete, integrity-checked Agent Eco mirror](governance/versioned-context-snapshots.md) identified by version and exact merged commit, plus an optional compact role-specific reading snapshot. Agents use a verified matching local copy instead of repeatedly downloading unchanged governance. Without canonical access, they may use only the last approved copy and cannot claim it is the latest. Canonical Agent Eco remains authoritative.
 
 ## Operating model
 
@@ -15,7 +15,7 @@ The current governance version is in [`VERSION`](VERSION). Each governance chang
    Code changes must also be easy to read: meaningful explanatory comments, descriptive names, clear spacing and line breaks, and the repository's established formatting conventions.
 7. After testable implementation and engineer-owned verification, the specialist must ask whether Armstrong should independently verify the work or whether the human declines that review.
 8. If approved, Armstrong reviews before implementation PR creation; Armstrong is never started automatically.
-9. Specialists may create pull requests only after that QA decision checkpoint and must never merge them.
+9. Specialists may create pull requests only after that QA decision checkpoint and must never merge them. After opening one, they remind the human about other relevant open PRs—especially context PRs still awaiting merge—or disclose that PR visibility was unavailable.
 
 Business Context Mode is the repository-free exception to the normal startup role question. Its complete prompt selects Ada internally, uses only canonical Agent Eco Space governance plus central product context, and separates Ada's governed role from a product-specific presenter ID and visible stage name.
 

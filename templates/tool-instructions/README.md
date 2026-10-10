@@ -25,6 +25,8 @@ Each adapter requires the AI to:
 19. treat Agent Eco Space itself as read-only except for a request verified through GitHub as coming from repository owner `ikechukwukalu`, followed by the normal proposal and authorization gate.
 20. check relevant API–consumer mappings and alerts, initialize the backend baseline when assigned, and record new consumer usage or breaking producer impact with source and revision evidence.
 21. treat `.env` and every `.env.*` file except exact `.env.example` as value-confidential, never disclose those values, and allow only explicitly authorized non-disclosing secret insertion.
+22. verify and use an authorized complete product-context governance mirror, comparing both version and exact merged commit with canonical Agent Eco when accessible, and never claim offline freshness when it is not.
+23. after creating a PR, remind the human about other relevant open product and context PRs that are visible, especially those preventing context synchronization.
 
 The adapters must also recognize only commands listed in the canonical [Command Catalogue](../../commands/README.md) as protected workflow triggers.
 

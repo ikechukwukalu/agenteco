@@ -8,7 +8,7 @@ Read `.agenteco/manifest.yml` first. When it exists, validate its recorded gover
 
 ## Checks
 
-1. Agent Eco Space governance location, access, and recorded version.
+1. Agent Eco Space governance location, access, and recorded version; verify the authorized product mirror's manifest and full file integrity. When canonical access exists, compare its version and exact merged commit with the mirror. When it does not, identify the last approved mirror and disclose the freshness limit to authorized internal users.
 2. Product name, application or component name, and central-context location and access.
 3. Repository registration and per-repository context directory.
 4. Repository identity, visibility, classification, current revision, and default specialist.
