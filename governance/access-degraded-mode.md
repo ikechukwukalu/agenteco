@@ -10,7 +10,7 @@ Never claim that inaccessible context was reviewed, synchronized, committed, pus
 
 ## Operating boundary
 
-The local adapter supplies only the compact non-negotiable contract. Continue only when that contract and verified local evidence are sufficient. If missing business rules, contracts, security requirements, or repository relationships could materially change implementation, stop affected work and request access or approved context.
+The local adapter supplies the compact non-negotiable contract. If a complete product-context Agent Eco mirror exists, verify its integrity and human-approved provenance, then use it for the authorized audience while clearly distinguishing its last recorded version from unknown canonical freshness. Do not modify that copy without canonical source access and a human-reviewed context PR. Continue only when the verified local rules and evidence are sufficient. If missing business rules, contracts, security requirements, or repository relationships could materially change implementation, stop affected work and request access or approved context.
 
 ## Context update outbox
 

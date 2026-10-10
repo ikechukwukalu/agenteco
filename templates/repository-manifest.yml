@@ -9,6 +9,12 @@ governance:
     manifest_path: "<CENTRAL_CONTEXT_GOVERNANCE_MANIFEST_OR_NONE>"
     fingerprint: "<FINGERPRINT_OR_NONE>"
     validation: "<matched|stale|conflicting|unavailable|missing>"
+  mirror:
+    manifest_path: "<CENTRAL_CONTEXT_GOVERNANCE_MIRROR_MANIFEST_OR_NONE>"
+    version: "<SEMVER_OR_NONE>"
+    commit: "<EXACT_MERGED_COMMIT_OR_NONE>"
+    fingerprint: "<CONTENT_SHA256_OR_NONE>"
+    validation: "<matched|offline-verified|stale|conflicting|unavailable|missing>"
 
 product:
   name: "<PRODUCT_NAME>"

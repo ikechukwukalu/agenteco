@@ -1,6 +1,6 @@
 # Product Governance Snapshot Manifest
 
-Use this as a human-readable guide alongside the generated `context/governance/manifest.json`, `core.md`, and `roles/<specialist>.md`. Generate them with `tools/build_governance_snapshot.py` from a clean, merged Agent Eco checkout. The snapshot is usable only after its fingerprint and canonical identity have been verified.
+Use this as a human-readable guide alongside the required complete `context/governance/mirror/` copy and any optional compact `context/governance/manifest.json`, `core.md`, and `roles/<specialist>.md`. Generate the complete copy with `tools/build_governance_mirror.py` from a clean, merged Agent Eco checkout after audience and license review. Use `tools/verify_governance_mirror.py` to check offline integrity. Generate optional role snapshots with `tools/build_governance_snapshot.py`. Neither local check proves canonical freshness without source access.
 
 | Field | Value |
 | --- | --- |
@@ -10,6 +10,7 @@ Use this as a human-readable guide alongside the generated `context/governance/m
 | Exact merged governance commit | `<commit>` |
 | Snapshot generated at | `<date and time>` |
 | Snapshot fingerprint | `<hash of included files>` |
+| Complete mirror path and fingerprint | `context/governance/mirror/` at `<content_sha256>` |
 | Product context commit at generation | `<commit>` |
 | Authorized audience and classification | `<audience/classification>` |
 | Included role sections | `<paths>` |
