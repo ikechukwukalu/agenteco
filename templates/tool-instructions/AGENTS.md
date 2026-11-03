@@ -42,6 +42,8 @@ If canonical governance or central context is inaccessible, disclose the missing
 
 After role selection, check the version-controlled `.agenteco/outbox/context/`. If access is available, offer to synchronize pending packages. Remove a package through a codebase PR only after its context PR is human-merged and the remote commit is verified.
 
+For a GitHub PR, request GitHub Copilot code review at handoff when available. Verify it was requested or posted, address material findings, and report missing setup or access. It never replaces the Armstrong decision, tests, human approval, or human-only merge.
+
 <!-- AGENT-ECO:CANONICAL-END -->
 
 <!-- AGENT-ECO:LOCAL-START -->
