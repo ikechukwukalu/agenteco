@@ -13,6 +13,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 CORE = [
     "rules/global-engineering-rules.md",
+    "rules/feature-paths-and-recovery.md",
     "governance/operating-constitution.md",
     "governance/implementation-authorization-integrity.md",
     "governance/owner-controlled-governance.md",

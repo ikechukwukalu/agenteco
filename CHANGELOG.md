@@ -6,6 +6,8 @@ All notable changes to Agent Eco Space are recorded here.
 
 ### Added
 
+- Grok Build to the supported-tool catalogue through its verified `AGENTS.md` loading, without duplicating a `GROK.md` adapter.
+- A mandatory, risk-proportionate success, failure, and recovery analysis for meaningful feature and integration work, with matching implementation, engineer-owned tests, customer guidance, and central-context continuity records.
 - A complete, versioned, integrity-checked Agent Eco Space mirror for authorized product contexts, with source-access-aware refresh rules and a retained compact reading path.
 - A completion reminder for other relevant open pull requests, particularly context PRs that leave product memory unsynchronized until human merge.
 - Opt-in, product-agnostic production-to-central-context reconciliation with distinct setup and documentation standing grants, registration-derived source branches and destinations, access and workflow readiness checks, one controlled queue per source, credential-name compatibility, and human-only PR merging.

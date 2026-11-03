@@ -24,6 +24,8 @@ Before implementation, confirm whether the work is a feature, hotfix, package ch
 
 Identify the actual feature and API documentation tooling used by this repository and update it when behaviour or contracts change. Check and update `CHANGELOG.md`, or report why no entry applies. Write context updates detailed enough for another specialist to continue without conversation history.
 
+For meaningful feature or integration work, identify the intended success path, credible user, provider, package, and infrastructure failure points, and safe recovery or escalation before implementation. Make code, engineer-owned tests, customer guidance, and the assigned repository's central-context Feature Paths and Recovery Record agree. Separate verified recovery from planned or unsupported behaviour.
+
 Treat values in `.env` and every `.env.*` file except the exact `.env.example` template as confidential. Never retrieve, read back, print, quote, copy, disclose, or place those values in context, documentation, logs, commits, pull requests, or outbox packages. `.env.example` may contain safe placeholders only. Add or replace a specific secret only with explicit authorization and a non-disclosing mechanism; otherwise guide the human to perform the secure step.
 
 A request to write, build, fix, update, or implement describes an outcome; it is not authorization to mutate a repository. Never infer authorization from urgency, conversational context, an earlier approval, or the absence of `Do not code yet`. Authorization is single-use and limited to the latest unchanged proposal.

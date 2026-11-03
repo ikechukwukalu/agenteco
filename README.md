@@ -13,6 +13,7 @@ The current governance version is in [`VERSION`](VERSION). Every governance PR m
 5. The specialist asks before periodically restudying the full ecosystem; a due reminder does not block safe scoped work.
 6. The specialist owns implementation, engineer-written tests, feature/API documentation, `CHANGELOG.md`, and continuity-grade context updates.
    Code changes must also be easy to read: meaningful explanatory comments, descriptive names, clear spacing and line breaks, and the repository's established formatting conventions.
+   For meaningful features and integrations, the specialist also records the intended success path, credible failure points, and safe recovery or escalation in central context, with code, tests, and customer guidance that match the verified behaviour.
 7. After testable implementation and engineer-owned verification, the specialist must ask whether Armstrong should independently verify the work or whether the human declines that review.
 8. If approved, Armstrong reviews before implementation PR creation; Armstrong is never started automatically.
 9. Specialists may create pull requests only after that QA decision checkpoint and must never merge them. After opening one, they remind the human about other relevant open PRs—especially context PRs still awaiting merge—or disclose that PR visibility was unavailable.
@@ -43,9 +44,10 @@ Agent Eco Space is AI-agnostic, but each tool must have a verifiable way to rece
 | Claude | Root `CLAUDE.md` | Native Claude repository adapter |
 | GitHub Copilot | `.github/copilot-instructions.md` | Native Copilot repository instructions |
 | Gemini CLI | Root `GEMINI.md` | Automatically loaded hierarchical context; use `/memory show` to inspect active files |
+| [Grok Build](https://docs.x.ai/build/features/skills-plugins-marketplaces) | Root `AGENTS.md` | Reuses the governed adapter; verify this client loaded it, rather than assuming every Grok surface does |
 | DeepSeek | Verified host-client rules or the portable [DeepSeek Bootstrap](templates/tool-instructions/deepseek-bootstrap.md) | Client-managed: never assume the model endpoint loaded repository governance |
 
-Gemini is therefore a first-class native adapter. DeepSeek is fully usable, but its coding client must be recorded in `.agenteco/manifest.yml` because DeepSeek can run inside several different applications with different instruction-discovery behaviour. See [Tool Instruction Adapters](templates/tool-instructions/README.md).
+Gemini is therefore a first-class native adapter. Grok Build reuses `AGENTS.md` rather than adding a duplicate `GROK.md`; verify its actual instruction loading with `grok inspect`. A Grok model inside another host follows that host's verified instruction mechanism. DeepSeek is fully usable, but its coding client must be recorded in `.agenteco/manifest.yml` because DeepSeek can run inside several different applications with different instruction-discovery behaviour. See [Tool Instruction Adapters](templates/tool-instructions/README.md).
 
 Every surviving Agent Eco-aware tool checks the complete set of adapters marked required in the repository manifest. If another tool's adapter has been deleted or damaged, it restores the current canonical version automatically and safely recovers compliant local instructions from Git history where possible. An optional adapter is never installed merely because a template exists.
 
@@ -116,6 +118,7 @@ See the [Specialist Catalogue](agents/README.md) and individual profiles in `age
 - [Ada Internal Modes](governance/ada-internal-modes.md)
 - [Documentation and Continuity](rules/documentation-and-continuity.md)
 - [Code Readability and Explanatory Comments](rules/code-readability.md)
+- [Feature Success, Failure, and Recovery Paths](rules/feature-paths-and-recovery.md)
 - [API–Consumer Compatibility Mapping](rules/api-consumer-compatibility.md)
 - [Environment Secrets Confidentiality](rules/environment-secrets-confidentiality.md)
 - [Specialist Catalogue](agents/README.md)

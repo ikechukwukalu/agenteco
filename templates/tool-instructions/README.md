@@ -27,6 +27,7 @@ Each adapter requires the AI to:
 21. treat `.env` and every `.env.*` file except exact `.env.example` as value-confidential, never disclose those values, and allow only explicitly authorized non-disclosing secret insertion.
 22. verify and use an authorized complete product-context governance mirror, comparing both version and exact merged commit with canonical Agent Eco when accessible, and never claim offline freshness when it is not.
 23. after creating a PR, remind the human about other relevant open product and context PRs that are visible, especially those preventing context synchronization.
+24. for meaningful feature and integration work, implement, test, and document the success path, credible failures, and safe recovery or escalation, then record verified versus proposed behaviour in central product context.
 
 The adapters must also recognize only commands listed in the canonical [Command Catalogue](../../commands/README.md) as protected workflow triggers.
 
@@ -40,9 +41,10 @@ For DeepSeek, first identify the host client. If that client natively loads one 
 | Claude | Root `CLAUDE.md` | Native when supported by the active Claude surface |
 | GitHub Copilot | `.github/copilot-instructions.md` | Native GitHub Copilot repository instructions |
 | Gemini CLI | Root `GEMINI.md` | Native hierarchical Gemini context |
+| Grok Build | Root `AGENTS.md` | Native when `grok inspect` confirms the governed file was loaded |
 | DeepSeek | Host-client adapter or portable bootstrap prompt | Client-managed or manual until verified |
 
-Tool-specific syntax may differ, but behaviour and canonical sources remain consistent.
+Grok Build reads the `AGENTS.md` instruction-file family, so do not create a redundant `GROK.md`. Verify which file it discovered with `grok inspect`; if Grok is used through another client, verify that client's actual instruction loading and use its governed adapter. Do not infer governance from the model name alone. Tool-specific syntax may differ, but behaviour and canonical sources remain consistent.
 
 ## Integrity and human edits
 

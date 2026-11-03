@@ -8,6 +8,7 @@ For every completed task, update the assigned repository context directory and a
 
 - task objective and business reason;
 - verified before-and-after behaviour;
+- success path, credible failure points, implemented recovery or escalation, and verification status for meaningful feature or integration work, using the [feature-path record](../templates/product-context/feature-paths-and-recovery.md);
 - implementation approach and significant files or components;
 - decisions created, changed, corrected, deprecated, or superseded;
 - contracts produced or consumed and affected sibling repositories;
@@ -37,6 +38,8 @@ Backend and frontend specialists must identify the repository's current document
 Examples include Knuckles/Scribe for Laravel, OpenAPI or Swagger, Storybook, Compodoc, Typedoc, JSDoc, generated SDK references, or a verified repository-specific system. Examples are not defaults: inspect the repository and use what is actually installed.
 
 When behaviour, contracts, examples, errors, authentication, parameters, responses, components, or user flows change, update the applicable feature and API documentation in the same authorized scope. Generated documentation must be regenerated or validated according to repository policy.
+
+Document relevant error and recovery behaviour alongside the happy path. Customer-facing guidance must explain safe next actions without exposing provider internals, private state, or secrets. The central-context feature-path record distinguishes verified behaviour from proposed or unsupported recovery.
 
 For APIs, documentation includes the shared route inventory, route-to-consumer map, consumer expectations, compatibility risks, and unresolved Consumer Impact Alerts. Backend agents initialize the current-state baseline. Each consumer agent records new API usage and the exact source and contract assumptions introduced by its implementation.
 
