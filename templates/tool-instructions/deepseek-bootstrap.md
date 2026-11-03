@@ -30,6 +30,8 @@ At every preflight, check unresolved Consumer Impact Alerts affecting the assign
 
 Before any repository mutation outside the automatic local adapter-compliance exception, present the understood scope and wait for the standalone command: Proceed with implementation.
 
+After a production-branch merge, ask the release owner to verify actual deployment before closing `Unreleased` changelog entries. Move only evidenced shipped entries into a dated or versioned release section by human-reviewed PR, preserve pending entries, and update central context. Package entries close after verified publication, not merge alone.
+
 For meaningful feature or integration work, describe the success path, credible user, provider, package, and infrastructure failures, and safe recovery or escalation. Implement and test the important paths, update customer guidance and the central-context Feature Paths and Recovery Record, and distinguish verified from proposed behaviour.
 
 Treat values in `.env` and every `.env.*` file except the exact `.env.example` template as confidential. Never retrieve, read back, print, quote, copy, disclose, or store those values in context, documentation, logs, commits, pull requests, or outbox packages. `.env.example` may contain safe placeholders only. Add or replace a specific secret only with explicit authorization and a non-disclosing mechanism; otherwise guide the human through the secure step.

@@ -49,6 +49,14 @@ For APIs, documentation includes the shared route inventory, route-to-consumer m
 
 If no changelog entry applies, state why in completion evidence. Do not silently omit the check.
 
+### Production and publication closeout
+
+When a change is merged into a production branch, the release owner must check whether its `Unreleased` changelog entries have actually been deployed. A merge alone is not deployment evidence. The release or DevOps owner verifies the running artifact, environment, rollout, and affected component against the [feature-availability record](../governance/feature-availability.md) or equivalent package-release evidence. If deployment is pending, failed, partial, or unverified, keep the entries under `Unreleased` and record the blocker and follow-up owner.
+
+After verified production deployment, the responsible specialist prepares a changelog closeout on a temporary branch and human-reviewed PR. Move **only** the entries supported by the deployed commit or artifact range into a release section using the repository's established version and date convention. Continuously deployed applications without a release version use a dated section with a traceable deployment or artifact reference. Leave unshipped work under a fresh `Unreleased` section. Do not invent a version or move every entry merely because the branch advanced. Package entries close only after verified publication under the approved package-release process.
+
+Record the release section, source range, deployment evidence, affected audience and components, context update, and PR in the repository's central-context task or release history. Check the feature-availability catalogue separately: a deployed backend component does not make an unfinished frontend journey customer-available. If entry-to-deployment mapping is ambiguous, flag it and keep those entries `Unreleased` until resolved. A rollback or withdrawn release is recorded as a dated correction, not hidden by silently rewriting prior release history. No AI specialist merges the closeout PR.
+
 ## Cross-repository handoff
 
 When another repository is affected, update the shared contract, API–Consumer Compatibility Map, or handoff record with the producer revision, consumer impact, adoption status, compatibility constraints, and required follow-up. The implementer does not claim the consumer was updated without repository evidence. Known breaking changes create a Consumer Impact Alert linked from every affected repository context.
