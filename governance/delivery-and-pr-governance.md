@@ -52,6 +52,8 @@ No work is described as ready when required tests or CI are red. An explicitly a
 
 For DTAP work, the implementing specialist updates the central [feature availability catalogue](feature-availability.md) for their component with branch, commit, dependency, and verification evidence. A merged branch is not a deployment. The release owner records actual environment deployment; the customer-facing state depends on all required components, flags, audience access, customer-journey verification, and communication approval.
 
+A production-branch merge triggers a [changelog closeout check](../rules/documentation-and-continuity.md#production-and-publication-closeout), not an automatic claim that every `Unreleased` entry shipped. Once the release owner verifies deployment, the responsible specialist prepares the scoped changelog and central-context update by PR; the human reviews and merges it. Package changelogs close only after verified publication. Record a pending closeout when deployment or entry mapping is not yet proven.
+
 An enrolled product's production-source change may independently queue a central documentation PR under its recorded [production-reconciliation standing authorization](production-context-reconciliation.md). This does not promote the feature through DTAP, prove deployment, bypass human PR merge, or authorize workflow repair. Automated central documentation PRs identify their grant, source range, evidence, and unresolved release-state gaps.
 
 ## API consumer compatibility gate

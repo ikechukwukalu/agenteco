@@ -18,6 +18,8 @@ The current governance version is in [`VERSION`](VERSION). Every governance PR m
 8. If approved, Armstrong reviews before implementation PR creation; Armstrong is never started automatically.
 9. Specialists may create pull requests only after that QA decision checkpoint and must never merge them. After opening one, they remind the human about other relevant open PRs—especially context PRs still awaiting merge—or disclose that PR visibility was unavailable.
 
+After a production-branch merge, the release owner also checks whether the change was actually deployed. The responsible specialist closes out only verified shipped entries in `CHANGELOG.md` through a review PR, leaving unshipped entries under `Unreleased` and recording the release evidence in product context. Package entries close after verified publication, not merely a repository merge. See [Changelog Closeout](rules/documentation-and-continuity.md#production-and-publication-closeout).
+
 Business Context Mode is the repository-free exception to the normal startup role question. Its complete prompt selects Ada internally, uses only canonical Agent Eco Space governance plus central product context, and separates Ada's governed role from a product-specific presenter ID and visible stage name.
 
 [Technical Product Context Mode](governance/technical-product-context-mode.md) is a separate repository-free option for authorized technical users. Its complete prompt selects the Engineering Manager and answers product-wide questions from central context and relevant verified repository or deployment evidence, without binding the session to one codebase.

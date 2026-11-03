@@ -26,6 +26,7 @@ State:
 - verification performed;
 - documentation and context updated;
 - feature/API documentation tooling and `CHANGELOG.md` disposition;
+- for production or package-release work, whether changelog closeout is verified, pending deployment evidence, or blocked by ambiguous entries;
 - branch and PR state;
 - unresolved risk or required human decision;
 - the independent QA decision and, when performed, Armstrong's verdict.
