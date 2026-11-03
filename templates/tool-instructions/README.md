@@ -41,9 +41,10 @@ For DeepSeek, first identify the host client. If that client natively loads one 
 | Claude | Root `CLAUDE.md` | Native when supported by the active Claude surface |
 | GitHub Copilot | `.github/copilot-instructions.md` | Native GitHub Copilot repository instructions |
 | Gemini CLI | Root `GEMINI.md` | Native hierarchical Gemini context |
+| Grok Build | Root `AGENTS.md` | Native when `grok inspect` confirms the governed file was loaded |
 | DeepSeek | Host-client adapter or portable bootstrap prompt | Client-managed or manual until verified |
 
-Tool-specific syntax may differ, but behaviour and canonical sources remain consistent.
+Grok Build reads the `AGENTS.md` instruction-file family, so do not create a redundant `GROK.md`. Verify which file it discovered with `grok inspect`; if Grok is used through another client, verify that client's actual instruction loading and use its governed adapter. Do not infer governance from the model name alone. Tool-specific syntax may differ, but behaviour and canonical sources remain consistent.
 
 ## Integrity and human edits
 

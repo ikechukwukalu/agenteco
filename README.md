@@ -44,9 +44,10 @@ Agent Eco Space is AI-agnostic, but each tool must have a verifiable way to rece
 | Claude | Root `CLAUDE.md` | Native Claude repository adapter |
 | GitHub Copilot | `.github/copilot-instructions.md` | Native Copilot repository instructions |
 | Gemini CLI | Root `GEMINI.md` | Automatically loaded hierarchical context; use `/memory show` to inspect active files |
+| [Grok Build](https://docs.x.ai/build/features/skills-plugins-marketplaces) | Root `AGENTS.md` | Reuses the governed adapter; verify this client loaded it, rather than assuming every Grok surface does |
 | DeepSeek | Verified host-client rules or the portable [DeepSeek Bootstrap](templates/tool-instructions/deepseek-bootstrap.md) | Client-managed: never assume the model endpoint loaded repository governance |
 
-Gemini is therefore a first-class native adapter. DeepSeek is fully usable, but its coding client must be recorded in `.agenteco/manifest.yml` because DeepSeek can run inside several different applications with different instruction-discovery behaviour. See [Tool Instruction Adapters](templates/tool-instructions/README.md).
+Gemini is therefore a first-class native adapter. Grok Build reuses `AGENTS.md` rather than adding a duplicate `GROK.md`; verify its actual instruction loading with `grok inspect`. A Grok model inside another host follows that host's verified instruction mechanism. DeepSeek is fully usable, but its coding client must be recorded in `.agenteco/manifest.yml` because DeepSeek can run inside several different applications with different instruction-discovery behaviour. See [Tool Instruction Adapters](templates/tool-instructions/README.md).
 
 Every surviving Agent Eco-aware tool checks the complete set of adapters marked required in the repository manifest. If another tool's adapter has been deleted or damaged, it restores the current canonical version automatically and safely recovers compliant local instructions from Git history where possible. An optional adapter is never installed merely because a template exists.
 
