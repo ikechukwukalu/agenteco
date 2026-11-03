@@ -27,6 +27,7 @@ Each adapter requires the AI to:
 21. treat `.env` and every `.env.*` file except exact `.env.example` as value-confidential, never disclose those values, and allow only explicitly authorized non-disclosing secret insertion.
 22. verify and use an authorized complete product-context governance mirror, comparing both version and exact merged commit with canonical Agent Eco when accessible, and never claim offline freshness when it is not.
 23. after creating a PR, remind the human about other relevant open product and context PRs that are visible, especially those preventing context synchronization.
+24. for meaningful feature and integration work, implement, test, and document the success path, credible failures, and safe recovery or escalation, then record verified versus proposed behaviour in central product context.
 
 The adapters must also recognize only commands listed in the canonical [Command Catalogue](../../commands/README.md) as protected workflow triggers.
 

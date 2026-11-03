@@ -50,6 +50,7 @@ context/
       decisions.md
       documentation.md
       task-history.md
+      feature-paths-and-recovery/
   releases/
     feature-availability.md
   risks/
@@ -64,6 +65,8 @@ The structure may expand, but shared truth and per-repository ownership must rem
 API records use the canonical [API–Consumer Compatibility Map](../templates/product-context/api-consumer-compatibility.md). A backend specialist initializes the route and known-consumer baseline. Every producer and consumer specialist then progressively maintains the rows affected by its work. Shared alerts are linked from the producer and every affected consumer context directory.
 
 The synchronization ledger records every accepted offline Context Update Package using its identifier, fingerprint, source repository and commit, destination records, context PR, merge commit, and synchronization date. This prevents another specialist from publishing the same offline update twice.
+
+For meaningful features and integrations, the owning repository directory records success, credible failures, recovery or escalation, tests, and implementation status using the [Feature Paths and Recovery Record](../templates/product-context/feature-paths-and-recovery.md). Link affected shared contracts and consumers. A documented but unimplemented recovery is never presented as available.
 
 ## Business-rule lifecycle
 

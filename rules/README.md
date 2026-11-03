@@ -8,6 +8,7 @@ Agent Eco Space rules preserve AgentHQ's proven safeguards while making one sele
 - [Session Role Selection and Lock](session-role-lock.md)
 - [Implementation Gate](implementation-gate.md)
 - [Documentation and Continuity](documentation-and-continuity.md)
+- [Feature Success, Failure, and Recovery Paths](feature-paths-and-recovery.md)
 - [Code Readability and Explanatory Comments](code-readability.md)
 - [Production-to-Central-Context Reconciliation](../governance/production-context-reconciliation.md)
 - [API–Consumer Compatibility Mapping](api-consumer-compatibility.md)
