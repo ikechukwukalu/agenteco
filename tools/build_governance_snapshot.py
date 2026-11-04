@@ -79,6 +79,8 @@ def main() -> int:
             paths.append("rules/fars-native-mobile-library.md")
         if key in {"dotun", "samuel", "armstrong"}:
             paths.append("rules/fars-mobile-web-library.md")
+        if key == "chinedu":
+            paths.append("rules/fars-laravel-php-backend-library.md")
         sections[f"roles/{key}.md"] = paths
 
     files = {}

@@ -9,6 +9,47 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class FarsGovernanceTests(unittest.TestCase):
+    def test_laravel_backend_capabilities_have_complete_fars_rows(self):
+        library = (ROOT / "rules/fars-laravel-php-backend-library.md").read_text(
+            encoding="utf-8"
+        )
+        sections = re.findall(r"^## (.+)$", library, flags=re.MULTILINE)
+
+        self.assertGreaterEqual(len(sections), 14)
+        self.assertIn("Validation, nested inputs, and translations", sections)
+        self.assertIn("Customer notifications and state guidance", sections)
+        self.assertIn("Hosting, network edge, and service capacity", sections)
+
+        for section in library.split("\n## ")[1:]:
+            if section.startswith("Verification and continuity"):
+                continue
+            heading = section.splitlines()[0]
+            self.assertIn("Success:", section, heading)
+            self.assertIn(
+                "| Failure or frustration | Candidate avoidance | Candidate recovery |",
+                section,
+                heading,
+            )
+            rows = [line for line in section.splitlines() if line.startswith("| ")]
+            self.assertGreaterEqual(len(rows), 4, heading)
+            for row in rows:
+                self.assertEqual(
+                    row.count("|"), 4, f"Incomplete backend FARS row in {heading}: {row}"
+                )
+
+        self.assertIn("`boxes.0.items.2.weight`", library)
+        self.assertIn("before the backend can answer", library)
+        self.assertIn("Do not claim that a queued", library)
+        self.assertIn("Never leak stack traces", library)
+
+        snapshot_builder = (ROOT / "tools/build_governance_snapshot.py").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn('if key == "chinedu":', snapshot_builder)
+        self.assertIn(
+            'paths.append("rules/fars-laravel-php-backend-library.md")', snapshot_builder
+        )
+
     def test_native_mobile_capabilities_have_complete_fars_rows(self):
         library = (ROOT / "rules/fars-native-mobile-library.md").read_text(encoding="utf-8")
         sections = re.findall(r"^## (.+)$", library, flags=re.MULTILINE)
