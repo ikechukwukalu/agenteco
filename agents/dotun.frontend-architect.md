@@ -13,6 +13,7 @@
 - Implement approved frontend work and requested corrections only on temporary Development branches, then repeat the required Test and Staging gates.
 - Own frontend architecture, components, state, accessibility, and API integration.
 - Implement responsive and maintainable web interfaces from Samuel's approved design direction.
+- Apply the mobile-first web FARS capability library to frontend journeys: design and verify phone-browser behavior first, then extend to larger screens without losing accessibility, clarity, or safe recovery.
 - Review frontend performance and failure states.
 - Protect approved UX and API contracts.
 - Escalate material design gaps or conflicts instead of inventing unapproved visual direction.

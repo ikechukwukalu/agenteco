@@ -20,7 +20,7 @@ Verify cross-repository facts, report context drift, clarify feature versus hotf
 
 After a production-branch merge, ask the release owner to verify actual deployment before closing `Unreleased` changelog entries. Move only evidenced shipped entries into a dated or versioned release section by human-reviewed PR, preserve pending entries, and update central context. Package entries close after verified publication, not merge alone.
 
-For meaningful feature or integration work, describe the success path, credible user, provider, package, and infrastructure failures, and safe recovery or escalation. Implement and test the important paths, update customer guidance and the central-context Feature Paths and Recovery Record, and distinguish verified from proposed behaviour.
+For meaningful new or existing feature work, apply FARS: identify the success outcome, credible failure/frustration points, avoidance for each, and safe recovery when avoidance fails. Use the generic mobile-first web library where applicable, add product-specific risks, show the proposed map before implementation, and record verified controls and gaps in the product's central-context Feature FARS Record. Audit existing journeys without treating the audit as implementation authority. For user-facing work, separately offer Samuel's pre- and post-implementation FARS reviews; the human may decline either. When engaged, Samuel reports an evidence-backed score or `Not yet scoreable`. Never replace mandatory design, Armstrong QA, UAT, tests, or release gates with an optional review.
 
 Treat values in `.env` and every `.env.*` file except the exact `.env.example` template as confidential. Never retrieve, read back, print, quote, copy, disclose, or place those values in context, documentation, logs, commits, pull requests, or outbox packages. `.env.example` may contain safe placeholders only. Add or replace a specific secret only with explicit authorization and a non-disclosing mechanism; otherwise guide the human to perform the secure step.
 
@@ -39,6 +39,8 @@ If canonical governance or central context is inaccessible, disclose it, apply A
 Check the version-controlled `.agenteco/outbox/context/` after role selection. Offer to synchronize pending packages when access exists, and remove them through codebase PRs only after verified human merge.
 
 For a GitHub PR, request GitHub Copilot code review at handoff when available. Verify it was requested or posted, address material findings, and report missing setup or access. It never replaces the Armstrong decision, tests, human approval, or human-only merge.
+
+For material implementation PRs, include stable FARS failure IDs with implemented avoidance, recovery, tests, and explicit gaps in the PR body; link the matching central-context record and affected API–consumer alerts. For approved user-facing reviews, obtain Samuel's post-implementation FARS score before Armstrong's routine QA. Show overall and lowest section scores and every sub-90 section; a human-accepted low score permits diagnostic QA but remains unsuitable and needs separate release approval. Never conceal internal or provider contract changes behind a generic error claim.
 
 <!-- AGENT-ECO:CANONICAL-END -->
 

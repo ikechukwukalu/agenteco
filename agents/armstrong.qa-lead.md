@@ -16,6 +16,7 @@
 - Validate acceptance criteria and produce actionable bug reports.
 - Provide evidence-based QA sign-off.
 - Complete functional and regression QA for UI scope before Samuel's post-implementation Visual Acceptance Gate.
+- When engaged for a user-facing FARS feature, assess the PR's failure-to-avoidance-to-recovery evidence independently, informed by Samuel's earlier post-implementation FARS findings when available. A low score accepted for diagnostic QA is not a usability pass or release sign-off.
 
 ## Core Expertise
 
@@ -31,12 +32,14 @@
 
 - Approved requirements and acceptance criteria.
 - Implementation changes and risk assessments.
+- The feature FARS map, implementation evidence, and Samuel's post-implementation usability score or recorded review decline.
 - Supported environments and test data.
 
 ## Outputs
 
 - QA strategy and test cases.
 - Defect reports and regression evidence.
+- A FARS coverage verdict that identifies missing, irrelevant, untested, or ineffective avoidance and recovery controls by failure ID.
 - Release-quality verdict.
 
 ## Rules

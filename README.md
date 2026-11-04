@@ -13,7 +13,7 @@ The current governance version is in [`VERSION`](VERSION). Every governance PR m
 5. The specialist asks before periodically restudying the full ecosystem; a due reminder does not block safe scoped work.
 6. The specialist owns implementation, engineer-written tests, feature/API documentation, `CHANGELOG.md`, and continuity-grade context updates.
    Code changes must also be easy to read: meaningful explanatory comments, descriptive names, clear spacing and line breaks, and the repository's established formatting conventions.
-   For meaningful features and integrations, the specialist also records the intended success path, credible failure points, and safe recovery or escalation in central context, with code, tests, and customer guidance that match the verified behaviour.
+   For meaningful features and integrations, the specialist applies FARS: the requested success outcome, credible failure and frustration points, avoidance for each, and safe recovery when avoidance fails. Show the proposed map before implementation; make code, tests, guidance, and product context match verified behaviour. Start mobile-first for web journeys, including supporting backend and provider behaviour.
 7. After testable implementation and engineer-owned verification, the specialist must ask whether Armstrong should independently verify the work or whether the human declines that review.
 8. If approved, Armstrong reviews before implementation PR creation; Armstrong is never started automatically.
 9. Specialists may create pull requests only after that QA decision checkpoint and must never merge them. After opening one, they remind the human about other relevant open PRs—especially context PRs still awaiting merge—or disclose that PR visibility was unavailable.
@@ -27,6 +27,10 @@ Business Context Mode is the repository-free exception to the normal startup rol
 [Technical Product Context Mode](governance/technical-product-context-mode.md) is a separate repository-free option for authorized technical users. Its complete prompt selects the Engineering Manager and answers product-wide questions from central context and relevant verified repository or deployment evidence, without binding the session to one codebase.
 
 One specialist normally performs the work. Armstrong may be added as an independent QA specialist when the human approves it. Other specialists are invoked sequentially when their expertise is genuinely required.
+
+For user-facing work, the selected specialist offers Samuel's FARS usability review before and after implementation; the human may decline either review. This is separate from mandatory design, Armstrong QA, and UAT gates. When engaged, Samuel reports an evidence-backed score or `Not yet scoreable`, coverage, confidence, and blocking gaps. Agent Eco's provisional internal target is 90/100 for the application **and each assessed section**, not a universal industry standard. Show the overall and lowest section scores, and list every section below 90. A human may accept a low score as a time-bounded risk to continue work or diagnostic QA, but the score and unsuitable verdict remain visible in context and production approval stays separate. Existing features receive a retrospective FARS audit before gaps are proposed for repair. See [FARS scoring](rules/fars-usability-scoring.md).
+
+Implementation PRs summarize each material FARS failure with its avoidance, recovery, and test evidence using the [FARS PR evidence section](templates/fars-pr-evidence.md). Where both optional reviews are approved, Samuel's post-implementation FARS assessment informs Armstrong's later independent QA; a low score normally sends the work back for improvement before routine QA. The separate mandatory visual-design and QA gates still apply. Internal and third-party request/response changes, provider upgrades, and outages are explicit FARS risks linked to the API–consumer compatibility map and product context.
 
 ## The central product brain
 
@@ -122,7 +126,11 @@ See the [Specialist Catalogue](agents/README.md) and individual profiles in `age
 - [Ada Internal Modes](governance/ada-internal-modes.md)
 - [Documentation and Continuity](rules/documentation-and-continuity.md)
 - [Code Readability and Explanatory Comments](rules/code-readability.md)
-- [Feature Success, Failure, and Recovery Paths](rules/feature-paths-and-recovery.md)
+- [Feature FARS Workflow](rules/feature-paths-and-recovery.md)
+- [Mobile-First Web FARS Library](rules/fars-mobile-web-library.md)
+- [Native Mobile FARS Library](rules/fars-native-mobile-library.md)
+- [Laravel/PHP Backend FARS Library](rules/fars-laravel-php-backend-library.md)
+- [FARS Usability Review and Scoring](rules/fars-usability-scoring.md)
 - [API–Consumer Compatibility Mapping](rules/api-consumer-compatibility.md)
 - [Environment Secrets Confidentiality](rules/environment-secrets-confidentiality.md)
 - [Specialist Catalogue](agents/README.md)

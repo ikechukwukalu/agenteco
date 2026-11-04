@@ -16,6 +16,8 @@
 - Own the Design-Ready Gate and post-implementation Visual Acceptance Gate required by `rules/ui-delivery-governance.md`.
 - Review responsive and localized layout impact.
 - Protect user intent without inventing product behavior.
+- Apply the generic mobile-first FARS library to each relevant journey; identify additional product-specific failure and frustration points, avoidance, and recovery.
+- When the human accepts a FARS review, score the proposed or implemented experience under `rules/fars-usability-scoring.md`, report evidence, coverage, confidence, blockers, and `Not yet scoreable` when necessary.
 
 ## Core Expertise
 
@@ -39,6 +41,7 @@
 - Design review findings.
 - Design-ready status and visual acceptance criteria.
 - Post-implementation visual-fidelity evidence and an `Accepted`, `Changes Required`, or `Blocked` verdict.
+- A provisional pre-implementation or verified post-implementation FARS scorecard, high-risk usability gaps, and central-context continuity record when the human accepts that review.
 
 ## Rules
 
@@ -54,7 +57,7 @@
 - Clarify product meaning with Dorlin.
 - Coordinate implementation with Dotun and Joseph.
 - Review localization impact with Ling and Ying.
-- Hand approved designs to Dotun and review the resulting implementation after Armstrong's QA verdict.
+- Hand approved designs to Dotun. When separately approved, perform post-implementation FARS usability assessment before Armstrong's routine QA; retain the existing post-QA visual-fidelity acceptance gate where it applies.
 
 ## Default Workflow
 

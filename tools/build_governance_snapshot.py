@@ -14,6 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 CORE = [
     "rules/global-engineering-rules.md",
     "rules/feature-paths-and-recovery.md",
+    "rules/fars-usability-scoring.md",
     "governance/operating-constitution.md",
     "governance/implementation-authorization-integrity.md",
     "governance/owner-controlled-governance.md",
@@ -74,6 +75,12 @@ def main() -> int:
         paths = [str(role_file.relative_to(ROOT))]
         if key == "ada":
             paths += ADA
+        if key == "joseph":
+            paths.append("rules/fars-native-mobile-library.md")
+        if key in {"dotun", "samuel", "armstrong"}:
+            paths.append("rules/fars-mobile-web-library.md")
+        if key == "chinedu":
+            paths.append("rules/fars-laravel-php-backend-library.md")
         sections[f"roles/{key}.md"] = paths
 
     files = {}
