@@ -14,6 +14,8 @@ ROOT = Path(__file__).resolve().parents[1]
 CORE = [
     "rules/global-engineering-rules.md",
     "rules/feature-paths-and-recovery.md",
+    "rules/fars-mobile-web-library.md",
+    "rules/fars-usability-scoring.md",
     "governance/operating-constitution.md",
     "governance/implementation-authorization-integrity.md",
     "governance/owner-controlled-governance.md",

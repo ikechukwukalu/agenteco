@@ -2,6 +2,8 @@
 
 This rule applies whenever work creates or materially changes a user interface. It establishes design ownership, implementation boundaries, and visual acceptance without changing Agent Eco Space's implementation, DTAP, or release gates.
 
+Start from a mobile-first FARS map for the complete user journey, not only a visual screen. The generic [web capability library](fars-mobile-web-library.md) supplies common failure, avoidance, and recovery prompts. The [FARS scoring rule](fars-usability-scoring.md) requires the specialist to offer Samuel's usability review before and after implementation while preserving any separately mandatory design approval, QA, or UAT gate.
+
 ## Required Delivery Sequence
 
 UI work follows this sequence:
@@ -11,8 +13,8 @@ UI work follows this sequence:
 3. Project Owner design approval when the proposed design introduces or materially changes visual direction;
 4. the standalone `Proceed with implementation.` command for the understood scope;
 5. Dotun's implementation of the approved design;
-6. Armstrong's functional and regression QA;
-7. Samuel's visual-fidelity and experience review;
+6. the human's Armstrong QA decision and Armstrong's functional and regression QA when approved;
+7. Samuel's visual-fidelity and experience review where required by the existing design gate, plus the separately offered FARS review when approved;
 8. the Project Owner's separate UAT decision.
 
 An already approved canonical UI or approved design specification may satisfy the design-approval step when the registry records that authority and no new visual direction is introduced. A technical foundation such as Tailwind CSS does not satisfy it.
@@ -24,6 +26,7 @@ Before requesting implementation authorization, Samuel must provide or validate:
 - the relevant journeys, screens, components, and responsive behaviour;
 - layout, hierarchy, interaction, state, accessibility, and design-system direction;
 - loading, empty, error, validation, permission, and success states that apply;
+- credible mobile failure/frustration points and their proposed avoidance and recovery, or an explicit unresolved gap;
 - visual acceptance criteria and allowed deviations;
 - the authoritative references actually consulted.
 
@@ -51,7 +54,9 @@ The implementing specialist must compare the implementation with the approved de
 - unresolved material differences;
 - a verdict of `Accepted`, `Changes Required`, or `Blocked`.
 
-After testable UI implementation and Dotun's engineer-owned verification—but before implementation PR creation—Dotun must ask whether the human approves Armstrong's independent functional QA or declines it. Armstrong is invoked only with human approval. Samuel remains a recommended independent visual reviewer when that would materially improve confidence. When the human requires either review for the current scope, unresolved blocking findings prevent readiness. UI Replica Mode adds stricter parity evidence when activated.
+After testable UI implementation and Dotun's engineer-owned verification—but before implementation PR creation—Dotun must ask whether the human approves Armstrong's independent functional QA or declines it. Armstrong is invoked only with human approval. Samuel's separately required design or visual acceptance responsibility remains in force; the human may decline the additional FARS scoring review unless it is explicitly required for this scope. When the human requires a review for the current scope, unresolved blocking findings prevent readiness. UI Replica Mode adds stricter parity evidence when activated.
+
+For FARS usability, ask separately whether the human approves or declines Samuel's post-implementation review. When engaged, Samuel must inspect the real journey and return an evidence-backed score or `Not yet scoreable`; he records high-risk failures and missing avoidance/recovery in central context. The score does not replace the visual acceptance verdict or Armstrong's functional QA.
 
 ## Project Owner UAT
 

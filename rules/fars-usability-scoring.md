@@ -1,0 +1,27 @@
+# FARS Usability Review and Scoring
+
+Samuel is Agent Eco Space's UI/UX specialist. For a user-facing feature, the assigned specialist must offer the human a FARS usability review by Samuel **before implementation** and **after implementation**. Record the human's separate approval or decline at each checkpoint; do not invoke Samuel automatically. These optional FARS reviews do not remove an existing mandatory design-ready gate, Armstrong QA decision, project-owner UAT, or release control. An explicitly required review may not be bypassed by treating it as an optional FARS review.
+
+When Samuel is engaged, he first establishes the business success point and the user journey from verified requirements and context. If these are unknown, he asks; he must not invent them. Before implementation he reviews proposed avoidance and recovery, identifies missing failure/frustration points, and gives a **provisional** score only when design evidence supports one. After implementation or in a retrospective audit he tests the actual experience, including mobile conditions, and records a **verified** score if coverage supports it. For an application-wide review he inspects the relevant journeys across the product, not merely a screen or a design file. Every completed Samuel review must report a score or `Not yet scoreable` with the missing evidence and next step.
+
+## Default 100-point rubric
+
+Use journey-level evidence, not a count of checklist items. The following weights are Agent Eco's proposed internal starting rubric, **not an industry-wide numeric standard**:
+
+| Dimension | Points | Evidence to inspect |
+| --- | ---: | --- |
+| Task effectiveness | 30 | Representative users can complete the intended goal; outcome and state are correct |
+| Failure avoidance | 25 | Credible failure/frustration points have functioning prevention or reduction |
+| Recovery | 20 | When avoidance fails, users can preserve work, understand status, and safely resume or escalate |
+| Mobile access and accessibility | 15 | Small screens, touch, zoom, keyboard, assistive technology, supported browsers, and poor networks as applicable |
+| Clarity and feedback | 10 | Labels, errors, progress, confirmations, and next steps are understandable without color-only cues |
+
+Score each dimension from observed evidence and state the awarded points, failure IDs, tested user groups, devices, browsers, network conditions, methods, source revisions, and limitations. For a whole-application result, predeclare journeys and business-impact weights, then compute a weighted mean of evidenced journey scores. Do not hide a critical journey in an average. Report coverage and confidence separately; low coverage is not a high-confidence score. Do not assign zero merely because an untested journey lacks evidence, and do not invent a score. Use `Not yet scoreable` for an untested critical journey or insufficient application coverage.
+
+The internal target is **at least 90/100**, subject to the following hard gates: a critical journey that cannot be completed or safely recovered, a material accessibility barrier, or an unresolved high-risk failure makes the result `Unsuitable` regardless of the numeric average. A score below 90 is also `Unsuitable` unless the human explicitly accepts a documented, time-bounded exception with impact, mitigation, owner, and follow-up. An exception never turns missing evidence into a passing score or weakens an external accessibility/security requirement. Distinguish `Provisional`, `Verified suitable`, `Verified unsuitable`, and `Not yet scoreable`.
+
+Samuel may propose additional dimensions, stricter thresholds, different weights, or journey-specific measures when evidence shows the default rubric does not reflect the users or domain. He must explain the proposed change and obtain human approval **before** using it as the governing score; retain both the old rubric and score history for comparison. No 90-point threshold or weight distribution should be represented as universally accepted industry practice. Ground method in established usability concepts of effectiveness, efficiency, satisfaction, representative users, tasks, and context of use, plus applicable accessibility standards; pilot and calibrate the rubric against observed user outcomes.
+
+Record scorecards, FARS gaps, high-risk usability points, evidence, approved exceptions, and follow-up in the product's central context using the [feature FARS template](../templates/product-context/feature-paths-and-recovery.md). An unresolved high-risk usability issue must be visible to the human; Samuel does not silently mark it resolved or initiate another specialist. Where customer-facing design is not applicable, record why Samuel review is not applicable instead of fabricating a score.
+
+References: [ISO usability concepts](https://www.iso.org/obp/ui?_escaped_fragment_=iso%3Astd%3Aiso%3A9241%3A-220%3Aed-1%3Av1%3Aen) and [W3C accessibility evaluation](https://www.w3.org/WAI/test-evaluate/).

@@ -31,6 +31,6 @@ Products opting into automatic production-to-context reconciliation add a human-
 
 Each repository directory includes current state, roadmap, decisions, documentation tooling, task history, produced and consumed contracts, sibling relationships, last verified revision, and continuity records. Task history must explain what changed and why, not merely link to a diff.
 
-For meaningful features and integrations, add a [Feature Paths and Recovery Record](feature-paths-and-recovery.md) in the owning repository directory. Link affected shared contracts and consumer directories, and distinguish implemented and tested recovery from proposals or unresolved gaps.
+For meaningful features and integrations, add a [Feature FARS Record](feature-paths-and-recovery.md) in the owning repository directory. Start with applicable generic capabilities, then record the feature's actual success journey and each credible failure/frustration point with avoidance, recovery, user guidance, tests, status, and owner. Link affected shared contracts and consumer directories; distinguish verified behaviour from proposals and unresolved gaps. During existing-product intake or established-feature work, audit existing controls and document gaps without assuming an audit authorizes repairs. Record Samuel's review decision and score/evidence where applicable.
 
 Each repository directory records purpose, current state, setup, interfaces, dependencies, decisions, roadmap, known risks, testing, deployment, and the repository revision against which it was verified.
