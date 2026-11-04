@@ -78,6 +78,8 @@ def main() -> int:
             paths += ADA
         if key == "joseph":
             paths.append("rules/fars-native-mobile-library.md")
+        if key == "chinedu":
+            paths.append("rules/fars-laravel-php-backend-library.md")
         sections[f"roles/{key}.md"] = paths
 
     files = {}
