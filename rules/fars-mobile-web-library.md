@@ -160,6 +160,9 @@ Success: connected systems agree on contracts and complete the user journey, or 
 | --- | --- | --- |
 | Frontend payload no longer meets backend contract | Contract tests, consumer map, compatible evolution | Retain user data, show safe correction, and raise drift alert |
 | Response field changes and a page crashes | Validate expected structure and handle optional data deliberately | Bounded fallback state and retry/support route; alert owners |
+| Backend request fields, validation, or response shape change without consumer rollout | Versioned contract checks and consumer-impact review across every affected app | Preserve work, show a truthful bounded state, and coordinate compatible rollout or rollback |
+| Third-party SDK or API upgrade changes outgoing fields, response shape, semantics, or error codes | Review release changes, pin/test upgrades, and verify request/response contracts in staging | Roll back or adapt the integration; keep affected journeys in an honest pending or unavailable state |
+| Third-party response is syntactically valid but semantically different | Check required invariants and business outcome, not just HTTP status or schema | Quarantine uncertain result, reconcile with provider, and notify operators before repeating effects |
 | Business failure is returned as HTTP success | Explicit outcome semantics and end-to-end tests | Display actual outcome, never false success |
 | Auth, permission, validation, and outage all become generic error | Stable error categories and safe user messages | Correct next action: sign in, fix input, request access, retry, or support |
 | Provider is slow, offline, or in maintenance | Timeouts, monitoring, bounded safe retries, and realistic status | Queue/defer only if supported; show pending and escalation |

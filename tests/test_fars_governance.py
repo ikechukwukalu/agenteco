@@ -40,6 +40,33 @@ class FarsGovernanceTests(unittest.TestCase):
         self.assertIn("before", scoring)
         self.assertIn("after", scoring)
 
+    def test_low_sections_and_accepted_risk_remain_visible(self):
+        scoring = (ROOT / "rules/fars-usability-scoring.md").read_text(encoding="utf-8")
+        context = (ROOT / "templates/product-context/feature-paths-and-recovery.md").read_text(
+            encoding="utf-8"
+        )
+
+        self.assertIn("lowest assessed section score", scoring)
+        self.assertIn("every", scoring)
+        self.assertIn("sub-90", scoring)
+        self.assertIn("diagnostic QA", scoring)
+        self.assertIn("not production approval", scoring)
+        self.assertIn("lowest assessed section score", context)
+        self.assertIn("all sections below 90", context)
+        self.assertIn("Reassessment date", context)
+
+    def test_pr_evidence_and_contract_changes_are_explicit(self):
+        handoff = (ROOT / "governance/delivery-and-pr-governance.md").read_text(encoding="utf-8")
+        template = (ROOT / "templates/fars-pr-evidence.md").read_text(encoding="utf-8")
+        library = (ROOT / "rules/fars-mobile-web-library.md").read_text(encoding="utf-8")
+
+        self.assertIn("FARS evidence section", handoff)
+        self.assertIn("Failure ID", template)
+        self.assertIn("Implemented avoidance", template)
+        self.assertIn("Implemented recovery", template)
+        self.assertIn("Third-party SDK or API upgrade", library)
+        self.assertIn("Backend request fields", library)
+
 
 if __name__ == "__main__":
     unittest.main()

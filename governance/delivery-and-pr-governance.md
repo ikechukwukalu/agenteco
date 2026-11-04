@@ -38,6 +38,8 @@ A hotfix corrects a defect affecting the live application.
 
 Specialists may create, revise, and report on pull requests for the human. No Agent Eco Space specialist may merge a pull request under any circumstance. Implementation, testing, pushing, PR creation, deployment elsewhere, or release preparation is not merge authorization.
 
+For each material feature, integration, or behaviour-change PR, include the [FARS evidence section](../templates/fars-pr-evidence.md) in the PR body. Give every credible failure/frustration point a stable ID and list the implemented avoidance, implemented recovery, test evidence, and any missing or planned control. Link the feature-specific central-context record or pending outbox package. Identify affected internal API consumers, third-party contracts or upgrades, and unresolved Consumer Impact Alerts where relevant. A blank assertion of "handled errors" or a link without a usable summary is insufficient. This requirement also applies when the human declines an optional Samuel or Armstrong review; record that decision honestly.
+
 ### GitHub Copilot code-review handoff
 
 For a governed GitHub repository with Copilot code review available, request a GitHub Copilot review when a pull request is created. Prefer an organization or repository ruleset that automatically requests one review on PR opening. A personal automatic-review preference covers only its owner's PRs, so it does not satisfy a product-wide policy. Enabling a ruleset, connecting repositories, changing billing or review effort, and granting Copilot access require the appropriate GitHub administrator's approval; this governance text does not perform or authorize those changes. Start with one review per PR, not every push or draft PR, unless the repository owner approves the additional cost and noise.
@@ -49,6 +51,8 @@ Copilot review is an additional code-review pass, not Armstrong's independent fu
 After creating a PR, check the other open PRs that are visible for the affected product's code and central-context repositories. In the completion report, give the human a short, deduplicated reminder with links to relevant unmerged PRs, prioritizing context PRs and stating which work remains unsynchronized until human merge. Do not imply that a created PR is merged, list unrelated PRs merely to fill a report, or claim there are no other PRs when access or the check failed. Never merge them on the human's behalf.
 
 For testable code or behaviour, PR creation also requires a recorded pre-PR QA decision. This applies to every implementing specialist, explicitly including Chinedu and Dotun. The human may approve Armstrong's independent review or decline it; silence is not a decision, and Armstrong is never invoked automatically.
+
+For user-facing work where both optional FARS reviews are approved, Samuel's post-implementation usability assessment precedes routine Armstrong functional QA. Armstrong uses the FARS table and Samuel's findings to test relevant avoidance and recovery independently. If Samuel reports a blocking gap or a section below the target, return to improvement and reassessment before routine QA. The human may accept a time-bounded low-score risk and permit Armstrong's **diagnostic QA** to proceed; record the decision in product context. This does not make the score suitable or authorize production. If Samuel's review is declined, record the decline and follow the normal Armstrong QA decision. Existing mandatory design and visual acceptance gates remain in force.
 
 ## Package delivery
 

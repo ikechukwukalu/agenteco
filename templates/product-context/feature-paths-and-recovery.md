@@ -19,9 +19,11 @@ Store this record in the affected repository directory of the product's central 
 
 ## Failure, avoidance, and recovery paths
 
-| Source and failure/frustration point | Avoidance and responsible component | Actual failure behaviour and preserved state | Safe recovery or escalation | User guidance | Test or observation | Status, owner, and next action |
+| Stable failure ID, source, and failure/frustration point | Avoidance and responsible component | Actual failure behaviour and preserved state | Safe recovery or escalation | User guidance | Test or observation | Status, owner, and next action |
 | --- | --- | --- | --- | --- | --- | --- |
-| `<USER_PROVIDER_PACKAGE_INFRASTRUCTURE; CREDIBLE_FAILURE>` | `<PREVENTION_OR_INFEASIBLE; COMPONENT>` | `<ERROR_AND_STATE>` | `<RETRY_FALLBACK_OR_MANUAL_PATH>` | `<ACTIONABLE_SAFE_MESSAGE>` | `<TEST_OR_GAP>` | `<VERIFIED_PRESENT_UNVERIFIED_MISSING_PLANNED_UNSUPPORTED; OWNER; ACTION>` |
+| `<FARS-ID; USER_PROVIDER_PACKAGE_INFRASTRUCTURE; CREDIBLE_FAILURE>` | `<PREVENTION_OR_INFEASIBLE; COMPONENT>` | `<ERROR_AND_STATE>` | `<RETRY_FALLBACK_OR_MANUAL_PATH>` | `<ACTIONABLE_SAFE_MESSAGE>` | `<TEST_OR_GAP>` | `<VERIFIED_PRESENT_UNVERIFIED_MISSING_PLANNED_UNSUPPORTED; OWNER; ACTION>` |
+
+For an API or third-party contract risk, link the product's API–Consumer Compatibility Map and any Consumer Impact Alert. Record the producer and consumer, request and response fields or schema versions affected, old versus new behaviour, dependency version or upgrade, source revisions, affected journeys, compatibility tests, and rollback or migration. Do not copy private payloads or secrets into this record.
 
 For existing journeys, record whether each relevant avoidance and recovery is `Verified`, `Present but unverified`, `Missing`, or `Not applicable`. Link an approved follow-up for missing controls; do not imply an audit authorized implementation. Note mobile viewport, keyboard, network, browser, accessibility, and affected API/third-party evidence where relevant.
 
@@ -31,7 +33,11 @@ For existing journeys, record whether each relevant avoidance and recovery is `V
 | --- | --- | --- | --- | --- |
 | Before implementation / after implementation / retrospective | `<HUMAN_DECISION>` | `<JOURNEYS_USERS_DEVICES>` | `<SCORE_OR_NOT_YET_SCOREABLE; COVERAGE; CONFIDENCE; BLOCKERS>` | `<OBSERVATIONS_AND_ACTIONS>` |
 
-If a score describes only part of the application, label it a journey or coverage-limited score rather than an overall application score. Do not average untested journeys into a claimed whole-application result.
+If a score describes only part of the application, label it a journey or coverage-limited score rather than an overall application score. Do not average untested journeys into a claimed whole-application result. For a valid application-wide score, record the overall score, lowest assessed section score, all sections below 90, journey/section weights, tested coverage, confidence, and every unresolved blocker. Keep an accepted low-score risk in the calculation and visible until retested; an acceptance to continue QA is not a usability pass or release approval.
+
+| Accepted low-score risk | Affected score and section | Reason and customer impact | Mitigation and owner | Reassessment date and evidence | QA continuation decision | Release decision |
+| --- | --- | --- | --- | --- | --- | --- |
+| `<RISK_ID>` | `<SCORE_AND_SECTION>` | `<WHY_AND_IMPACT>` | `<MITIGATION_AND_OWNER>` | `<DATE_AND_RECORD>` | `<APPROVED_OR_NOT>` | `<SEPARATE_RELEASE_STATUS>` |
 
 ## Operational and continuity notes
 

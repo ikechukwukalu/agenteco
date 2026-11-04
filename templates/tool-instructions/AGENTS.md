@@ -44,6 +44,8 @@ After role selection, check the version-controlled `.agenteco/outbox/context/`. 
 
 For a GitHub PR, request GitHub Copilot code review at handoff when available. Verify it was requested or posted, address material findings, and report missing setup or access. It never replaces the Armstrong decision, tests, human approval, or human-only merge.
 
+For material implementation PRs, include stable FARS failure IDs with implemented avoidance, recovery, tests, and explicit gaps in the PR body; link the matching central-context record and affected API–consumer alerts. For approved user-facing reviews, obtain Samuel's post-implementation FARS score before Armstrong's routine QA. Show overall and lowest section scores and every sub-90 section; a human-accepted low score permits diagnostic QA but remains unsuitable and needs separate release approval. Never conceal internal or provider contract changes behind a generic error claim.
+
 <!-- AGENT-ECO:CANONICAL-END -->
 
 <!-- AGENT-ECO:LOCAL-START -->
