@@ -54,6 +54,17 @@ class FarsGovernanceTests(unittest.TestCase):
             for row in rows:
                 self.assertEqual(row.count("|"), 4, f"Incomplete FARS row in {heading}: {row}")
 
+    def test_mobile_first_web_library_reaches_frontend_and_review_roles(self):
+        builder = (ROOT / "tools/build_governance_snapshot.py").read_text(encoding="utf-8")
+        dotun = (ROOT / "agents/dotun.frontend-architect.md").read_text(encoding="utf-8")
+
+        core = builder.split("CORE = [", 1)[1].split("\n]", 1)[0]
+        self.assertIn('"rules/feature-paths-and-recovery.md"', core)
+        self.assertNotIn('"rules/fars-mobile-web-library.md"', core)
+        self.assertIn('if key in {"dotun", "samuel", "armstrong"}:', builder)
+        self.assertIn('paths.append("rules/fars-mobile-web-library.md")', builder)
+        self.assertIn("phone-browser behavior first", dotun)
+
     def test_score_has_hundred_points_and_no_unearned_claim(self):
         scoring = (ROOT / "rules/fars-usability-scoring.md").read_text(encoding="utf-8")
         points = [int(value) for value in re.findall(r"^\| [^|]+ \| (\d+) \|", scoring, re.MULTILINE)]

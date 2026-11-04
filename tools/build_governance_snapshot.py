@@ -14,7 +14,6 @@ ROOT = Path(__file__).resolve().parents[1]
 CORE = [
     "rules/global-engineering-rules.md",
     "rules/feature-paths-and-recovery.md",
-    "rules/fars-mobile-web-library.md",
     "rules/fars-usability-scoring.md",
     "governance/operating-constitution.md",
     "governance/implementation-authorization-integrity.md",
@@ -78,6 +77,8 @@ def main() -> int:
             paths += ADA
         if key == "joseph":
             paths.append("rules/fars-native-mobile-library.md")
+        if key in {"dotun", "samuel", "armstrong"}:
+            paths.append("rules/fars-mobile-web-library.md")
         sections[f"roles/{key}.md"] = paths
 
     files = {}
