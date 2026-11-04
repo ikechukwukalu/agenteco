@@ -9,6 +9,30 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class FarsGovernanceTests(unittest.TestCase):
+    def test_native_mobile_capabilities_have_complete_fars_rows(self):
+        library = (ROOT / "rules/fars-native-mobile-library.md").read_text(encoding="utf-8")
+        sections = re.findall(r"^## (.+)$", library, flags=re.MULTILINE)
+
+        self.assertGreaterEqual(len(sections), 12)
+        self.assertIn("Launch, update, and app lifecycle", sections)
+        self.assertIn("Connectivity, APIs, offline data, and sync", sections)
+        self.assertIn("Privacy, local storage, and account trust", sections)
+
+        for section in library.split("\n## ")[1:]:
+            if section.startswith("Source and verification"):
+                continue
+            heading = section.splitlines()[0]
+            self.assertIn("Success:", section, heading)
+            self.assertIn("| Failure or frustration | Candidate avoidance | Candidate recovery |", section, heading)
+            rows = [line for line in section.splitlines() if line.startswith("| ")]
+            self.assertGreaterEqual(len(rows), 4, heading)
+            for row in rows:
+                self.assertEqual(row.count("|"), 4, f"Incomplete mobile FARS row in {heading}: {row}")
+
+        snapshot_builder = (ROOT / "tools/build_governance_snapshot.py").read_text(encoding="utf-8")
+        self.assertIn('if key == "joseph":', snapshot_builder)
+        self.assertIn('paths.append("rules/fars-native-mobile-library.md")', snapshot_builder)
+
     def test_capability_rows_have_failure_avoidance_and_recovery(self):
         library = (ROOT / "rules/fars-mobile-web-library.md").read_text(encoding="utf-8")
         sections = re.findall(r"^## (.+)$", library, flags=re.MULTILINE)

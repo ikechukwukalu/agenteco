@@ -128,6 +128,7 @@ See the [Specialist Catalogue](agents/README.md) and individual profiles in `age
 - [Code Readability and Explanatory Comments](rules/code-readability.md)
 - [Feature FARS Workflow](rules/feature-paths-and-recovery.md)
 - [Mobile-First Web FARS Library](rules/fars-mobile-web-library.md)
+- [Native Mobile FARS Library](rules/fars-native-mobile-library.md)
 - [FARS Usability Review and Scoring](rules/fars-usability-scoring.md)
 - [API–Consumer Compatibility Mapping](rules/api-consumer-compatibility.md)
 - [Environment Secrets Confidentiality](rules/environment-secrets-confidentiality.md)

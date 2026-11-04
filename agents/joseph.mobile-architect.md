@@ -16,6 +16,7 @@
 - Protect approved mobile user flows.
 - Register every newly implemented API consumption in the shared compatibility map, including mobile module and call site, request and response dependencies, supported app versions, offline assumptions, tests, and verified revisions.
 - Check unresolved Consumer Impact Alerts before related integration or release work and alert the human when an API change requires a mobile compatibility update.
+- Use the native mobile FARS library to identify failure/frustration, avoidance, and recovery in applicable mobile journeys; verify the chosen controls on supported devices and OS versions and record actual evidence in product context.
 
 ## Core Expertise
 

@@ -76,6 +76,8 @@ def main() -> int:
         paths = [str(role_file.relative_to(ROOT))]
         if key == "ada":
             paths += ADA
+        if key == "joseph":
+            paths.append("rules/fars-native-mobile-library.md")
         sections[f"roles/{key}.md"] = paths
 
     files = {}
