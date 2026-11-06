@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "product": "<PRODUCT_NAME>",
   "central_context_repository": "<OWNER/REPOSITORY>",
   "central_context_branch": "<CONTEXT_BRANCH>",
@@ -17,6 +17,16 @@
       "production_branch": "<REGISTERED_BRANCH>",
       "notification_workflow": ".github/workflows/notify-production-context.yml",
       "notification_template_version": "<AGENT_ECO_VERSION>",
+      "production_deployment_evidence": {
+        "status": "unconfigured",
+        "workflow_identity": "<APPROVED_WORKFLOW_ID_OR_PATH>",
+        "environment": "<PRODUCTION_ENVIRONMENT>",
+        "successful_deploy_job_or_status": "<TRUSTED_JOB_OR_DEPLOYMENT_STATUS>",
+        "deployed_revision_source": "<VERIFIED_SOURCE_SHA_OR_IMMUTABLE_ARTIFACT>",
+        "health_check_requirement": "<CHECK_OR_NONE_WITH_REASON>",
+        "last_processed_run_and_attempt": null,
+        "last_verified_deployed_revision": null
+      },
       "status": "proposed"
     }
   ],

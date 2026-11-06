@@ -17,6 +17,22 @@ Store this record in the affected repository directory of the product's central 
 | --- | --- | --- | --- |
 | `<PRECONDITIONS>` | `<STEPS>` | `<OUTCOME>` | `<TEST_OR_OBSERVATION>` |
 
+## Actor, state, and next-action map
+
+For a multi-step journey, record every essential transition. A pending action owned by someone else should show an honest waiting state, not a dead button. Test primary-action visibility on mobile web, desktop web, and native mobile where supported.
+
+| Current state | Responsible actor | Prerequisite or business condition | Visible primary next action or waiting status | Interface and evidence |
+| --- | --- | --- | --- | --- |
+| `<STATE>` | `<CUSTOMER_PARTNER_STAFF_OR_SYSTEM>` | `<VERIFIED_RULE_AND_SOURCE>` | `<ACTION_OR_WAITING_EXPLANATION>` | `<WEB_MOBILE_WEB_NATIVE_AND_TEST>` |
+
+## Conditional validation and customer guidance
+
+| Producer rule and revision | Triggering condition | Affected consumer and step | Early customer-safe requirement | Server error ID and field key | Clear message, locale, and recovery | Contract test or gap |
+| --- | --- | --- | --- | --- | --- | --- |
+| `<BUSINESS_RULE_AND_API_REVISION>` | `<WHEN_REQUIRED>` | `<APP_AND_STEP>` | `<WHAT_IS_SHOWN_BEFORE_SUBMIT>` | `<STABLE_CODE_AND_FIELD>` | `<MESSAGE_AND_NEXT_ACTION>` | `<EVIDENCE_OR_GAP>` |
+
+The backend remains authoritative. Do not copy secret or privileged conditions to a client. For nested fields, verify that the customer-facing one-based box/item labels match the form; keep raw array paths internal. Separate corrections from service failures and show whether the operation completed, is pending, or remains uncertain.
+
 ## Failure, avoidance, and recovery paths
 
 | Stable failure ID, source, and failure/frustration point | Avoidance and responsible component | Actual failure behaviour and preserved state | Safe recovery or escalation | User guidance | Test or observation | Status, owner, and next action |

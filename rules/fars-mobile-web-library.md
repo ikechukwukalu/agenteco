@@ -16,6 +16,7 @@ Success: valid information is entered and the intended task completes.
 | Mobile keyboard hides fields or controls | Test keyboard-open layouts and reachable actions | Bring the affected field and error into view without resetting the step |
 | Repeated submit creates duplicate work | Immediate pending state and server-side duplicate protection | Check the existing operation before offering another attempt |
 | Frontend and backend validation disagree | Contract tests and compatible rules | Preserve entered data, show a safe field error, and report contract drift |
+| A conditional backend business rule becomes visible only after submit | Inspect producer rules and affected contract; reveal safe requirements when the condition is known | Preserve inputs, focus the missing evidence or field, and explain the rule in plain language |
 
 ## Registration, sign-in, and social sign-in
 
@@ -48,6 +49,7 @@ Success: users find and complete tasks without losing their place.
 | Failure or frustration | Candidate avoidance | Candidate recovery |
 | --- | --- | --- |
 | Primary action is hidden in a mobile menu | Prioritize common tasks and test with real content | Provide a clear route back with state preserved |
+| A required next step is hidden in `View details` or an action menu | Map actor and state; expose one accessible primary next action on phone view before desktop enhancement | Restore the right state and show the required action or an honest waiting status |
 | Modal or side panel hides its own close control | Test narrow, tall, zoomed, and keyboard-open states | Reachable close/back action with focus restored |
 | SPA deep link or refresh fails | Configure server fallback and test direct routes | Useful not-found route and safe path home |
 | Login or redirect loses the intended destination | Preserve destination and location cues | Resume at the last safe step |

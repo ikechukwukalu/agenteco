@@ -9,6 +9,8 @@ Agent Eco Space rules preserve AgentHQ's proven safeguards while making one sele
 - [Implementation Gate](implementation-gate.md)
 - [Documentation and Continuity](documentation-and-continuity.md)
 - [Feature Success, Failure, and Recovery Paths](feature-paths-and-recovery.md)
+- [Journey Actions and Customer Feedback](journey-actions-and-customer-feedback.md)
+- [Review Applicability by Impact](../governance/review-applicability.md)
 - [Mobile-First Web FARS Capability Library](fars-mobile-web-library.md)
 - [Native Mobile FARS Capability Library](fars-native-mobile-library.md)
 - [Laravel/PHP Backend FARS Capability Library](fars-laravel-php-backend-library.md)

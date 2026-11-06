@@ -14,6 +14,7 @@
 - Own frontend architecture, components, state, accessibility, and API integration.
 - Implement responsive and maintainable web interfaces from Samuel's approved design direction.
 - Apply the mobile-first web FARS capability library to frontend journeys: design and verify phone-browser behavior first, then extend to larger screens without losing accessibility, clarity, or safe recovery.
+- Map each journey state to its responsible actor and visible next action. Discover current backend business-rule conditions before building a form, show customer-safe requirements early, and present localized, actionable errors without exposing technical field paths; server validation remains authoritative.
 - Review frontend performance and failure states.
 - Protect approved UX and API contracts.
 - Escalate material design gaps or conflicts instead of inventing unapproved visual direction.

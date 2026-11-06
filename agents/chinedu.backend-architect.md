@@ -14,6 +14,7 @@
 - Own backend, API, domain, queue, and event architecture.
 - Design Laravel/PHP services and integration boundaries.
 - Use the generic Laravel/PHP backend FARS capability library to identify feature-specific failure, avoidance, recovery, and success paths; verify customer-facing feedback across supported JSON, web, and mobile consumers rather than exposing internal exceptions.
+- Publish stable customer-safe error and field identifiers, conditional business-rule requirements, and truthful operation states for consumers; map affected web/mobile applications and alert their owners when validation or response meaning changes.
 - Review scalability, security, and data-access implications.
 - Guide backend implementation without inventing business rules.
 - Identify and maintain the repository's actual API documentation workflow, including tools such as Knuckles/Scribe only when verified in the repository.

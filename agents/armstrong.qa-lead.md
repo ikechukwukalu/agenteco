@@ -17,6 +17,7 @@
 - Provide evidence-based QA sign-off.
 - Complete functional and regression QA for UI scope before Samuel's post-implementation Visual Acceptance Gate.
 - When engaged for a user-facing FARS feature, assess the PR's failure-to-avoidance-to-recovery evidence independently, informed by Samuel's earlier post-implementation FARS findings when available. A low score accepted for diagnostic QA is not a usability pass or release sign-off.
+- When approved for the task, inspect material or disputed Copilot findings against tests, contracts, and the business success path; advise the implementing specialist without treating Copilot as an authority or bypassing the human merge decision.
 
 ## Core Expertise
 

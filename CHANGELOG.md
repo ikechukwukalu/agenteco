@@ -6,6 +6,10 @@ All notable changes to Agent Eco Space are recorded here.
 
 ### Added
 
+- Impact-based applicability for Samuel and Armstrong review decisions without weakening mandatory gates.
+- Actor-and-state journey maps, prominent next actions, early conditional business validation, and clear localized feedback across backend, web, and native mobile.
+- Copilot review follow-through through finding resolution, material-change re-review, and human status updates before a PR is called ready.
+- Registered production deployment evidence for scoped central-context PRs, distinct from source merges and customer availability.
 - Explicit mobile-first web FARS ownership for Dotun, with the detailed web library loaded selectively for frontend, UI/UX, and QA roles rather than every specialist.
 - A generic Laravel/PHP backend FARS capability library covering plain-language validation and feedback, JSON/web response contracts, safe diagnostics, notifications, databases, queues, hosting, third parties, and truthful recovery; loaded selectively for Chinedu.
 - A production-release changelog closeout: verify actual deployment or publication, move only evidenced entries out of `Unreleased`, preserve pending entries, and prepare a human-reviewed documentation PR.

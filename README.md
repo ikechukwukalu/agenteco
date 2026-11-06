@@ -42,6 +42,8 @@ Products also maintain a [scoped rule index](governance/scoped-product-rules.md)
 
 Products may opt into [Production-to-Central-Context Reconciliation](governance/production-context-reconciliation.md). Approved registration identifies each source's production branch and its own central-context destination. Verified source changes can then queue bounded central documentation PRs without repeated per-event authorization; a human still merges each PR. Setup and workflow repair use a separate grant. Secret names are standardized while values and access scopes remain product-specific.
 
+For user-facing journeys, [map each actor's visible next action](rules/journey-actions-and-customer-feedback.md), surface verified backend business requirements before submission, and use clear, localized feedback across backend, web, and native mobile. [Samuel and Armstrong decisions follow the work's impact](governance/review-applicability.md), not the specialist's title; mandatory gates still apply. After opening a PR, the specialist follows [Copilot findings through resolution](governance/delivery-and-pr-governance.md) before calling it ready. An enrolled product may also register its actual production deployment workflow as evidence for a human-reviewed central-context status PR; a green build or branch merge alone does not establish deployment or customer availability.
+
 ## Supported AI tools and models
 
 Agent Eco Space is AI-agnostic, but each tool must have a verifiable way to receive governance. Its canonical rules remain the same across tools.

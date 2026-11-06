@@ -14,11 +14,13 @@ ROOT = Path(__file__).resolve().parents[1]
 CORE = [
     "rules/global-engineering-rules.md",
     "rules/feature-paths-and-recovery.md",
+    "rules/journey-actions-and-customer-feedback.md",
     "rules/fars-usability-scoring.md",
     "governance/operating-constitution.md",
     "governance/implementation-authorization-integrity.md",
     "governance/owner-controlled-governance.md",
     "governance/delivery-and-pr-governance.md",
+    "governance/review-applicability.md",
     "governance/repository-readiness-preflight.md",
     "governance/session-and-role-selection.md",
     "governance/instruction-adapter-integrity.md",

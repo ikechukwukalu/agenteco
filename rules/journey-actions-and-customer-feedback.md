@@ -1,0 +1,23 @@
+# Journey Actions and Customer Feedback
+
+This rule applies to a feature that has user steps, conditional business requirements, or customer-visible responses. Its purpose is to make the route to the intended success point obvious and recoverable across desktop web, mobile web, and native mobile. Start with the phone-browser journey for web work, then verify larger screens; native apps still require supported iOS/Android checks. Use the product's real business rules, actors, and API contracts rather than inventing a generic flow.
+
+## Visible next action by actor and state
+
+Before implementation, map each meaningful state from entry to success: actor, prerequisite, action required now, who is waiting on whom, visible status, and safe recovery. Distinguish customer, partner, staff, and automated steps as applicable. Show the responsible actor a clear, accessible primary next action at the point of need. A necessary action such as adding a destination address or paying must not be hidden solely behind `View details`, an unlabeled icon, a dropdown, or a desktop-only control. If another actor must act first, explain the waiting state and what happens next; do not offer a dead or unauthorized action. After success, secondary actions may move to details/history if the user can still find them.
+
+Samuel checks whether representative people can identify the next step without coaching; Dotun and Joseph verify that the control and status work on their supported interfaces. A visually prominent button is not sufficient if business state, permission, or device behaviour makes it unusable. Record the journey map and observed gaps in the central product context.
+
+## Backend business-rule requirements on every consumer
+
+Chinedu maintains producer truth for validation, conditions, error categories, and affected consumers in the API–Consumer Compatibility Map. For each affected journey, Dotun and Joseph inspect the current producer contract and active business rules, including conditional requirements, then present known customer-safe requirements **before** the customer reaches the failing submit step. For example, if a verified destination rule requires an invoice, explain it and offer the upload action when the destination is known. Preserve entered information and return to the exact step if the backend rejects the request anyway.
+
+Client checks are an avoidance aid, not an authorization or replacement for server validation. Do not copy private server rules to an untrusted client, invent a condition, or assume a client check proves acceptance. Keep server validation authoritative, test changed conditions and error responses against every known web/mobile consumer, and issue a Consumer Impact Alert for breaking drift. If a requirement depends on a fact only the backend can know, request a safe eligibility/requirements response or defer the decision to the server while keeping the customer's path clear.
+
+## One understandable meaning across channels
+
+Every customer-visible validation, status, notification, and error message must be professional, respectful, localized where supported, and understandable without technical knowledge. The “13-year-old test” checks clarity; it is not permission to speak to customers like children. Say what needs attention, whether the action completed or is pending, and the next safe step. Avoid raw array paths, zero-based indexes, class names, stack traces, SQL errors, provider payloads, and generic messages that conceal an actionable correction.
+
+The backend returns stable machine-readable field or error identifiers, appropriate status and truthful operation state, plus customer-safe meaning. The web/mobile consumer maps that meaning to the displayed field, step, language, and accessible notice without changing the business outcome. For nested records, use the one-based labels the person actually sees: “Enter a weight for item 1 in box 2,” not `boxes.1.items.0.weight`. Preserve permissible data and focus the affected step. Keep detailed diagnostics internal, redacted, and correlated by a non-sensitive reference. Do not disclose secrets, protected environment values, private customer data, or internal governance.
+
+Where translations are required, coordinate approved terminology and review through Ling and Ying under the existing localization rules. Test multiple nested records, supported locales, narrow screens, assistive technology, and API/web/mobile error paths. Record the customer-facing text or approved message key, source contract revision, consumer verification, and unresolved gaps in the feature FARS record. A library candidate is not proof that the product has implemented it.

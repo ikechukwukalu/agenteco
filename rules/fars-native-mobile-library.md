@@ -23,6 +23,7 @@ Success: the person reaches the intended screen and can resume their task.
 | Deep link opens wrong or missing screen | Validate routes, authentication, and destination state | Useful fallback destination with intended action retained |
 | External payment, maps, share, or browser app is unavailable or cancelled | Check availability and define handoff/return states | Re-enter the original task with operation status verified |
 | Back action leaves an unfinished transaction or loses form state | Design platform-appropriate back behaviour and draft policy | Confirm exit where needed; restore permissible draft |
+| The next required action is buried in a menu or inaccessible after a state change | Map actor and journey state; present a reachable primary action or clear waiting status | Reopen the correct stage with the task and permissible inputs retained |
 
 ## Forms, wizards, and keyboards
 
@@ -32,6 +33,7 @@ Success: valid information is entered and submitted without losing progress.
 | --- | --- | --- |
 | Keyboard, safe area, or orientation hides field or action | Test small screens, keyboard-open state, rotation, and text scaling | Focus and reveal the exact field without clearing other inputs |
 | Validation arrives too late or differs from backend rules | Clear constraints and contract tests; server validation remains authoritative | Preserve entries and show field-specific correction |
+| A destination, role, or service choice creates an undisclosed business-rule requirement | Inspect active producer rules and expose customer-safe conditions when known | Retain safe draft, return to the exact step, and explain the required evidence or correction |
 | Interruption or process death loses a long wizard | Save safe non-sensitive drafts with lifecycle tests | Restore permissible steps or explain what must be re-entered |
 | Repeated submit creates duplicate work | Pending state and server-side operation identity | Check authoritative result before another attempt |
 

@@ -4,6 +4,8 @@
 
 Before creating a branch, the specialist asks whether the implementation is a **feature** or a **hotfix**. Do not infer the classification when the human has not stated it.
 
+Apply [Review Applicability by Work Impact](review-applicability.md) to identify whether Samuel's FARS review, Armstrong's independent QA decision, or neither applies. The decision follows affected behaviour and audience, not the specialist's name. Documentation-only work with no testable behaviour is not forced through an implementation QA checkpoint; separately mandatory gates remain in force.
+
 The human may provide the branch suffix. The specialist may propose a concise suffix when permitted.
 
 ## Feature delivery
@@ -12,7 +14,7 @@ The human may provide the branch suffix. The specialist may propose a concise su
 2. Create a temporary branch following `ft/feature-task-name`.
 3. Implement with engineer-owned tests.
 4. Update technical documentation, changelog, and central context.
-5. Present the evidence and obtain the human's explicit Armstrong QA decision.
+5. For testable code or behaviour, present the evidence and obtain the human's explicit Armstrong QA decision; otherwise record why it is not applicable.
 6. If approved, have Armstrong independently verify the completed branch and address or record the verdict before PR creation. If declined, record the decision.
 7. Push and create one pull request targeting `test` when authorized.
 8. Never merge the pull request.
@@ -27,7 +29,7 @@ A hotfix corrects a defect affecting the live application.
 2. Create a temporary branch following `hotfix/task-name`.
 3. Implement the smallest safe correction with regression tests.
 4. Update technical documentation, changelog, and central context.
-5. Present the evidence and obtain the human's explicit Armstrong QA decision.
+5. For testable code or behaviour, present the evidence and obtain the human's explicit Armstrong QA decision; otherwise record why it is not applicable.
 6. If approved, have Armstrong independently verify the completed branch and address or record the verdict before PR creation. If declined, record the decision.
 7. Push and create two pull requests when authorized: one targeting `test` for validation and UAT, and one targeting `production` for the eventual live correction.
 8. Never merge either pull request.
@@ -47,6 +49,10 @@ For a governed GitHub repository with Copilot code review available, request a G
 At PR handoff, verify whether Copilot review is configured for that repository and whether a review was requested or posted. If automatic review is unavailable, request Copilot as reviewer through GitHub when permitted; otherwise tell the human exactly what setup or permission is missing. Do not claim a review occurred merely because the PR exists or a ruleset is expected. On later pushes, check whether material changes warrant a fresh review and request it when appropriate and available.
 
 Copilot review is an additional code-review pass, not Armstrong's independent functional QA, Victor's optional specialist review, CI, security review, human approval, or merge authority. Keep the pre-PR Armstrong decision checkpoint unchanged. Treat Copilot findings as actionable evidence: address or explicitly record unresolved material findings before calling a PR ready. Do not allow Copilot approval to count as the human's merge decision or required human approval. Keep review instructions scoped, concise, and consistent with canonical governance; never expose secrets or confidential context in PR comments.
+
+After PR creation, report its link and review state as `Awaiting Copilot`, `Review unavailable`, or the verified posted result; do not end with a “ready to merge” claim while expected review is pending. When a review arrives, the implementing specialist classifies each finding as valid, disputed, not applicable, or unresolved against the code, tests, approved business objective, and FARS success path. Fix valid findings on the same branch, run relevant checks, push, and request a fresh Copilot review for material changes when available. An approved Armstrong may independently examine disputed or high-risk findings and advise the implementer; never auto-invoke him. If Copilot's suggestion would damage the business outcome, reply with a concise evidence-based reason and record the human-visible resolution rather than silently dismissing it. The implementer, not Copilot, remains accountable for code and context updates.
+
+Keep the human informed when findings are received, when a fix or justified disagreement is underway, and when follow-up review and checks finish. If review cannot be obtained or completed within a reasonable session, report the PR as **pending review**, provide the exact next action, and do not fabricate completion or repeatedly poll without purpose. Before calling the PR ready for the human's merge decision, verify that required CI, the applicable Armstrong/Samuel gates, material Copilot findings or documented exceptions, and any requested re-review are resolved. Never merge or imply Copilot approval alone proves the customer journey works.
 
 After creating a PR, check the other open PRs that are visible for the affected product's code and central-context repositories. In the completion report, give the human a short, deduplicated reminder with links to relevant unmerged PRs, prioritizing context PRs and stating which work remains unsynchronized until human merge. Do not imply that a created PR is merged, list unrelated PRs merely to fill a report, or claim there are no other PRs when access or the check failed. Never merge them on the human's behalf.
 
