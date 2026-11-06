@@ -17,6 +17,8 @@
 - Review responsive and localized layout impact.
 - Protect user intent without inventing product behavior.
 - Apply the generic mobile-first FARS library to each relevant journey; identify additional product-specific failure and frustration points, avoidance, and recovery.
+- Review the actor/state journey for visible essential next actions, early conditional requirements, and understandable correction, pending, and recovery messages on mobile web, desktop web, and native mobile where applicable.
+- Steward the 2A (Actors and Actions) process map: identify actors and all business-required actions, mark which actions are prerequisites to the defined success point versus post-success, and assess whether the next required step is obvious at the right moment without unnecessary detours.
 - When the human accepts a FARS review, score the proposed or implemented experience under `rules/fars-usability-scoring.md`, report evidence, coverage, confidence, blockers, and `Not yet scoreable` when necessary.
 
 ## Core Expertise

@@ -17,6 +17,24 @@ Store this record in the affected repository directory of the product's central 
 | --- | --- | --- | --- |
 | `<PRECONDITIONS>` | `<STEPS>` | `<OUTCOME>` | `<TEST_OR_OBSERVATION>` |
 
+## Actor, state, and next-action map
+
+Use the **2A system (Actors and Actions)**: list every real actor and every approved business-required action in the process, then distinguish the actions indispensable to the stated success point from actions available after it. Design a guided flow where the next required step is obvious at the right moment, without unnecessary detours. A pending action owned by someone else should show an honest waiting state, not a dead button. Test primary-action visibility on mobile web, desktop web, and native mobile where supported. Every mapped action needs proportionate implementation and verification, including post-success actions; key actions deserve extra success-path scrutiny.
+
+| Current state | Responsible actor | Action and classification: key / other pre-success / post-success | Prerequisite or business condition | Visible next action or waiting status | Interface, test evidence, and gap |
+| --- | --- | --- | --- | --- | --- |
+| `<STATE>` | `<VERIFIED_ACTOR>` | `<BUSINESS_REQUIRED_ACTION_AND_CLASS>` | `<VERIFIED_RULE_AND_SOURCE>` | `<ACTION_OR_WAITING_EXPLANATION>` | `<WEB_MOBILE_WEB_NATIVE_AND_TEST>` |
+
+Specify whether the success point is an intermediate state (for example, a shipment draft) or the completed business outcome (for example, a paid booking). For each actor, confirm that all mapped actions—including viewing or downloading documents after booking—remain discoverable, permitted, and tested without misclassifying them as booking prerequisites.
+
+## Conditional validation and customer guidance
+
+| Producer rule and revision | Triggering condition | Affected consumer and step | Early customer-safe requirement | Server error ID and field key | Clear message, locale, and recovery | Contract test or gap |
+| --- | --- | --- | --- | --- | --- | --- |
+| `<BUSINESS_RULE_AND_API_REVISION>` | `<WHEN_REQUIRED>` | `<APP_AND_STEP>` | `<WHAT_IS_SHOWN_BEFORE_SUBMIT>` | `<STABLE_CODE_AND_FIELD>` | `<MESSAGE_AND_NEXT_ACTION>` | `<EVIDENCE_OR_GAP>` |
+
+The backend remains authoritative. Do not copy secret or privileged conditions to a client. For nested fields, verify that the customer-facing one-based box/item labels match the form; keep raw array paths internal. Separate corrections from service failures and show whether the operation completed, is pending, or remains uncertain.
+
 ## Failure, avoidance, and recovery paths
 
 | Stable failure ID, source, and failure/frustration point | Avoidance and responsible component | Actual failure behaviour and preserved state | Safe recovery or escalation | User guidance | Test or observation | Status, owner, and next action |
