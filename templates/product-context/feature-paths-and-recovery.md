@@ -19,11 +19,13 @@ Store this record in the affected repository directory of the product's central 
 
 ## Actor, state, and next-action map
 
-For a multi-step journey, record every essential transition. A pending action owned by someone else should show an honest waiting state, not a dead button. Test primary-action visibility on mobile web, desktop web, and native mobile where supported.
+Use the **2A system (Actors and Actions)**: list every real actor and every approved business-required action in the process, then distinguish the actions indispensable to the stated success point from actions available after it. Design a guided flow where the next required step is obvious at the right moment, without unnecessary detours. A pending action owned by someone else should show an honest waiting state, not a dead button. Test primary-action visibility on mobile web, desktop web, and native mobile where supported. Every mapped action needs proportionate implementation and verification, including post-success actions; key actions deserve extra success-path scrutiny.
 
-| Current state | Responsible actor | Prerequisite or business condition | Visible primary next action or waiting status | Interface and evidence |
-| --- | --- | --- | --- | --- |
-| `<STATE>` | `<CUSTOMER_PARTNER_STAFF_OR_SYSTEM>` | `<VERIFIED_RULE_AND_SOURCE>` | `<ACTION_OR_WAITING_EXPLANATION>` | `<WEB_MOBILE_WEB_NATIVE_AND_TEST>` |
+| Current state | Responsible actor | Action and classification: key / other pre-success / post-success | Prerequisite or business condition | Visible next action or waiting status | Interface, test evidence, and gap |
+| --- | --- | --- | --- | --- | --- |
+| `<STATE>` | `<VERIFIED_ACTOR>` | `<BUSINESS_REQUIRED_ACTION_AND_CLASS>` | `<VERIFIED_RULE_AND_SOURCE>` | `<ACTION_OR_WAITING_EXPLANATION>` | `<WEB_MOBILE_WEB_NATIVE_AND_TEST>` |
+
+Specify whether the success point is an intermediate state (for example, a shipment draft) or the completed business outcome (for example, a paid booking). For each actor, confirm that all mapped actions—including viewing or downloading documents after booking—remain discoverable, permitted, and tested without misclassifying them as booking prerequisites.
 
 ## Conditional validation and customer guidance
 

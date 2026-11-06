@@ -6,6 +6,7 @@ All notable changes to Agent Eco Space are recorded here.
 
 ### Added
 
+- The 2A (Actors and Actions) journey protocol: all actors and business-required actions, success-blocking key actions versus post-success actions, obvious next steps without detours, Samuel's usability stewardship, and Armstrong's verification of every action when approved.
 - Impact-based applicability for Samuel and Armstrong review decisions without weakening mandatory gates.
 - Actor-and-state journey maps, prominent next actions, early conditional business validation, and clear localized feedback across backend, web, and native mobile.
 - Copilot review follow-through through finding resolution, material-change re-review, and human status updates before a PR is called ready.

@@ -19,8 +19,21 @@ class ImpactJourneyDeploymentTests(unittest.TestCase):
 
     def test_journey_template_records_actions_and_conditional_requirements(self):
         template = self.read("templates/product-context/feature-paths-and-recovery.md")
-        self.assertIn("Visible primary next action", template)
+        self.assertIn("Visible next action", template)
         self.assertIn("Conditional", template)
+
+    def test_2a_distinguishes_key_from_post_success_without_dropping_qa(self):
+        rule = self.read("rules/journey-actions-and-customer-feedback.md")
+        template = self.read("templates/product-context/feature-paths-and-recovery.md")
+        samuel = self.read("agents/samuel.uiux-lead.md")
+        armstrong = self.read("agents/armstrong.qa-lead.md")
+        self.assertIn("2A system (Actors and Actions)", rule)
+        self.assertIn("next required step is obvious at the right moment", rule)
+        self.assertIn("post-success action", rule)
+        self.assertIn("All mapped actions", rule)
+        self.assertIn("key / other pre-success / post-success", template)
+        self.assertIn("Steward the 2A", samuel)
+        self.assertIn("every mapped business-required action", armstrong)
 
     def test_copilot_review_requires_follow_through(self):
         delivery = self.read("governance/delivery-and-pr-governance.md")
