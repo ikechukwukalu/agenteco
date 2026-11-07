@@ -12,6 +12,7 @@ Agent Eco Space rules preserve AgentHQ's proven safeguards while making one sele
 - [Journey Actions and Customer Feedback](journey-actions-and-customer-feedback.md)
 - [Review Applicability by Impact](../governance/review-applicability.md)
 - [Mobile-First Web FARS Capability Library](fars-mobile-web-library.md)
+- [UI/UX FARS Capability Library](fars-uiux-library.md)
 - [Native Mobile FARS Capability Library](fars-native-mobile-library.md)
 - [Laravel/PHP Backend FARS Capability Library](fars-laravel-php-backend-library.md)
 - [Code Readability and Explanatory Comments](code-readability.md)
