@@ -17,6 +17,8 @@ CORE = [
     "rules/journey-actions-and-customer-feedback.md",
     "rules/fars-usability-scoring.md",
     "governance/operating-constitution.md",
+    "governance/requirements-and-process-planning.md",
+    "governance/case-management-and-help-knowledge.md",
     "governance/implementation-authorization-integrity.md",
     "governance/owner-controlled-governance.md",
     "governance/delivery-and-pr-governance.md",

@@ -37,3 +37,7 @@ At completion, report the covered success, failure, avoidance, and recovery path
 ## Existing-feature audit
 
 When adopting an existing product or changing an established journey, inspect the current implementation and evidence. Mark each applicable FARS control as `Verified`, `Present but unverified`, `Missing`, or `Not applicable`. Document verified controls in the product's central context. Present missing avoidance or recovery as a scoped proposal, with risk, owner, and priority; an audit does not authorize a code rewrite. Preserve prior decisions and do not describe a newly drafted control as already working.
+
+## Business review and engineering evidence
+
+Follow [Requirements and process planning](../governance/requirements-and-process-planning.md) and the [simple FARS planning form](../templates/planning/fars.md) for the stakeholder-facing action review. Retain the engineering evidence record above as a linked verification companion, using the same stable finding IDs. Present agent-discovered additions for discussion and approval before incorporating them into an agreed FARS. Recovery that needs new functionality is a scoped requirement and 2A change, not automatic implementation authority.

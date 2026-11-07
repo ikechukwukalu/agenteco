@@ -936,3 +936,9 @@ Explain how the process will retain one active reconciliation per source, keep n
 
 Do not change a repository or activate the workflow now. Present exact proposed files, tests, access checks, PRs, and remaining human decisions. Wait for the standalone Proceed with implementation. authorization for changes not already covered by an approved, bounded setup grant. Never merge a PR.
 ```
+
+## PRD, 2A, FARS and operational templates
+
+The [requirements and process planning standard](governance/requirements-and-process-planning.md) connects stakeholder intent to agreed actors, actions, flows, risk review and verification. Use the [planning templates and Word masters](templates/planning/README.md), [product planning index](templates/product-context/planning-index.md), and [actor/action register](templates/product-context/actor-action-register.md). Keep process flows inside 2A, stable references across documents, and agreed versus live versions distinct. Business agreement never replaces implementation authorization.
+
+Operational [case reporting and classification](governance/case-management-and-help-knowledge.md) remain separate from implementation planning. The same policy defines audience boundaries for a potential CPI-backed help centre without deploying one. Existing products adopt the standard through scoped context PRs and bounded backfill, not automatic application changes.

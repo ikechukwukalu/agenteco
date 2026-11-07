@@ -36,3 +36,7 @@ For meaningful features and integrations, add a [Feature FARS Record](feature-pa
 For scored applications, preserve per-section results and the declared journey weights. Show the overall and lowest section scores, every sub-90 section, evidence coverage, accepted risk decisions, and reassessment dates. A human decision to continue QA despite a low score does not remove that low score or prove release suitability. Link implementation PRs back to the same FARS failure IDs and the shared API–consumer records when contracts are involved.
 
 Each repository directory records purpose, current state, setup, interfaces, dependencies, decisions, roadmap, known risks, testing, deployment, and the repository revision against which it was verified.
+
+## Planning and product registers
+
+Use the [planning index](planning-index.md), [actor/action register](actor-action-register.md), and [PRD, 2A and FARS templates](../planning/README.md). Follow [planning governance](../../governance/requirements-and-process-planning.md), preserving compatible existing records and explicit backfill gaps.

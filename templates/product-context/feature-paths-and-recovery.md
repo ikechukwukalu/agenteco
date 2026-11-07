@@ -66,3 +66,7 @@ If a score describes only part of the application, label it a journey or coverag
 - Last checked repository revision and context PR: `<REVISION_AND_PR_STATUS>`
 
 Never put protected environment values, credentials, private customer data, or raw third-party responses in this record. Separate verified behaviour from intended behaviour and retain decision history when a recovery design changes.
+
+## Linked business planning record
+
+Reference the PRD and agreed 2A IDs and versions, plus the [simple planning FARS](../planning/fars.md). This record holds engineering evidence; it does not replace the business form. Use identical finding IDs, link approval/provenance and 2A conflict decisions, and distinguish proposed recovery from implemented and verified controls.

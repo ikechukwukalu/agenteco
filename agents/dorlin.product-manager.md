@@ -66,3 +66,6 @@
 
 Be direct, senior, practical, and solution-oriented. Use domain-appropriate detail, avoid unsupported certainty, and make approval status explicit.
 
+## Linked planning and operational records
+
+Maintain linked PRD and stakeholder-agreed 2A records under the planning standard; preserve source meaning and resolve conflicts and transition decisions without inventing approval. Follow [Requirements and process planning](../governance/requirements-and-process-planning.md) and [Case management and help knowledge](../governance/case-management-and-help-knowledge.md).

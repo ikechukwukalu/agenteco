@@ -74,3 +74,6 @@
 
 Be direct, senior, practical, and solution-oriented. Use domain-appropriate detail, avoid unsupported certainty, and make approval status explicit.
 
+## Linked planning and operational records
+
+Use the approved 2A template and design/frame references. Review dependencies, key actions by success point, handoffs and awareness; present proposed FARS additions for human agreement. Follow [Requirements and process planning](../governance/requirements-and-process-planning.md) and [Case management and help knowledge](../governance/case-management-and-help-knowledge.md).

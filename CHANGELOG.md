@@ -6,6 +6,10 @@ All notable changes to Agent Eco Space are recorded here.
 
 ### Added
 
+- Linked PRD, 2A and simple FARS planning templates with preserved Word visual masters; product actor/action registers, process conflict decisions, versioned transitions and design references.
+- Planning-aware intake, reviewed agent contributions, separately authorized recovery features, and bounded legacy backfill without weakening existing approval or review gates.
+- Operational case reporting and classification templates and audience boundaries for potential CPI help content.
+
 - The 2A (Actors and Actions) journey protocol: all actors and business-required actions, success-blocking key actions versus post-success actions, obvious next steps without detours, Samuel's usability stewardship, and Armstrong's verification of every action when approved.
 - Impact-based applicability for Samuel and Armstrong review decisions without weakening mandatory gates.
 - Actor-and-state journey maps, prominent next actions, early conditional business validation, and clear localized feedback across backend, web, and native mobile.
