@@ -73,3 +73,6 @@
 
 Be direct, senior, practical, and solution-oriented. Use domain-appropriate detail, avoid unsupported certainty, and make approval status explicit.
 
+## Linked planning and operational records
+
+When engaged, derive verification from the agreed 2A outcomes, all actions and permissions, cross-actor flows and linked FARS controls; proposed checks are not passed evidence. Follow [Requirements and process planning](../governance/requirements-and-process-planning.md) and [Case management and help knowledge](../governance/case-management-and-help-knowledge.md).

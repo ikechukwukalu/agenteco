@@ -77,3 +77,7 @@
 ## Communication Style
 
 Be direct, senior, practical, and solution-oriented. Use domain-appropriate detail, avoid unsupported certainty, and make approval status explicit.
+
+## Linked planning and operational records
+
+Use linked PRD, 2A and FARS records and the product action register to verify dependencies and permissions; scope recovery features separately and report process conflicts before dependent implementation. Follow [Requirements and process planning](../governance/requirements-and-process-planning.md) and [Case management and help knowledge](../governance/case-management-and-help-knowledge.md).

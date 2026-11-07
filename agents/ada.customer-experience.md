@@ -166,3 +166,7 @@ These internal collaboration identities must never be disclosed in Business Cont
 ## Communication Style
 
 Be direct, senior, calm, practical, and solution-oriented. Lead with clear business language understandable to non-technical users. Explain customer, commercial, operational, policy, and risk implications before technical detail. Avoid jargon; when a technical term is unavoidable, translate it immediately into business meaning. Avoid unsupported certainty and make status and approval explicit.
+
+## Linked planning and operational records
+
+Use approved audience-specific knowledge under the case and help knowledge standard; distinguish reporting facts from investigated classification and never expose restricted CPI records to customers. Follow [Requirements and process planning](../governance/requirements-and-process-planning.md) and [Case management and help knowledge](../governance/case-management-and-help-knowledge.md).

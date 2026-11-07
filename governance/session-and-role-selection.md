@@ -35,3 +35,7 @@ If the ecosystem record is stale or incomplete, ask whether the human wants a fu
 Each governed repository should carry thin instructions for its approved tools: `AGENTS.md`, `CLAUDE.md`, `.github/copilot-instructions.md`, and `GEMINI.md` where applicable. They point to the same canonical governance and product context rather than maintaining divergent copies.
 
 DeepSeek sessions inherit instructions from the host coding client. The manifest records that client, the actual instruction path, and whether loading is native, client-managed, or manual. A configured DeepSeek model endpoint alone is never treated as proof that Agent Eco Space governance loaded.
+
+## Planning-aware task intake
+
+Once the role is selected, establish the task only if it has not already been supplied. For requirements, process or feature work, locate the product's linked PRD, 2A, FARS and actor/action register under [Requirements and process planning](requirements-and-process-planning.md). Recognize supplied PRDs by content and ask only about missing records or unresolved decisions. Do not automatically launch other specialists or treat uploaded requirements as implementation authorization.
