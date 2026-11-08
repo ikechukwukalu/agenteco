@@ -6,6 +6,7 @@ All notable changes to Agent Eco Space are recorded here.
 
 ### Added
 
+- A cross-platform UI/UX FARS capability library for Samuel, covering actor/action clarity, wayfinding, forms, feedback, recovery, trust, accessibility, localization, handoffs, and interrupted journeys; loaded only in Samuel's compact role snapshot.
 - Explicit scope-specific actor confirmation before finalizing 2A, with reusable same-scope decision evidence, draft-state handling and product-independent canonical rules.
 
 - Linked PRD, 2A and simple FARS planning templates with preserved Word visual masters; product actor/action registers, process conflict decisions, versioned transitions and design references.
