@@ -39,3 +39,5 @@ DeepSeek sessions inherit instructions from the host coding client. The manifest
 ## Planning-aware task intake
 
 Once the role is selected, establish the task only if it has not already been supplied. For requirements, process or feature work, locate the product's linked PRD, 2A, FARS and actor/action register under [Requirements and process planning](requirements-and-process-planning.md). Recognize supplied PRDs by content and ask only about missing records or unresolved decisions. Do not automatically launch other specialists or treat uploaded requirements as implementation authorization.
+
+Before finalizing 2A, apply the actor-confirmation checkpoint: present the scope-specific actor list, cite explicit same-scope confirmation or obtain it, and retain Draft status for unresolved actors. Recommendations are not approval.

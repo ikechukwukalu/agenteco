@@ -6,6 +6,8 @@ All notable changes to Agent Eco Space are recorded here.
 
 ### Added
 
+- Explicit scope-specific actor confirmation before finalizing 2A, with reusable same-scope decision evidence, draft-state handling and product-independent canonical rules.
+
 - Linked PRD, 2A and simple FARS planning templates with preserved Word visual masters; product actor/action registers, process conflict decisions, versioned transitions and design references.
 - Planning-aware intake, reviewed agent contributions, separately authorized recovery features, and bounded legacy backfill without weakening existing approval or review gates.
 - Operational case reporting and classification templates and audience boundaries for potential CPI help content.
