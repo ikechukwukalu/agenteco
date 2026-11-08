@@ -35,3 +35,11 @@ A group label is not a permission grant. Record uncertain entries as proposed or
 | 1 | | | | | |
 
 Keep detail in linked 2A records rather than copying competing definitions. Never reuse retired IDs. A register change does not modify accounts, roles or application permissions. Follow [planning governance](../../governance/requirements-and-process-planning.md).
+
+## Application scope and confirmation
+
+| No. | Application/process scope | Confirmed actor references | Confirmed by/date and decision reference | Proposed changes or unresolved questions |
+| --- | --- | --- | --- | --- |
+| 1 | | | | |
+
+Do not infer a scoped actor list from the full product inventory. Existing explicit same-scope confirmation may be reused; otherwise obtain confirmation before finalizing 2A. Product-specific mappings belong here, not in canonical actor defaults.

@@ -32,6 +32,14 @@ Every key action must be obvious to the responsible actor at the right time. Eac
 
 Record a module wireframe/design link and version or date, plus exact frame links per flow where available. Do not invent links or assume a linked design is approved, implemented or accessible. Record inaccessible designs as gaps. Keep optional actions discoverable without making them false prerequisites to success.
 
+## Actor-confirmation checkpoint
+
+Before finalizing a 2A, present the actors for its exact product, application and process scope to the human and obtain explicit confirmation. Agents may recommend actors with reasons and evidence; recommendations, model names, source-code discovery and assumed industry conventions are not confirmation. Keep the 2A in Draft while the applicable actor list is unconfirmed or disputed.
+
+Consult the product's approved actor register first. Cite any existing explicit confirmation for the same unchanged scope; it may be reused without repeatedly asking the human. A broad product inventory alone does not confirm which actors belong in a specific application's 2A. Any addition, omission, rename, reclassification or changed scope requires renewed clarification and confirmation. Record the confirmed list, scope, confirmer, date and decision reference in 2A. General implementation approval does not settle an unresolved actor decision.
+
+Distinguish actors using the scoped application from actors participating through connected applications. Record cross-application handoffs without assigning the receiving actor access to the originating application. Do not silently convert an agreed actor into a role or collapse distinct actor categories. Product owners define their product's taxonomy; canonical governance must not impose one product's actor names, user models or application mapping on another.
+
 ## Product register and older features
 
 Use the [product actor, action and process register](../templates/product-context/actor-action-register.md) as the stable reference. Distinguish actor groups, subtypes, aliases and permission-bearing roles. A broad group name does not grant every member every permission. Record which role may perform which action, under what conditions, and the source and decision owner.
@@ -40,7 +48,7 @@ Agents may discover and propose additions, renames and retirements with evidence
 
 For older products, consult existing ecosystem intake first and propose a bounded backfill: repositories, processes, revision, evidence, missing coverage and decision owner. Inspect only the approved scope, including relevant contracts, tests and consumers. Do not fabricate a historical PRD or retroactive approval. A reconstructed requirement remains proposed until agreed. Do not automatically repair application behaviour or repeat full discovery each session.
 
-For example, a product may group Customer, Admin, Packager/Operations Staff, Partner and Affiliate. Parent Partner and Mini Partner may be subtypes or roles. These are illustrative business labels, not verified permissions or mandatory names for other products.
+Product-specific actor names and application mappings belong in that product’s approved register, not in canonical examples used as default actor inventories.
 
 ## Process conflicts and change history
 
