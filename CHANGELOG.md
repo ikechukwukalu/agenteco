@@ -6,6 +6,8 @@ All notable changes to Agent Eco Space are recorded here.
 
 ### Added
 
+- Cross-module conflict handling with one authoritative CPI record, links from every affected 2A and FARS, missing-document follow-ups, coordinated authorized updates, and evidence-backed closure.
+
 - Added maintained Word copies of the Case Classification Guide and Software Issue Reporting Format, with paired-document update and export guidance.
 
 - Replaced 2A roles/assignments with an action-to-permission catalogue and added audience-separated internal/external helpful links; aligned the Word export with current template content while preserving styling.
