@@ -58,6 +58,19 @@ Distinguish confirmed conflict, possible impact requiring verification, missing 
 
 Version a process in place with the same document ID. Preserve prior versions, the reason for change, approval and effective-date evidence. Identify the current agreed version separately from the confirmed live version. Keep action IDs when identity remains the same; give genuinely new actions new IDs and mark removed ones retired. Explicitly decide how work already in progress uses old or new rules; do not assume migration. Refresh linked PRD, 2A, FARS, tests and affected guidance after an approved change.
 
+### Cross-module conflict handling
+
+When a finding affects more than one product module, maintain one authoritative conflict record in CPI with a stable reference. Search existing records first and reuse the reference for the same conflict. Do not create competing decisions in separate modules.
+
+1. Verify the affected rules and available implementation evidence. Classify the finding as confirmed conflict, possible impact requiring verification, or missing information. An illustrative risk is not a confirmed implementation defect.
+2. Record the conflicting rules and their source/version references, affected modules, 2A actions and success points, consequences, decision owner, status, proposed resolution and decision history. Record unknown ownership or evidence explicitly.
+3. Link the shared record from the Connections to other processes section of every affected 2A. Each link states that module's specific impact. If an affected 2A does not exist, place the reference and drafting follow-up in its module-register entry; do not invent a completed 2A.
+4. Link relevant failure, avoidance, recovery and verification entries in each affected FARS to the same conflict reference. If a FARS is missing, record that gap and follow-up. A FARS must not become a second business-decision record.
+5. Present the proposed resolution for human review. After the applicable scope-bound authorization, update affected documents together, or explicitly track incomplete linked updates and their owners. Preserve document IDs, version history and prior approvals. Keep recommendations distinct from agreed behaviour; recording a conflict does not authorize a software fix.
+6. Keep decision approval, documentation alignment, implementation and verification separately visible. Close the conflict only when the required resolution and checks across all affected modules are evidenced. If investigation disproves it, close with the evidence and reason instead. Do not equate an approved decision or merged documentation with a repaired or deployed application.
+
+Apply this review during module drafting, connected-process changes and new implementation/testing findings. Reassess related records when the shared decision changes. Unresolved conflicts block dependent changes, not safe independent work. Follow existing authorization, access, agent-contribution and human-only merge rules; this mechanism grants no additional mutation authority.
+
 ## Agent contributions and recovery features
 
 Before adding agent-discovered findings or solutions to an agreed FARS, display them for discussion and obtain human approval. Keep provenance in a short note keyed by finding ID: human-provided, agent-proposed or joint; approval reference/date; and whether controls are proposed, implemented or verified. Do not bury unapproved proposals among agreed entries. The simple six-column action table stays unchanged.
