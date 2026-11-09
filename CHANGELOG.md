@@ -6,6 +6,8 @@ All notable changes to Agent Eco Space are recorded here.
 
 ### Added
 
+- Replaced 2A roles/assignments with an action-to-permission catalogue and added audience-separated internal/external helpful links; aligned the Word export with current template content while preserving styling.
+
 - A cross-platform UI/UX FARS capability library for Samuel, covering actor/action clarity, wayfinding, forms, feedback, recovery, trust, accessibility, localization, handoffs, and interrupted journeys; loaded only in Samuel's compact role snapshot.
 - Explicit scope-specific actor confirmation before finalizing 2A, with reusable same-scope decision evidence, draft-state handling and product-independent canonical rules.
 
