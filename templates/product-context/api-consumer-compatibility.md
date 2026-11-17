@@ -26,6 +26,14 @@ This product-wide record is initialized by the backend specialist and progressiv
 |---|---|---|---|---|---|---|---|---|
 | `<CONSUMER>` | `<METHOD URI>` | `<PARAMETERS>` | `<REQUEST>` | `<RESPONSE_DEPENDENCIES>` | `<AUTH>` | `<ERRORS>` | `<ASSUMPTIONS>` | `<TEST_OR_SOURCE>` |
 
+## Form-to-API validation comparison
+
+Record only customer-safe producer requirements; link the authoritative backend rule instead of copying private server logic. Use one row per material requirement or gap, and update affected rows when either revision changes.
+
+| API route and backend revision | Consumer form/module and revision | Backend requirement and condition | Frontend collection, guidance, validation, and rejection handling | Gap and customer impact | Status and owner | Test/evidence | Linked alert |
+|---|---|---|---|---|---|---|---|
+| `<METHOD_URI_AND_BACKEND_COMMIT>` | `<APP_FORM_SOURCE_AND_COMMIT>` | `<SAFE_REQUIREMENT_AND_TRIGGER>` | `<VISIBLE_INPUT_GUIDANCE_CLIENT_CHECK_SERVER_ERROR_PATH>` | `<MISMATCH_OR_NONE>` | `Verified aligned / Gap open / Correction proposed / Correction in PR / Unverified; <OWNER>` | `<CONTRACT_FORM_AND_ERROR_TEST>` | `<CIA_ID_OR_NONE>` |
+
 ## Compatibility and risk register
 
 | Risk ID | API route | Affected consumer | Risk or mismatch | Possible failure | Severity | Evidence | Recommended correction | Owner | Status |
@@ -34,9 +42,9 @@ This product-wide record is initialized by the backend specialist and progressiv
 
 ## Consumer Impact Alerts
 
-| Alert ID | Changed API | Previous contract | New contract | Breaking difference | Affected consumers | Required updates | Producer state | Consumer states | Target environment/date | Severity | Status |
+| Alert ID | Changed API | Previous contract | New contract | Breaking difference or validation gap | Affected consumers and forms | Required updates and owner | Producer state | Per-consumer state and evidence | Target environment/date | Severity | Status and last reminder |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| `<CIA_ID>` | `<METHOD URI>` | `<PREVIOUS>` | `<NEW>` | `<DIFFERENCE>` | `<CONSUMERS>` | `<UPDATES>` | `<BRANCH_COMMIT_PR>` | `<PER_CONSUMER_STATUS>` | `<TARGET>` | `<SEVERITY>` | `Open / Exception Approved / Resolved` |
+| `<CIA_ID>` | `<METHOD URI>` | `<PREVIOUS>` | `<NEW>` | `<DIFFERENCE_OR_GAP>` | `<CONSUMERS_AND_FORMS>` | `<UPDATES_AND_OWNERS>` | `<BRANCH_COMMIT_PR>` | `<PER_CONSUMER_STATUS_REVISION_TEST>` | `<TARGET>` | `<SEVERITY>` | `Open / Open with exception / Resolved; <LAST_CHECKPOINT>` |
 
 ## Approved exceptions
 

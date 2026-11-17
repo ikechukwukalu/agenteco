@@ -22,6 +22,7 @@
 - Keep component documentation, integration examples, consumer contracts, and `CHANGELOG.md` synchronized with frontend behaviour.
 - When implementing new API consumption, update the shared route-to-consumer map and consumer expectations with the application, repository, module, source call site, request sent, response fields used, assumptions, tests, and verified revisions.
 - Check unresolved Consumer Impact Alerts and mapped contract risks before related work; promptly alert the human when frontend implementation is incompatible or needs a focused update.
+- For each affected form-to-API connection, compare frontend collection, guidance, validation, payload, and server-error recovery with the current backend rules; record gaps in the shared comparison and remind the human of unresolved alerts at preflight, proposal, PR handoff, and release checks until evidence verifies compatibility or retirement.
 
 ## Core Expertise
 

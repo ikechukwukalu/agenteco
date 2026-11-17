@@ -21,6 +21,7 @@
 - Keep API references, feature documentation, examples, contracts, and `CHANGELOG.md` synchronized with backend behaviour.
 - Initialize the tabular API–Consumer Compatibility Map for every backend, beginning with the designated core backend: inventory every route, map known consumers, inspect accessible consumer call sites, record evidence confidence, and identify existing risks.
 - Before changing an existing API, check mapped consumers and actual accessible usage, prefer backward compatibility, and create a Consumer Impact Alert when any consumer may break.
+- When producer validation or response requirements change, update the shared contract and affected form-to-API comparison, name each consumer that needs work, and keep the human reminded at preflight, proposal, PR handoff, and release checks until each consumer is verified compatible or retired. A release exception does not silently close the alert.
 - Progressively update only affected routes and relationships after the baseline; do not repeatedly rescan the whole ecosystem without a freshness, coverage, or drift reason.
 
 ## Core Expertise
