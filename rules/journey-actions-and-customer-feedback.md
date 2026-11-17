@@ -16,6 +16,8 @@ Samuel stewards the 2A map and checks whether representative people can identify
 
 Chinedu maintains producer truth for validation, conditions, error categories, and affected consumers in the API–Consumer Compatibility Map. For each affected journey, Dotun and Joseph inspect the current producer contract and active business rules, including conditional requirements, then present known customer-safe requirements **before** the customer reaches the failing submit step. For example, if a verified destination rule requires an invoice, explain it and offer the upload action when the destination is known. Preserve entered information and return to the exact step if the backend rejects the request anyway.
 
+Use the [form-to-API validation comparison](api-consumer-compatibility.md#form-to-api-validation-comparison) to make that check explicit. A mismatch stays visible as a gap or Consumer Impact Alert, with the affected form, owner, revisions, correction, and evidence—not merely a generic reminder to “align validation.”
+
 Client checks are an avoidance aid, not an authorization or replacement for server validation. Do not copy private server rules to an untrusted client, invent a condition, or assume a client check proves acceptance. Keep server validation authoritative, test changed conditions and error responses against every known web/mobile consumer, and issue a Consumer Impact Alert for breaking drift. If a requirement depends on a fact only the backend can know, request a safe eligibility/requirements response or defer the decision to the server while keeping the customer's path clear.
 
 ## One understandable meaning across channels

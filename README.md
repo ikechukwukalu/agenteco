@@ -44,6 +44,8 @@ Products may opt into [Production-to-Central-Context Reconciliation](governance/
 
 For user-facing journeys, use the [2A system (Actors and Actions)](rules/journey-actions-and-customer-feedback.md): map every actor and business-required action, identify success-point prerequisites and post-success actions, and design a guided flow where the next required step is obvious at the right moment, without unnecessary detours. Surface verified backend business requirements before submission, and use clear, localized feedback across backend, web, and native mobile. [Samuel and Armstrong decisions follow the work's impact](governance/review-applicability.md), not the specialist's title; mandatory gates still apply. After opening a PR, the specialist follows [Copilot findings through resolution](governance/delivery-and-pr-governance.md) before calling it ready. An enrolled product may also register its actual production deployment workflow as evidence for a human-reviewed central-context status PR; a green build or branch merge alone does not establish deployment or customer availability.
 
+For affected forms and APIs, [compare backend validation with frontend behavior](rules/api-consumer-compatibility.md#form-to-api-validation-comparison) and keep each unresolved Consumer Impact Alert visible to both producer and consumer specialists at task preflight, proposal, PR handoff, and release checks. A release exception does not erase an incompatible consumer; resolution requires evidence and a human-reviewed context update.
+
 ## Supported AI tools and models
 
 Agent Eco Space is AI-agnostic, but each tool must have a verifiable way to receive governance. Its canonical rules remain the same across tools.

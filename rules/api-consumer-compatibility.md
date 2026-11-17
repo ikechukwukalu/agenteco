@@ -37,8 +37,9 @@ Use [the canonical API–Consumer Compatibility tables](../templates/product-con
 1. backend route inventory;
 2. route-to-consumer map;
 3. consumer contract expectations;
-4. compatibility and risk register; and
-5. Consumer Impact Alerts.
+4. form-to-API validation comparisons for user-facing consumers;
+5. compatibility and risk register; and
+6. Consumer Impact Alerts.
 
 Every row records the backend and consumer revisions used as evidence. Keep historical alerts and superseded relationships; mark their lifecycle instead of deleting the reason they changed.
 
@@ -66,13 +67,21 @@ Consumer relationship status uses only these values:
 
 ## Consumer Impact Alerts
 
-Before changing an existing API, the backend specialist checks the map and accessible consumer evidence. Prefer a backward-compatible change. When a change may break a consumer, create a Consumer Impact Alert with a stable identifier such as `CIA-2026-001-shipment-quote-response`.
+Before changing an existing API, the backend specialist checks the map and accessible consumer evidence. Prefer a backward-compatible change. When a change may break a consumer—or a new or changed validation requirement may make a form insufficient—create a Consumer Impact Alert with a stable identifier such as `CIA-2026-001-shipment-quote-response`. Record a verified no-impact finding when the evidence shows consumers remain compatible; do not create an alert for every harmless producer edit.
 
-The alert records the previous and new contract, exact breaking difference, affected consumers and source locations, required changes, migration or compatibility options, producer and consumer revisions, branches and PRs, target environment or date, tests, owner, severity, and per-consumer status.
+The backend specialist updates the producer contract and the affected validation-comparison rows when the API changes. The alert records the previous and new contract, exact difference, affected consumers and source locations, required changes, migration or compatibility options, producer and consumer revisions, branches and PRs, target environment or date, tests, owner, severity, and **separate status for each consumer**. If a consumer repository cannot be inspected, mark it `Unverified`; never infer compatibility from silence. Do not copy private server-only rules, customer data, or protected payloads into the shared map.
 
 The alert must be visible from the shared API contract area, the backend context directory, and every affected consumer context directory. Every specialist checks unresolved alerts affecting its assigned repository during every preflight, even when the requested task appears unrelated. Backend and consumer specialists check again before related implementation, then promptly alert the human and propose focused work. An unrelated alert need not block otherwise safe scoped work, but it must not be hidden or described as resolved.
 
-An alert remains open until each affected consumer is `Verified Compatible`, deprecated, or covered by an explicit human-approved exception. An agent never marks another repository updated without repository evidence.
+At **each task preflight, affected implementation proposal, PR handoff, and release-readiness check**, the backend specialist and each affected consumer specialist remind the human of still-open alerts relevant to their repositories. Give the alert link or ID, affected API and form/module, concrete consumer action, owner, environment, latest verification, and blocker or target. Combine repeated alerts into one concise status report; do not interrupt every unrelated message. A specialist with no central-context access uses the version-controlled Context Update Package flow and reports that the alert is pending, not shared. New or changed evidence updates the alert rather than generating a duplicate reminder record.
+
+An alert remains open until **every** affected consumer is verified compatible at the relevant revisions and environment, or is demonstrably retired. A human-approved, time-bounded exception may allow a release under the release-protection rule, but does **not** assert compatibility or remove the alert; keep its risk, expiry, mitigation, and reminders visible until the underlying consumer issue is resolved or retired. Resolve through a human-reviewed context PR only after checking consumer code and tests, producer contract, affected deployment/version state, and any outstanding validation gaps. Preserve the alert's history as `Resolved` rather than deleting it. An agent never marks another repository updated without repository evidence.
+
+## Form-to-API validation comparison
+
+For every affected user-facing form or native-mobile input flow, the consumer specialist compares the **current backend validation contract** with what the interface collects, explains, checks, submits, and does when the server rejects a value. Check required and conditionally required fields, types, ranges, formats, cross-field and business-state conditions, file constraints, and customer-safe error identifiers where relevant. Record producer and consumer revisions, the form location, evidence, and the status of each gap in the canonical table. Repeat the comparison when a mapped backend rule changes, an alert is raised, or a new form starts using the API; do not re-audit unrelated forms without a freshness trigger.
+
+Flag a gap when the form omits a required input, allows an avoidable rejection, hides a conditional requirement until submit, sends the wrong payload, or cannot guide a person to correct a backend rejection. Present known safe requirements early, preserve permissible entries, and map stable server errors to the correct visible field or step. Backend validation remains authoritative; client checks cannot replace it. A condition that only the backend can evaluate needs an approved safe requirements/eligibility response or honest server-side correction path, not a guessed client rule. Link material gaps to the Consumer Impact Alert and the feature's FARS record until verified corrected.
 
 ## Release protection
 
