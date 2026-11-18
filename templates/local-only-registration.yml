@@ -1,0 +1,38 @@
+# Store this file in an approved local context root, never in the company code repository.
+schema_version: 1
+mode: local-only
+
+product:
+  name: "<PRODUCT_NAME>"
+  application_or_component: "<APPLICATION_OR_COMPONENT_NAME>"
+  data_owner: "<COMPANY_OR_APPROVED_OWNER>"
+  classification: "<APPROVED_CLASSIFICATION>"
+
+source_repository:
+  canonical_remote: "<EXACT_COMPANY_REPOSITORY_REMOTE>"
+  local_path: "<ABSOLUTE_PROJECT_PATH>"
+  verified_revision: "<COMMIT_OR_NONE>"
+
+local_context:
+  root: "<ABSOLUTE_APPROVED_PATH_OUTSIDE_PROJECT>"
+  history_method: "<APPROVED_LOCAL_GIT_OR_OTHER_HISTORY>"
+  backup_location: "<APPROVED_COMPANY_CONTROLLED_DESTINATION_OR_NONE>"
+  retention_and_deletion_reference: "<APPROVED_POLICY_OR_NONE>"
+  last_verified_revision: "<LOCAL_CONTEXT_REVISION_OR_NONE>"
+
+governance:
+  canonical_repository: "https://github.com/ikechukwukalu/agenteco"
+  last_verified_version: "<VERSION_OR_UNKNOWN>"
+  last_verified_commit: "<COMMIT_OR_UNKNOWN>"
+  approved_local_mirror_path: "<PATH_OR_NONE>"
+
+activation:
+  manual_prompt_required: true
+  verified_user_level_loaders: []
+  last_loading_check: null
+
+personal_or_external_sync:
+  enabled: false
+  destination: null
+  authorization_reference: null
+  allowed_classification: null

@@ -36,6 +36,8 @@ Implementation PRs summarize each material FARS failure with its avoidance, reco
 
 Each product has one central context repository covering every application, service, package, SDK, and infrastructure repository. It records product meaning, business rules and history, architecture, repository relationships, contracts, decisions, handoffs, risks, delivery evidence, and per-repository context.
 
+In [Local-Only Mode](governance/local-only-mode.md), the single product context is instead an approved local directory outside the company worktree; it is not presumed to be a remote repository or visible to other agents and machines.
+
 Git repositories remain the authority for implemented code. When context and code disagree, the specialist reports and resolves **context drift** rather than guessing.
 
 Products also maintain a [scoped rule index](governance/scoped-product-rules.md) so each specialist can load active rules that apply to its role and task. DTAP products maintain a shared [feature availability record](governance/feature-availability.md) across test, staging, and production, including required backend, frontend, mobile, API, SDK, flag, and audience evidence. A branch merge alone is not a customer release.
@@ -62,6 +64,8 @@ Agent Eco Space is AI-agnostic, but each tool must have a verifiable way to rece
 Gemini is therefore a first-class native adapter. Grok Build reuses `AGENTS.md` rather than adding a duplicate `GROK.md`; verify its actual instruction loading with `grok inspect`. A Grok model inside another host follows that host's verified instruction mechanism. DeepSeek is fully usable, but its coding client must be recorded in `.agenteco/manifest.yml` because DeepSeek can run inside several different applications with different instruction-discovery behaviour. See [Tool Instruction Adapters](templates/tool-instructions/README.md).
 
 Every surviving Agent Eco-aware tool checks the complete set of adapters marked required in the repository manifest. If another tool's adapter has been deleted or damaged, it restores the current canonical version automatically and safely recovers compliant local instructions from Git history where possible. An optional adapter is never installed merely because a template exists.
+
+That repository-adapter repair rule does not run in verified Local-Only Mode, which deliberately has no Agent Eco manifest or adapters in the company worktree. Local loading and external registration are verified instead.
 
 For total adapter loss, install the dependency-free [adapter integrity checker](templates/check-agenteco-adapters.py) in CI. It fails closed on missing required files, invalid managed markers, or fingerprint drift; it reports only and never commits changes. Recovery then starts through the governance-upgrade or first-time bootstrap prompt.
 
@@ -114,6 +118,7 @@ See the [Specialist Catalogue](agents/README.md) and individual profiles in `age
 - [AgentHQ Inheritance Matrix](governance/agenthq-inheritance-matrix.md)
 - [AgentHQ Transfer Ledger](governance/transfer-ledger.md)
 - [Access-Degraded and Offline Mode](governance/access-degraded-mode.md)
+- [Local-Only Mode](governance/local-only-mode.md)
 - [Repository Readiness Preflight](governance/repository-readiness-preflight.md)
 - [Instruction Adapter Integrity](governance/instruction-adapter-integrity.md)
 - [Implementation Authorization Integrity](governance/implementation-authorization-integrity.md)
@@ -170,6 +175,12 @@ Commands that change Agent Eco Space state or enter a governed workflow must be 
 ### First-time bootstrap
 
 A completely new AI session cannot understand the short commands until Agent Eco Space is discoverable. Start an unconfigured session with the [First-Time Bootstrap Prompt](templates/bootstrap-agent-eco-space.md). It identifies the Agent Eco Space repository, the product or current repository, and the central context repository when one exists.
+
+For a company repository where Agent Eco must leave **no tracked project files**, use [Local-Only Mode](governance/local-only-mode.md) and its [startup prompt](templates/call-agent-eco-space-local-only.md). The company-approved product context and registration stay outside the worktree. Personal-account synchronization is optional and disabled by default; user-level auto-loading is possible only for supported local tools after the active session verifies it. No setup can guarantee invisibility to company administration or tool providers.
+
+The [optional user-level loader](templates/local-only-user-loader.md) can match a locally approved project registration without adding project files. It must be installed separately in each supported local tool; hosted/cloud agents may still need an approved manual attachment.
+
+Local setup uses a [disabled-by-default project registry](templates/local-only-project-registry.yml) pointing to an approved [product registration](templates/local-only-registration.yml). Store both outside the company project and review their access classification before enabling any entry.
 
 After repository instruction adapters have been installed, the shorter commands below become reliable entry points.
 
@@ -315,6 +326,29 @@ Read the Agent Eco Space README, command catalogue, operating constitution, spec
 Do not assume the repository is already configured. Run the canonical Repository Readiness Preflight first. Confirm what sources you can access, recommend the Engineering Manager for onboarding, ask who you are operating as today, and determine whether a verified complete ecosystem intake exists.
 
 If it does not exist, inspect the complete accessible product ecosystem once: repositories, repository context directories, business rules, decisions, architecture, contracts, producers, consumers, handoffs, risks, documentation systems, changelogs, and current revisions. Present one combined adoption, intake, and remediation plan. Wait for the standalone "Proceed with implementation." command before creating approved changes. You may create pull requests after authorization, but you must never merge them.
+```
+
+### Local-Only Agent Eco Space startup prompt
+
+Use this when Agent Eco must govern a company project without placing Agent Eco files in that project's Git repository. The approved context and registration paths must be outside its worktree. This is the complete [Local-Only Startup Prompt](templates/call-agent-eco-space-local-only.md); personal or remote synchronization is off unless separately authorized.
+
+```text
+Use Agent Eco Space in Local-Only Mode for this product.
+
+Agent Eco governance source: https://github.com/ikechukwukalu/agenteco
+Product: <PRODUCT_NAME>
+Application or component: <APPLICATION_OR_COMPONENT_NAME>
+Company repository remote: <EXACT_REPOSITORY_REMOTE>
+Project workspace: <ABSOLUTE_PROJECT_PATH>
+Approved local context root, outside the project worktree: <ABSOLUTE_APPROVED_CONTEXT_PATH>
+Local registration: <ABSOLUTE_APPROVED_REGISTRATION_PATH>
+Optional personal or external context destination: none unless separately authorized and recorded in the local registration.
+
+First verify that the project remote and path match the local registration, that this local context is authorized for this machine and audience, and that you can actually read the applicable Agent Eco governance and product context. Report any missing access, stale version, conflicting repository instructions, or unverified activation. Use the local context and the current role-specific rules only after verification. Ask who you are operating as today unless the role was already selected.
+
+Do not create, edit, restore, stage, or commit Agent Eco adapters, manifest, outbox, or context inside the company code repository. Do not add an Agent Eco entry to its .gitignore. Keep local pending updates and review history in the approved external context. Never claim that a local update was shared, pushed, or merged.
+
+Follow the ordinary scope rules and wait for the standalone "Proceed with implementation." command before code or context changes. Respect company AI and information-handling rules. Do not copy company context to a personal account or remote destination without explicit permission. Continue with the requested task only after this Local-Only Readiness Preflight.
 ```
 
 ### 2. Call Agent Eco Space prompt

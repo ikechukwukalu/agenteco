@@ -2,6 +2,8 @@
 
 Every repository-based Agent Eco Space entry workflow runs this compact preflight before assuming a repository is configured. This includes first-time repository bootstrap, normal repository calls, product adoption, adding a repository, synchronizing existing work, and refreshing Agent Eco Space understanding. Repository-free [Business Context Mode](business-context-mode.md) and [Technical Product Context Mode](technical-product-context-mode.md) use their own product-context checks and must not invent a code repository, manifest, or adapters.
 
+An explicitly registered [Local-Only Mode](local-only-mode.md) runs its own external-registry preflight. It does not treat the intentionally absent in-repository manifest, adapters, or tracked outbox as damage and must not install them in the company worktree. Without a verified local registration and actual agent loading, do not infer Local-Only Mode from missing files.
+
 ## Fast path
 
 Read `.agenteco/manifest.yml` first. When it exists, validate its recorded governance version and exact commit against the canonical pair, product snapshot fingerprint, product context, repository identity, adapters, work mode, delivery model, and last verified repository revision. Inspect deeper only when the manifest is missing, stale, inconsistent, or insufficient for the requested work.

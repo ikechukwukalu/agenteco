@@ -6,6 +6,8 @@ This catalogue documents commands that trigger a defined Agent Eco Space workflo
 
 The [First-Time Bootstrap Prompt](../templates/bootstrap-agent-eco-space.md) is required when a session has no repository instruction pointing to Agent Eco Space. It supplies the governance location and product scope. The commands below are shortcuts used after that bootstrap or after instruction adapters are installed.
 
+For a company repository that must not contain Agent Eco files, use the separate [Local-Only Startup Prompt](../templates/call-agent-eco-space-local-only.md) and an approved external registration. Do not use normal adoption or a short command to install adapters in that repository. A verified user-level loader may provide the same local activation on supported tools, but a new session must confirm it actually loaded; cloud agents cannot be assumed to read a PC-only context.
+
 ## Command rules
 
 - Send a command as a standalone message, without commentary or additional scope.

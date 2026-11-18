@@ -2,6 +2,8 @@
 
 `AGENTS.md`, `CLAUDE.md`, `.github/copilot-instructions.md`, and `GEMINI.md` are governed Agent Eco Space adapters. A DeepSeek host client may reuse one of these adapters or use a recorded client-managed path. Agent Eco Space is the governing authority for their managed sections; neither a human nor an AI may maintain a conflicting canonical section in a governed repository.
 
+The automatic install/repair rule below applies to normal **repository-based adoption**. A human-selected, verified [Local-Only Mode](local-only-mode.md) deliberately has no in-repository Agent Eco adapter or manifest; do not create or repair those files in that worktree. Verify user-level or manual loading and the external registration instead. If ordinary governed adapters already exist, treat the overlap as a conflict to resolve, not permission to delete them.
+
 ## Managed and local sections
 
 Each adapter separates its content using these markers:

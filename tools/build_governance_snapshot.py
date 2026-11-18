@@ -27,6 +27,7 @@ CORE = [
     "governance/session-and-role-selection.md",
     "governance/instruction-adapter-integrity.md",
     "governance/access-degraded-mode.md",
+    "governance/local-only-mode.md",
     "governance/versioned-context-snapshots.md",
     "governance/scoped-product-rules.md",
     "governance/feature-availability.md",

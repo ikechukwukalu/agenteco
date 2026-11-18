@@ -4,6 +4,8 @@
 
 A product uses one central context repository across customer and internal applications, mobile apps, backends, microservices, SDKs, packages, and infrastructure repositories.
 
+An explicitly authorized [Local-Only Mode](local-only-mode.md) is the exception: its single product context lives at an approved local path outside the company worktree and is not assumed to be remote or shared. The structure and evidence principles below apply where relevant, but no company-repository adapter, context PR, or remote synchronization may be invented.
+
 ## Required structure
 
 ```text

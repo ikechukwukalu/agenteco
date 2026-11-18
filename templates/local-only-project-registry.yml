@@ -1,0 +1,9 @@
+# Store outside every company project and outside personal/cloud-synced folders unless approved.
+# This is a local activation index, not the product context itself.
+schema_version: 1
+mode: local-only
+projects:
+  - enabled: false
+    canonical_remote: "<EXACT_COMPANY_REPOSITORY_REMOTE>"
+    local_path: "<ABSOLUTE_PROJECT_PATH>"
+    registration_path: "<ABSOLUTE_APPROVED_LOCAL_REGISTRATION_PATH>"
