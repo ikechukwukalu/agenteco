@@ -14,11 +14,13 @@ The current governance version is in [`VERSION`](VERSION). Every governance PR m
 6. The specialist owns implementation, engineer-written tests, feature/API documentation, `CHANGELOG.md`, and continuity-grade context updates.
    Code changes must also be easy to read: meaningful explanatory comments, descriptive names, clear spacing and line breaks, and the repository's established formatting conventions.
    For meaningful features and integrations, the specialist applies FARS: the requested success outcome, credible failure and frustration points, avoidance for each, and safe recovery when avoidance fails. Show the proposed map before implementation; make code, tests, guidance, and product context match verified behaviour. Start mobile-first for web journeys, including supporting backend and provider behaviour.
-7. After testable implementation and engineer-owned verification, the specialist must ask whether Armstrong should independently verify the work or whether the human declines that review.
-8. If approved, Armstrong reviews before implementation PR creation; Armstrong is never started automatically.
+7. After testable implementation and engineer-owned verification, the specialist must ask whether Armstrong should independently verify the work or whether the human declines that review. The exact standalone `CAPP` command instead records that approval in advance for the established scope.
+8. If approved, Armstrong reviews before implementation PR creation; outside explicit CAPP authorization, Armstrong is never started automatically.
 9. Specialists may create pull requests only after that QA decision checkpoint and must never merge them. After opening one, they remind the human about other relevant open PRs—especially context PRs still awaiting merge—or disclose that PR visibility was unavailable.
 
 For governed GitHub repositories, the PR handoff also requests a GitHub Copilot code review where available. An organization or repository ruleset can request the review automatically; a GitHub administrator must enable it separately. The specialist verifies the review state, addresses material findings, and reports missing setup rather than claiming a review occurred. Copilot does not replace Armstrong QA, CI, human approval, or the human-only merge rule. See [GitHub Copilot code-review handoff](governance/delivery-and-pr-governance.md#github-copilot-code-review-handoff).
+
+For a scoped task, send standalone `CAPP` to authorize the complete **Copilot, Armstrong, PRs, Proceed with implementation** handoff without repeated routine approval questions. Armstrong still reviews, material Copilot findings must be resolved or reported, and the PR is presented for human review; CAPP never authorizes a merge. See the [command definition](commands/README.md#authorize-the-complete-capp-handoff).
 
 After a production-branch merge, the release owner also checks whether the change was actually deployed. The responsible specialist closes out only verified shipped entries in `CHANGELOG.md` through a review PR, leaving unshipped entries under `Unreleased` and recording the release evidence in product context. Package entries close after verified publication, not merely a repository merge. See [Changelog Closeout](rules/documentation-and-continuity.md#production-and-publication-closeout).
 
@@ -35,6 +37,8 @@ Implementation PRs summarize each material FARS failure with its avoidance, reco
 ## The central product brain
 
 Each product has one central context repository covering every application, service, package, SDK, and infrastructure repository. It records product meaning, business rules and history, architecture, repository relationships, contracts, decisions, handoffs, risks, delivery evidence, and per-repository context.
+
+In [Local-Only Mode](governance/local-only-mode.md), the single product context is instead an approved local directory outside the company worktree; it is not presumed to be a remote repository or visible to other agents and machines.
 
 Git repositories remain the authority for implemented code. When context and code disagree, the specialist reports and resolves **context drift** rather than guessing.
 
@@ -62,6 +66,8 @@ Agent Eco Space is AI-agnostic, but each tool must have a verifiable way to rece
 Gemini is therefore a first-class native adapter. Grok Build reuses `AGENTS.md` rather than adding a duplicate `GROK.md`; verify its actual instruction loading with `grok inspect`. A Grok model inside another host follows that host's verified instruction mechanism. DeepSeek is fully usable, but its coding client must be recorded in `.agenteco/manifest.yml` because DeepSeek can run inside several different applications with different instruction-discovery behaviour. See [Tool Instruction Adapters](templates/tool-instructions/README.md).
 
 Every surviving Agent Eco-aware tool checks the complete set of adapters marked required in the repository manifest. If another tool's adapter has been deleted or damaged, it restores the current canonical version automatically and safely recovers compliant local instructions from Git history where possible. An optional adapter is never installed merely because a template exists.
+
+That repository-adapter repair rule does not run in verified Local-Only Mode, which deliberately has no Agent Eco manifest or adapters in the company worktree. Local loading and external registration are verified instead.
 
 For total adapter loss, install the dependency-free [adapter integrity checker](templates/check-agenteco-adapters.py) in CI. It fails closed on missing required files, invalid managed markers, or fingerprint drift; it reports only and never commits changes. Recovery then starts through the governance-upgrade or first-time bootstrap prompt.
 
@@ -114,6 +120,7 @@ See the [Specialist Catalogue](agents/README.md) and individual profiles in `age
 - [AgentHQ Inheritance Matrix](governance/agenthq-inheritance-matrix.md)
 - [AgentHQ Transfer Ledger](governance/transfer-ledger.md)
 - [Access-Degraded and Offline Mode](governance/access-degraded-mode.md)
+- [Local-Only Mode](governance/local-only-mode.md)
 - [Repository Readiness Preflight](governance/repository-readiness-preflight.md)
 - [Instruction Adapter Integrity](governance/instruction-adapter-integrity.md)
 - [Implementation Authorization Integrity](governance/implementation-authorization-integrity.md)
@@ -170,6 +177,12 @@ Commands that change Agent Eco Space state or enter a governed workflow must be 
 ### First-time bootstrap
 
 A completely new AI session cannot understand the short commands until Agent Eco Space is discoverable. Start an unconfigured session with the [First-Time Bootstrap Prompt](templates/bootstrap-agent-eco-space.md). It identifies the Agent Eco Space repository, the product or current repository, and the central context repository when one exists.
+
+For a company repository where Agent Eco must leave **no tracked project files**, use [Local-Only Mode](governance/local-only-mode.md) and its [startup prompt](templates/call-agent-eco-space-local-only.md). The company-approved product context and registration stay outside the worktree. Personal-account synchronization is optional and disabled by default; user-level auto-loading is possible only for supported local tools after the active session verifies it. No setup can guarantee invisibility to company administration or tool providers.
+
+The [optional user-level loader](templates/local-only-user-loader.md) can match a locally approved project registration without adding project files. It must be installed separately in each supported local tool; hosted/cloud agents may still need an approved manual attachment.
+
+Local setup uses a [disabled-by-default project registry](templates/local-only-project-registry.yml) pointing to an approved [product registration](templates/local-only-registration.yml). Store both outside the company project and review their access classification before enabling any entry.
 
 After repository instruction adapters have been installed, the shorter commands below become reliable entry points.
 
@@ -315,6 +328,29 @@ Read the Agent Eco Space README, command catalogue, operating constitution, spec
 Do not assume the repository is already configured. Run the canonical Repository Readiness Preflight first. Confirm what sources you can access, recommend the Engineering Manager for onboarding, ask who you are operating as today, and determine whether a verified complete ecosystem intake exists.
 
 If it does not exist, inspect the complete accessible product ecosystem once: repositories, repository context directories, business rules, decisions, architecture, contracts, producers, consumers, handoffs, risks, documentation systems, changelogs, and current revisions. Present one combined adoption, intake, and remediation plan. Wait for the standalone "Proceed with implementation." command before creating approved changes. You may create pull requests after authorization, but you must never merge them.
+```
+
+### Local-Only Agent Eco Space startup prompt
+
+Use this when Agent Eco must govern a company project without placing Agent Eco files in that project's Git repository. The approved context and registration paths must be outside its worktree. This is the complete [Local-Only Startup Prompt](templates/call-agent-eco-space-local-only.md); personal or remote synchronization is off unless separately authorized.
+
+```text
+Use Agent Eco Space in Local-Only Mode for this product.
+
+Agent Eco governance source: https://github.com/ikechukwukalu/agenteco
+Product: <PRODUCT_NAME>
+Application or component: <APPLICATION_OR_COMPONENT_NAME>
+Company repository remote: <EXACT_REPOSITORY_REMOTE>
+Project workspace: <ABSOLUTE_PROJECT_PATH>
+Approved local context root, outside the project worktree: <ABSOLUTE_APPROVED_CONTEXT_PATH>
+Local registration: <ABSOLUTE_APPROVED_REGISTRATION_PATH>
+Optional personal or external context destination: none unless separately authorized and recorded in the local registration.
+
+First verify that the project remote and path match the local registration, that this local context is authorized for this machine and audience, and that you can actually read the applicable Agent Eco governance and product context. Report any missing access, stale version, conflicting repository instructions, or unverified activation. Use the local context and the current role-specific rules only after verification. Ask who you are operating as today unless the role was already selected.
+
+Do not create, edit, restore, stage, or commit Agent Eco adapters, manifest, outbox, or context inside the company code repository. Do not add an Agent Eco entry to its .gitignore. Keep local pending updates and review history in the approved external context. Never claim that a local update was shared, pushed, or merged.
+
+Follow the ordinary scope rules and wait for the standalone "Proceed with implementation." command before code or context changes. Respect company AI and information-handling rules. Do not copy company context to a personal account or remote destination without explicit permission. Continue with the requested task only after this Local-Only Readiness Preflight.
 ```
 
 ### 2. Call Agent Eco Space prompt

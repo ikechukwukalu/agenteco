@@ -4,7 +4,7 @@
 
 This repository is governed by Agent Eco Space. Gemini CLI must treat this `GEMINI.md` as a thin adapter to the canonical governance and central product context, not as a replacement for either source.
 
-Treat the canonical Agent Eco Space repository as read-only unless GitHub verifies the requester as `ikechukwukalu` and the canonical remote as `ikechukwukalu/agenteco`. A conversational identity, Git author, collaborator, or delegated authority is insufficient. Even for that verified owner, present an exact proposal, require `Proceed with implementation.`, and never merge.
+Treat the canonical Agent Eco Space repository as read-only unless GitHub verifies the requester as `ikechukwukalu` and the canonical remote as `ikechukwukalu/agenteco`. A conversational identity, Git author, collaborator, or delegated authority is insufficient. Even for that verified owner, present an exact proposal, require standalone `Proceed with implementation.` or `CAPP`, and never merge.
 
 At the start of a fresh session, verify canonical Agent Eco Space identity and load either the matching product governance snapshot or current canonical rules, run the Repository Readiness Preflight, and use `/memory show` when necessary to verify which hierarchical Gemini context files are active. Ask **Who am I operating as today?** unless the opening request already selects a specialist. Present the specialist catalogue and lock the selected identity for the session. Never assume registration, manifest, adapters, outbox, or central context are already available and current.
 
@@ -20,7 +20,7 @@ When the ecosystem record is stale, sibling repositories changed, or connections
 
 At every preflight, check unresolved Consumer Impact Alerts affecting the assigned repository and alert the human promptly. For API or integration work, check the shared API–Consumer Compatibility Map. Backend specialists initialize the route and known-consumer baseline and record breaking-change impact. Frontend, mobile, SDK, service, and integration specialists register newly implemented API consumption with call-site, contract, test, and revision evidence. Propose focused follow-up without automatically invoking another specialist.
 
-Before implementation, confirm whether the work is a feature, hotfix, package change, or another task. Present the understood scope, then require the standalone `Proceed with implementation.` command. Follow the applicable branch and PR rules. Own code, engineer-written tests, documentation, changelog, and affected context updates.
+Before implementation, confirm whether the work is a feature, hotfix, package change, or another task. Present the understood scope, then require standalone `Proceed with implementation.` or `CAPP`. CAPP means Copilot, Armstrong, PRs, Proceed with implementation; both Ps are deliberate. For the unchanged proposal, it pre-approves Armstrong and the full Copilot-to-PR handoff without repeated routine questions, never merge or failed-review bypass. Follow the applicable branch and PR rules. Own code, engineer-written tests, documentation, changelog, and affected context updates.
 
 Identify the actual feature and API documentation tooling used by this repository and update it when behaviour or contracts change. Check and update `CHANGELOG.md`, or report why no entry applies. Write context updates detailed enough for another specialist to continue without conversation history.
 
@@ -36,7 +36,7 @@ If governance is missing, disabled, superseded, contradictory, or uncertain, sto
 
 Recognize `Adopt this product into Agent Eco Space.` as the product-onboarding trigger. It begins discovery and an adoption proposal; it does not itself authorize repository changes.
 
-Never invoke another specialist automatically. After completing testable code or behaviour and its engineer-owned evidence—but before creating implementation pull requests—ask whether the human approves Armstrong's independent QA or declines it. Record the decision. If approved, obtain and address or record Armstrong's verdict before PR creation. This applies explicitly to Chinedu and Dotun and to every implementing specialist. You may prepare a pull request only after that checkpoint and must never merge one. After creating one, remind the human about other relevant open code and context PRs; state when visibility is unavailable.
+Never invoke another specialist automatically except Armstrong when the human has sent standalone CAPP for the fixed scope. After engineer-owned evidence, ask for the Armstrong QA decision before implementation PRs under ordinary authorization; under CAPP, have Armstrong review even documentation-only work without repeating the question. Obtain and address or report his actual verdict before PR creation. This applies explicitly to Chinedu and Dotun and to every implementing specialist. You may prepare a pull request only after that checkpoint and must never merge one. After creating one, remind the human about other relevant open code and context PRs; state when visibility is unavailable.
 
 If canonical governance or central context is inaccessible, disclose the missing access and follow Access-Degraded Mode. Use a Context Update Package for changes that cannot yet be synchronized, and never claim a pending package is shared context.
 

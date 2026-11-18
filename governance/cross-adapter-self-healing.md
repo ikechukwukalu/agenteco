@@ -1,5 +1,7 @@
 # Cross-Adapter Self-Healing
 
+This rule applies to normal repository-based adoption with a manifest-required adapter set. In verified [Local-Only Mode](local-only-mode.md), missing in-repository Agent Eco files are intentional; never install or restore them in the company worktree. Check the external registration and actual user-level or manual activation instead.
+
 Every Agent Eco-aware specialist validates the complete adapter set declared in `.agenteco/manifest.yml`, not only the adapter used by the active AI tool. A surviving Codex, Claude, Copilot, Gemini, or verified DeepSeek session must therefore detect and repair another required adapter that was deleted or damaged.
 
 ## Manifest authority

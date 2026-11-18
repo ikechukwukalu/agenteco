@@ -18,7 +18,7 @@ A name in conversation, a Git author name or email, local configuration, a copie
 Verified ownership allows the agent to accept a request; it is not implementation authorization. The agent must still:
 
 1. inspect current governance and present an exact, bounded proposal;
-2. wait for the standalone `Proceed with implementation.` command from the verified owner;
+2. wait for the standalone `Proceed with implementation.` or `CAPP` command from the verified owner; `CAPP` also pre-approves Armstrong review and the complete Copilot/PR handoff for the fixed proposal;
 3. use a temporary branch and preserve governance history;
 4. run proportionate validation;
 5. create a pull request when requested or appropriate; and

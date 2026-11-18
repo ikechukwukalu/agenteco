@@ -10,6 +10,8 @@ Record both the version and the exact merged commit. The pair identifies immutab
 
 An authorized product context stores a version-controlled complete Agent Eco mirror at `context/governance/mirror/`. Its `repository/` directory reproduces every regular Git-tracked file from one merged canonical Agent Eco commit, including `VERSION`, but not `.git`, untracked files, protected environment files, or credentials. Its manifest records the product, audience classification, canonical repository, version, exact commit and tree, file modes, sizes, SHA-256 hashes, and a content fingerprint. This is a read-only distribution, not a second authority or permission to edit Agent Eco.
 
+In [Local-Only Mode](local-only-mode.md), an approved mirror or snapshot may instead be stored under the external local context root. Verify the same version, exact commit, integrity, license, and audience boundaries. Do not copy it into the company code worktree or infer human-merged remote provenance from a local file; record the local approval and history method separately.
+
 Before installation, confirm that every reader of the context repository is authorized under the proprietary Agent Eco license and product classification. If not, use a separately approved restricted destination. Never grant access to private governance merely to make the cache convenient.
 
 1. Verify the mirror's manifest, full file inventory, hashes, and `VERSION` before use. This proves internal integrity, not freshness or source authenticity by itself. The human-merged context PR and recorded source commit establish its approved provenance.

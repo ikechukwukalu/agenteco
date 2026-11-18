@@ -2,6 +2,8 @@
 
 This mode applies when a repository contains an Agent Eco Space adapter but the active AI cannot access canonical governance or the central product-context repository.
 
+For a verified [Local-Only Mode](local-only-mode.md), use its approved external context and pending-update ledger instead of the tracked in-repository outbox below. Never install a tracked outbox into a company repository merely to recover missing local or remote access. If the approved local context cannot be read, report the limitation and stop affected work rather than fabricating a local copy.
+
 ## Required disclosure
 
 The specialist reports whether it can access the current repository, local Agent Eco Space instructions and version, canonical Agent Eco Space, a local or remote central-context repository, and connected repositories required by the task.
