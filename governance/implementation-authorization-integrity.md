@@ -2,15 +2,17 @@
 
 Agent Eco Space separates a request for an outcome from authorization to change a repository. A human may ask a specialist to write, build, fix, update, implement, remove, or refactor something without yet authorizing mutation.
 
-## Sole normal authorization command
+## Normal authorization commands
 
-The standalone command below is the only normal implementation authorization:
+The standalone command below is the default implementation authorization:
 
 ```text
 Proceed with implementation.
 ```
 
 It authorizes only the most recently presented, unchanged scope after the specialist identity, work classification, affected repositories, branch source, material risks, tests, documentation, context updates, and intended pull requests have been established.
+
+The exact standalone `CAPP` command is a second, explicit authorization path for that same established scope. It additionally records the human's advance approval for Armstrong's independent review and the full Copilot-to-PR handoff defined in [Delivery and Pull Request Governance](delivery-and-pr-governance.md). The letters mean **Copilot, Armstrong, PRs, Proceed with implementation**; the two Ps are intentional. It is not triggered by a quoted word, an acronym in a longer message, or a prior conversation about the command.
 
 Authorization is:
 
@@ -21,6 +23,8 @@ Authorization is:
 - **revocable:** a human may stop the work at any time, after which a new proposal and authorization are required to resume.
 
 Material scope changes invalidate authorization. The specialist must stop, explain the change, present a revised proposal, and wait for a fresh standalone command.
+
+`CAPP` waives repeated routine approval questions within its approved cycle, not actual verification or higher-priority permission checks. It does not authorize a merge, deployment, publication, access expansion, unrelated specialist, or an exception to a failed review. If Armstrong cannot review or material Copilot findings remain unresolved, report the blockage and keep the PR unready; obtain a separate human decision for any exception.
 
 ## Narrow governance-compliance exception
 

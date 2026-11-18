@@ -6,6 +6,7 @@ All notable changes to Agent Eco Space are recorded here.
 
 ### Added
 
+- Standalone CAPP command for a scoped implementation cycle: Copilot review follow-through, advance-approved Armstrong review, PR presentation, and implementation authorization without repeated routine approval questions; no merge or failed-review bypass.
 - Local-Only Agent Eco Space Mode for approved company projects: external local context and registration, no tracked project adapters or outbox, optional verified user-level auto-loading, manual startup fallback, personal sync disabled by default, and local review/backup safeguards.
 - Form-to-API validation comparison and persistent, checkpoint-based backend/consumer reminders for unresolved Consumer Impact Alerts until every affected consumer is verified compatible or retired; release exceptions remain visible risks.
 - Cross-module conflict handling with one authoritative CPI record, links from every affected 2A and FARS, missing-document follow-ups, coordinated authorized updates, and evidence-backed closure.

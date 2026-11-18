@@ -62,6 +62,18 @@ Proceed with implementation.
 
 Material scope changes invalidate the authorization and require a refreshed proposal followed by a new standalone command.
 
+## Authorize the complete CAPP handoff
+
+```text
+CAPP
+```
+
+**Meaning:** **C**opilot review, **A**rmstrong review, **P**Rs presented, **P**roceed with implementation. Both Ps are deliberate. The exact word must be the entire standalone message; quoting it, adding instructions, or using it before a specific proposal is established does not activate it.
+
+**Effect:** For the most recently presented, unchanged scope, authorize implementation and pre-approve Armstrong's independent review. After implementer-owned verification, involve Armstrong without another routine approval question, address his material findings, create and present the authorized PRs, request Copilot review where available, and follow through on its findings and material-change re-reviews. Keep the human updated and present the PR link and verified review state. Do not call a PR ready while expected review or checks are pending.
+
+**Does not authorize:** A merge, deployment, release, publication, material scope expansion, access or credential changes, another specialist beyond Armstrong, or silently accepting failed or unavailable reviews. Tool/platform permissions and mandatory human decisions outside this handoff still apply. If Copilot is unavailable, report the exact missing capability and ask for a decision rather than claiming that CAPP was fully satisfied.
+
 ## Start a business context session
 
 ```text

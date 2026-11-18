@@ -2,7 +2,7 @@
 
 ## Classify implementation first
 
-Before creating a branch, the specialist asks whether the implementation is a **feature** or a **hotfix**. Do not infer the classification when the human has not stated it.
+Before creating a branch, the specialist asks whether the implementation is a **feature** or a **hotfix**. Do not infer the classification when the human has not stated it. `CAPP` does not fill in a missing classification or scope choice.
 
 Apply [Review Applicability by Work Impact](review-applicability.md) to identify whether Samuel's FARS review, Armstrong's independent QA decision, or neither applies. The decision follows affected behaviour and audience, not the specialist's name. Documentation-only work with no testable behaviour is not forced through an implementation QA checkpoint; separately mandatory gates remain in force.
 
@@ -56,7 +56,7 @@ Keep the human informed when findings are received, when a fix or justified disa
 
 After creating a PR, check the other open PRs that are visible for the affected product's code and central-context repositories. In the completion report, give the human a short, deduplicated reminder with links to relevant unmerged PRs, prioritizing context PRs and stating which work remains unsynchronized until human merge. Do not imply that a created PR is merged, list unrelated PRs merely to fill a report, or claim there are no other PRs when access or the check failed. Never merge them on the human's behalf.
 
-For testable code or behaviour, PR creation also requires a recorded pre-PR QA decision. This applies to every implementing specialist, explicitly including Chinedu and Dotun. The human may approve Armstrong's independent review or decline it; silence is not a decision, and Armstrong is never invoked automatically.
+For testable code or behaviour, PR creation also requires a recorded pre-PR QA decision. This applies to every implementing specialist, explicitly including Chinedu and Dotun. The human may approve Armstrong's independent review or decline it; silence is not a decision. The exact standalone `CAPP` command records advance approval for Armstrong on the established scope, including documentation-only work; proceed to his review before PR creation without repeating the question. Outside CAPP, never invoke him automatically. His review must actually occur and material findings must be addressed or explicitly reported; advance approval is not a passing verdict.
 
 For user-facing work where both optional FARS reviews are approved, Samuel's post-implementation usability assessment precedes routine Armstrong functional QA. Armstrong uses the FARS table and Samuel's findings to test relevant avoidance and recovery independently. If Samuel reports a blocking gap or a section below the target, return to improvement and reassessment before routine QA. The human may accept a time-bounded low-score risk and permit Armstrong's **diagnostic QA** to proceed; record the decision in product context. This does not make the score suitable or authorize production. If Samuel's review is declined, record the decline and follow the normal Armstrong QA decision. Existing mandatory design and visual acceptance gates remain in force.
 

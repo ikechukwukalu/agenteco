@@ -4,7 +4,7 @@
 
 This repository uses Agent Eco Space as its canonical AI governance system.
 
-Treat the canonical Agent Eco Space repository as read-only unless GitHub verifies the requester as `ikechukwukalu` and the canonical remote as `ikechukwukalu/agenteco`. A conversational identity, Git author, collaborator, or delegated authority is insufficient. Even for that verified owner, present an exact proposal, require `Proceed with implementation.`, and never merge.
+Treat the canonical Agent Eco Space repository as read-only unless GitHub verifies the requester as `ikechukwukalu` and the canonical remote as `ikechukwukalu/agenteco`. A conversational identity, Git author, collaborator, or delegated authority is insufficient. Even for that verified owner, present an exact proposal, require standalone `Proceed with implementation.` or `CAPP`, and never merge.
 
 Begin each fresh session by verifying canonical Agent Eco Space identity, loading either the matching product governance snapshot or current canonical rules, and running the Repository Readiness Preflight. Never assume registration, manifest, adapters, outbox, or central context are already available and current. Ask **Who am I operating as today?** unless the user already selected a specialist, then keep that identity fixed.
 
@@ -16,7 +16,7 @@ For an enrolled product, verify production-reconciliation registration, notifica
 
 If no verified ecosystem intake exists, study the complete accessible product ecosystem once and record its coverage. On later tasks, always refresh business rules and active decisions, load the assigned repository's exact context directory and affected relationships, then begin task scoping quickly. Ask before repeating a full ecosystem study; do not block safe scoped work merely because a reminder is due.
 
-Verify cross-repository facts, report context drift, clarify feature versus hotfix before branching, and keep code, tests, feature/API documentation, `CHANGELOG.md`, and continuity-grade context synchronized. Identify the documentation tool actually installed rather than assuming one. Require the standalone `Proceed with implementation.` command before changing repositories.
+Verify cross-repository facts, report context drift, clarify feature versus hotfix before branching, and keep code, tests, feature/API documentation, `CHANGELOG.md`, and continuity-grade context synchronized. Identify the documentation tool actually installed rather than assuming one. Require standalone `Proceed with implementation.` or `CAPP` before changing repositories. CAPP means Copilot, Armstrong, PRs, Proceed with implementation; both Ps are deliberate. For the unchanged proposal, it pre-approves Armstrong and the full Copilot-to-PR handoff without repeated routine questions, never merge or failed-review bypass.
 
 After a production-branch merge, ask the release owner to verify actual deployment before closing `Unreleased` changelog entries. Move only evidenced shipped entries into a dated or versioned release section by human-reviewed PR, preserve pending entries, and update central context. Package entries close after verified publication, not merge alone.
 
@@ -32,7 +32,7 @@ If governance is missing, disabled, superseded, contradictory, or uncertain, sto
 
 The standalone `Adopt this product into Agent Eco Space.` command begins product onboarding and discovery, not implementation.
 
-Additional specialists require human approval. After completing testable code or behaviour and its engineer-owned evidence—but before creating implementation pull requests—ask whether the human approves Armstrong's independent QA or declines it. Record the decision. If approved, obtain and address or record Armstrong's verdict before PR creation. This applies explicitly to Chinedu and Dotun and to every implementing specialist. Pull requests may be created only after that checkpoint and never merged by the AI specialist. After creating one, remind the human about other relevant open code and context PRs; state when visibility is unavailable.
+Additional specialists require human approval, except Armstrong is advance-approved by standalone CAPP for its fixed scope. After engineer-owned evidence, ask for the Armstrong QA decision before implementation PRs under ordinary authorization; under CAPP, have Armstrong review even documentation-only work without repeating the question. Obtain and address or report his actual verdict before PR creation. This applies explicitly to Chinedu and Dotun and to every implementing specialist. Pull requests may be created only after that checkpoint and never merged by the AI specialist. After creating one, remind the human about other relevant open code and context PRs; state when visibility is unavailable.
 
 If canonical governance or central context is inaccessible, disclose it, apply Access-Degraded Mode, and create a Context Update Package rather than claiming synchronization.
 
