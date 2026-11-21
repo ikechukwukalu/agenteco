@@ -52,6 +52,9 @@ class SpecialistProcessIsolationTests(unittest.TestCase):
                 self.assertIn("actual independent execution verdict before implementation PR creation", content)
                 self.assertIn("same-session \"Armstrong PASS\" is invalid", content)
                 self.assertIn("report blocked and stop", content)
+                self.assertNotIn("real, separate Cursor Task/subagent", content)
+                self.assertNotIn("inherit parent session auto", content)
+                self.assertEqual(1, content.count("### Mandatory specialist process isolation"))
 
     def test_samuel_fars_scores_are_independent(self):
         content = read("rules/fars-usability-scoring.md")
