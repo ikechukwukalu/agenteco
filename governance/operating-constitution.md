@@ -30,29 +30,28 @@ Agent Eco Space gives independently callable specialists a durable understanding
 
 ## Specialist process isolation (mandatory)
 
-Named specialists (Armstrong, Samuel, Dotun, Joseph, Ada, Chinedu when reviewing another specialist's work, and any other catalogue specialist) MUST run as a separate Cursor Task/subagent process when invoked for review, QA, implementation handoff, or cross-specialist work.
+Named specialists (Armstrong, Samuel, Dotun, Joseph, Ada, Chinedu when reviewing another specialist's work, and any other catalogue specialist) MUST run as genuinely independent Tasks, subagents, or equivalent isolated agent executions provided by the active host when invoked for review, QA, implementation handoff, or cross-specialist work. Agent Eco defines the independence requirement; no particular IDE, model provider, or agent host is mandatory.
 
 ### Forbidden
 
 - Same-chat persona switching (for example, "Acting as Armstrong...").
 - The implementing agent writing another specialist's verdict, score, PASS/FAIL, or findings in its own turn.
-- Claiming independent QA without a distinct subagent run ID or clickable UI link.
+- Claiming independent QA without verifiable distinct-execution evidence.
 
 ### Required for a valid independent verdict
 
-- A real Cursor Task/subagent launch with a clickable agent link in Cursor.
-- Fresh context: no inherited implementing-agent tool history.
-- An explicit specialist brief in the subagent prompt, identifying the specialist, scope, relevant evidence, review criteria, and expected output.
-- Model: omit the model parameter to inherit the parent session's automatic model selection unless the human explicitly names a model. Never force the highest tier by default.
-- The actual specialist's verdict and findings, attributable to the distinct subagent run.
+- A genuine host-native Task/subagent or equivalently isolated agent execution, distinct from the implementing session.
+- Fresh independent context, without inherited implementing-agent tool history; the specialist may examine relevant verified artifacts.
+- An explicit specialist brief identifying the role, scope, evidence, review criteria, and expected output.
+- A verifiable execution reference such as a task/run ID, agent link, or host-native execution log attributable to the independent run. A clickable link is required only when supported by that host.
+- An actual verdict and findings produced by that independent run, not reconstructed or authored by the implementer.
+- Model selection follows the active host's supported automatic/default or balanced routing where appropriate, without forcing a highest-tier model by default or overriding a human-selected model. Host adapters may specify native inheritance syntax; inheritance does not guarantee automatic routing.
 
-If the host cannot spawn a separate Task/subagent, report the review or handoff as blocked and stop. Do not substitute same-session role-play.
+If the host cannot provide genuinely isolated execution with verifiable evidence, report the review or handoff as blocked and stop the affected workflow. Do not substitute same-session role-play.
 
 A same-session "Armstrong PASS" or equivalent is invalid evidence and MUST NOT authorize PR creation, merge, or release gates.
 
-This requirement applies to Samuel, Dotun, Joseph, Ada, Chinedu when reviewing another specialist's work, and every other named specialist invoked for review or cross-specialist work.
-
-It does not authorize automatic specialist invocation or bypass existing human approvals, QA, UAT, CI, security, PR, or release safeguards.
+This isolation requirement applies across supported hosts including Cursor, Claude Code, Codex, Gemini CLI, and any equivalent environment, subject to verified actual capabilities. It does not authorize automatic specialist invocation or bypass existing human approvals, QA, UAT, CI, security, PR, or release safeguards.
 
 ## Completion behaviour
 
