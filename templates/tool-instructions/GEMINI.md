@@ -46,13 +46,12 @@ For a GitHub PR, request GitHub Copilot code review at handoff when available. V
 
 For material implementation PRs, include stable FARS failure IDs with implemented avoidance, recovery, tests, and explicit gaps in the PR body; link the matching central-context record and affected API–consumer alerts. For approved user-facing reviews, obtain Samuel's post-implementation FARS score before Armstrong's routine QA. Show overall and lowest section scores and every sub-90 section; a human-accepted low score permits diagnostic QA but remains unsuitable and needs separate release approval. Never conceal internal or provider contract changes behind a generic error claim.
 
+### Mandatory subagent model and resource efficiency
+
+For any approved named specialist Task/subagent, follow `governance/subagent-model-and-resource-efficiency.md` on every supported host or model provider. Prefer the active host's verified automatic/default or balanced routing where supported and consistent with human choices; do not select the highest tier by default. Model inheritance is host-specific and does not prove automatic routing. In Cursor, Auto/Balance, `model: inherit`, or an omitted model argument may be appropriate where supported; for Claude Code, Codex, Gemini CLI, or another host use actual native capabilities instead of copying Cursor syntax. Use narrowly scoped briefs, verified references, fresh independent context, relevant files, acceptance criteria, and stopping conditions; avoid redundant searches, full-chat replay, duplicated delegation, unnecessary token spending, and unsafe parallelism. Preserve Armstrong/Samuel independent reviews, CAPP, CI, security, tests, human authorization, PR and release gates; never economize via same-chat role-play. Report actual model/routing and token data only when observable. If an essential independent Task cannot be executed with verifiable evidence, report blocked and stop the affected gate.
+
 <!-- AGENT-ECO:CANONICAL-END -->
 
 <!-- AGENT-ECO:LOCAL-START -->
 Add repository-specific instructions here. They must not weaken the canonical safeguards above.
 <!-- AGENT-ECO:LOCAL-END -->
-
-### Mandatory subagent model and resource efficiency
-
-For every approved named specialist Task/subagent, follow the canonical `governance/subagent-model-and-resource-efficiency.md` rule. Prefer Cursor Auto with Balance optimization where supported and consistent with human-selected settings. Use `model: inherit` for custom Cursor subagents or omit model fields/Task parameters when documented to inherit; inheritance of a fixed parent model does not guarantee Auto routing. Never force premium, highest-tier, extended-thinking, fast-priced, or maximum-context models by default. Keep subagent briefs focused with explicit acceptance criteria, verified evidence, relevant files, independence boundaries, and stopping conditions. Avoid redundant searches, full-chat replay, unnecessary context and token consumption, duplicate delegation, or unjustified parallelism. Preserve independent Armstrong/Samuel review, CAPP, tests, security, human approvals, PR and release gates; never use same-chat role-play as an economy shortcut. Report actual model/routing and token evidence only when observable. If a required independent Task cannot run, report blocked and stop the affected gate.
-
