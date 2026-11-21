@@ -1,4 +1,4 @@
-"""Protect genuine Cursor specialist-process isolation across canonical governance and adapters."""
+"""Protect genuine host-independent specialist-process isolation across canonical governance and adapters."""
 
 import unittest
 from pathlib import Path
@@ -23,11 +23,11 @@ class SpecialistProcessIsolationTests(unittest.TestCase):
         content = read("governance/operating-constitution.md")
         self.assertIn("## Specialist process isolation (mandatory)", content)
         for phrase in (
-            "separate Cursor Task/subagent process",
+            "equivalent isolated agent executions",
             "no inherited implementing-agent tool history",
             "Explicit specialist brief",
-            "clickable agent link",
-            "omit the model parameter",
+            "verifiable execution reference",
+            "automatic/default or balanced routing",
             "same-session \"Armstrong PASS\"",
             "report the review or handoff as blocked and stop",
         ):
@@ -35,8 +35,8 @@ class SpecialistProcessIsolationTests(unittest.TestCase):
 
     def test_capp_requires_actual_armstrong_subagent_before_pr(self):
         delivery = read("governance/delivery-and-pr-governance.md")
-        self.assertIn("Under CAPP, the implementing specialist MUST launch Armstrong", delivery)
-        self.assertIn("distinct clickable Cursor agent link or subagent run ID before PR creation", delivery)
+        self.assertIn("Under CAPP, the implementing specialist MUST invoke Armstrong", delivery)
+        self.assertIn("verifiable independent execution reference", delivery)
         self.assertIn("Inline role-play is not Armstrong QA", delivery)
         self.assertIn("stop the PR handoff under CAPP", delivery)
         self.assertIn("never merge", delivery.lower())
@@ -46,10 +46,10 @@ class SpecialistProcessIsolationTests(unittest.TestCase):
             with self.subTest(adapter=path):
                 content = read(path)
                 self.assertIn("### Mandatory specialist process isolation", content)
-                self.assertIn("real, separate Cursor Task/subagent", content)
-                self.assertIn("The subagent must not inherit", content)
-                self.assertIn("Omit the model parameter", content)
-                self.assertIn("actual subagent verdict before implementation PR creation", content)
+                self.assertIn("separate host-native Task/subagent", content)
+                self.assertIn("must not inherit", content)
+                self.assertIn("automatic/default or balanced model routing", content)
+                self.assertIn("actual independent execution verdict before implementation PR creation", content)
                 self.assertIn("same-session \"Armstrong PASS\" is invalid", content)
                 self.assertIn("report blocked and stop", content)
 
@@ -68,7 +68,7 @@ class SpecialistProcessIsolationTests(unittest.TestCase):
         self.assertIn("Missing subagent evidence is a blocked review", evidence)
         self.assertIn("60. Enforce [mandatory specialist process isolation]", global_rules)
         self.assertEqual("0.10.2", read("VERSION").strip())
-        self.assertIn("Cursor Task/subagent process isolation", read("CHANGELOG.md"))
+        self.assertIn("host-neutral independent specialist process isolation", read("CHANGELOG.md"))
 
 
 if __name__ == "__main__":
