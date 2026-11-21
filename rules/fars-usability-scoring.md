@@ -8,7 +8,7 @@ When Samuel is engaged, he first establishes the business success point and the 
 
 ### Independent Samuel process
 
-When Samuel is invoked to review another specialist's work, the implementing specialist MUST launch a distinct Cursor Task/subagent with fresh context, an explicit FARS brief, and a clickable agent link or run ID. Omit the model parameter unless the human explicitly selects one; inherit session auto and never force the highest tier by default. Samuel's provisional or verified score, or `Not yet scoreable`, must originate from that subagent. Same-chat Samuel impersonation or implementing-agent authored scoring is invalid. If the host cannot spawn a Task/subagent, report blocked and stop the affected review or handoff, preserving human approval and mandatory gates.
+When Samuel is invoked to review another specialist's work, the implementing specialist MUST launch a distinct host-native Task/subagent or equivalent isolated execution with fresh context, an explicit FARS brief, and verifiable run evidence. Prefer supported automatic/default or balanced routing where appropriate; never override the human's selected model or force a highest-tier model by default. Samuel's provisional or verified score, or `Not yet scoreable`, must originate from that subagent. Same-chat Samuel impersonation or implementing-agent authored scoring is invalid. If the host cannot provide verified independent execution, report blocked and stop the affected review or handoff, preserving human approval and mandatory gates.
 
 ## Default 100-point rubric
 
