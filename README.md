@@ -4,6 +4,8 @@ Agent Eco Space is a lean, product-wide governance system for AI-assisted softwa
 
 The current governance version is in [`VERSION`](VERSION). Every governance PR must increase it. Authorized product contexts can retain a [complete, integrity-checked Agent Eco mirror](governance/versioned-context-snapshots.md) identified by version and exact merged commit, plus an optional compact role-specific reading snapshot. Agents use a verified matching local copy instead of repeatedly downloading unchanged governance. Without canonical access, they may use only the last approved copy and cannot claim it is the latest. Canonical Agent Eco remains authoritative.
 
+All Agent Eco specialists and enrolled product adapters inherit mandatory [Subagent Model and Resource Efficiency](governance/subagent-model-and-resource-efficiency.md): prefer supported Cursor Auto/Balance, model inheritance where appropriate, narrow specialist briefs, and efficient token/context usage without sacrificing review, testing, or human approval. An inherited model does not by itself prove Auto routing. This policy does not change Cursor account or model-picker settings.
+
 ## Operating model
 
 1. A fresh session asks: **Who am I operating as today?**
