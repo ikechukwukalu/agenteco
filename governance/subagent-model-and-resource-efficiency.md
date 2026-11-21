@@ -1,33 +1,36 @@
 # Subagent Model and Resource Efficiency (Mandatory)
 
-Applies to every Agent Eco specialist using Cursor, regardless of provider (Codex, Claude, Gemini, Grok, or another supported model). This policy optimizes approved independent Tasks/subagents; it does not authorize additional specialist invocations.
+Applies to every Agent Eco specialist using a supported agent host, IDE, CLI, or model provider, including Cursor, Claude Code, Codex, Gemini CLI, Grok-powered hosts, and future equivalents. Agent Eco defines resource and independence outcomes, not a mandatory execution platform. This policy optimizes approved Tasks/subagents; it does not automatically authorize additional specialist invocations.
 
-## Auto-first model selection
+## Host-agnostic model selection
 
-1. Prefer Cursor **Auto** with **Balance** optimization when supported, available to the account, and compatible with human settings. Balance considers intelligence, speed, and cost; it does not guarantee the lowest price. Where unavailable, use the supported model/routing setting without pretending Balance is active. Cost mode is acceptable; Intelligence mode is not required by default.
-2. For custom Cursor subagents (`.cursor/agents/*.md`), use `model: inherit` or omit the model setting where inheritance is the documented default. For Task launches, omit an explicit model parameter where supported. Never force premium, maximum-context, highest-intelligence, extended-thinking, or fast-priced models by default.
-3. **Inheritance is not Auto routing.** A fixed parent model may be inherited. Never claim inherited models automatically receive cost-balanced Auto routing. Respect human-selected models and modes; do not silently override them.
-4. Model control and billing vary by host, account, and built-in versus custom subagent. When the host requires a model outside authorized settings, disclose the limitation and obtain human direction rather than guessing.
+1. Prefer the active host's supported automatic, default, or balanced model routing where available and consistent with human choice, taking intelligence, speed, and cost into account. If such routing is unavailable, use the host's supported selection and disclose limitations. Never claim a specific cost benefit without evidence.
+2. Do not force premium, maximum-context, highest-intelligence, extended-thinking, or fast-priced models by default. Adjust model capability only when warranted by risk, complexity, available host controls, and human authorization.
+3. Respect explicit human model and optimization choices. Model inheritance is not automatically balanced routing: a fixed model inherited from the parent remains fixed unless the host demonstrates otherwise.
+4. Model flags and default behavior are host-specific. For Cursor custom subagents, `model: inherit` or an omitted model field may be appropriate; for native Task launches, omit explicit model parameters where documented to inherit. **These are Cursor-specific examples, not universal syntax.** Claude Code, Codex, Gemini CLI, and other hosts must use their actual supported equivalent controls without inventing undocumented APIs or selection guarantees.
+5. If a required model configuration cannot be honored, explain the constraint; do not silently override human preferences or imply a host capability that was not verified.
 
 ## Token and context efficiency
 
-Every subagent MUST receive a focused brief with the specialist identity, task, acceptance criteria, relevant verified evidence and file/commit references, independence constraints, expected output, and stopping condition. Do not inherit the implementing agent's tool history; provide the evidence necessary to perform a fresh independent review.
+Every invoked subagent MUST receive a focused brief identifying specialist, task, acceptance criteria, verified references, evidence boundaries, independence requirements, expected output, and stopping condition. Fresh independent execution must not inherit the implementing agent's tool history; the reviewer can inspect necessary artifacts while forming its own verdict.
 
-- Load the smallest relevant context slice, expanding only for verified dependencies or missing facts. Avoid full-chat replay, unfocused repository scans, repeated retrieval, and duplicate analysis.
-- Use concise findings with actionable evidence and uncertainties; avoid verbose reports that do not improve decisions.
-- Apply actual supported token, execution, and context limits where appropriate. Do not invent hard quotas or claim token savings without measurement.
-- Stop unnecessary exploration when task criteria are met, but never stop necessary QA, security analysis, or testing simply to save tokens.
+- Load the smallest relevant context slice and expand only for demonstrated dependencies or missing facts. Avoid entire-chat replay, repetitive retrieval, unfocused repository scans, and duplicate analysis.
+- Return concise findings with actionable evidence, limitations, and next steps rather than verbose reports that add no review value.
+- Use supported execution, context, and token limits appropriately. Do not invent fixed budgets, measured savings, or access to usage metering the host does not expose.
+- Stop unnecessary exploration once acceptance and verification criteria are met, but never truncate necessary security investigation, QA, or tests solely to save resources.
 
 ## Delegation, speed, and resource scaling
 
-Delegate only meaningful, scoped work with the required human approval. Avoid redundant parallel subagents, repeated vague handoffs, and unnecessary nested delegation. Parallelize independent read-only tasks only if the host supports it and doing so improves overall efficiency without conflicting work. Give routine tasks short briefs; allow proportionate deeper investigation for architecture, security, complex failures, and independent QA. If the required resources or subagent launch capability are missing, report blocked rather than fabricating a verdict.
+Delegate meaningful, bounded work only with applicable human approval. Avoid duplicate agents, unnecessary nested delegation, repeated vague handoffs, or speculative parallel work. Parallelize independent tasks only when supported and worthwhile, without conflicting writes. Scale context and depth to risk: narrow documentation tasks should be lightweight; architecture, security, failures, and independent QA may require more extensive investigation.
 
-## Quality, authority, and evidence
+If resources or independent agent capabilities are insufficient for a mandatory gate, report blocked rather than manufacturing evidence.
 
-Resource optimization MUST NOT weaken separate specialist execution, Armstrong QA, Samuel scoring, engineer-owned tests, security review, CAPP, CI, UAT, human authorization, PR creation gates, release approval, or the prohibition on agent merges. Never substitute same-chat role-play for genuinely independent QA to save cost or time.
+## Quality, authority, and execution evidence
 
-When observable, report the actual subagent run ID or clickable Cursor agent link, its configured/inherited model or routing mode, resource limitations, and completed evidence. Never assert exact token usage, actual Auto routing, or model identity without host evidence. When the host cannot spawn a mandatory separate subagent, report blocked and stop the affected independent-review workflow.
+Resource optimization MUST NOT weaken genuine process isolation, independent Armstrong QA, Samuel review/scoring, engineer-owned tests, security, CI, CAPP, UAT, human authorization, PR creation controls, release approvals, or the prohibition on AI merges. Do not replace independent execution with same-session role-play for speed or cost.
 
-## Canonical inheritance
+When available, record the host-native execution reference (task/run ID, agent link, or verifiable execution log), actual configured model/routing, and resource constraints. Never claim an actual model identity, Auto routing, token savings, or completed review without host-verifiable evidence. An agent link is not universally required if the host provides another verifiable record.
 
-This is mandatory for all enrolled product adapters at their next authorized reconciliation. Optional `LOCAL` reinforcement may tighten efficiency expectations but cannot weaken canonical review, evidence, model-authority, or human approval safeguards.
+## Canonical inheritance and host adapters
+
+Mandatory across enrolled product adapters at authorized reconciliation. Adapters translate this policy into real host-native controls; Cursor Auto/Balance and `model: inherit` are examples, not platform requirements. Product-specific `LOCAL` reinforcement may tighten budgets or review scope but MUST NOT weaken canonical independence, evidence, model choice, human approval, or release safeguards.
