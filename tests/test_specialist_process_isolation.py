@@ -70,7 +70,12 @@ class SpecialistProcessIsolationTests(unittest.TestCase):
         self.assertIn("## Independent specialist review evidence", evidence)
         self.assertIn("Missing subagent evidence is a blocked review", evidence)
         self.assertIn("60. Enforce [mandatory specialist process isolation]", global_rules)
-        self.assertEqual("0.10.2", read("VERSION").strip())
+        expected_version = (
+            "0.10.3"
+            if "61. Follow mandatory [Subagent Model and Resource Efficiency]" in global_rules
+            else "0.10.2"
+        )
+        self.assertEqual(expected_version, read("VERSION").strip())
         self.assertIn("host-neutral independent specialist process isolation", read("CHANGELOG.md"))
 
 
