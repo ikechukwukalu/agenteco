@@ -47,3 +47,8 @@ For material implementation PRs, include stable FARS failure IDs with implemente
 <!-- AGENT-ECO:LOCAL-START -->
 Add repository-specific instructions here. They must not weaken the canonical safeguards above.
 <!-- AGENT-ECO:LOCAL-END -->
+
+### Mandatory subagent model and resource efficiency
+
+For every approved named specialist Task/subagent, follow the canonical `governance/subagent-model-and-resource-efficiency.md` rule. Prefer Cursor Auto with Balance optimization where supported and consistent with human-selected settings. Use `model: inherit` for custom Cursor subagents or omit model fields/Task parameters when documented to inherit; inheritance of a fixed parent model does not guarantee Auto routing. Never force premium, highest-tier, extended-thinking, fast-priced, or maximum-context models by default. Keep subagent briefs focused with explicit acceptance criteria, verified evidence, relevant files, independence boundaries, and stopping conditions. Avoid redundant searches, full-chat replay, unnecessary context and token consumption, duplicate delegation, or unjustified parallelism. Preserve independent Armstrong/Samuel review, CAPP, tests, security, human approvals, PR and release gates; never use same-chat role-play as an economy shortcut. Report actual model/routing and token evidence only when observable. If a required independent Task cannot run, report blocked and stop the affected gate.
+
