@@ -6,6 +6,10 @@ Apply [Review Applicability by Work Impact](../governance/review-applicability.m
 
 When Samuel is engaged, he first establishes the business success point and the user journey from verified requirements and context. If these are unknown, he asks; he must not invent them. Before implementation he reviews proposed avoidance and recovery, identifies missing failure/frustration points, and gives a **provisional** score only when design evidence supports one. After implementation or in a retrospective audit he tests the actual experience, including mobile conditions, and records a **verified** score if coverage supports it. For an application-wide review he inspects the relevant journeys across the product, not merely a screen or a design file. Every completed Samuel review must report a score or `Not yet scoreable` with the missing evidence and next step.
 
+### Independent Samuel process
+
+When Samuel is invoked to review another specialist's work, the implementing specialist MUST launch a distinct Cursor Task/subagent with fresh context, an explicit FARS brief, and a clickable agent link or run ID. Omit the model parameter unless the human explicitly selects one; inherit session auto and never force the highest tier by default. Samuel's provisional or verified score, or `Not yet scoreable`, must originate from that subagent. Same-chat Samuel impersonation or implementing-agent authored scoring is invalid. If the host cannot spawn a Task/subagent, report blocked and stop the affected review or handoff, preserving human approval and mandatory gates.
+
 ## Default 100-point rubric
 
 Use journey-level evidence, not a count of checklist items. The following weights are Agent Eco's proposed internal starting rubric, **not an industry-wide numeric standard**:

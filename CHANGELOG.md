@@ -4,6 +4,12 @@ All notable changes to Agent Eco Space are recorded here.
 
 ## Unreleased
 
+### Changed
+
+- Required real Cursor Task/subagent process isolation for named specialist QA, reviews, implementation handoffs, and cross-specialist work; inline impersonation and self-authored specialist verdicts or scores are invalid evidence.
+- Clarified CAPP's mandatory Armstrong separate-subagent verdict before PR creation, fresh-context briefs, clickable run evidence, and fail-closed behavior when a subagent cannot launch.
+- Updated governed adapter instructions to inherit session-auto model selection unless explicitly overridden by the human, without weakening human approval or release gates.
+
 ### Added
 
 - Standalone CAPP command for a scoped implementation cycle: Copilot review follow-through, advance-approved Armstrong review, PR presentation, and implementation authorization without repeated routine approval questions; no merge or failed-review bypass.
