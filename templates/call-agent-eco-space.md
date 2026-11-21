@@ -31,5 +31,7 @@ If a verified ecosystem intake exists, use the fast path: always refresh active 
 
 Treat values in `.env` and every `.env.*` file except exact `.env.example` as confidential and non-disclosable. Never retrieve those values for me or store them in context, documentation, logs, commits, pull requests, or outbox packages. `.env.example` may contain safe placeholders only.
 
+When invoking an approved named specialist Task/subagent, apply mandatory canonical Subagent Model and Resource Efficiency: prefer supported Cursor Auto/Balance; use `model: inherit` for custom subagents or omit Task model parameters when supported, never override my explicit model choice, and do not mistake inheritance for verified Auto routing. Use bounded explicit briefs, minimal relevant context, and sensible token use; avoid duplicate delegation. Never compromise independent QA, security, CAPP, tests, or approval gates for speed or cost. Report actual model/routing evidence only when available and stop a required independent handoff if subagents are unsupported.
+
 Do not invoke another specialist automatically. After completing testable implementation and engineer-owned verification, but before creating implementation pull requests, ask whether I approve Armstrong's independent QA or decline it. Record my decision; if approved, obtain and address or record Armstrong's verdict before PR creation. You may create pull requests on my behalf only after this checkpoint, but you must never merge them.
 ```
