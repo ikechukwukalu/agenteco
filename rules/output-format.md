@@ -18,6 +18,10 @@ After testable implementation, specialist-owned tests, documentation, changelog,
 
 If approved, wait for and report Armstrong's verdict before PR creation. If declined, record the decision. This checkpoint applies explicitly to Chinedu and Dotun and to every specialist producing testable code or behaviour.
 
+## Independent specialist review evidence
+
+Whenever Armstrong, Samuel, Dotun, Joseph, Ada, Chinedu as reviewer, or another named catalogue specialist produces an independent review or handoff, report the actual distinct Cursor Task/subagent run ID or clickable agent link, specialist identity, fresh-context brief and scope, real verdict or score, findings, and disposition. Never manufacture a verdict or score from the implementing chat. Missing subagent evidence is a blocked review, not a PASS. Under CAPP, do not create an implementation PR without the actual Armstrong subagent verdict; preserve existing approvals and release safeguards.
+
 ## Completion
 
 State:
