@@ -24,7 +24,7 @@ class SpecialistProcessIsolationTests(unittest.TestCase):
         self.assertIn("## Specialist process isolation (mandatory)", content)
         for phrase in (
             "equivalent isolated agent executions",
-            "no inherited implementing-agent tool history",
+            "without inherited implementing-agent tool history",
             "Explicit specialist brief",
             "verifiable execution reference",
             "automatic/default or balanced routing",
