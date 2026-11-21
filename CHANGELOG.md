@@ -4,6 +4,11 @@ All notable changes to Agent Eco Space are recorded here.
 
 ## Unreleased
 
+### Changed
+
+- Mandated provider-neutral Cursor subagent resource efficiency: prefer supported Auto/Balance routing, inherit or omit model selection where appropriate, reduce irrelevant context and redundant token usage, and maintain independent QA, security, human approval, and release safeguards.
+- Refreshed all five managed adapter templates and specialist call guidance; clarified that inherited fixed models do not guarantee Auto routing.
+
 ### Added
 
 - Standalone CAPP command for a scoped implementation cycle: Copilot review follow-through, advance-approved Armstrong review, PR presentation, and implementation authorization without repeated routine approval questions; no merge or failed-review bypass.
