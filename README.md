@@ -6,6 +6,8 @@ The current governance version is in [`VERSION`](VERSION). Every governance PR m
 
 All Agent Eco specialists and enrolled product adapters inherit mandatory [Subagent Model and Resource Efficiency](governance/subagent-model-and-resource-efficiency.md): prefer host-supported automatic/default or balanced routing, native model inheritance where appropriate, narrow specialist briefs, and efficient token/context usage without sacrificing review, testing, or human approval. Cursor is one example, not a required host. An inherited model does not by itself prove automatic routing. This policy does not change Cursor account or model-picker settings.
 
+**Model-neutral operation:** In Cursor, a developer may select Composer (or another supported model) as the implementing agent. Agent Eco specialists remain roles rather than model names; host-native independent execution, verifiable review evidence, and explicit human model selection remain authoritative. Composer does not inherently launch a separate Armstrong subagent.
+
 ## Operating model
 
 1. A fresh session asks: **Who am I operating as today?**
