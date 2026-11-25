@@ -4,7 +4,7 @@ Applies to every Agent Eco specialist using a supported agent host, IDE, CLI, or
 
 ## Agent host, model, and specialist are separate concerns
 
-Agent Eco specialist identity (Armstrong, Samuel, Chinedu, etc.) is independent of the agent host and underlying model. A developer may use Cursor with its **Composer** model as the implementing agent, or another supported model/host, without changing specialist authority or governance obligations. Composer is a model choice, **not** an Agent Eco specialist or a separate required host. Do not assume that selecting Composer, or any other model, creates an independent subagent, grants new permissions, or proves the host supports delegation. Verify the actual host-native isolated execution and attributable evidence before accepting specialist QA.
+Agent Eco specialist identity (Armstrong, Samuel, Chinedu, etc.) is independent of the agent host and underlying model. A developer may use Cursor with its **Composer** model as the implementing agent, or another supported model/host, without changing specialist authority or governance obligations. Composer is a model choice, not an Agent Eco specialist or a separate required host. Do not assume that selecting Composer, or any other model, creates an independent subagent, grants new permissions, or proves the host supports delegation. Verify the actual host-native isolated execution and attributable evidence before accepting specialist QA.
 
 ## Host-agnostic model selection
 
