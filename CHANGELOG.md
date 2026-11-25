@@ -6,6 +6,7 @@ All notable changes to Agent Eco Space are recorded here.
 
 ### Changed
 
+- Clarified model-neutral Agent Eco compatibility with Cursor Composer alongside other models, without granting model-specific authority, bypassing independent specialist execution, or overriding explicit human model choice.
 - Mandated provider- and host-neutral subagent resource efficiency: prefer host-supported automatic/default or balanced routing, inherit or omit model selection where appropriate, reduce irrelevant context and redundant token usage, and maintain independent QA, security, human approval, and release safeguards.
 - Refreshed all five managed adapter templates and specialist call guidance; clarified that inherited fixed models do not guarantee automatic routing; Cursor examples stay host-specific.
 - Required host-neutral independent specialist process isolation for named specialist QA, reviews, implementation handoffs, and cross-specialist work; inline impersonation and self-authored specialist verdicts or scores are invalid evidence.
