@@ -1,12 +1,16 @@
 # Subagent Model and Resource Efficiency (Mandatory)
 
-Applies to every Agent Eco specialist using a supported agent host, IDE, CLI, or model provider, including Cursor, Claude Code, Codex, Gemini CLI, Grok-powered hosts, and future equivalents. Agent Eco defines resource and independence outcomes, not a mandatory execution platform. This policy optimizes approved Tasks/subagents; it does not automatically authorize additional specialist invocations.
+Applies to every Agent Eco specialist using a supported agent host, IDE, CLI, or model provider, including Cursor, Claude Code, Codex, Gemini CLI, Grok-powered hosts, and future equivalents. Supported underlying model choices may include Cursor Composer, Claude, GPT/Codex, Gemini, Grok, and others; neither class of example restricts eligibility. Agent Eco defines resource and independence outcomes, not a mandatory execution platform. This policy optimizes approved Tasks/subagents; it does not automatically authorize additional specialist invocations.
+
+## Agent host, model, and specialist are separate concerns
+
+Agent Eco specialist identity (Armstrong, Samuel, Chinedu, etc.) is independent of the agent host and underlying model. A developer may use Cursor with its **Composer** model as the implementing agent, or another supported model/host, without changing specialist authority or governance obligations. Composer is a model choice, **not** an Agent Eco specialist or a separate required host. Do not assume that selecting Composer, or any other model, creates an independent subagent, grants new permissions, or proves the host supports delegation. Verify the actual host-native isolated execution and attributable evidence before accepting specialist QA.
 
 ## Host-agnostic model selection
 
 1. Prefer the active host's supported automatic, default, or balanced model routing where available and consistent with human choice, taking intelligence, speed, and cost into account. If such routing is unavailable, use the host's supported selection and disclose limitations. Never claim a specific cost benefit without evidence.
 2. Do not force premium, maximum-context, highest-intelligence, extended-thinking, or fast-priced models by default. Adjust model capability only when warranted by risk, complexity, available host controls, and human authorization.
-3. Respect explicit human model and optimization choices. Model inheritance is not automatically balanced routing: a fixed model inherited from the parent remains fixed unless the host demonstrates otherwise.
+3. Respect explicit human model and optimization choices, including Composer selected in Cursor. Never silently substitute Auto, another model, or a different provider merely because it seems cheaper. Model inheritance is not automatically balanced routing: a fixed model inherited from the parent remains fixed unless the host demonstrates otherwise.
 4. Model flags and default behavior are host-specific. For Cursor custom subagents, `model: inherit` or an omitted model field may be appropriate; for native Task launches, omit explicit model parameters where documented to inherit. **These are Cursor-specific examples, not universal syntax.** Claude Code, Codex, Gemini CLI, and other hosts must use their actual supported equivalent controls without inventing undocumented APIs or selection guarantees.
 5. If a required model configuration cannot be honored, explain the constraint; do not silently override human preferences or imply a host capability that was not verified.
 
