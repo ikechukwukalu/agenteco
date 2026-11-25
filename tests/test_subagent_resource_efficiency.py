@@ -46,6 +46,33 @@ class ResourceEfficiencyTests(unittest.TestCase):
                         content.index("<!-- AGENT-ECO:CANONICAL-END -->"),
                     )
 
+    def test_composer_is_model_not_specialist_or_host(self):
+        rule = read("governance/subagent-model-and-resource-efficiency.md")
+        for phrase in (
+            "Cursor Composer",
+            "Composer is a model choice",
+            "not an Agent Eco specialist",
+            "Verify the actual host-native isolated execution",
+            "Never silently substitute Auto",
+        ):
+            with self.subTest(phrase=phrase):
+                self.assertIn(phrase, rule)
+        self.assertIn("Cursor Composer", read("governance/operating-constitution.md"))
+        self.assertIn("Composer does not inherently launch", read("README.md"))
+        self.assertIn("chosen underlying model is Cursor Composer", read("templates/call-agent-eco-space.md"))
+        for adapter in ADAPTERS:
+            with self.subTest(adapter=adapter):
+                content = read("templates/tool-instructions/" + adapter)
+                self.assertIn("Cursor Composer is a permitted underlying model", content)
+                self.assertIn("not an Agent Eco specialist", content)
+                self.assertIn("do not silently replace Composer with Auto", content)
+                self.assertNotIn("real, separate Cursor Task/subagent", content)
+                if "<!-- AGENT-ECO:CANONICAL-END -->" in content:
+                    self.assertLess(
+                        content.index("**Composer and model-neutral specialists:**"),
+                        content.index("<!-- AGENT-ECO:CANONICAL-END -->"),
+                    )
+
     def test_governance_version_and_entry(self):
         self.assertIn("Subagent Model and Resource Efficiency", read("governance/operating-constitution.md"))
         self.assertIn("61. Follow mandatory [Subagent Model and Resource Efficiency]", read("rules/global-engineering-rules.md"))
